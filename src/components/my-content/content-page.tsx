@@ -36,7 +36,6 @@ function ContentPage({
   wish: number[];
 }) {
   const [tabCategory, setTabCategory] = useState<string>(allTab);
-  const [pop, setOpenPop] = useState<number>(-1);
   const [search, setSearch] = useState<string>("");
   const [list, setList] = useState(contentListJson);
 
@@ -100,8 +99,6 @@ function ContentPage({
             free={item.free}
             skuGroup={item.skuGroup ? Object.values(item.skuGroup) : undefined}
             series={item.series}
-            popOpen={pop === item.id}
-            setOpenPop={setOpenPop}
             owned={myContent.includes(item.id)}
             favorite={favorites.includes(item.id)}
             wish={wish.includes(item.id)}

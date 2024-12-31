@@ -1,9 +1,9 @@
 import {
-  HoverCardArrow,
-  HoverCardContent,
-  HoverCardRoot,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+  PopoverArrow,
+  PopoverContent,
+  PopoverRoot,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { Category } from "@/ir-data/utils/types";
 import { IR_URL } from "@/ir-data/utils/urls";
@@ -15,9 +15,18 @@ import {
   setWishCar,
   setWishTrack,
 } from "@/store/ir";
-import { Badge, Center, For, Image, Table, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Center,
+  For,
+  HStack,
+  Image,
+  Table,
+  Text,
+} from "@chakra-ui/react";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import {
+  faCaretDown,
   faFlagCheckered,
   faSackXmark,
   IconDefinition,
@@ -44,8 +53,6 @@ function ContentTableRow({
   series,
   skuIcon,
   infoUrl,
-  popOpen,
-  setOpenPop,
   owned,
   favorite,
   wish,
@@ -64,8 +71,6 @@ function ContentTableRow({
   series?: number[];
   skuIcon: IconDefinition;
   infoUrl: string;
-  popOpen: boolean;
-  setOpenPop: (i: number) => void;
 }) {
   const [setMy, setWish, setFavorite] =
     content === "cars"
@@ -135,24 +140,19 @@ function ContentTableRow({
       </Table.Cell>
       <Table.Cell minWidth={"100px"} textAlign={"center"}>
         {series && (
-          <HoverCardRoot
-            unmountOnExit
-            openDelay={200}
-            open={popOpen}
-            onOpenChange={(e) => (e.open ? setOpenPop(id) : setOpenPop(-1))}
-            lazyMount
-          >
-            <HoverCardTrigger asChild>
-              <Badge variant={"solid"} _light={{ bg: "gray.600" }}>
+          <PopoverRoot lazyMount unmountOnExit>
+            <PopoverTrigger asChild>
+              <HStack gap={1} justifyContent={"center"} cursor={"pointer"}>
                 <FontAwesomeIcon icon={faFlagCheckered} />
                 {series.length}
-              </Badge>
-            </HoverCardTrigger>
-            <HoverCardContent p={2} maxW={"100%"}>
-              <HoverCardArrow />
+                <FontAwesomeIcon icon={faCaretDown} />
+              </HStack>
+            </PopoverTrigger>
+            <PopoverContent p={2}>
+              <PopoverArrow />
               <SeriesPopover id={id} content={content} />
-            </HoverCardContent>
-          </HoverCardRoot>
+            </PopoverContent>
+          </PopoverRoot>
         )}
       </Table.Cell>
       <Table.Cell minWidth={"100px"} textAlign={"center"}>
