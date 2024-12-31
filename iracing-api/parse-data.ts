@@ -47,7 +47,9 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
         if (!acc.trackSeries[tracks]) {
           acc.trackSeries[tracks] = [];
         }
-        acc.trackSeries[tracks].push(seriesId);
+        if (!acc.trackSeries[tracks].includes(seriesId)) {
+          acc.trackSeries[tracks].push(seriesId);
+        }
       });
 
       return acc;

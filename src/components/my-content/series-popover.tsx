@@ -1,8 +1,9 @@
 import { setFavoriteSeriesItem, useIr } from "@/store/ir";
-import { Badge, For, Table, Text } from "@chakra-ui/react";
+import { For, Table, Text } from "@chakra-ui/react";
 import CARS_JSON from "../../ir-data/cars.json";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
+import LicenseBadge from "./license-badge";
 import StarCheckbox from "./star-checkbox";
 
 function SeriesPopover({
@@ -20,7 +21,7 @@ function SeriesPopover({
   const { favoriteSeries } = useIr();
 
   return (
-    <Table.Root size="sm">
+    <Table.Root size="sm" striped>
       <Table.Body fontSize={"xs"}>
         <For
           each={list.series}
@@ -30,7 +31,12 @@ function SeriesPopover({
             return (
               series && (
                 <Table.Row key={item}>
-                  <Table.Cell textAlign={"center"} p={0} px={"4px"}>
+                  <Table.Cell
+                    textAlign={"center"}
+                    p={0}
+                    borderBottom={0}
+                    px={"4px"}
+                  >
                     <StarCheckbox
                       size={"xs"}
                       checked={favoriteSeries.includes(item)}
@@ -45,25 +51,20 @@ function SeriesPopover({
                     display={"flex"}
                     alignItems={"center"}
                     p={0}
+                    borderBottom={0}
                     px={"4px"}
                     fontWeight={"bold"}
                   >
                     <Text textWrap={"nowrap"}>{series.name}</Text>
                   </Table.Cell>
-                  <Table.Cell p={0} px={"4px"}>
-                    <Badge
+                  <Table.Cell p={0} borderBottom={0} px={"4px"}>
+                    <LicenseBadge
+                      letter={series.license.letter}
+                      color={series.license.color}
                       size={"xs"}
-                      bg={`#${series.license.color}`}
-                      fontWeight={"bold"}
-                      color={
-                        series.license.letter === "C" ||
-                        series.license.letter === "D"
-                          ? "black"
-                          : "white"
-                      }
                     >
                       {series.license.letter}
-                    </Badge>
+                    </LicenseBadge>
                   </Table.Cell>
                 </Table.Row>
               )
