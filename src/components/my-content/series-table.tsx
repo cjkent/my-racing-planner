@@ -49,22 +49,22 @@ function SeriesTable<T extends string | number | Dict | undefined>({
                 <VisuallyHidden>Series Logo</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader width={"100%"}>Name</Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Setup
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Cars
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Tracks
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Category
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Duration
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"}>
+              <Table.ColumnHeader minWidth={"90px"}>
                 <VisuallyHidden>Info on iracing.com</VisuallyHidden>
               </Table.ColumnHeader>
             </Table.Row>

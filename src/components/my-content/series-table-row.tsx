@@ -103,10 +103,10 @@ function SeriesTableRow({
           onCheckedChange={(e) => setFavoriteSeriesItem(id, !!e.checked)}
         />
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {fixed && (
           <Tooltip
-            content={"Fixed"}
+            content={"Fixed Setup"}
             showArrow
             positioning={{ placement: "top" }}
             openDelay={200}
@@ -119,7 +119,7 @@ function SeriesTableRow({
           </Tooltip>
         )}
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <PopoverRoot lazyMount unmountOnExit>
           <PopoverTrigger asChild>
             <HStack gap={1} justifyContent={"center"} cursor={"pointer"}>
@@ -134,7 +134,7 @@ function SeriesTableRow({
           </PopoverContent>
         </PopoverRoot>
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <PopoverRoot lazyMount unmountOnExit>
           <PopoverTrigger asChild>
             <HStack gap={1} justifyContent={"center"} cursor={"pointer"}>
@@ -149,7 +149,7 @@ function SeriesTableRow({
           </PopoverContent>
         </PopoverRoot>
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <Tooltip
           key={`${category}`}
           content={Category[category as keyof typeof Category]}
@@ -161,10 +161,10 @@ function SeriesTableRow({
           <CategoryIcon fontSize="16px" category={category} />
         </Tooltip>
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <DurationBadge duration={duration} laps={laps} />
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign="end">
+      <Table.Cell minWidth={"90px"} textAlign="end">
         <InfoButton href={infoUrl} />
       </Table.Cell>
     </Table.Row>

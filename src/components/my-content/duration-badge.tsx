@@ -10,7 +10,7 @@ function DurationBadge({
   duration: number | null;
   laps: number | null;
 }) {
-  const durationLaps = laps ? `${laps} Laps` : `${duration} Min`;
+  const durationLaps = laps ? `${laps} laps` : `${duration} min`;
   return (
     <Badge colorPalette={laps ? "pink" : "purple"}>
       <FontAwesomeIcon icon={laps ? faCircleNotch : faClock} size="xs" />

@@ -49,19 +49,19 @@ function ContentTable<T extends string | number | Dict | undefined>({
                 <VisuallyHidden>Content Logo</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader width={"100%"}>Name</Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Includes
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Series
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Category
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Price
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"100px"}>
+              <Table.ColumnHeader minWidth={"90px"}>
                 <VisuallyHidden>Info on iracing.com</VisuallyHidden>
               </Table.ColumnHeader>
             </Table.Row>

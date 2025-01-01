@@ -138,7 +138,7 @@ function ContentTableRow({
           onCheckedChange={(e) => setFavorite(id, !!e.checked)}
         />
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {skuGroup && (
           <Tooltip
             content={skuGroup.map((c) => (
@@ -158,7 +158,7 @@ function ContentTableRow({
           </Tooltip>
         )}
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {series && (
           <PopoverRoot lazyMount unmountOnExit>
             <PopoverTrigger asChild>
@@ -175,7 +175,7 @@ function ContentTableRow({
           </PopoverRoot>
         )}
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <For
           each={categories}
           children={(category, i) => (
@@ -196,10 +196,10 @@ function ContentTableRow({
           )}
         />
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <PriceBadge price={price} />
       </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign="end">
+      <Table.Cell minWidth={"90px"} textAlign="end">
         <InfoButton href={infoUrl} />
       </Table.Cell>
     </Table.Row>
