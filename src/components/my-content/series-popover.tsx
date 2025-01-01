@@ -32,6 +32,7 @@ function SeriesPopover({
               series && (
                 <Table.Row key={item}>
                   <Table.Cell
+                    w={"20px"}
                     textAlign={"center"}
                     p={0}
                     borderBottom={0}
@@ -39,11 +40,11 @@ function SeriesPopover({
                   >
                     <StarCheckbox
                       size={"xs"}
-                      checked={favoriteSeries.includes(item)}
                       mt={"4px"}
-                      onCheckedChange={({ checked }) => {
-                        setFavoriteSeriesItem(series.id, !!checked);
-                      }}
+                      checked={favoriteSeries.includes(item)}
+                      onCheckedChange={({ checked }) =>
+                        setFavoriteSeriesItem(series.id, !!checked)
+                      }
                     />
                   </Table.Cell>
                   <Table.Cell
@@ -54,10 +55,17 @@ function SeriesPopover({
                     borderBottom={0}
                     px={"4px"}
                     fontWeight={"bold"}
+                    maxW={"264px"}
                   >
-                    <Text textWrap={"nowrap"}>{series.name}</Text>
+                    <Text truncate>{series.name}</Text>
                   </Table.Cell>
-                  <Table.Cell p={0} borderBottom={0} px={"4px"}>
+                  <Table.Cell
+                    w={"20px"}
+                    p={0}
+                    borderBottom={0}
+                    px={"4px"}
+                    paddingInline={0}
+                  >
                     <LicenseBadge
                       letter={series.license.letter}
                       color={series.license.color}

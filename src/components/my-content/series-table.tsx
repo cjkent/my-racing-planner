@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { EmptyState } from "../ui/empty-state";
 
 type Dict<T = any> = Record<string, T>;
-function ContentTable<T extends string | number | Dict | undefined>({
+function SeriesTable<T extends string | number | Dict | undefined>({
   list,
   children,
 }: {
@@ -43,23 +43,26 @@ function ContentTable<T extends string | number | Dict | undefined>({
           <Table.Header>
             <Table.Row>
               <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
-                <VisuallyHidden>Owned content</VisuallyHidden>
+                <VisuallyHidden>License</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"60px"} textAlign={"center"}>
-                <VisuallyHidden>Content Logo</VisuallyHidden>
+                <VisuallyHidden>Series Logo</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader width={"100%"}>Name</Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
-                Includes
+                Setup
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
-                Series
+                Cars
+              </Table.ColumnHeader>
+              <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
+                Tracks
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
                 Category
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"100px"} textAlign={"center"}>
-                Price
+                Duration
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"100px"}>
                 <VisuallyHidden>Info on iracing.com</VisuallyHidden>
@@ -108,4 +111,4 @@ function ContentTable<T extends string | number | Dict | undefined>({
   );
 }
 
-export default ContentTable;
+export default SeriesTable;

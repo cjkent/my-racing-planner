@@ -9,8 +9,8 @@ export enum ETrackCategories {
 export enum ECarCategories {
   all = "All",
   oval = "Oval",
-  formula_car = "Formula Car",
   sports_car = "Sports Car",
+  formula_car = "Formula Car",
   dirt_oval = "Dirt Oval",
   dirt_road = "Dirt Road",
 }

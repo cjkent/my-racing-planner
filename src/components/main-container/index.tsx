@@ -1,8 +1,8 @@
 import { ETabs, useUi } from "@/store/ui";
 import { Flex } from "@chakra-ui/react";
 import CarsPage from "../my-content/cars-page";
+import SeriesPage from "../my-content/series-page";
 import TracksPage from "../my-content/tracks-page";
-import SeriesPage from "../series/series-page";
 
 function MainContainer() {
   const { selectedTab } = useUi();

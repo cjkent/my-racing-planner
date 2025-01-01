@@ -12,7 +12,9 @@ function NameWithBadges({ name }: { name: string }) {
   if (badge) {
     return (
       <>
-        <Badge colorPalette="yellow">{patterns[badge]}</Badge>{" "}
+        <Badge colorPalette="yellow" mr={1}>
+          {patterns[badge]}
+        </Badge>
         {name.replace(badge, "")}
       </>
     );

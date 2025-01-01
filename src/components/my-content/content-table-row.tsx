@@ -139,6 +139,26 @@ function ContentTableRow({
         />
       </Table.Cell>
       <Table.Cell minWidth={"100px"} textAlign={"center"}>
+        {skuGroup && (
+          <Tooltip
+            content={skuGroup.map((c) => (
+              <Text key={c} as="p">
+                {c}
+              </Text>
+            ))}
+            showArrow
+            positioning={{ placement: "top" }}
+            openDelay={200}
+            closeDelay={100}
+          >
+            <Badge variant={"solid"} _light={{ bg: "gray.600" }}>
+              <FontAwesomeIcon icon={skuIcon} size="sm" />
+              {skuGroup.length}
+            </Badge>
+          </Tooltip>
+        )}
+      </Table.Cell>
+      <Table.Cell minWidth={"100px"} textAlign={"center"}>
         {series && (
           <PopoverRoot lazyMount unmountOnExit>
             <PopoverTrigger asChild>
@@ -153,26 +173,6 @@ function ContentTableRow({
               <SeriesPopover id={id} content={content} />
             </PopoverContent>
           </PopoverRoot>
-        )}
-      </Table.Cell>
-      <Table.Cell minWidth={"100px"} textAlign={"center"}>
-        {skuGroup && (
-          <Tooltip
-            content={skuGroup.map((c) => (
-              <Text key={c} as="p">
-                {c}
-              </Text>
-            ))}
-            showArrow
-            positioning={{ placement: "top" }}
-            openDelay={200}
-            closeDelay={100}
-          >
-            <Badge variant={"solid"} _light={{ bg: "gray.600" }}>
-              <FontAwesomeIcon icon={skuIcon} />
-              {skuGroup.length}
-            </Badge>
-          </Tooltip>
         )}
       </Table.Cell>
       <Table.Cell minWidth={"100px"} textAlign={"center"}>
