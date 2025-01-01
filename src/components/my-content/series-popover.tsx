@@ -13,18 +13,21 @@ function SeriesPopover({
   content: "cars" | "tracks";
   id: number;
 }) {
-  const list: any =
+  const contentItem: any =
     content === "cars"
       ? CARS_JSON[id.toString() as keyof typeof CARS_JSON]
       : TRACKS_JSON[id.toString() as keyof typeof TRACKS_JSON];
 
   const { favoriteSeries } = useIr();
 
+  const listSeries =
+    (contentItem.skuSeries ? contentItem.skuSeries : contentItem.series) || [];
+
   return (
     <Table.Root size="sm" striped>
       <Table.Body fontSize={"xs"}>
         <For
-          each={list.series}
+          each={listSeries}
           children={(item: number) => {
             const series =
               SERIES_JSON[item.toString() as keyof typeof SERIES_JSON];

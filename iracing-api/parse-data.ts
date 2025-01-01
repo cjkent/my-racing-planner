@@ -73,7 +73,7 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
       free: car.free_with_subscription,
       price: car.price,
       sku: car.sku,
-      series: seriesCarsTracksMaps.carSeries[car.car_id],
+      series: seriesCarsTracksMaps.carSeries[car.car_id] ?? [],
       logo:
         CAR_ASSETS_JSON[`${car.car_id}` as keyof typeof CAR_ASSETS_JSON]
           ?.logo ?? undefined,
@@ -88,13 +88,27 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
       const skuGroup = parsedCars
         .filter((item) => item.sku === curr.sku)
         .reduce((acc, curr) => ({ ...acc, [curr.id]: curr.name }), {});
+
+      const skuKeys = Object.keys(skuGroup);
       acc[curr.id] = {
         ...curr,
-        skuGroup: Object.keys(skuGroup).length > 1 ? skuGroup : undefined,
+        skuGroup: skuKeys.length > 1 ? skuGroup : undefined,
+        skuSeries:
+          skuKeys.length > 1
+            ? [
+                ...new Set(
+                  Object.keys(skuGroup)
+                    .map(
+                      (sk: string) => seriesCarsTracksMaps.carSeries[sk] ?? [],
+                    )
+                    .flat(),
+                ),
+              ]
+            : undefined,
       };
     }
     return acc;
-  }, {} as Record<string, (typeof parsedCars)[0] & { skuGroup?: { [key: string]: string }; group?: number }>);
+  }, {} as Record<string, (typeof parsedCars)[0] & { skuGroup?: { [key: string]: string }; group?: number; skuSeries?: number[] }>);
 
   const parsedTracks = TRACKS_JSON.filter(
     (track) => track.is_ps_purchasable,
@@ -123,13 +137,28 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
       const skuGroup = parsedTracks
         .filter((item) => item.sku === curr.sku)
         .reduce((acc, curr) => ({ ...acc, [curr.id]: curr.config }), {});
+
+      const skuKeys = Object.keys(skuGroup);
       acc[curr.id] = {
         ...curr,
-        skuGroup: Object.keys(skuGroup).length > 1 ? skuGroup : undefined,
+        skuGroup: skuKeys.length > 1 ? skuGroup : undefined,
+        skuSeries:
+          skuKeys.length > 1
+            ? [
+                ...new Set(
+                  Object.keys(skuGroup)
+                    .map(
+                      (sk: string) =>
+                        seriesCarsTracksMaps.trackSeries[sk] ?? [],
+                    )
+                    .flat(),
+                ),
+              ]
+            : undefined,
       };
     }
     return acc;
-  }, {} as Record<string, (typeof parsedTracks)[0] & { skuGroup?: { [key: string]: string }; group?: number }>);
+  }, {} as Record<string, (typeof parsedTracks)[0] & { skuGroup?: { [key: string]: string }; group?: number; skuSeries?: number[] }>);
 
   const licensesById = LICENSES_JSON.map((group) => ({
     id: group.license_group,

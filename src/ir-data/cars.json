@@ -30,7 +30,13 @@
     "skuGroup": {
       "2": "Modified - SK",
       "31": "Modified - NASCAR Whelen Tour"
-    }
+    },
+    "skuSeries": [
+      45,
+      441,
+      102,
+      417
+    ]
   },
   "3": {
     "id": 3,
@@ -41,11 +47,13 @@
     "free": true,
     "price": 0,
     "sku": 10011,
+    "series": [],
     "logo": "/img/logos/partners/pontiac-logo.png",
     "skuGroup": {
       "3": "Pontiac Solstice",
       "10": "Pontiac Solstice - Rookie"
-    }
+    },
+    "skuSeries": []
   },
   "4": {
     "id": 4,
@@ -56,6 +64,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10006,
+    "series": [],
     "logo": "/img/logos/partners/promazda-logo.png"
   },
   "5": {
@@ -76,7 +85,13 @@
       "5": "Legends Ford '34 Coupe",
       "11": "Legends Ford '34 Coupe - Rookie",
       "82": "Dirt Legends Ford '34 Coupe"
-    }
+    },
+    "skuSeries": [
+      562,
+      32,
+      483,
+      315
+    ]
   },
   "10": {
     "id": 10,
@@ -87,6 +102,7 @@
     "free": true,
     "price": 0,
     "sku": 10011,
+    "series": [],
     "logo": "/img/logos/partners/pontiac-logo.png",
     "group": 3
   },
@@ -114,6 +130,7 @@
     "free": true,
     "price": 0,
     "sku": 10040,
+    "series": [],
     "logo": "/img/logos/partners/radical-logo.png"
   },
   "18": {
@@ -153,6 +170,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10061,
+    "series": [],
     "logo": "/img/logos/partners/rileytechnologies-logo.png"
   },
   "22": {
@@ -164,6 +182,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10068,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "23": {
@@ -196,7 +215,11 @@
     "skuGroup": {
       "24": "ARCA Menards Chevrolet Impala",
       "167": "Gen 4 Cup"
-    }
+    },
+    "skuSeries": [
+      167,
+      524
+    ]
   },
   "25": {
     "id": 25,
@@ -235,6 +258,7 @@
     "free": true,
     "price": 0,
     "sku": 10114,
+    "series": [],
     "logo": "/img/logos/partners/volkswagen-logo.png"
   },
   "28": {
@@ -246,6 +270,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10115,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "29": {
@@ -257,6 +282,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10119,
+    "series": [],
     "logo": "/img/logos/partners/dallara-logo.png"
   },
   "30": {
@@ -298,6 +324,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10222,
+    "series": [],
     "logo": "/img/logos/partners/williams-logo.png"
   },
   "34": {
@@ -309,11 +336,13 @@
     "free": true,
     "price": 0,
     "sku": 10226,
+    "series": [],
     "logo": "/img/logos/partners/mazda-logo.png",
     "skuGroup": {
       "34": "[Legacy] Mazda MX-5 Cup - 2010",
       "35": "[Legacy] Mazda MX-5 Roadster - 2010"
-    }
+    },
+    "skuSeries": []
   },
   "35": {
     "id": 35,
@@ -324,6 +353,7 @@
     "free": true,
     "price": 0,
     "sku": 10226,
+    "series": [],
     "logo": "/img/logos/partners/mazda-logo.png",
     "group": 34
   },
@@ -365,6 +395,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10268,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "39": {
@@ -397,7 +428,10 @@
     "skuGroup": {
       "40": "Ford GT GT2",
       "59": "Ford GT GT3"
-    }
+    },
+    "skuSeries": [
+      432
+    ]
   },
   "41": {
     "id": 41,
@@ -436,6 +470,7 @@
     "free": false,
     "price": 2.95,
     "sku": 10335,
+    "series": [],
     "logo": "/img/logos/partners/mclaren-logo.png"
   },
   "44": {
@@ -461,6 +496,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10344,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "46": {
@@ -472,6 +508,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10408,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "48": {
@@ -483,13 +520,15 @@
     "free": false,
     "price": 12.95,
     "sku": 10353,
+    "series": [],
     "logo": "/img/logos/partners/ruf-logo.png",
     "skuGroup": {
       "48": "Ruf RT 12R AWD",
       "49": "Ruf RT 12R RWD",
       "50": "Ruf RT 12R Track",
       "52": "Ruf RT 12R C-Spec"
-    }
+    },
+    "skuSeries": []
   },
   "49": {
     "id": 49,
@@ -500,6 +539,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10353,
+    "series": [],
     "logo": "/img/logos/partners/ruf-logo.png",
     "group": 48
   },
@@ -512,6 +552,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10353,
+    "series": [],
     "logo": "/img/logos/partners/ruf-logo.png",
     "group": 48
   },
@@ -524,6 +565,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10409,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "52": {
@@ -535,6 +577,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10353,
+    "series": [],
     "logo": "/img/logos/partners/ruf-logo.png",
     "group": 48
   },
@@ -562,6 +605,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10362,
+    "series": [],
     "logo": "/img/logos/partners/bmw-logo.png"
   },
   "56": {
@@ -573,6 +617,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10363,
+    "series": [],
     "logo": "/img/logos/partners/toyota-logo.png"
   },
   "57": {
@@ -598,6 +643,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10373,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "59": {
@@ -609,6 +655,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10281,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png",
     "group": 40
   },
@@ -621,6 +668,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10375,
+    "series": [],
     "logo": "/img/logos/partners/holden-logo.png"
   },
   "61": {
@@ -632,6 +680,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10379,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "64": {
@@ -673,6 +722,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10399,
+    "series": [],
     "logo": "/img/logos/partners/toyota-logo.png"
   },
   "70": {
@@ -684,6 +734,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10400,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "71": {
@@ -695,6 +746,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10402,
+    "series": [],
     "logo": "/img/logos/partners/mclaren-logo.png"
   },
   "72": {
@@ -706,6 +758,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10404,
+    "series": [],
     "logo": "/img/logos/partners/AMG-Logo.png"
   },
   "73": {
@@ -717,6 +770,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10405,
+    "series": [],
     "logo": "/img/logos/partners/audi-logo.png"
   },
   "74": {
@@ -728,6 +782,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10406,
+    "series": [],
     "logo": "/img/logos/partners/formularenault20-logo.png"
   },
   "76": {
@@ -775,7 +830,14 @@
       "78": "Dirt Late Model - Limited",
       "83": "Dirt Late Model - Pro",
       "84": "Dirt Late Model - Super"
-    }
+    },
+    "skuSeries": [
+      291,
+      306,
+      517,
+      308,
+      369
+    ]
   },
   "79": {
     "id": 79,
@@ -809,7 +871,15 @@
       "80": "Dirt Sprint Car - 305",
       "85": "Dirt Sprint Car - 360",
       "86": "Dirt Sprint Car - 410"
-    }
+    },
+    "skuSeries": [
+      292,
+      305,
+      515,
+      570,
+      307,
+      458
+    ]
   },
   "81": {
     "id": 81,
@@ -922,7 +992,11 @@
     "skuGroup": {
       "87": "Dirt Sprint Car - 360 Non-Winged",
       "89": "Dirt Sprint Car - 410 Non-Winged"
-    }
+    },
+    "skuSeries": [
+      310,
+      309
+    ]
   },
   "88": {
     "id": 88,
@@ -933,6 +1007,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10513,
+    "series": [],
     "logo": "/img/logos/partners/porsche-logo.png"
   },
   "89": {
@@ -967,7 +1042,13 @@
     "skuGroup": {
       "91": "VW Beetle",
       "138": "VW Beetle - Lite"
-    }
+    },
+    "skuSeries": [
+      325,
+      461,
+      459,
+      460
+    ]
   },
   "92": {
     "id": 92,
@@ -1006,6 +1087,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10514,
+    "series": [],
     "logo": "/img/logos/partners/ferrari-logo.png"
   },
   "95": {
@@ -1045,6 +1127,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10439,
+    "series": [],
     "logo": "/img/logos/partners/audi-logo.png"
   },
   "99": {
@@ -1072,6 +1155,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10442,
+    "series": [],
     "logo": "/img/logos/partners/porsche-logo.png"
   },
   "101": {
@@ -1112,6 +1196,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10447,
+    "series": [],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "104": {
@@ -1131,7 +1216,13 @@
     "skuGroup": {
       "104": "Lucas Oil Off Road Pro 2 Truck",
       "107": "Lucas Oil Off Road Pro 4 Truck"
-    }
+    },
+    "skuSeries": [
+      464,
+      490,
+      463,
+      391
+    ]
   },
   "105": {
     "id": 105,
@@ -1142,6 +1233,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10451,
+    "series": [],
     "logo": "/img/logos/partners/formularenault35-logo.png"
   },
   "106": {
@@ -1198,6 +1290,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10458,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "111": {
@@ -1299,6 +1392,7 @@
     "free": false,
     "price": 2.95,
     "sku": 10467,
+    "series": [],
     "logo": "/img/logos/partners/holden-logo.png"
   },
   "118": {
@@ -1310,6 +1404,7 @@
     "free": false,
     "price": 2.95,
     "sku": 10472,
+    "series": [],
     "logo": "/img/logos/partners/ford-logo.png"
   },
   "119": {
@@ -1479,7 +1574,12 @@
     "skuGroup": {
       "131": "Dirt Big Block Modified",
       "134": "Dirt 358 Modified"
-    }
+    },
+    "skuSeries": [
+      428,
+      518,
+      466
+    ]
   },
   "132": {
     "id": 132,
@@ -1564,6 +1664,7 @@
     "free": false,
     "price": 3.25,
     "sku": 10502,
+    "series": [],
     "logo": "/img/logos/partners/porsche-logo.png"
   },
   "138": {
@@ -1672,6 +1773,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10510,
+    "series": [],
     "logo": "/img/logos/partners/ferrari-logo.png"
   },
   "145": {
@@ -1683,6 +1785,7 @@
     "free": false,
     "price": 12.95,
     "sku": 10515,
+    "series": [],
     "logo": "/img/logos/partners/mercedesf1-logo.png"
   },
   "146": {
@@ -2091,7 +2194,11 @@
     "skuGroup": {
       "171": "Super Formula SF23 - Toyota",
       "172": "Super Formula SF23 - Honda"
-    }
+    },
+    "skuSeries": [
+      536,
+      537
+    ]
   },
   "172": {
     "id": 172,
@@ -2232,7 +2339,12 @@
       "181": "Dirt Micro Sprint Car - Non-Winged",
       "182": "Dirt Outlaw Micro Sprint Car - Winged",
       "183": "Dirt Outlaw Micro Sprint Car - Non-Winged"
-    }
+    },
+    "skuSeries": [
+      550,
+      558,
+      553
+    ]
   },
   "181": {
     "id": 181,
@@ -2257,6 +2369,7 @@
     "free": true,
     "price": 0,
     "sku": 10573,
+    "series": [],
     "group": 180
   },
   "183": {
@@ -2331,7 +2444,11 @@
     "skuGroup": {
       "186": "Street Stock - Casino M2",
       "187": "Street Stock - Eagle T3"
-    }
+    },
+    "skuSeries": [
+      182,
+      190
+    ]
   },
   "187": {
     "id": 187,

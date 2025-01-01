@@ -12,9 +12,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      5
-    ],
+    "cars": [5],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -139,9 +137,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      164
-    ],
+    "cars": [164],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -267,9 +263,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      1
-    ],
+    "cars": [1],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -399,9 +393,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      2
-    ],
+    "cars": [2],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -527,11 +519,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      123,
-      155,
-      111
-    ],
+    "cars": [123, 155, 111],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -624,9 +612,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      18
-    ],
+    "cars": [18],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -752,11 +738,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      139,
-      140,
-      141
-    ],
+    "cars": [139, 140, 141],
     "license": {
       "id": 5,
       "name": "Class A",
@@ -886,11 +868,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      114,
-      115,
-      116
-    ],
+    "cars": [114, 115, 116],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -985,9 +963,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      23
-    ],
+    "cars": [23],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -1117,9 +1093,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      25
-    ],
+    "cars": [25],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -1248,9 +1222,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      149
-    ],
+    "cars": [149],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -1379,9 +1351,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      31
-    ],
+    "cars": [31],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -1508,11 +1478,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      114,
-      115,
-      116
-    ],
+    "cars": [114, 115, 116],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -1643,12 +1609,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      122,
-      67,
-      160,
-      162
-    ],
+    "cars": [122, 67, 160, 162],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -1778,11 +1739,7 @@
     "official": false,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      139,
-      140,
-      141
-    ],
+    "cars": [139, 140, 141],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -1918,9 +1875,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      37
-    ],
+    "cars": [37],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -2047,9 +2002,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      99
-    ],
+    "cars": [99],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -2177,9 +2130,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      99
-    ],
+    "cars": [99],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -2309,9 +2260,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      67
-    ],
+    "cars": [67],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -2442,11 +2391,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      123,
-      155,
-      111
-    ],
+    "cars": [123, 155, 111],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -2575,9 +2520,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      99
-    ],
+    "cars": [99],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -2707,9 +2650,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      24
-    ],
+    "cars": [24],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -2839,11 +2780,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      36,
-      186,
-      187
-    ],
+    "cars": [36, 186, 187],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -2969,11 +2906,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      36,
-      186,
-      187
-    ],
+    "cars": [36, 186, 187],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -3097,11 +3030,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      139,
-      140,
-      141
-    ],
+    "cars": [139, 140, 141],
     "license": {
       "id": 5,
       "name": "Class A",
@@ -3231,9 +3160,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      42
-    ],
+    "cars": [42],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -3362,10 +3289,7 @@
     "official": true,
     "fixed": true,
     "multiclass": true,
-    "cars": [
-      44,
-      41
-    ],
+    "cars": [44, 41],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -3494,9 +3418,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      54
-    ],
+    "cars": [54],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -3623,18 +3545,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173
-    ],
+    "cars": [176, 194, 132, 133, 184, 169, 185, 156, 188, 173],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -3764,9 +3675,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      67
-    ],
+    "cars": [67],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -3896,18 +3805,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173
-    ],
+    "cars": [176, 194, 132, 133, 184, 169, 185, 156, 188, 173],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -4037,9 +3935,7 @@
     "official": false,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      20
-    ],
+    "cars": [20],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -4180,9 +4076,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      161
-    ],
+    "cars": [161],
     "license": {
       "id": 5,
       "name": "Class A",
@@ -4312,10 +4206,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      76,
-      77
-    ],
+    "cars": [76, 77],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -4446,9 +4337,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      78
-    ],
+    "cars": [78],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -4572,9 +4461,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      80
-    ],
+    "cars": [80],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -4698,9 +4585,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      143
-    ],
+    "cars": [143],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -4829,9 +4714,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      85
-    ],
+    "cars": [85],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -4952,9 +4835,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      83
-    ],
+    "cars": [83],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -5076,9 +4957,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      86
-    ],
+    "cars": [86],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -5200,9 +5079,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      84
-    ],
+    "cars": [84],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -5323,9 +5200,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      89
-    ],
+    "cars": [89],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -5447,9 +5322,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      87
-    ],
+    "cars": [87],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -5572,9 +5445,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      79
-    ],
+    "cars": [79],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -5697,9 +5568,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      82
-    ],
+    "cars": [82],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -5824,11 +5693,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      81,
-      101,
-      91
-    ],
+    "cars": [81, 101, 91],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -5960,9 +5825,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      96
-    ],
+    "cars": [96],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -6086,21 +5949,7 @@
     "fixed": false,
     "multiclass": true,
     "cars": [
-      128,
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173,
-      196,
-      168,
-      170,
-      174,
+      128, 176, 194, 132, 133, 184, 169, 185, 156, 188, 173, 196, 168, 170, 174,
       159
     ],
     "license": {
@@ -6180,9 +6029,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      173
-    ],
+    "cars": [173],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -6312,9 +6159,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      84
-    ],
+    "cars": [84],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -6435,9 +6280,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      107
-    ],
+    "cars": [107],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -6561,10 +6404,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      192,
-      190
-    ],
+    "cars": [192, 190],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -6694,10 +6534,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      192,
-      190
-    ],
+    "cars": [192, 190],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -6827,12 +6664,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      154,
-      124,
-      125,
-      175
-    ],
+    "cars": [154, 124, 125, 175],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -6960,9 +6792,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      120
-    ],
+    "cars": [120],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7092,9 +6922,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      54
-    ],
+    "cars": [54],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7221,9 +7049,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      31
-    ],
+    "cars": [31],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7351,21 +7177,7 @@
     "fixed": false,
     "multiclass": true,
     "cars": [
-      128,
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173,
-      196,
-      168,
-      170,
-      174,
+      128, 176, 194, 132, 133, 184, 169, 185, 156, 188, 173, 196, 168, 170, 174,
       159
     ],
     "license": {
@@ -7444,9 +7256,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      131
-    ],
+    "cars": [131],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7569,9 +7379,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      129
-    ],
+    "cars": [129],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7702,12 +7510,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      112,
-      146,
-      147,
-      153
-    ],
+    "cars": [112, 146, 147, 153],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -7836,9 +7639,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      106
-    ],
+    "cars": [106],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -7970,12 +7771,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      39,
-      40,
-      64,
-      26
-    ],
+    "cars": [39, 40, 64, 26],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -8107,9 +7903,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      164
-    ],
+    "cars": [164],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -8235,9 +8029,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      2
-    ],
+    "cars": [2],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -8363,9 +8155,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      95
-    ],
+    "cars": [95],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -8488,9 +8278,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      121
-    ],
+    "cars": [121],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -8620,18 +8408,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173
-    ],
+    "cars": [176, 194, 132, 133, 184, 169, 185, 156, 188, 173],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -8761,9 +8538,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      79
-    ],
+    "cars": [79],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -8892,21 +8667,7 @@
     "fixed": false,
     "multiclass": true,
     "cars": [
-      128,
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173,
-      196,
-      168,
-      170,
-      174,
+      128, 176, 194, 132, 133, 184, 169, 185, 156, 188, 173, 196, 168, 170, 174,
       159
     ],
     "license": {
@@ -9039,9 +8800,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      142
-    ],
+    "cars": [142],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -9171,9 +8930,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      106
-    ],
+    "cars": [106],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -9305,13 +9062,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      196,
-      168,
-      170,
-      174,
-      159
-    ],
+    "cars": [196, 168, 170, 174, 159],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -9442,9 +9193,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      86
-    ],
+    "cars": [86],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -9566,9 +9315,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      138
-    ],
+    "cars": [138],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -9700,9 +9447,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      138
-    ],
+    "cars": [138],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -9834,11 +9579,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      81,
-      101,
-      91
-    ],
+    "cars": [81, 101, 91],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -9970,9 +9711,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      113
-    ],
+    "cars": [113],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -10098,9 +9837,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      107
-    ],
+    "cars": [107],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -10225,9 +9962,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      104
-    ],
+    "cars": [104],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -10351,9 +10086,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      134
-    ],
+    "cars": [134],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -10477,9 +10210,7 @@
     "official": false,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      57
-    ],
+    "cars": [57],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -10616,9 +10347,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      143
-    ],
+    "cars": [143],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -10747,12 +10476,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      154,
-      124,
-      125,
-      175
-    ],
+    "cars": [154, 124, 125, 175],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -10888,12 +10612,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      154,
-      124,
-      125,
-      175
-    ],
+    "cars": [154, 124, 125, 175],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -11029,9 +10748,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      11
-    ],
+    "cars": [11],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -11158,9 +10875,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      161
-    ],
+    "cars": [161],
     "license": {
       "id": 5,
       "name": "Class A",
@@ -11290,9 +11005,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      104
-    ],
+    "cars": [104],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -11417,13 +11130,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      150,
-      119,
-      135,
-      157,
-      189
-    ],
+    "cars": [150, 119, 135, 157, 189],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -11551,17 +11258,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      112,
-      146,
-      147,
-      153,
-      150,
-      119,
-      135,
-      157,
-      189
-    ],
+    "cars": [112, 146, 147, 153, 150, 119, 135, 157, 189],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -11637,10 +11334,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      151,
-      152
-    ],
+    "cars": [151, 152],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -11770,9 +11464,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      148
-    ],
+    "cars": [148],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -11902,9 +11594,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      148
-    ],
+    "cars": [148],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -12034,14 +11724,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      165,
-      150,
-      119,
-      135,
-      157,
-      189
-    ],
+    "cars": [165, 150, 119, 135, 157, 189],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -12169,12 +11852,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      112,
-      146,
-      147,
-      153
-    ],
+    "cars": [112, 146, 147, 153],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -12303,9 +11981,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      158
-    ],
+    "cars": [158],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -12436,9 +12112,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      160
-    ],
+    "cars": [160],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -12569,9 +12243,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      85
-    ],
+    "cars": [85],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -12692,9 +12364,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      96
-    ],
+    "cars": [96],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -12817,9 +12487,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      83
-    ],
+    "cars": [83],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -12941,9 +12609,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      131
-    ],
+    "cars": [131],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -13066,9 +12732,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      162
-    ],
+    "cars": [162],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -13197,9 +12861,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      163
-    ],
+    "cars": [163],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -13329,9 +12991,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      163
-    ],
+    "cars": [163],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -13461,9 +13121,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      167
-    ],
+    "cars": [167],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -13591,9 +13249,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      165
-    ],
+    "cars": [165],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -13721,9 +13377,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      143
-    ],
+    "cars": [143],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -13855,9 +13509,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      30
-    ],
+    "cars": [30],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -13987,13 +13639,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      102,
-      92,
-      93,
-      109,
-      127
-    ],
+    "cars": [102, 92, 93, 109, 127],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -14125,10 +13771,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      171,
-      172
-    ],
+    "cars": [171, 172],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -14258,10 +13901,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      171,
-      172
-    ],
+    "cars": [171, 172],
     "license": {
       "id": 4,
       "name": "Class B",
@@ -14391,11 +14031,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      139,
-      140,
-      141
-    ],
+    "cars": [139, 140, 141],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -14522,21 +14158,7 @@
     "fixed": true,
     "multiclass": true,
     "cars": [
-      128,
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173,
-      196,
-      168,
-      170,
-      174,
+      128, 176, 194, 132, 133, 184, 169, 185, 156, 188, 173, 196, 168, 170, 174,
       159
     ],
     "license": {
@@ -14669,9 +14291,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      148
-    ],
+    "cars": [148],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -14799,9 +14419,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      148
-    ],
+    "cars": [148],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -14932,9 +14550,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      148
-    ],
+    "cars": [148],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -15063,9 +14679,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      180
-    ],
+    "cars": [180],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -15191,9 +14805,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      178
-    ],
+    "cars": [178],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -15323,9 +14935,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      178
-    ],
+    "cars": [178],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -15455,9 +15065,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      183
-    ],
+    "cars": [183],
     "license": {
       "id": 3,
       "name": "Class C",
@@ -15581,9 +15189,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      179
-    ],
+    "cars": [179],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -15708,9 +15314,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      189
-    ],
+    "cars": [189],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -15840,9 +15444,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      181
-    ],
+    "cars": [181],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -15968,18 +15570,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      176,
-      194,
-      132,
-      133,
-      184,
-      169,
-      185,
-      156,
-      188,
-      173
-    ],
+    "cars": [176, 194, 132, 133, 184, 169, 185, 156, 188, 173],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -16109,9 +15700,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      5
-    ],
+    "cars": [5],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -16241,9 +15830,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      120
-    ],
+    "cars": [120],
     "license": {
       "id": 2,
       "name": "Class D",
@@ -16371,9 +15958,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      191
-    ],
+    "cars": [191],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -16499,9 +16084,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      193
-    ],
+    "cars": [193],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -16629,9 +16212,7 @@
     "official": true,
     "fixed": false,
     "multiclass": false,
-    "cars": [
-      86
-    ],
+    "cars": [86],
     "license": {
       "id": 5,
       "name": "Class A",
@@ -16735,9 +16316,7 @@
     "official": true,
     "fixed": true,
     "multiclass": false,
-    "cars": [
-      195
-    ],
+    "cars": [195],
     "license": {
       "id": 1,
       "name": "Rookie",
@@ -16868,14 +16447,7 @@
     "official": true,
     "fixed": false,
     "multiclass": true,
-    "cars": [
-      165,
-      150,
-      119,
-      135,
-      157,
-      189
-    ],
+    "cars": [165, 150, 119, 135, 157, 189],
     "license": {
       "id": 3,
       "name": "Class C",

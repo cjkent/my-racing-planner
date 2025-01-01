@@ -26,6 +26,7 @@ export type TContent = {
   price: number;
   sku: number;
   series?: number[];
+  skuSeries?: number[];
   logo?: string;
   skuGroup?: { [key: string | number]: string };
   group?: number;

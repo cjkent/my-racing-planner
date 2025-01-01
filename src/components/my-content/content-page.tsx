@@ -98,7 +98,7 @@ function ContentPage({
             categories={item.categories}
             free={item.free}
             skuGroup={item.skuGroup ? Object.values(item.skuGroup) : undefined}
-            series={item.series}
+            series={item.skuSeries ? item.skuSeries : item.series}
             owned={myContent.includes(item.id)}
             favorite={favorites.includes(item.id)}
             wish={wish.includes(item.id)}
