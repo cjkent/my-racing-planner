@@ -2,10 +2,14 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export enum ETabs {
-  MySeries = 0,
-  MyCars = 1,
-  MyTracks = 2,
-  Settings = 3,
+  MySeason,
+  MySeries,
+  MyCars,
+  MyTracks,
+  ShopGuide,
+  Wishlist,
+  About,
+  Settings,
 }
 
 export const useUiStore = create(

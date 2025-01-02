@@ -26,10 +26,14 @@ function MainContainer() {
         overflow={"hidden"}
         boxShadow={"rgba(5, 5, 15, 0.16) 0px 12px 24px -2px"}
       >
+        {selectedTab === ETabs.MySeason && <>My Season</>}
         {selectedTab === ETabs.MySeries && <SeriesPage />}
         {selectedTab === ETabs.MyCars && <CarsPage />}
         {selectedTab === ETabs.MyTracks && <TracksPage />}
+        {selectedTab === ETabs.Wishlist && <>Wishlist</>}
+        {selectedTab === ETabs.ShopGuide && <>Shop Guide</>}
         {selectedTab === ETabs.Settings && <>Settings</>}
+        {selectedTab === ETabs.About && <>About</>}
       </Flex>
     </Flex>
   );
