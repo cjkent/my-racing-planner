@@ -28,50 +28,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "skuGroup": {
-      "2": "[Retired] Full Course",
-      "3": "[Retired] Patriot",
-      "4": "[Retired] North",
-      "5": "[Retired] Grand West",
-      "6": "[Retired] Grand East",
-      "7": "[Retired] South",
-      "141": "[Retired] Patriot Reverse",
-      "465": "Full Course",
-      "466": "Grand Course",
-      "467": "North Course",
-      "468": "South Course",
-      "469": "Patriot Course"
-    },
-    "skuSeries": [
-      519,
-      530,
-      505,
-      557,
-      63,
-      210,
-      491,
-      502,
-      525,
-      231,
-      432,
-      551,
-      552,
-      536,
-      537,
-      572,
-      112,
-      353,
-      559,
-      139,
-      571,
-      562,
-      493,
-      455,
-      520,
-      34,
-      541,
-      514
-    ]
+    "group": 465
   },
   "3": {
     "id": 3,
@@ -84,7 +41,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "4": {
     "id": 4,
@@ -97,7 +54,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "5": {
     "id": 5,
@@ -110,7 +67,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "6": {
     "id": 6,
@@ -123,7 +80,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "7": {
     "id": 7,
@@ -136,7 +93,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "8": {
     "id": 8,
@@ -1423,51 +1380,7 @@
     "price": 15.95,
     "sku": 10060,
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "skuGroup": {
-      "106": "[Retired] Cup",
-      "107": "[Retired] Boot",
-      "108": "[Retired] Classic Boot",
-      "109": "[Retired] Classic",
-      "432": "Classic",
-      "433": "Cup",
-      "434": "Boot",
-      "435": "Classic Boot"
-    },
-    "skuSeries": [
-      481,
-      482,
-      530,
-      430,
-      503,
-      413,
-      514,
-      562,
-      505,
-      210,
-      491,
-      502,
-      525,
-      432,
-      535,
-      457,
-      419,
-      447,
-      539,
-      572,
-      399,
-      405,
-      443,
-      34,
-      541,
-      429,
-      551,
-      552,
-      414,
-      165,
-      133,
-      536,
-      537
-    ]
+    "group": 432
   },
   "107": {
     "id": 107,
@@ -1480,7 +1393,7 @@
     "price": 15.95,
     "sku": 10060,
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "108": {
     "id": 108,
@@ -1493,7 +1406,7 @@
     "price": 15.95,
     "sku": 10060,
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "109": {
     "id": 109,
@@ -1506,7 +1419,7 @@
     "price": 15.95,
     "sku": 10060,
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "110": {
     "id": 110,
@@ -2076,7 +1989,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "142": {
     "id": 142,
@@ -6794,7 +6707,51 @@
       413
     ],
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "skuGroup": {
+      "106": "[Retired] Cup",
+      "107": "[Retired] Boot",
+      "108": "[Retired] Classic Boot",
+      "109": "[Retired] Classic",
+      "432": "Classic",
+      "433": "Cup",
+      "434": "Boot",
+      "435": "Classic Boot"
+    },
+    "skuSeries": [
+      481,
+      482,
+      530,
+      430,
+      503,
+      413,
+      514,
+      562,
+      505,
+      210,
+      491,
+      502,
+      525,
+      432,
+      535,
+      457,
+      419,
+      447,
+      539,
+      572,
+      399,
+      405,
+      443,
+      34,
+      541,
+      429,
+      551,
+      552,
+      414,
+      165,
+      133,
+      536,
+      537
+    ]
   },
   "433": {
     "id": 433,
@@ -6812,7 +6769,7 @@
       505
     ],
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "434": {
     "id": 434,
@@ -6838,7 +6795,7 @@
       572
     ],
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "435": {
     "id": 435,
@@ -6866,7 +6823,7 @@
       537
     ],
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 106
+    "group": 432
   },
   "436": {
     "id": 436,
@@ -7345,7 +7302,50 @@
       572
     ],
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "skuGroup": {
+      "2": "[Retired] Full Course",
+      "3": "[Retired] Patriot",
+      "4": "[Retired] North",
+      "5": "[Retired] Grand West",
+      "6": "[Retired] Grand East",
+      "7": "[Retired] South",
+      "141": "[Retired] Patriot Reverse",
+      "465": "Full Course",
+      "466": "Grand Course",
+      "467": "North Course",
+      "468": "South Course",
+      "469": "Patriot Course"
+    },
+    "skuSeries": [
+      519,
+      530,
+      505,
+      557,
+      63,
+      210,
+      491,
+      502,
+      525,
+      231,
+      432,
+      551,
+      552,
+      536,
+      537,
+      572,
+      112,
+      353,
+      559,
+      139,
+      571,
+      562,
+      493,
+      455,
+      520,
+      34,
+      541,
+      514
+    ]
   },
   "466": {
     "id": 466,
@@ -7363,7 +7363,7 @@
       559
     ],
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "467": {
     "id": 467,
@@ -7386,7 +7386,7 @@
       541
     ],
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "468": {
     "id": 468,
@@ -7402,7 +7402,7 @@
       514
     ],
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "469": {
     "id": 469,
@@ -7415,7 +7415,7 @@
     "price": 0,
     "sku": 10031,
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 2
+    "group": 465
   },
   "470": {
     "id": 470,

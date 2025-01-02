@@ -86,10 +86,11 @@ function ContentPage({
         children={(item) => (
           <ContentTableRow
             key={item.id}
+            id={item.id}
+            sku={item.sku}
             content={content}
             infoUrl={infoUrl(item.id)}
             skuIcon={skuIcon}
-            id={item.id}
             price={item.price}
             name={item.name}
             logo={item.logo}
@@ -97,8 +98,8 @@ function ContentPage({
             free={item.free}
             skuGroup={item.skuGroup ? Object.values(item.skuGroup) : undefined}
             series={item.skuSeries ? item.skuSeries : item.series}
-            owned={myContent.includes(item.id)}
-            wish={wish.includes(item.id)}
+            owned={myContent.includes(item.sku)}
+            wish={wish.includes(item.sku)}
           />
         )}
       />

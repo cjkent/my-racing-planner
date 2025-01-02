@@ -35,8 +35,8 @@ function ContentPopover({
             children={(item: number) => {
               const contentItem =
                 contentList[item.toString() as keyof typeof contentList];
-              const wish = wishes.includes(contentItem?.id);
-              const owned = myContent.includes(contentItem?.id);
+              const wish = wishes.includes(contentItem?.sku);
+              const owned = myContent.includes(contentItem?.sku);
               return (
                 contentItem && (
                   <Table.Row key={item}>
@@ -65,12 +65,12 @@ function ContentPopover({
                         onClick={(e) => e.stopPropagation()}
                         onCheckedChange={() => {
                           if (owned) {
-                            setMy(contentItem.id, false);
-                            setWish(contentItem.id, true);
+                            setMy(contentItem.sku, false);
+                            setWish(contentItem.sku, true);
                           } else if (wish) {
-                            setWish(contentItem.id, false);
+                            setWish(contentItem.sku, false);
                           } else {
-                            setMy(contentItem.id, true);
+                            setMy(contentItem.sku, true);
                           }
                         }}
                       />

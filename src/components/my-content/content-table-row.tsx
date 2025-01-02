@@ -36,6 +36,7 @@ import SeriesPopover from "./series-popover";
 function ContentTableRow({
   content,
   id,
+  sku,
   price,
   name,
   logo,
@@ -50,6 +51,7 @@ function ContentTableRow({
 }: {
   content: "cars" | "tracks";
   id: number;
+  sku: number;
   price: number;
   name: string;
   logo?: string;
@@ -85,12 +87,12 @@ function ContentTableRow({
           onClick={(e) => e.stopPropagation()}
           onCheckedChange={() => {
             if (owned) {
-              setMy(id, false);
-              setWish(id, true);
+              setMy(sku, false);
+              setWish(sku, true);
             } else if (wish) {
-              setWish(id, false);
+              setWish(sku, false);
             } else {
-              setMy(id, true);
+              setMy(sku, true);
             }
           }}
         />

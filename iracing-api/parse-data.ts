@@ -12,6 +12,13 @@ import TRACKS_JSON from "./raw/tracks.json";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const isLegacy = (name: string) => {
+  return (
+    name.toLowerCase().includes("legacy") ||
+    name.toLowerCase().includes("retired")
+  );
+};
+
 (async () => {
   const classesById = CLASSES_JSON.reduce(
     (acc, curr) => ({
@@ -127,20 +134,46 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
   }));
 
   const tracksById = parsedTracks.reduce((acc, curr) => {
-    const existing = Object.values(acc).find((item) => item.sku === curr.sku);
+    const existing = Object.values(acc).find(
+      (item) => item.sku === curr.sku && !("group" in item),
+    );
     if (existing) {
-      acc[curr.id] = { ...curr, group: existing.id };
-      if (!acc[existing.id].categories.includes(curr.categories[0])) {
-        acc[existing.id].categories.push(curr.categories[0]);
+      if (isLegacy(existing.name) && !isLegacy(curr.name)) {
+        acc[curr.id] = {
+          ...curr,
+          categories: existing.categories,
+          skuGroup: { ...(existing.skuGroup ?? {}) },
+          skuSeries: existing.skuSeries
+            ? [...(existing.skuSeries ?? [])]
+            : undefined,
+        };
+        Object.keys(existing.skuGroup || {}).forEach((each) => {
+          if (each !== curr.id.toString() && acc[each])
+            acc[each].group = curr.id;
+        });
+        delete existing.skuGroup;
+        delete existing.skuSeries;
+        acc[existing.id] = { ...existing, group: curr.id };
+      } else {
+        acc[curr.id] = { ...curr, group: existing.id };
       }
     } else {
-      const skuGroup = parsedTracks
-        .filter((item) => item.sku === curr.sku)
-        .reduce((acc, curr) => ({ ...acc, [curr.id]: curr.config }), {});
+      const skuGroupItems = parsedTracks.filter(
+        (item) => item.sku === curr.sku,
+      );
+      const skuGroup = skuGroupItems.reduce(
+        (acc, curr) => ({ ...acc, [curr.id]: curr.config }),
+        {},
+      );
+
+      const categories = [
+        ...new Set(skuGroupItems.map((item) => item.categories[0])),
+      ];
 
       const skuKeys = Object.keys(skuGroup);
       acc[curr.id] = {
         ...curr,
+        categories,
         skuGroup: skuKeys.length > 1 ? skuGroup : undefined,
         skuSeries:
           skuKeys.length > 1

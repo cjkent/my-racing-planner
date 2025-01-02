@@ -1,19 +1,27 @@
 import useSeason from "@/hooks/useSeason";
 import { IR_URL } from "@/ir-data/utils/urls";
 import { useIr } from "@/store/ir";
-import { Center, Flex, For, Image, Table, Text } from "@chakra-ui/react";
+import {
+  Center,
+  Flex,
+  For,
+  Image,
+  Table,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import { Tooltip } from "../ui/tooltip";
 
 function SeasonPage() {
   const { weeksStartDates, seriesDateMap } = useSeason();
-  const { favoriteSeries } = useIr();
+  const { myTracks, wishTracks, favoriteSeries } = useIr();
 
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
       <Table.ScrollArea>
-        <Table.Root size="sm" fontSize={"14px"} textAlign={"center"}>
+        <Table.Root size="sm" showColumnBorder>
           <Table.Header>
             <Table.Row>
               <Table.ColumnHeader>Week</Table.ColumnHeader>
@@ -39,11 +47,16 @@ function SeasonPage() {
                             openDelay={200}
                             closeDelay={100}
                           >
-                            <Image
-                              h="24px"
-                              fit="contain"
-                              src={`${IR_URL.image}/img/logos/series/${series.logo}`}
-                            />
+                            <VStack>
+                              <Image
+                                h="40px"
+                                fit="contain"
+                                src={`${IR_URL.image}/img/logos/series/${series.logo}`}
+                              />
+                              <Text truncate maxW={"200px"}>
+                                {series.name}
+                              </Text>
+                            </VStack>
                           </Tooltip>
                         </Center>
                       )}
@@ -58,7 +71,7 @@ function SeasonPage() {
               each={weeksStartDates}
               children={(date, i) => {
                 return (
-                  <Table.Row key={date}>
+                  <Table.Row key={date} height="60px">
                     <Table.Cell minW="30px">
                       <Tooltip
                         content={date}
@@ -67,24 +80,36 @@ function SeasonPage() {
                         openDelay={200}
                         closeDelay={100}
                       >
-                        <Text>{i + 1}</Text>
+                        <Text textAlign={"right"}>{i + 1}</Text>
                       </Tooltip>
                     </Table.Cell>
                     <For
                       each={favoriteSeries}
-                      children={(seriesId) => (
-                        <Table.Cell key={seriesId}>
-                          <Text lineClamp="2">
-                            {
-                              TRACKS_JSON[
-                                seriesDateMap[
-                                  seriesId as keyof typeof seriesDateMap
-                                ][date] as keyof typeof TRACKS_JSON
-                              ].name
+                      children={(seriesId) => {
+                        const trackId =
+                          seriesDateMap[seriesId as keyof typeof seriesDateMap][
+                            date
+                          ];
+                        const track =
+                          TRACKS_JSON[trackId as keyof typeof TRACKS_JSON];
+                        return (
+                          <Table.Cell
+                            key={seriesId}
+                            textAlign={"center"}
+                            bgColor={
+                              track.free
+                                ? "green.100"
+                                : myTracks.includes(track.sku)
+                                ? "green.200"
+                                : wishTracks.includes(track.sku)
+                                ? "blue.200"
+                                : undefined
                             }
-                          </Text>
-                        </Table.Cell>
-                      )}
+                          >
+                            <Text lineClamp="2">{track.name}</Text>
+                          </Table.Cell>
+                        );
+                      }}
                     />
                   </Table.Row>
                 );
