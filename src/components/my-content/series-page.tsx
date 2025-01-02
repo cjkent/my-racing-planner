@@ -71,7 +71,7 @@ function SeriesPage() {
             favorite={favoriteSeries.includes(item.id)}
             fixed={item.fixed}
             cars={item.cars}
-            tracks={item.weeks.map((w) => w.track.id)}
+            tracks={[...new Set(item.weeks.map((w) => w.track.id))]}
             license={item.license.letter}
             color={item.license.color}
             duration={item.duration}

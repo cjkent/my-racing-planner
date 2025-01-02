@@ -6,7 +6,7 @@ import { faCar } from "@fortawesome/free-solid-svg-icons";
 import ContentPage from "./content-page";
 
 function CarsPage() {
-  const { myCars, wishCars, favoriteCars } = useIr();
+  const { myCars, wishCars } = useIr();
   return (
     <ContentPage
       allTab={ECarCategories.all}
@@ -15,7 +15,6 @@ function CarsPage() {
       description={
         "Mark the cars you own and select your favorites. Use the wishlist to preview the content before you buy it."
       }
-      favorites={favoriteCars}
       freeCount={FREE_CARS}
       infoUrl={(id) => `${IR_URL.members}/shop/cars?carId=${id}`}
       myContent={myCars}

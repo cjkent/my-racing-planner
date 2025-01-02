@@ -1,6 +1,4 @@
 import {
-  setFavoriteCar,
-  setFavoriteTrack,
   setMyCar,
   setMyTrack,
   setWishCar,
@@ -13,7 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CARS_JSON from "../../ir-data/cars.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import { Checkbox } from "../ui/checkbox";
-import StarCheckbox from "./star-checkbox";
 
 function ContentPopover({
   content,
@@ -22,26 +19,12 @@ function ContentPopover({
   content: string;
   list: number[];
 }) {
-  const [setMy, setWish, setFavorite] =
-    content === "cars"
-      ? [setMyCar, setWishCar, setFavoriteCar]
-      : [setMyTrack, setWishTrack, setFavoriteTrack];
-
+  const [setMy, setWish] =
+    content === "cars" ? [setMyCar, setWishCar] : [setMyTrack, setWishTrack];
   const contentList: any = content === "cars" ? CARS_JSON : TRACKS_JSON;
-
-  const {
-    favoriteCars,
-    favoriteTracks,
-    wishCars,
-    wishTracks,
-    myCars,
-    myTracks,
-  } = useIr();
-
-  const [favorites, wishes, myContent] =
-    content === "cars"
-      ? [favoriteCars, wishCars, myCars]
-      : [favoriteTracks, wishTracks, myTracks];
+  const { wishCars, wishTracks, myCars, myTracks } = useIr();
+  const [wishes, myContent] =
+    content === "cars" ? [wishCars, myCars] : [wishTracks, myTracks];
 
   return (
     <Table.ScrollArea width="100%" maxH={"320px"}>
@@ -57,34 +40,6 @@ function ContentPopover({
               return (
                 contentItem && (
                   <Table.Row key={item}>
-                    <Table.Cell
-                      w={"20px"}
-                      textAlign={"center"}
-                      p={0}
-                      borderBottom={0}
-                      px={"4px"}
-                    >
-                      <StarCheckbox
-                        size={"xs"}
-                        mt={"4px"}
-                        checked={favorites.includes(item)}
-                        onCheckedChange={(e) =>
-                          setFavorite(contentItem.id, !!e.checked)
-                        }
-                      />
-                    </Table.Cell>
-                    <Table.Cell
-                      width={"100%"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      p={0}
-                      borderBottom={0}
-                      px={"4px"}
-                      fontWeight={"bold"}
-                      maxW={"264px"}
-                    >
-                      <Text truncate>{contentItem.name}</Text>
-                    </Table.Cell>
                     <Table.Cell w={"20px"} p={0} borderBottom={0} px={"4px"}>
                       <Checkbox
                         size={"xs"}
@@ -119,6 +74,18 @@ function ContentPopover({
                           }
                         }}
                       />
+                    </Table.Cell>
+                    <Table.Cell
+                      width={"100%"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      p={0}
+                      borderBottom={0}
+                      px={"4px"}
+                      fontWeight={"bold"}
+                      maxW={"284px"}
+                    >
+                      <Text truncate>{contentItem.name}</Text>
                     </Table.Cell>
                   </Table.Row>
                 )

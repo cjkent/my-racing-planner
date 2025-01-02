@@ -6,7 +6,7 @@ import { faRoad } from "@fortawesome/free-solid-svg-icons";
 import ContentPage from "./content-page";
 
 function TracksPage() {
-  const { myTracks, wishTracks, favoriteTracks } = useIr();
+  const { myTracks, wishTracks } = useIr();
   return (
     <ContentPage
       allTab={ETrackCategories.all}
@@ -15,7 +15,6 @@ function TracksPage() {
       description={
         "Mark the tracks you own and select your favorites. Use the wishlist to preview the content before you buy it."
       }
-      favorites={favoriteTracks}
       freeCount={FREE_TRACKS}
       infoUrl={(id) => `${IR_URL.members}/shop/tracks?trackId=${id}`}
       myContent={myTracks}

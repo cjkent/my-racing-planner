@@ -43,7 +43,7 @@ function SeriesTable<T extends string | number | Dict | undefined>({
           <Table.Header>
             <Table.Row>
               <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
-                <VisuallyHidden>License</VisuallyHidden>
+                <VisuallyHidden>Favorite</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"60px"} textAlign={"center"}>
                 <VisuallyHidden>Series Logo</VisuallyHidden>
@@ -63,6 +63,9 @@ function SeriesTable<T extends string | number | Dict | undefined>({
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 Duration
+              </Table.ColumnHeader>
+              <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
+                License
               </Table.ColumnHeader>
               <Table.ColumnHeader minWidth={"90px"}>
                 <VisuallyHidden>Info on iracing.com</VisuallyHidden>

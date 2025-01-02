@@ -59,9 +59,11 @@ function SeriesTableRow({
   return (
     <Table.Row>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
-        <LicenseBadge letter={license} color={color}>
-          {license}
-        </LicenseBadge>
+        <StarCheckbox
+          onClick={(e) => e.stopPropagation()}
+          checked={favorite}
+          onCheckedChange={(e) => setFavoriteSeriesItem(id, !!e.checked)}
+        />
       </Table.Cell>
       <Table.Cell minWidth={"60px"} textAlign={"center"}>
         {logo && (
@@ -97,11 +99,6 @@ function SeriesTableRow({
           </Badge>
         )}
         <ContentNameBadge name={name} />
-        <StarCheckbox
-          onClick={(e) => e.stopPropagation()}
-          checked={favorite}
-          onCheckedChange={(e) => setFavoriteSeriesItem(id, !!e.checked)}
-        />
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {fixed && (
@@ -163,6 +160,11 @@ function SeriesTableRow({
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <DurationBadge duration={duration} laps={laps} />
+      </Table.Cell>
+      <Table.Cell minWidth={"40px"} textAlign={"center"}>
+        <LicenseBadge letter={license} color={color}>
+          {license}
+        </LicenseBadge>
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign="end">
         <InfoButton href={infoUrl} />

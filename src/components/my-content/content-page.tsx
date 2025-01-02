@@ -13,7 +13,6 @@ function ContentPage({
   content,
   contentListJson,
   description,
-  favorites,
   freeCount,
   infoUrl,
   myContent,
@@ -26,7 +25,6 @@ function ContentPage({
   content: "cars" | "tracks";
   contentListJson: TContent[];
   description: string;
-  favorites: number[];
   freeCount: number;
   infoUrl: (id: number) => string;
   myContent: number[];
@@ -100,7 +98,6 @@ function ContentPage({
             skuGroup={item.skuGroup ? Object.values(item.skuGroup) : undefined}
             series={item.skuSeries ? item.skuSeries : item.series}
             owned={myContent.includes(item.id)}
-            favorite={favorites.includes(item.id)}
             wish={wish.includes(item.id)}
           />
         )}

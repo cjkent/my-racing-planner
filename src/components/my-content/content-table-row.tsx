@@ -7,14 +7,7 @@ import {
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { Category } from "@/ir-data/utils/types";
 import { IR_URL } from "@/ir-data/utils/urls";
-import {
-  setFavoriteCar,
-  setFavoriteTrack,
-  setMyCar,
-  setMyTrack,
-  setWishCar,
-  setWishTrack,
-} from "@/store/ir";
+import { setMyCar, setMyTrack, setWishCar, setWishTrack } from "@/store/ir";
 import {
   Badge,
   Center,
@@ -39,7 +32,6 @@ import ContentNameBadge from "./content-name-badge";
 import InfoButton from "./info-button";
 import PriceBadge from "./price-badge";
 import SeriesPopover from "./series-popover";
-import StarCheckbox from "./star-checkbox";
 
 function ContentTableRow({
   content,
@@ -54,7 +46,6 @@ function ContentTableRow({
   skuIcon,
   infoUrl,
   owned,
-  favorite,
   wish,
 }: {
   content: "cars" | "tracks";
@@ -65,17 +56,14 @@ function ContentTableRow({
   categories: string[];
   free: boolean;
   owned: boolean;
-  favorite: boolean;
   wish: boolean;
   skuGroup?: string[];
   series?: number[];
   skuIcon: IconDefinition;
   infoUrl: string;
 }) {
-  const [setMy, setWish, setFavorite] =
-    content === "cars"
-      ? [setMyCar, setWishCar, setFavoriteCar]
-      : [setMyTrack, setWishTrack, setFavoriteTrack];
+  const [setMy, setWish] =
+    content === "cars" ? [setMyCar, setWishCar] : [setMyTrack, setWishTrack];
 
   return (
     <Table.Row>
@@ -132,11 +120,6 @@ function ContentTableRow({
       </Table.Cell>
       <Table.Cell width={"100%"} display={"flex"} alignItems={"center"}>
         <ContentNameBadge name={name} />
-        <StarCheckbox
-          onClick={(e) => e.stopPropagation()}
-          checked={favorite}
-          onCheckedChange={(e) => setFavorite(id, !!e.checked)}
-        />
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {skuGroup && (
