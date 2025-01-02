@@ -1,6 +1,7 @@
 import { ETabs, useUi } from "@/store/ui";
 import { Flex } from "@chakra-ui/react";
 import CarsPage from "../my-content/cars-page";
+import SeasonPage from "../my-content/season-page";
 import SeriesPage from "../my-content/series-page";
 import TracksPage from "../my-content/tracks-page";
 
@@ -26,7 +27,7 @@ function MainContainer() {
         overflow={"hidden"}
         boxShadow={"rgba(5, 5, 15, 0.16) 0px 12px 24px -2px"}
       >
-        {selectedTab === ETabs.MySeason && <>My Season</>}
+        {selectedTab === ETabs.MySeason && <SeasonPage />}
         {selectedTab === ETabs.MySeries && <SeriesPage />}
         {selectedTab === ETabs.MyCars && <CarsPage />}
         {selectedTab === ETabs.MyTracks && <TracksPage />}

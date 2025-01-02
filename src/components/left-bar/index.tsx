@@ -34,7 +34,7 @@ function LeftBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Stack
-      width="80px"
+      minW="80px"
       height="100%"
       justifyContent="space-between"
       paddingTop="16px"
