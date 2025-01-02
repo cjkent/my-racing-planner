@@ -2,6 +2,22 @@ import { useIr } from "@/store/ir";
 import { useMemo } from "react";
 import SERIES_JSON from "../ir-data/series.json";
 
+function getPreviousTuesday(date: string): string {
+  const inputDate = new Date(date);
+  const utcDay = inputDate.getUTCDay();
+
+  if (utcDay !== 2) {
+    const offset = utcDay - 2;
+    inputDate.setUTCDate(inputDate.getUTCDate() - offset);
+  }
+
+  const year = inputDate.getUTCFullYear();
+  const month = String(inputDate.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(inputDate.getUTCDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
 const useSeason = () => {
   const { favoriteSeries } = useIr();
 
@@ -12,7 +28,7 @@ const useSeason = () => {
           .map((seriesId) =>
             SERIES_JSON[
               seriesId.toString() as keyof typeof SERIES_JSON
-            ].weeks.map((w) => w.date),
+            ].weeks.map((w) => getPreviousTuesday(w.date)),
           )
           .flat(),
       ),
@@ -28,7 +44,10 @@ const useSeason = () => {
           [curr]: SERIES_JSON[
             curr.toString() as keyof typeof SERIES_JSON
           ].weeks.reduce(
-            (acc2, curr2) => ({ ...acc2, [curr2.date]: curr2.track.id }),
+            (acc2, curr2) => ({
+              ...acc2,
+              [getPreviousTuesday(curr2.date)]: curr2.track.id,
+            }),
             {},
           ),
         }),
