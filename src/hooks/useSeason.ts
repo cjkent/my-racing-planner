@@ -2,7 +2,7 @@ import { useIr } from "@/store/ir";
 import { useMemo } from "react";
 import SERIES_JSON from "../ir-data/series.json";
 
-function getPreviousTuesday(date: string): string {
+export function getPreviousTuesday(date: string): string {
   const inputDate = new Date(date);
   const utcDay = inputDate.getUTCDay();
 
@@ -11,9 +11,13 @@ function getPreviousTuesday(date: string): string {
     inputDate.setUTCDate(inputDate.getUTCDate() - offset);
   }
 
-  const year = inputDate.getUTCFullYear();
-  const month = String(inputDate.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(inputDate.getUTCDate()).padStart(2, "0");
+  return formatDate(inputDate);
+}
+
+export function formatDate(date: Date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
 
   return `${year}-${month}-${day}`;
 }

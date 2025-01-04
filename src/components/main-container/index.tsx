@@ -6,7 +6,7 @@ import SeriesPage from "../my-content/series-page";
 import TracksPage from "../my-content/tracks-page";
 
 function MainContainer() {
-  const { selectedTab } = useUi();
+  const { selectedPage } = useUi();
   return (
     <Flex
       direction={"column"}
@@ -27,14 +27,14 @@ function MainContainer() {
         overflow={"hidden"}
         boxShadow={"rgba(5, 5, 15, 0.16) 0px 12px 24px -2px"}
       >
-        {selectedTab === ETabs.MySeason && <SeasonPage />}
-        {selectedTab === ETabs.MySeries && <SeriesPage />}
-        {selectedTab === ETabs.MyCars && <CarsPage />}
-        {selectedTab === ETabs.MyTracks && <TracksPage />}
-        {selectedTab === ETabs.Wishlist && <>Wishlist</>}
-        {selectedTab === ETabs.ShopGuide && <>Shop Guide</>}
-        {selectedTab === ETabs.Settings && <>Settings</>}
-        {selectedTab === ETabs.About && <>About</>}
+        {selectedPage === ETabs.MySeason && <SeasonPage />}
+        {selectedPage === ETabs.MySeries && <SeriesPage />}
+        {selectedPage === ETabs.MyCars && <CarsPage />}
+        {selectedPage === ETabs.MyTracks && <TracksPage />}
+        {selectedPage === ETabs.Wishlist && <>Wishlist</>}
+        {selectedPage === ETabs.ShopGuide && <>Shop Guide</>}
+        {selectedPage === ETabs.Settings && <>Settings</>}
+        {selectedPage === ETabs.About && <>About</>}
       </Flex>
     </Flex>
   );

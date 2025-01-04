@@ -77,7 +77,7 @@ function ContentHeader({
         </Tooltip>
         <Tooltip
           content={
-            "Content you wish to buy, select to preview it in your series planner"
+            "Content you wish to buy, select to preview it in your season planner"
           }
           showArrow
           positioning={{ placement: "left" }}

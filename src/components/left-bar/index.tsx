@@ -1,4 +1,4 @@
-import { ETabs, useUi } from "@/store/ui";
+import { ETabs, setSelectedPage, useUi } from "@/store/ui";
 import { For, Stack } from "@chakra-ui/react";
 import {
   faBookmark,
@@ -30,7 +30,7 @@ const tabsBottom = [
 ];
 
 function LeftBar() {
-  const { selectedTab, setSelectedTab } = useUi();
+  const { selectedPage } = useUi();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Stack
@@ -48,8 +48,8 @@ function LeftBar() {
               key={tab.index}
               label={tab.label}
               icon={tab.icon}
-              selected={selectedTab === tab.index}
-              onClick={() => setSelectedTab(tab.index)}
+              selected={selectedPage === tab.index}
+              onClick={() => setSelectedPage(tab.index)}
             />
           )}
         />
@@ -62,8 +62,8 @@ function LeftBar() {
               key={tab.index}
               label={tab.label}
               icon={tab.icon}
-              selected={selectedTab === tab.index}
-              onClick={() => setSelectedTab(tab.index)}
+              selected={selectedPage === tab.index}
+              onClick={() => setSelectedPage(tab.index)}
             />
           )}
         />
