@@ -1,15 +1,17 @@
-import { Badge, FormatNumber } from "@chakra-ui/react";
+import { Badge, BadgeProps, FormatNumber } from "@chakra-ui/react";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function PriceBadge({ price }: { price: number }) {
+function PriceBadge({ price, ...rest }: BadgeProps & { price: number }) {
   return price > 0 ? (
-    <Badge colorPalette={"orange"}>
+    <Badge colorPalette={"orange"} {...rest}>
       <FontAwesomeIcon icon={faShoppingCart} size="xs" />
       <FormatNumber value={price} style="currency" currency="USD" />
     </Badge>
   ) : (
-    <Badge colorPalette={"green"}>Free</Badge>
+    <Badge colorPalette={"green"} {...rest}>
+      Free
+    </Badge>
   );
 }
 

@@ -101,6 +101,8 @@ function ContentTableRow({
         {logo && (
           <Center>
             <Tooltip
+              lazyMount
+              unmountOnExit
               key={logo}
               content={
                 <Image
@@ -126,6 +128,8 @@ function ContentTableRow({
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {skuGroup && (
           <Tooltip
+            lazyMount
+            unmountOnExit
             content={skuGroup.map((c) => (
               <Text key={c} as="p">
                 {c}
@@ -165,6 +169,8 @@ function ContentTableRow({
           each={categories}
           children={(category, i) => (
             <Tooltip
+              lazyMount
+              unmountOnExit
               key={`${category}`}
               content={Category[category as keyof typeof Category]}
               showArrow

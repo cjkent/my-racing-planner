@@ -15,6 +15,7 @@ function LeftBarButton({
 }) {
   return (
     <Stack
+      as={"button"}
       cursor={"pointer"}
       alignItems={"center"}
       gap={"0"}

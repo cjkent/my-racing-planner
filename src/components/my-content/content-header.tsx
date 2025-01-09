@@ -28,6 +28,8 @@ function ContentHeader({
       </Stack>
       <Stack>
         <Tooltip
+          lazyMount
+          unmountOnExit
           content={"Available for free with an iRacing subscription"}
           showArrow
           positioning={{ placement: "left" }}
@@ -55,6 +57,8 @@ function ContentHeader({
           </HStack>
         </Tooltip>
         <Tooltip
+          lazyMount
+          unmountOnExit
           content={"Content you already purchased"}
           showArrow
           positioning={{ placement: "left" }}
@@ -76,6 +80,8 @@ function ContentHeader({
           </HStack>
         </Tooltip>
         <Tooltip
+          lazyMount
+          unmountOnExit
           content={
             "Content you wish to buy, select to preview it in your season planner"
           }

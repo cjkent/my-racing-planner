@@ -72,6 +72,8 @@ function SeasonSettingsPopover() {
         each={settingsList}
         children={(settings) => (
           <Tooltip
+            lazyMount
+            unmountOnExit
             key={settings.id}
             content={settings.tooltip}
             showArrow

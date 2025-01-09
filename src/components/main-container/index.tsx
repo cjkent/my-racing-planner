@@ -3,6 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import CarsPage from "../my-content/cars-page";
 import SeasonPage from "../my-content/season-page";
 import SeriesPage from "../my-content/series-page";
+import ShopPage from "../my-content/shop-page";
 import TracksPage from "../my-content/tracks-page";
 
 function MainContainer() {
@@ -31,10 +32,7 @@ function MainContainer() {
         {selectedPage === ETabs.MySeries && <SeriesPage />}
         {selectedPage === ETabs.MyCars && <CarsPage />}
         {selectedPage === ETabs.MyTracks && <TracksPage />}
-        {selectedPage === ETabs.Wishlist && <>Wishlist</>}
-        {selectedPage === ETabs.ShopGuide && <>Shop Guide</>}
-        {selectedPage === ETabs.Settings && <>Settings</>}
-        {selectedPage === ETabs.About && <>About</>}
+        {selectedPage === ETabs.ShopGuide && <ShopPage />}
       </Flex>
     </Flex>
   );

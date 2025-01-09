@@ -25,6 +25,8 @@ function StarCheckbox({
       size={"lg"}
       icon={
         <Tooltip
+          lazyMount
+          unmountOnExit
           content={"Favorite"}
           showArrow
           positioning={{ placement: "top" }}

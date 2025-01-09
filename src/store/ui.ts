@@ -8,15 +8,16 @@ export enum ETabs {
   MyCars,
   MyTracks,
   ShopGuide,
-  Wishlist,
-  About,
-  Settings,
 }
 
-export const useUiStore = create(
+export const useUiStore = create(() => ({
+  selectedPage: ETabs.MySeason,
+}));
+
+export const useUiStorePersist = create(
   persist(
     () => ({
-      selectedPage: ETabs.MySeason,
+      seasonShowReorder: false,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
       seasonHighlight: false,
@@ -24,6 +25,8 @@ export const useUiStore = create(
       seasonShowOwned: true,
       seasonShowThisWeek: true,
       seasonCategory: ECarCategories.all,
+      shopVolumeDiscount: true,
+      shopLoyaltyDiscount: false,
     }),
     {
       name: "ui-settings",
@@ -34,43 +37,66 @@ export const useUiStore = create(
 export const setSelectedPage = (index: ETabs) =>
   useUiStore.setState(() => ({ selectedPage: index }));
 
+export const setSeasonShowReorder = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ seasonShowReorder: value }));
+
 export const setSeasonShowCheckboxes = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonShowCheckboxes: value }));
+  useUiStorePersist.setState(() => ({ seasonShowCheckboxes: value }));
 
 export const setSeasonShowCarsDropdown = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonShowCarsDropdown: value }));
+  useUiStorePersist.setState(() => ({ seasonShowCarsDropdown: value }));
 
 export const setSeasonHighlight = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonHighlight: value }));
+  useUiStorePersist.setState(() => ({ seasonHighlight: value }));
 
 export const setSeasonShowWishlist = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonShowWishlist: value }));
+  useUiStorePersist.setState(() => ({ seasonShowWishlist: value }));
 
 export const setSeasonShowOwned = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonShowOwned: value }));
+  useUiStorePersist.setState(() => ({ seasonShowOwned: value }));
 
 export const setSeasonShowThisWeek = (value: boolean) =>
-  useUiStore.setState(() => ({ seasonShowThisWeek: value }));
+  useUiStorePersist.setState(() => ({ seasonShowThisWeek: value }));
 
 export const setSeasonCategory = (value: ECarCategories) =>
-  useUiStore.setState(() => ({ seasonCategory: value }));
+  useUiStorePersist.setState(() => ({ seasonCategory: value }));
+
+export const setShopVolumeDiscount = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ shopVolumeDiscount: value }));
+
+export const setShopLoyaltyDiscount = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ shopLoyaltyDiscount: value }));
 
 export const useUi = () => {
   const selectedPage = useUiStore((state) => state.selectedPage);
-  const seasonShowCheckboxes = useUiStore(
+  const seasonShowReorder = useUiStorePersist(
+    (state) => state.seasonShowReorder,
+  );
+  const seasonShowCheckboxes = useUiStorePersist(
     (state) => state.seasonShowCheckboxes,
   );
-  const seasonShowCarsDropdown = useUiStore(
+  const seasonShowCarsDropdown = useUiStorePersist(
     (state) => state.seasonShowCarsDropdown,
   );
-  const seasonHighlight = useUiStore((state) => state.seasonHighlight);
-  const seasonShowWishlist = useUiStore((state) => state.seasonShowWishlist);
-  const seasonShowOwned = useUiStore((state) => state.seasonShowOwned);
-  const seasonShowThisWeek = useUiStore((state) => state.seasonShowThisWeek);
-  const seasonCategory = useUiStore((state) => state.seasonCategory);
+  const seasonHighlight = useUiStorePersist((state) => state.seasonHighlight);
+  const seasonShowWishlist = useUiStorePersist(
+    (state) => state.seasonShowWishlist,
+  );
+  const seasonShowOwned = useUiStorePersist((state) => state.seasonShowOwned);
+  const seasonShowThisWeek = useUiStorePersist(
+    (state) => state.seasonShowThisWeek,
+  );
+  const seasonCategory = useUiStorePersist((state) => state.seasonCategory);
+  const shopVolumeDiscount = useUiStorePersist(
+    (state) => state.shopVolumeDiscount,
+  );
+  const shopLoyaltyDiscount = useUiStorePersist(
+    (state) => state.shopLoyaltyDiscount,
+  );
 
   return {
     selectedPage,
+    seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
     seasonHighlight,
@@ -78,5 +104,7 @@ export const useUi = () => {
     seasonShowOwned,
     seasonShowThisWeek,
     seasonCategory,
+    shopVolumeDiscount,
+    shopLoyaltyDiscount,
   };
 };

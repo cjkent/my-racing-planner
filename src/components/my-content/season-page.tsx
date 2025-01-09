@@ -160,6 +160,7 @@ function SeasonPage() {
                 const thisWeek =
                   seasonShowThisWeek &&
                   getPreviousTuesday(formatDate(new Date())) === date;
+
                 return (
                   <Table.Row
                     key={date}
@@ -173,6 +174,8 @@ function SeasonPage() {
                       color={thisWeek ? "bg" : undefined}
                     >
                       <Tooltip
+                        lazyMount
+                        unmountOnExit
                         content={`${weekStart.toLocaleDateString(
                           locale,
                           longFormat,
@@ -197,6 +200,7 @@ function SeasonPage() {
                           seriesDateMap[seriesId as keyof typeof seriesDateMap][
                             date
                           ];
+
                         const track =
                           TRACKS_JSON[trackId as keyof typeof TRACKS_JSON];
                         const wish = track && wishTracks.includes(track.sku);
@@ -261,6 +265,8 @@ function SeasonPage() {
                             {track && (
                               <>
                                 <Tooltip
+                                  lazyMount
+                                  unmountOnExit
                                   content={track.name}
                                   showArrow
                                   positioning={{ placement: "top" }}

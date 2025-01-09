@@ -7,7 +7,7 @@ export function getPreviousTuesday(date: string): string {
   const utcDay = inputDate.getUTCDay();
 
   if (utcDay !== 2) {
-    const offset = utcDay - 2;
+    const offset = utcDay - 2 >= 0 ? utcDay - 2 : utcDay - 2 + 7;
     inputDate.setUTCDate(inputDate.getUTCDate() - offset);
   }
 

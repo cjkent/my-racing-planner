@@ -1,10 +1,8 @@
 import { ETabs, setSelectedPage, useUi } from "@/store/ui";
 import { For, Stack } from "@chakra-ui/react";
 import {
-  faBookmark,
   faCar,
   faFlagCheckered,
-  faGear,
   faInfoCircle,
   faLanguage,
   faMoon,
@@ -21,12 +19,6 @@ const tabsTop = [
   { label: "My Cars", icon: faCar, index: ETabs.MyCars },
   { label: "My Tracks", icon: faRoad, index: ETabs.MyTracks },
   { label: "Shop Guide", icon: faShoppingBag, index: ETabs.ShopGuide },
-];
-
-const tabsBottom = [
-  { label: "Wishlist", icon: faBookmark, index: ETabs.Wishlist },
-  { label: "About", icon: faInfoCircle, index: ETabs.About },
-  { label: "Settings", icon: faGear, index: ETabs.Settings },
 ];
 
 function LeftBar() {
@@ -55,29 +47,23 @@ function LeftBar() {
         />
       </Stack>
       <Stack justifyContent={"flex-start"} alignItems={"center"} gap={3}>
-        <For
-          each={tabsBottom}
-          children={(tab) => (
-            <LeftBarButton
-              key={tab.index}
-              label={tab.label}
-              icon={tab.icon}
-              selected={selectedPage === tab.index}
-              onClick={() => setSelectedPage(tab.index)}
-            />
-          )}
-        />
         <LeftBarButton
-          key={"color-mode"}
-          label={colorMode === "light" ? "Light" : "Dark"}
-          icon={colorMode === "light" ? faSun : faMoon}
+          key={"about"}
+          label={"About"}
+          icon={faInfoCircle}
           selected={false}
-          onClick={toggleColorMode}
+          onClick={() => {}}
         />
         <LeftBarButton
           key={"language"}
           label={"English"}
           icon={faLanguage}
+          selected={false}
+        />
+        <LeftBarButton
+          key={"color-mode"}
+          label={colorMode === "light" ? "Light" : "Dark"}
+          icon={colorMode === "light" ? faSun : faMoon}
           selected={false}
           onClick={toggleColorMode}
         />

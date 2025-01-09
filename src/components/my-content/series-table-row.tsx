@@ -69,6 +69,8 @@ function SeriesTableRow({
         {logo && (
           <Center>
             <Tooltip
+              lazyMount
+              unmountOnExit
               key={logo}
               content={
                 <Image
@@ -103,6 +105,8 @@ function SeriesTableRow({
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {fixed && (
           <Tooltip
+            lazyMount
+            unmountOnExit
             content={"Fixed Setup"}
             showArrow
             positioning={{ placement: "top" }}
@@ -148,6 +152,8 @@ function SeriesTableRow({
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <Tooltip
+          lazyMount
+          unmountOnExit
           key={`${category}`}
           content={Category[category as keyof typeof Category]}
           showArrow

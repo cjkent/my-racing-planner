@@ -4179,6 +4179,23 @@
       456
     ]
   },
+  "252": {
+    "id": 252,
+    "name": "Nürburgring Combined",
+    "config": "Gesamtstrecke 24h",
+    "categories": [
+      "road"
+    ],
+    "free": false,
+    "price": 0,
+    "sku": 0,
+    "series": [
+      237,
+      228,
+      444
+    ],
+    "logo": "/img/logos/tracks/nurburgring-logo.png"
+  },
   "253": {
     "id": 253,
     "name": "Nürburgring Nordschleife",
