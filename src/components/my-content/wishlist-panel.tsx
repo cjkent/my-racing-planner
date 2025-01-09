@@ -1,3 +1,4 @@
+import { IR_URL } from "@/ir-data/utils/urls";
 import { useIr } from "@/store/ir";
 import {
   setShopLoyaltyDiscount,
@@ -15,11 +16,17 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { faCar, faGears, faRoad } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faCar,
+  faGears,
+  faRoad,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useMemo } from "react";
 import CARS_LIST from "../../ir-data/utils/cars";
 import TRACKS_LIST from "../../ir-data/utils/tracks";
+import { LinkButton } from "../ui/link-button";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 import { Switch } from "../ui/switch";
 import { Tooltip } from "../ui/tooltip";
@@ -188,6 +195,15 @@ function WishlistPanel() {
           </Text>
         </Stack>
       </HStack>
+      <LinkButton
+        size="lg"
+        href={`${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Checkout on iRacing.com
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+      </LinkButton>
     </Stack>
   );
 }
