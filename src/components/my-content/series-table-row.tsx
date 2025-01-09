@@ -94,7 +94,7 @@ function SeriesTableRow({
           </Center>
         )}
       </Table.Cell>
-      <Table.Cell width={"100%"} display={"flex"} alignItems={"center"}>
+      <Table.Cell width={"100%"}>
         {!official && (
           <Badge colorPalette="yellow" mr={1}>
             Unranked

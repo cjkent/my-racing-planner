@@ -26,7 +26,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
   children: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
 }) {
   const [page, setPage] = useState<number>(1);
-  const pageSize = 240;
+  const pageSize = 40;
 
   const start = (page - 1) * pageSize;
   const end = start + pageSize;

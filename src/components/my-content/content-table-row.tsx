@@ -122,7 +122,7 @@ function ContentTableRow({
           </Center>
         )}
       </Table.Cell>
-      <Table.Cell width={"100%"} display={"flex"} alignItems={"center"}>
+      <Table.Cell width={"100%"}>
         <ContentNameBadge name={name} />
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
