@@ -21,7 +21,6 @@ import DurationBadge from "../badges/duration-badge";
 import LicenseBadge from "../badges/license-badge";
 import ContentNameBadge from "../content/content-name-badge";
 import ContentPopover from "../content/content-popover";
-import InfoButton from "../content/info-button";
 import StarCheckbox from "../content/star-checkbox";
 import { Tooltip } from "../ui/tooltip";
 
@@ -34,7 +33,6 @@ function SeriesTableRow({
   favorite,
   fixed,
   category,
-  infoUrl,
   license,
   color,
   duration,
@@ -49,7 +47,6 @@ function SeriesTableRow({
   favorite: boolean;
   fixed: boolean;
   category: string;
-  infoUrl: string;
   license: string;
   color: string;
   duration: number | null;
@@ -172,9 +169,6 @@ function SeriesTableRow({
         <LicenseBadge letter={license} color={color}>
           {license}
         </LicenseBadge>
-      </Table.Cell>
-      <Table.Cell minWidth={"90px"} textAlign="end">
-        <InfoButton href={infoUrl} />
       </Table.Cell>
     </Table.Row>
   );

@@ -63,7 +63,6 @@ function SeriesPage() {
         children={(item) => (
           <SeriesTableRow
             key={item.id}
-            infoUrl={`${item.id}`}
             id={item.id}
             name={item.name}
             logo={item.logo}
