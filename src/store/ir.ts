@@ -57,6 +57,9 @@ export const setFavoriteSeriesItem = (id: number, enabled: boolean) =>
       : state.favoriteSeries.filter((series: number) => series !== id),
   }));
 
+export const setFavoriteSeriesList = (list: number[]) =>
+  useIrStore.setState(() => ({ favoriteSeries: list }));
+
 export const useIr = () => {
   const myCars = useIrStore((state) => state.myCars);
   const myTracks = useIrStore((state) => state.myTracks);

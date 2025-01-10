@@ -46,7 +46,9 @@ function SeasonHeader() {
         <Heading size="4xl" fontFamily="mono" fontWeight="bold">
           My Season Planner
         </Heading>
-        <Text>Plan your season weeks</Text>
+        <Text>
+          Plan your season weeks, you can drag and drop series columns.
+        </Text>
       </Stack>
       <Stack>
         <Tooltip

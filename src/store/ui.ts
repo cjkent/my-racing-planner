@@ -18,7 +18,7 @@ export const useUiStore = create(() => ({
 export const useUiStorePersist = create(
   persist(
     () => ({
-      seasonShowReorder: false,
+      seasonShowReorder: true,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
       seasonHighlight: true,

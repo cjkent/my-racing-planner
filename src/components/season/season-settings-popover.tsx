@@ -3,6 +3,7 @@ import {
   setSeasonShowCarsDropdown,
   setSeasonShowCheckboxes,
   setSeasonShowOwned,
+  setSeasonShowReorder,
   setSeasonShowThisWeek,
   setSeasonShowWishlist,
   useUi,
@@ -13,6 +14,7 @@ import { Tooltip } from "../ui/tooltip";
 
 function SeasonSettingsPopover() {
   const {
+    seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
     seasonHighlight,
@@ -22,6 +24,13 @@ function SeasonSettingsPopover() {
   } = useUi();
 
   const settingsList = [
+    {
+      id: "reorder",
+      text: "Drag and drop to reorder",
+      tooltip: "Enable columns drag and drop to reorder series",
+      checked: seasonShowReorder,
+      setChecked: setSeasonShowReorder,
+    },
     {
       id: "checkboxes",
       text: "Show content checkboxes",
