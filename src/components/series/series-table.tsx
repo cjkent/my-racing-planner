@@ -67,9 +67,6 @@ function SeriesTable<T extends string | number | Dict | undefined>({
               <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
                 License
               </Table.ColumnHeader>
-              <Table.ColumnHeader minWidth={"90px"}>
-                <VisuallyHidden>Info on iracing.com</VisuallyHidden>
-              </Table.ColumnHeader>
             </Table.Row>
           </Table.Header>
           <Table.Body>

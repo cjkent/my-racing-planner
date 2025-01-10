@@ -93,9 +93,9 @@ function SeasonPage() {
 
     if (over && active?.id !== over?.id) {
       setFavoriteSeriesItem;
-      const oldIndex = filteredFavorites.indexOf(active.id as number);
-      const newIndex = filteredFavorites.indexOf(over.id as number);
-      setFavoriteSeriesList(arrayMove(filteredFavorites, oldIndex, newIndex));
+      const oldIndex = favoriteSeries.indexOf(active.id as number);
+      const newIndex = favoriteSeries.indexOf(over.id as number);
+      setFavoriteSeriesList(arrayMove(favoriteSeries, oldIndex, newIndex));
     }
   }
 
