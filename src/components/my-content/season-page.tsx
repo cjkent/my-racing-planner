@@ -96,13 +96,23 @@ function SeasonPage() {
                               src={`${IR_URL.image}/img/logos/series/${series.logo}`}
                             />
                           )}
-                          <Text
-                            textAlign={"center"}
-                            lineClamp="2"
-                            maxW={"200px"}
+                          <Tooltip
+                            lazyMount
+                            unmountOnExit
+                            content={series.name}
+                            showArrow
+                            positioning={{ placement: "bottom" }}
+                            openDelay={200}
+                            closeDelay={100}
                           >
-                            {series.name}
-                          </Text>
+                            <Text
+                              textAlign={"center"}
+                              lineClamp="2"
+                              maxW={"200px"}
+                            >
+                              {series.name}
+                            </Text>
+                          </Tooltip>
                         </VStack>
                         {seasonShowCarsDropdown && (
                           <PopoverRoot lazyMount unmountOnExit>
@@ -253,30 +263,17 @@ function SeasonPage() {
                             onMouseLeave={() =>
                               seasonHighlight && setHighlightTrack(-1)
                             }
-                            borderColor={
-                              seasonHighlight && highlight ? color : undefined
+                            bgColor={
+                              seasonHighlight && highlight ? color : bgColor
                             }
-                            borderWidth={
-                              seasonHighlight && highlight ? "2px" : undefined
-                            }
-                            color={color}
-                            bgColor={bgColor}
+                            color={seasonHighlight && highlight ? "bg" : color}
                           >
                             {track && (
                               <>
-                                <Tooltip
-                                  lazyMount
-                                  unmountOnExit
-                                  content={track.name}
-                                  showArrow
-                                  positioning={{ placement: "top" }}
-                                  openDelay={200}
-                                  closeDelay={100}
-                                >
-                                  <Text textAlign={"center"} lineClamp="3">
-                                    {track.name}
-                                  </Text>
-                                </Tooltip>
+                                <Text textAlign={"center"} lineClamp="3">
+                                  {track.name}
+                                </Text>
+
                                 {seasonShowCheckboxes && (
                                   <Checkbox
                                     size={"xs"}
