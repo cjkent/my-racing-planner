@@ -1,5 +1,6 @@
 import { ETabs, useUi } from "@/store/ui";
 import { Flex } from "@chakra-ui/react";
+import AboutPage from "../about";
 import CarsPage from "../content/cars-page";
 import TracksPage from "../content/tracks-page";
 import SeasonPage from "../season/season-page";
@@ -33,6 +34,7 @@ function MainContainer() {
         {selectedPage === ETabs.MyCars && <CarsPage />}
         {selectedPage === ETabs.MyTracks && <TracksPage />}
         {selectedPage === ETabs.ShopGuide && <ShopPage />}
+        {selectedPage === ETabs.About && <AboutPage />}
       </Flex>
     </Flex>
   );

@@ -51,8 +51,8 @@ function LeftBar() {
           key={"about"}
           label={"About"}
           icon={faInfoCircle}
-          selected={false}
-          onClick={() => {}}
+          selected={selectedPage === ETabs.About}
+          onClick={() => setSelectedPage(ETabs.About)}
         />
         <LeftBarButton
           key={"language"}

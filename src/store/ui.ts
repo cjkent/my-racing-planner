@@ -8,6 +8,7 @@ export enum ETabs {
   MyCars,
   MyTracks,
   ShopGuide,
+  About,
 }
 
 export const useUiStore = create(() => ({
@@ -20,7 +21,7 @@ export const useUiStorePersist = create(
       seasonShowReorder: false,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
-      seasonHighlight: false,
+      seasonHighlight: true,
       seasonShowWishlist: true,
       seasonShowOwned: true,
       seasonShowThisWeek: true,
