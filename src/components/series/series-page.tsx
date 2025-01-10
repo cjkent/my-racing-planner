@@ -4,7 +4,7 @@ import { ECarCategories } from "@/ir-data/utils/types";
 import { useIr } from "@/store/ir";
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import ContentFilterPanel from "./content-filter-panel";
+import ContentFilterPanel from "../content/content-filter-panel";
 import SeriesHeader from "./series-header";
 import SeriesTable from "./series-table";
 import SeriesTableRow from "./series-table-row";

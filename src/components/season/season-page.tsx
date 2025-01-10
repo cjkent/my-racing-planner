@@ -22,6 +22,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
+import ContentPopover from "../content/content-popover";
 import { Checkbox } from "../ui/checkbox";
 import {
   PopoverArrow,
@@ -30,7 +31,6 @@ import {
   PopoverTrigger,
 } from "../ui/popover";
 import { Tooltip } from "../ui/tooltip";
-import ContentPopover from "./content-popover";
 import SeasonFilterPanel from "./season-filter-panel";
 import SeasonHeader from "./season-header";
 

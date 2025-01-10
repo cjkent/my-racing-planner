@@ -26,12 +26,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import PriceBadge from "../badges/price-badge";
+import SeriesPopover from "../series/series-popover";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 import ContentNameBadge from "./content-name-badge";
 import InfoButton from "./info-button";
-import PriceBadge from "./price-badge";
-import SeriesPopover from "./series-popover";
 
 function ContentTableRow({
   content,

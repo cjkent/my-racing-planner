@@ -1,10 +1,10 @@
 import { ETabs, useUi } from "@/store/ui";
 import { Flex } from "@chakra-ui/react";
-import CarsPage from "../my-content/cars-page";
-import SeasonPage from "../my-content/season-page";
-import SeriesPage from "../my-content/series-page";
-import ShopPage from "../my-content/shop-page";
-import TracksPage from "../my-content/tracks-page";
+import CarsPage from "../content/cars-page";
+import TracksPage from "../content/tracks-page";
+import SeasonPage from "../season/season-page";
+import SeriesPage from "../series/series-page";
+import ShopPage from "../shop-guide/shop-page";
 
 function MainContainer() {
   const { selectedPage } = useUi();

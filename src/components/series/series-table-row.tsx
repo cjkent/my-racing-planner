@@ -17,13 +17,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import DurationBadge from "../badges/duration-badge";
+import LicenseBadge from "../badges/license-badge";
+import ContentNameBadge from "../content/content-name-badge";
+import ContentPopover from "../content/content-popover";
+import InfoButton from "../content/info-button";
+import StarCheckbox from "../content/star-checkbox";
 import { Tooltip } from "../ui/tooltip";
-import ContentNameBadge from "./content-name-badge";
-import ContentPopover from "./content-popover";
-import DurationBadge from "./duration-badge";
-import InfoButton from "./info-button";
-import LicenseBadge from "./license-badge";
-import StarCheckbox from "./star-checkbox";
 
 function SeriesTableRow({
   id,

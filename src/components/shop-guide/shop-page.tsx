@@ -15,10 +15,10 @@ import { useMemo } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import TRACKS_LIST from "../../ir-data/utils/tracks";
+import PriceBadge from "../badges/price-badge";
+import ContentNameBadge from "../content/content-name-badge";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
-import ContentNameBadge from "./content-name-badge";
-import PriceBadge from "./price-badge";
 import ShopGuideHeader from "./shop-guide-header";
 import WishlistPanel from "./wishlist-panel";
 
