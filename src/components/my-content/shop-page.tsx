@@ -5,7 +5,6 @@ import {
   Flex,
   For,
   HStack,
-  Stack,
   Table,
   Text,
   VisuallyHidden,
@@ -87,9 +86,17 @@ function ShopPage() {
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
       <ShopGuideHeader />
-      <HStack flex={1} alignItems={"start"}>
-        <Stack flex={1} borderRadius={"md"} minH={"100%"} bgColor={"bg"}>
-          <Table.ScrollArea borderRadius={"md"}>
+      <HStack flex={1} alignItems={"start"} overflow={"hidden"}>
+        <Flex
+          flex={1}
+          borderRadius={"md"}
+          bgColor={"bg"}
+          overflowY={"auto"}
+          maxH={"100%"}
+          height={"100%"}
+          alignItems={"start"}
+        >
+          <Table.ScrollArea borderRadius={"md"} width={"100%"}>
             <Table.Root size="sm" striped>
               <Table.Header fontSize={"xs"}>
                 <Table.Row>
@@ -216,7 +223,7 @@ function ShopPage() {
               </Table.Body>
             </Table.Root>
           </Table.ScrollArea>
-        </Stack>
+        </Flex>
         <WishlistPanel />
       </HStack>
     </Flex>

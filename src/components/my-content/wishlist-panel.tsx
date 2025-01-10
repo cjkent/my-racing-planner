@@ -23,7 +23,7 @@ import {
   faRoad,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import CARS_LIST from "../../ir-data/utils/cars";
 import TRACKS_LIST from "../../ir-data/utils/tracks";
 import { LinkButton } from "../ui/link-button";
@@ -68,7 +68,14 @@ function WishlistPanel() {
   const totalPriceDiscount = totalPrice - discountAmount;
 
   return (
-    <Stack flex={1} borderRadius={"md"} minH={"100%"} bgColor={"bg"} p={4}>
+    <Stack
+      flex={1}
+      borderRadius={"md"}
+      height={"100%"}
+      maxH={"100%"}
+      bgColor={"bg"}
+      p={4}
+    >
       <HStack justifyContent={"space-between"}>
         <Text textStyle="3xl">Wishlist</Text>
 
@@ -136,7 +143,7 @@ function WishlistPanel() {
         <For
           each={wishList}
           children={(item) => (
-            <Stack key={item.id}>
+            <Fragment key={item.id}>
               <HStack>
                 <FontAwesomeIcon icon={item.isCar ? faCar : faRoad} size="sm" />
                 <Flex flex={1}>{item.name}</Flex>
@@ -147,7 +154,7 @@ function WishlistPanel() {
                 />
               </HStack>
               <Separator />
-            </Stack>
+            </Fragment>
           )}
         />
       </Stack>
@@ -200,8 +207,9 @@ function WishlistPanel() {
         href={`${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`}
         target="_blank"
         rel="noreferrer"
+        colorPalette={"blue"}
       >
-        Checkout on iRacing.com
+        Checkout on iRacing.com store
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
       </LinkButton>
     </Stack>
