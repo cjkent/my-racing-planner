@@ -1,4 +1,5 @@
 import { Badge, Text } from "@chakra-ui/react";
+import { PropsWithChildren } from "react";
 
 const patterns = {
   "[Retired] ": "Retired",
@@ -22,9 +23,13 @@ function NameWithBadges({ name }: { name: string }) {
   return name;
 }
 
-function ContentNameBadge({ name }: { name: string }) {
+function ContentNameBadge({
+  name,
+  children,
+}: PropsWithChildren<{ name: string }>) {
   return (
     <Text fontWeight={"bold"}>
+      {children}
       <NameWithBadges name={name} />
     </Text>
   );

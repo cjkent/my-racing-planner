@@ -7,23 +7,31 @@ function LeftBarButton({
   label,
   selected,
   onClick,
+  disabled,
 }: {
   label: string;
   icon: IconProp;
   selected?: boolean;
   onClick?: () => void;
+  disabled?: boolean;
 }) {
   return (
     <Stack
       as={"button"}
-      cursor={"pointer"}
+      cursor={!disabled ? "pointer" : undefined}
       alignItems={"center"}
       gap={"0"}
-      color={selected ? { base: "blue.900", _dark: "blue.300" } : undefined}
-      onClick={onClick}
+      color={
+        disabled
+          ? "gray"
+          : selected
+          ? { base: "blue.900", _dark: "blue.300" }
+          : undefined
+      }
+      onClick={!disabled ? onClick : undefined}
       fontWeight={selected ? "semibold" : "medium"}
       _hover={
-        !selected
+        !disabled && !selected
           ? {
               color: {
                 base: "gray.900",
@@ -41,7 +49,7 @@ function LeftBarButton({
         alignItems={"center"}
         justifyContent={"center"}
         bg={selected ? "blue.600/40" : "transparent"}
-        _hover={!selected ? { bg: "gray.400/30" } : undefined}
+        _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
         p={"6px"}
       >
         <FontAwesomeIcon icon={icon} />

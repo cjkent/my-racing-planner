@@ -59,6 +59,7 @@ function LeftBar() {
           label={"English"}
           icon={faLanguage}
           selected={false}
+          disabled
         />
         <LeftBarButton
           key={"color-mode"}

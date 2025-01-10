@@ -95,12 +95,13 @@ function SeriesTableRow({
         )}
       </Table.Cell>
       <Table.Cell width={"100%"}>
-        {!official && (
-          <Badge colorPalette="yellow" mr={1}>
-            Unranked
-          </Badge>
-        )}
-        <ContentNameBadge name={name} />
+        <ContentNameBadge name={name}>
+          {!official && (
+            <Badge colorPalette="yellow" mr={1}>
+              Unranked
+            </Badge>
+          )}
+        </ContentNameBadge>
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         {fixed && (
