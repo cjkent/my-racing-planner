@@ -20,13 +20,15 @@ import {
   faArrowUpRightFromSquare,
   faCar,
   faGears,
+  faMagnifyingGlass,
   faRoad,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment, useMemo } from "react";
 import CARS_LIST from "../../ir-data/utils/cars";
 import TRACKS_LIST from "../../ir-data/utils/tracks";
-import { LinkButton } from "../ui/link-button";
+import { Button } from "../ui/button";
+import { EmptyState } from "../ui/empty-state";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 import { Switch } from "../ui/switch";
 import { Tooltip } from "../ui/tooltip";
@@ -141,6 +143,13 @@ function WishlistPanel() {
       <Stack overflowY="auto" flex={1}>
         <Separator />
         <For
+          fallback={
+            <EmptyState
+              icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
+              title={"Empty wishlist"}
+              description={"Add some cars or tracks to your wishlist"}
+            />
+          }
           each={wishList}
           children={(item) => (
             <Fragment key={item.id}>
@@ -202,7 +211,8 @@ function WishlistPanel() {
           </Text>
         </Stack>
       </HStack>
-      <LinkButton
+      <Button
+        disabled={wishList.length < 1}
         size="lg"
         href={`${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`}
         target="_blank"
@@ -211,7 +221,7 @@ function WishlistPanel() {
       >
         Checkout on iRacing.com store
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-      </LinkButton>
+      </Button>
     </Stack>
   );
 }
