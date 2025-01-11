@@ -1,5 +1,5 @@
 import { ETabs, setSelectedPage, useUi } from "@/store/ui";
-import { For, Stack } from "@chakra-ui/react";
+import { For, Image, Stack } from "@chakra-ui/react";
 import {
   faCar,
   faCircleQuestion,
@@ -15,6 +15,7 @@ import {
 import HelpDialog from "../help";
 import LeftBarButton from "../left-bar/left-bar-button";
 import { useColorMode } from "../ui/color-mode";
+import { Tooltip } from "../ui/tooltip";
 const tabsTop = [
   { label: "My Season", icon: faTableCellsLarge, index: ETabs.MySeason },
   { label: "My Series", icon: faFlagCheckered, index: ETabs.MySeries },
@@ -35,6 +36,23 @@ function LeftBar() {
       paddingBottom="12px"
     >
       <Stack justifyContent={"flex-start"} alignItems={"center"} gap={3}>
+        <Tooltip
+          lazyMount
+          unmountOnExit
+          content={`My Racing Planner v${APP_VERSION}`}
+          showArrow
+          positioning={{ placement: "bottom" }}
+          openDelay={200}
+          closeDelay={100}
+        >
+          <Image
+            w={"40px"}
+            h={"40px"}
+            src="/my-racing-planner-icon.svg"
+            alt="my=racing-planner-icon"
+            mb={5}
+          />
+        </Tooltip>
         <For
           each={tabsTop}
           children={(tab) => (
