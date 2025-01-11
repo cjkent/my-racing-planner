@@ -4,7 +4,7 @@ This tool helps iRacing users efficiently navigate series, cars, and tracks, all
 
 Visit it at: [https://adrianulima.github.io/my-racing-planner/](https://adrianulima.github.io/my-racing-planner/)
 
-_This project is not affiliated with or endorsed by iRacing._
+_This project is not affiliated with or endorsed by iRacing.com._
 
 ---
 

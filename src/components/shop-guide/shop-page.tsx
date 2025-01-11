@@ -9,7 +9,10 @@ import {
   Text,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookmark,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useMemo } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
@@ -18,6 +21,7 @@ import TRACKS_LIST from "../../ir-data/utils/tracks";
 import PriceBadge from "../badges/price-badge";
 import ContentNameBadge from "../content/content-name-badge";
 import { Checkbox } from "../ui/checkbox";
+import { EmptyState } from "../ui/empty-state";
 import { Tooltip } from "../ui/tooltip";
 import ShopGuideHeader from "./shop-guide-header";
 import WishlistPanel from "./wishlist-panel";
@@ -114,6 +118,25 @@ function ShopPage() {
               </Table.Header>
               <Table.Body fontSize={"xs"}>
                 <For
+                  fallback={
+                    <Table.Row>
+                      <Table.Cell colSpan={8} minWidth={"100%"}>
+                        <EmptyState
+                          icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
+                          title={
+                            favoriteSeries.length > 0
+                              ? "No paid tracks missing"
+                              : "No series selected"
+                          }
+                          description={
+                            favoriteSeries.length > 0
+                              ? "You already own all tracks of your favorite series"
+                              : "You didn't choose any favorite series"
+                          }
+                        />
+                      </Table.Cell>
+                    </Table.Row>
+                  }
                   each={tracksList}
                   children={(item) => {
                     const owned = myTracks.includes(item.sku);

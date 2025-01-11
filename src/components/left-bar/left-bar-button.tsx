@@ -12,7 +12,7 @@ function LeftBarButton({
   label: string;
   icon: IconProp;
   selected?: boolean;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
   disabled?: boolean;
 }) {
   return (

@@ -21,13 +21,14 @@ export const useUiStorePersist = create(
       seasonShowReorder: true,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
-      seasonHighlight: true,
+      seasonHighlight: false,
       seasonShowWishlist: true,
       seasonShowOwned: true,
       seasonShowThisWeek: true,
       seasonCategory: ECarCategories.all,
       shopVolumeDiscount: true,
       shopLoyaltyDiscount: false,
+      helpPresented: false,
     }),
     {
       name: "ui-settings",
@@ -68,6 +69,9 @@ export const setShopVolumeDiscount = (value: boolean) =>
 export const setShopLoyaltyDiscount = (value: boolean) =>
   useUiStorePersist.setState(() => ({ shopLoyaltyDiscount: value }));
 
+export const setHelpPresented = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ helpPresented: value }));
+
 export const useUi = () => {
   const selectedPage = useUiStore((state) => state.selectedPage);
   const seasonShowReorder = useUiStorePersist(
@@ -94,6 +98,7 @@ export const useUi = () => {
   const shopLoyaltyDiscount = useUiStorePersist(
     (state) => state.shopLoyaltyDiscount,
   );
+  const helpPresented = useUiStorePersist((state) => state.helpPresented);
 
   return {
     selectedPage,
@@ -107,5 +112,6 @@ export const useUi = () => {
     seasonCategory,
     shopVolumeDiscount,
     shopLoyaltyDiscount,
+    helpPresented,
   };
 };

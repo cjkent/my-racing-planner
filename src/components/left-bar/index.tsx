@@ -2,6 +2,7 @@ import { ETabs, setSelectedPage, useUi } from "@/store/ui";
 import { For, Stack } from "@chakra-ui/react";
 import {
   faCar,
+  faCircleQuestion,
   faFlagCheckered,
   faInfoCircle,
   faLanguage,
@@ -11,6 +12,7 @@ import {
   faSun,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
+import HelpDialog from "../help";
 import LeftBarButton from "../left-bar/left-bar-button";
 import { useColorMode } from "../ui/color-mode";
 const tabsTop = [
@@ -54,6 +56,16 @@ function LeftBar() {
           selected={selectedPage === ETabs.About}
           onClick={() => setSelectedPage(ETabs.About)}
         />
+        <HelpDialog>
+          <LeftBarButton
+            key={"help"}
+            label={"Help"}
+            icon={faCircleQuestion}
+            selected={false}
+            onClick={(e) => e.currentTarget.blur()}
+          />
+        </HelpDialog>
+
         <LeftBarButton
           key={"language"}
           label={"English"}

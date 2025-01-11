@@ -25,13 +25,6 @@ function SeasonSettingsPopover() {
 
   const settingsList = [
     {
-      id: "reorder",
-      text: "Drag and drop to reorder",
-      tooltip: "Enable columns drag and drop to reorder series",
-      checked: seasonShowReorder,
-      setChecked: setSeasonShowReorder,
-    },
-    {
       id: "checkboxes",
       text: "Show content checkboxes",
       tooltip: "Show track checkboxes to quickly switch tracks you own",
@@ -53,9 +46,16 @@ function SeasonSettingsPopover() {
       setChecked: setSeasonHighlight,
     },
     {
+      id: "reorder",
+      text: "Drag and drop to reorder",
+      tooltip: "Enable columns drag and drop to reorder series",
+      checked: seasonShowReorder,
+      setChecked: setSeasonShowReorder,
+    },
+    {
       id: "thisWeek",
-      text: "Show current week",
-      tooltip: "Highlight current week",
+      text: "Highlight current week",
+      tooltip: "Highlight current week row",
       checked: seasonShowThisWeek,
       setChecked: setSeasonShowThisWeek,
     },
