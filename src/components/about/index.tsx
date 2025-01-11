@@ -7,14 +7,23 @@ const contributors = [
 ];
 function AboutPage() {
   return (
-    <Stack height="100%" width="100%" gap="8px" padding={4}>
-      <Heading size="4xl" fontFamily="mono" fontWeight="bold">
-        About
-      </Heading>
-      <Text>About My Racing Planner and why it was created</Text>
-      <Stack px={10} overflowY={"auto"} textAlign={"justify"}>
+    <Stack height="100%" width="100%" gap="8px">
+      <Stack padding={4}>
+        <Heading size="4xl" fontFamily="mono" fontWeight="bold">
+          About
+        </Heading>
+        <Text>About My Racing Planner and why it was created</Text>
+      </Stack>
+      <Stack
+        p={10}
+        overflowY={"auto"}
+        textAlign={"justify"}
+        borderRadius={"md"}
+        bgColor={"bg"}
+        flex={1}
+      >
         <section>
-          <Heading mt={4}>The Creator</Heading>
+          <Heading>The Creator</Heading>
           <Text as="p">
             My name is <strong>Adriano Lima</strong>, I am from Brazil and have
             been passionate about sim racing since 2010. I started with rFactor
@@ -22,7 +31,7 @@ function AboutPage() {
             chance in 2020. Sim racing has always been a hobby for me, but
             recently, I've been working to improve my driving techniques.
           </Text>
-          <Text as="p" mt={2}>
+          <Text as="p" my={2}>
             As a software developer, I've always enjoyed exploring iRacing APIs.
             In the past, I created a Twitch bot and an Overlay prototype, and
             now I'm excited to present this project. Every season, I find myself
