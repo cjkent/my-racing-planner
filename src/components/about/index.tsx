@@ -74,6 +74,17 @@ function AboutPage() {
             iRacing season. All data is fetched directly from the iRacing public
             API.
           </Text>
+          <Text as="p" mt={2}>
+            For detailed update history, visit the{" "}
+            <Link
+              href="https://github.com/adrianulima/my-racing-planner/blob/main/CHANGELOG.md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              change logs file
+            </Link>
+            .
+          </Text>
         </section>
 
         <section>
