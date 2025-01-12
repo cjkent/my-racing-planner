@@ -175,8 +175,11 @@ function HelpDialog({ children }: PropsWithChildren) {
                 <strong>Red cells</strong>: Represent the tracks you don't own.
               </List.Item>
               <List.Item>
-                <strong>Green cells</strong>: Represent the free tracks or that
-                you own.
+                <strong>Green cells</strong>: Represent the tracks free with
+                subscription.
+              </List.Item>
+              <List.Item>
+                <strong>Teal cells</strong>: Represent the tracks you own.
               </List.Item>
               <List.Item>
                 <strong>Blue cells</strong>: Represent the tracks you added to

@@ -321,19 +321,19 @@ function SeasonPage() {
                                   ? "green.400"
                                   : seasonShowOwned &&
                                     myTracks.includes(track.sku)
-                                  ? "green.400"
+                                  ? "teal.400"
                                   : seasonShowWishlist &&
                                     wishTracks.includes(track.sku)
-                                  ? "teal.400"
+                                  ? "blue.400"
                                   : "red.400",
                                 base: track.free
                                   ? "green.600"
                                   : seasonShowOwned &&
                                     myTracks.includes(track.sku)
-                                  ? "green.600"
+                                  ? "teal.600"
                                   : seasonShowWishlist &&
                                     wishTracks.includes(track.sku)
-                                  ? "teal.600"
+                                  ? "blue.600"
                                   : "red.600",
                               };
                               const bgColor = track && {
@@ -341,19 +341,19 @@ function SeasonPage() {
                                   ? "green.50"
                                   : seasonShowOwned &&
                                     myTracks.includes(track.sku)
-                                  ? "green.50"
+                                  ? "teal.50"
                                   : seasonShowWishlist &&
                                     wishTracks.includes(track.sku)
-                                  ? "teal.50"
+                                  ? "blue.50"
                                   : "red.50",
                                 _dark: track.free
                                   ? "green.800"
                                   : seasonShowOwned &&
                                     myTracks.includes(track.sku)
-                                  ? "green.800"
+                                  ? "teal.800"
                                   : seasonShowWishlist &&
                                     wishTracks.includes(track.sku)
-                                  ? "teal.800"
+                                  ? "blue.800"
                                   : "red.800",
                               };
                               return (
