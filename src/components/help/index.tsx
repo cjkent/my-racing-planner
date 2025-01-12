@@ -7,6 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import useWindowSize from "@/hooks/useWindowSize";
 import { ETabs, setHelpPresented, setSelectedPage, useUi } from "@/store/ui";
 import {
   Box,
@@ -40,6 +41,8 @@ function HelpDialog({ children }: PropsWithChildren) {
   const { helpPresented } = useUi();
   const [open, setOpen] = useState(!helpPresented);
 
+  const { size } = useWindowSize();
+
   useEffect(() => {
     if (!helpPresented) {
       setOpen(true);
@@ -53,7 +56,7 @@ function HelpDialog({ children }: PropsWithChildren) {
       lazyMount
       open={open}
       onOpenChange={(e) => setOpen(e.open)}
-      size="lg"
+      size={size.md ? "lg" : "full"}
       scrollBehavior="inside"
       placement="center"
       motionPreset="slide-in-bottom"
@@ -64,7 +67,7 @@ function HelpDialog({ children }: PropsWithChildren) {
         <DialogHeader textAlign={"center"}>
           <DialogTitle>Welcome to My Racing Planner</DialogTitle>
         </DialogHeader>
-        <DialogBody px={10} textAlign={"justify"}>
+        <DialogBody px={{ base: 4, md: 10 }} textAlign={"justify"}>
           <section>
             <Heading mt={2}>
               Start with <Em>My Series</Em> Page{" "}

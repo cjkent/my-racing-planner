@@ -1,17 +1,18 @@
-import { Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
+import PageHeader from "../content/page-header";
 
 function ShopGuideHeader() {
   return (
-    <HStack padding={4} justifyContent={"space-between"}>
-      <Stack>
-        <Heading size="4xl" fontFamily="mono" fontWeight="bold">
-          Shop Guide
-        </Heading>
-        <Text>
-          See the tracks most used by your favorite series. Checkout your
-          wishlist items at iracing.com
-        </Text>
-      </Stack>
+    <HStack
+      padding={{ base: "unset", md: 4 }}
+      justifyContent={"space-between"}
+      alignItems={"start"}
+    >
+      <PageHeader
+        title="Shop Guide"
+        description="See the tracks most used by your favorite series. Checkout your
+          wishlist items at iracing.com"
+      />
     </HStack>
   );
 }

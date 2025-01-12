@@ -1,7 +1,7 @@
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { ECarCategories } from "@/ir-data/utils/types";
 import { setSeasonCategory, useUi } from "@/store/ui";
-import { IconButton, Stack, Tabs } from "@chakra-ui/react";
+import { HStack, IconButton, Tabs, Text } from "@chakra-ui/react";
 import { faGears } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
@@ -11,10 +11,9 @@ function SeasonFilterPanel() {
   const { seasonCategory } = useUi();
 
   return (
-    <Stack
+    <HStack
       justifyContent={{ md: "space-between", base: "center" }}
-      alignItems={"center"}
-      direction={{ base: "column", md: "row" }}
+      alignItems={"start"}
     >
       <PopoverRoot positioning={{ placement: "right-start" }}>
         <PopoverTrigger asChild>
@@ -38,17 +37,31 @@ function SeasonFilterPanel() {
         value={seasonCategory}
         onValueChange={(e) => setSeasonCategory(e.value as ECarCategories)}
         variant={"enclosed"}
+        width={{ md: "unset", base: "100%" }}
+        flex={{ md: "unset", base: 1 }}
       >
-        <Tabs.List>
+        <Tabs.List
+          flex={{ md: "unset", base: 1 }}
+          width={{ md: "unset", base: "100%" }}
+        >
           {Object.entries(ECarCategories).map(([k, tab]: [string, string]) => (
-            <Tabs.Trigger value={tab} key={tab}>
+            <Tabs.Trigger
+              value={tab}
+              key={tab}
+              width={{ md: "unset", base: "100%" }}
+            >
               <CategoryIcon category={k} />
-              {tab}
+              <Text
+                hideBelow={tab === "All" ? undefined : "md"}
+                textWrap={"nowrap"}
+              >
+                {tab}
+              </Text>
             </Tabs.Trigger>
           ))}
         </Tabs.List>
       </Tabs.Root>
-    </Stack>
+    </HStack>
   );
 }
 

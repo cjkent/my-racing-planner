@@ -2,7 +2,7 @@ import { Icon, Stack, Text } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function LeftBarButton({
+function NavBarButton({
   icon,
   label,
   selected,
@@ -61,4 +61,4 @@ function LeftBarButton({
   );
 }
 
-export default LeftBarButton;
+export default NavBarButton;

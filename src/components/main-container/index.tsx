@@ -1,5 +1,5 @@
 import { ETabs, useUi } from "@/store/ui";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Stack, StackProps } from "@chakra-ui/react";
 import AboutPage from "../about";
 import CarsPage from "../content/cars-page";
 import TracksPage from "../content/tracks-page";
@@ -7,27 +7,23 @@ import SeasonPage from "../season/season-page";
 import SeriesPage from "../series/series-page";
 import ShopPage from "../shop-guide/shop-page";
 
-function MainContainer() {
+function MainContainer({ ...props }: StackProps) {
   const { selectedPage } = useUi();
   return (
-    <Flex
-      direction={"column"}
-      height="100%"
-      width={"100%"}
-      padding="12px"
-      paddingLeft="0"
-    >
+    <Stack {...props}>
       <Flex
         height="100%"
         width={"100%"}
         padding="8px"
         bg={"gray.200"}
+        overflow={"hidden"}
         borderColor={"gray.300"}
         _dark={{ bg: "gray.800", borderColor: "gray.700" }}
-        borderRadius={"xl"}
-        borderWidth={"1px"}
-        overflow={"hidden"}
-        boxShadow={"rgba(5, 5, 15, 0.16) 0px 12px 24px -2px"}
+        md={{
+          borderRadius: "xl",
+          borderWidth: "1px",
+          boxShadow: "rgba(5, 5, 15, 0.16) 0px 12px 24px -2px",
+        }}
       >
         {selectedPage === ETabs.MySeason && <SeasonPage />}
         {selectedPage === ETabs.MySeries && <SeriesPage />}
@@ -36,7 +32,7 @@ function MainContainer() {
         {selectedPage === ETabs.ShopGuide && <ShopPage />}
         {selectedPage === ETabs.About && <AboutPage />}
       </Flex>
-    </Flex>
+    </Stack>
   );
 }
 

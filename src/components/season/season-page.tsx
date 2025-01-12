@@ -138,7 +138,7 @@ function SeasonPage() {
         <Flex flex={1} borderRadius={"md"} bgColor={"bg"} p={4}>
           <EmptyState
             icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
-            title="No results found"
+            title="No series found"
             description="Try different categories"
           />
         </Flex>

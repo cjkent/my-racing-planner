@@ -1,4 +1,5 @@
 import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
+import PageHeader from "../content/page-header";
 import { Tooltip } from "../ui/tooltip";
 
 const contributors = [
@@ -8,14 +9,13 @@ const contributors = [
 function AboutPage() {
   return (
     <Stack height="100%" width="100%" gap="8px">
-      <Stack padding={4}>
-        <Heading size="4xl" fontFamily="mono" fontWeight="bold">
-          About
-        </Heading>
-        <Text>About My Racing Planner and why it was created</Text>
-      </Stack>
+      <PageHeader
+        padding={4}
+        title="About"
+        description="About My Racing Planner and why it was created"
+      />
       <Stack
-        p={10}
+        p={{ base: 4, md: 10 }}
         overflowY={"auto"}
         textAlign={"justify"}
         borderRadius={"md"}
@@ -23,21 +23,22 @@ function AboutPage() {
         flex={1}
       >
         <section>
-          <Heading>The Creator</Heading>
+          <Heading>Data Updates</Heading>
           <Text as="p">
-            My name is <strong>Adriano Lima</strong>, I am from Brazil and have
-            been passionate about sim racing since 2010. I started with rFactor
-            and later explored other simulators until I finally gave iRacing a
-            chance in 2020. Sim racing has always been a hobby for me, but
-            recently, I've been working to improve my driving techniques.
+            The content on this site is updated at the beginning of every
+            iRacing season. All data is fetched directly from the iRacing public
+            API.
           </Text>
-          <Text as="p" my={2}>
-            As a software developer, I've always enjoyed exploring iRacing APIs.
-            In the past, I created a Twitch bot and an Overlay prototype, and
-            now I'm excited to present this project. Every season, I find myself
-            wondering which tracks and cars to purchase. This tool was initially
-            designed to address my own needs, but I hope it will also be helpful
-            to the broader iRacing community.
+          <Text as="p" mt={2}>
+            For detailed update history, visit the{" "}
+            <Link
+              href="https://github.com/adrianulima/my-racing-planner/blob/main/CHANGELOG.md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              change logs file
+            </Link>
+            .
           </Text>
         </section>
 
@@ -77,28 +78,27 @@ function AboutPage() {
         </section>
 
         <section>
-          <Heading mt={2}>Data Updates</Heading>
-          <Text as="p">
-            The content on this site is updated at the beginning of every
-            iRacing season. All data is fetched directly from the iRacing public
-            API.
-          </Text>
-          <Text as="p" mt={2}>
-            For detailed update history, visit the{" "}
-            <Link
-              href="https://github.com/adrianulima/my-racing-planner/blob/main/CHANGELOG.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              change logs file
-            </Link>
-            .
+          <Text my={2} fontWeight={"bold"} as="p">
+            This project is not affiliated with or endorsed by iRacing.com.
           </Text>
         </section>
 
         <section>
-          <Text my={2} fontWeight={"bold"} as="p">
-            This project is not affiliated with or endorsed by iRacing.com.
+          <Heading mt={2}>The Creator</Heading>
+          <Text as="p">
+            My name is <strong>Adriano Lima</strong>, I am from Brazil and have
+            been passionate about sim racing since 2010. I started with rFactor
+            and later explored other simulators until I finally gave iRacing a
+            chance in 2020. Sim racing has always been a hobby for me, but
+            recently, I've been working to improve my driving techniques.
+          </Text>
+          <Text as="p" my={2}>
+            As a software developer, I've always enjoyed exploring iRacing APIs.
+            In the past, I created a Twitch bot and an Overlay prototype, and
+            now I'm excited to present this project. Every season, I find myself
+            wondering which tracks and cars to purchase. This tool was initially
+            designed to address my own needs, but I hope it will also be helpful
+            to the broader iRacing community.
           </Text>
         </section>
 

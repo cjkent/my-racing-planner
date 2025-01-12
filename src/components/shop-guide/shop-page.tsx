@@ -1,253 +1,45 @@
-import { getPreviousTuesday } from "@/hooks/useSeason";
-import { setMyTrack, setWishTrack, useIr } from "@/store/ir";
-import {
-  Badge,
-  Flex,
-  For,
-  HStack,
-  Table,
-  Text,
-  VisuallyHidden,
-} from "@chakra-ui/react";
-import {
-  faBookmark,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useMemo } from "react";
-import SERIES_JSON from "../../ir-data/series.json";
-import TRACKS_JSON from "../../ir-data/tracks.json";
-import TRACKS_LIST from "../../ir-data/utils/tracks";
-import PriceBadge from "../badges/price-badge";
-import ContentNameBadge from "../content/content-name-badge";
-import { Checkbox } from "../ui/checkbox";
-import { EmptyState } from "../ui/empty-state";
-import { Tooltip } from "../ui/tooltip";
+import useWindowSize from "@/hooks/useWindowSize";
+import { Flex, HStack, Stack, Tabs, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import ShopGuideHeader from "./shop-guide-header";
+import TracksUsed from "./tracks-used";
 import WishlistPanel from "./wishlist-panel";
 
+enum ETab {
+  TracksUsed = "TracksUsed",
+  WishlistPanel = "WishlistPanel",
+}
+
 function ShopPage() {
-  const { myTracks, wishTracks, favoriteSeries } = useIr();
-
-  const tracksMap = useMemo(
-    () =>
-      favoriteSeries.reduce((acc, curr) => {
-        const series = SERIES_JSON[curr.toString() as keyof typeof SERIES_JSON];
-        series.weeks.forEach((week) => {
-          const track =
-            TRACKS_JSON[week.track.id.toString() as keyof typeof TRACKS_JSON];
-          if (track.free) {
-            return acc;
-          }
-          const skuId = ("group" in track ? track.group : track.id) as number;
-          acc[skuId] = acc[skuId] ?? {
-            id: skuId,
-            name: track.name,
-            sku: track.sku,
-            price: track.price,
-            weeks: {},
-            used: 0,
-          };
-          const weekDate = getPreviousTuesday(week.date);
-          acc[skuId].weeks[series.id] = acc[skuId].weeks[series.id] ?? [];
-          acc[skuId].weeks[series.id].push(weekDate);
-          acc[skuId].used++;
-        }, null);
-        return acc;
-      }, {} as { id: number; name: string; price: number; sku: number; weeks: { [key: number]: string[] }; used: number }[]),
-    [favoriteSeries],
-  );
-
-  const tracksList = useMemo(
-    () =>
-      Object.values(tracksMap)
-        .sort(
-          (a, b) =>
-            b.used +
-            Object.keys(b.weeks).length -
-            (a.used + Object.keys(a.weeks).length),
-        )
-        .concat(
-          wishTracks
-            .map((sku) => {
-              const track = TRACKS_LIST.find((t) => t.sku === sku);
-              return !!track && !(track.id in tracksMap)
-                ? {
-                    id: track.id,
-                    name: track.name,
-                    sku: track.sku,
-                    price: track.price,
-                    weeks: {},
-                    used: 0,
-                  }
-                : null;
-            })
-            .filter((t) => !!t),
-        ),
-    [tracksMap],
-  );
+  const [tab, setTab] = useState<ETab>(ETab.TracksUsed);
+  const { size } = useWindowSize();
 
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
       <ShopGuideHeader />
-      <HStack flex={1} alignItems={"start"} overflow={"hidden"}>
-        <Flex
+      <Stack hideFrom={"md"}>
+        <Tabs.Root
+          size={"sm"}
+          value={tab}
+          onValueChange={(e) => setTab(e.value as ETab)}
+          variant={"enclosed"}
+          width={"100%"}
           flex={1}
-          borderRadius={"md"}
-          bgColor={"bg"}
-          overflowY={"auto"}
-          maxH={"100%"}
-          height={"100%"}
-          alignItems={"start"}
         >
-          <Table.ScrollArea borderRadius={"md"} width={"100%"}>
-            <Table.Root size="sm" striped>
-              <Table.Header fontSize={"xs"}>
-                <Table.Row>
-                  <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
-                    <VisuallyHidden>Owned content</VisuallyHidden>
-                  </Table.ColumnHeader>
-                  <Table.ColumnHeader width="100%">Name</Table.ColumnHeader>
-                  <Table.ColumnHeader textAlign={"center"} width="180px">
-                    Used
-                  </Table.ColumnHeader>
-                  <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
-                    Price
-                  </Table.ColumnHeader>
-                </Table.Row>
-              </Table.Header>
-              <Table.Body fontSize={"xs"}>
-                <For
-                  fallback={
-                    <Table.Row>
-                      <Table.Cell colSpan={8} minWidth={"100%"}>
-                        <EmptyState
-                          icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
-                          title={
-                            favoriteSeries.length > 0
-                              ? "No paid tracks missing"
-                              : "No series selected"
-                          }
-                          description={
-                            favoriteSeries.length > 0
-                              ? "You already own all tracks of your favorite series"
-                              : "You didn't choose any favorite series"
-                          }
-                        />
-                      </Table.Cell>
-                    </Table.Row>
-                  }
-                  each={tracksList}
-                  children={(item) => {
-                    const owned = myTracks.includes(item.sku);
-                    const wish = wishTracks.includes(item.sku);
-                    return (
-                      <Table.Row key={item.id}>
-                        <Table.Cell
-                          minWidth={"40px"}
-                          textAlign={"center"}
-                          p={0}
-                          borderBottom={0}
-                          px={"4px"}
-                        >
-                          <Checkbox
-                            size={"xs"}
-                            mt={"4px"}
-                            colorPalette={wish ? "blue" : undefined}
-                            checked={owned || wish}
-                            controlProps={{
-                              borderColor:
-                                !wish && !owned ? "gray.400" : undefined,
-                            }}
-                            icon={
-                              wish ? (
-                                <FontAwesomeIcon size="xs" icon={faBookmark} />
-                              ) : undefined
-                            }
-                            onClick={(e) => e.stopPropagation()}
-                            onCheckedChange={() => {
-                              if (owned) {
-                                setMyTrack(item.sku, false);
-                                setWishTrack(item.sku, true);
-                              } else if (wish) {
-                                setWishTrack(item.sku, false);
-                              } else {
-                                setMyTrack(item.sku, true);
-                              }
-                            }}
-                          />
-                        </Table.Cell>
-                        <Table.Cell
-                          width={"100%"}
-                          display={"flex"}
-                          alignItems={"center"}
-                          p={0}
-                          borderBottom={0}
-                          px={"4px"}
-                        >
-                          <ContentNameBadge name={item.name} />
-                        </Table.Cell>
-                        <Table.Cell
-                          minWidth={"90px"}
-                          textAlign={"center"}
-                          p={0}
-                          borderBottom={0}
-                          px={"4px"}
-                        >
-                          <Tooltip
-                            lazyMount
-                            unmountOnExit
-                            content={Object.keys(item.weeks).map(
-                              (seriesId: string) => (
-                                <HStack
-                                  key={seriesId}
-                                  justifyContent={"space-between"}
-                                >
-                                  <Text textAlign={"left"} truncate>
-                                    {
-                                      SERIES_JSON[
-                                        seriesId.toString() as keyof typeof SERIES_JSON
-                                      ].name
-                                    }
-                                  </Text>
-                                  <Text textAlign={"right"}>
-                                    {item.weeks[parseInt(seriesId)].join(", ")}
-                                  </Text>
-                                </HStack>
-                              ),
-                            )}
-                            showArrow
-                            positioning={{ placement: "top" }}
-                            openDelay={200}
-                            closeDelay={100}
-                          >
-                            <Badge
-                              size="xs"
-                              variant={"solid"}
-                              _light={{ bg: "gray.600" }}
-                            >
-                              {item.used}x
-                            </Badge>
-                          </Tooltip>
-                        </Table.Cell>
-                        <Table.Cell
-                          minWidth={"90px"}
-                          textAlign={"center"}
-                          p={0}
-                          borderBottom={0}
-                          px={"4px"}
-                        >
-                          <PriceBadge size="xs" price={item.price} />
-                        </Table.Cell>
-                      </Table.Row>
-                    );
-                  }}
-                />
-              </Table.Body>
-            </Table.Root>
-          </Table.ScrollArea>
-        </Flex>
-        <WishlistPanel />
+          <Tabs.List flex={1} width={"100%"}>
+            <Tabs.Trigger value={ETab.TracksUsed} width={"100%"}>
+              <Text textWrap={"nowrap"}>Tracks Used</Text>
+            </Tabs.Trigger>
+            <Tabs.Trigger value={ETab.WishlistPanel} width={"100%"}>
+              <Text textWrap={"nowrap"}>Wishlist</Text>
+            </Tabs.Trigger>
+          </Tabs.List>
+        </Tabs.Root>
+      </Stack>
+
+      <HStack flex={1} alignItems={"start"} overflow={"hidden"} gap={2}>
+        {(tab === ETab.TracksUsed || size.md) && <TracksUsed />}
+        {(tab === ETab.WishlistPanel || size.md) && <WishlistPanel />}
       </HStack>
     </Flex>
   );

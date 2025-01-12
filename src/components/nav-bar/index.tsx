@@ -1,5 +1,5 @@
 import { ETabs, setSelectedPage, useUi } from "@/store/ui";
-import { For, Image, Stack } from "@chakra-ui/react";
+import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
   faCircleQuestion,
@@ -13,9 +13,10 @@ import {
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import HelpDialog from "../help";
-import LeftBarButton from "../left-bar/left-bar-button";
 import { useColorMode } from "../ui/color-mode";
 import { Tooltip } from "../ui/tooltip";
+import NavBarButton from "./nav-bar-button";
+
 const tabsTop = [
   { label: "My Season", icon: faTableCellsLarge, index: ETabs.MySeason },
   { label: "My Series", icon: faFlagCheckered, index: ETabs.MySeries },
@@ -24,13 +25,12 @@ const tabsTop = [
   { label: "Shop Guide", icon: faShoppingBag, index: ETabs.ShopGuide },
 ];
 
-function LeftBar() {
+function NavBar({ ...props }: StackProps) {
   const { selectedPage } = useUi();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Stack
-      minW="80px"
-      height="100%"
+      {...props}
       justifyContent="space-between"
       paddingTop="16px"
       paddingBottom="12px"
@@ -56,7 +56,7 @@ function LeftBar() {
         <For
           each={tabsTop}
           children={(tab) => (
-            <LeftBarButton
+            <NavBarButton
               key={tab.index}
               label={tab.label}
               icon={tab.icon}
@@ -67,7 +67,7 @@ function LeftBar() {
         />
       </Stack>
       <Stack justifyContent={"flex-start"} alignItems={"center"} gap={3}>
-        <LeftBarButton
+        <NavBarButton
           key={"about"}
           label={"About"}
           icon={faInfoCircle}
@@ -75,23 +75,24 @@ function LeftBar() {
           onClick={() => setSelectedPage(ETabs.About)}
         />
         <HelpDialog>
-          <LeftBarButton
+          <NavBarButton
             key={"help"}
             label={"Help"}
             icon={faCircleQuestion}
             selected={false}
-            onClick={(e) => e.currentTarget.blur()}
+            onClick={() => (document.activeElement as HTMLElement).blur()}
           />
         </HelpDialog>
 
-        <LeftBarButton
+        <NavBarButton
           key={"language"}
           label={"English"}
           icon={faLanguage}
           selected={false}
           disabled
         />
-        <LeftBarButton
+
+        <NavBarButton
           key={"color-mode"}
           label={colorMode === "light" ? "Light" : "Dark"}
           icon={colorMode === "light" ? faSun : faMoon}
@@ -103,4 +104,4 @@ function LeftBar() {
   );
 }
 
-export default LeftBar;
+export default NavBar;

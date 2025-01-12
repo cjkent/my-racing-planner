@@ -73,7 +73,8 @@ function WishlistPanel() {
     <Stack
       flex={1}
       borderRadius={"md"}
-      height={"100%"}
+      w={"100%"}
+      h={"100%"}
       maxH={"100%"}
       bgColor={"bg"}
       p={4}

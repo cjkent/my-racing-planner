@@ -79,9 +79,9 @@ function ContentTableRow({
           }}
           icon={
             free ? (
-              <FontAwesomeIcon icon={faSackXmark} />
+              <FontAwesomeIcon size={"xs"} icon={faSackXmark} />
             ) : wish ? (
-              <FontAwesomeIcon icon={faBookmark} />
+              <FontAwesomeIcon size={"xs"} icon={faBookmark} />
             ) : undefined
           }
           onClick={(e) => e.stopPropagation()}

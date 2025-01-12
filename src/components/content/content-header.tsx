@@ -1,9 +1,6 @@
-import { Badge, Heading, HStack, Stack, Text } from "@chakra-ui/react";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import { faSackXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Checkbox } from "../ui/checkbox";
-import { Tooltip } from "../ui/tooltip";
+import { HStack } from "@chakra-ui/react";
+import CheckboxCounts from "./checkbox-counts";
+import PageHeader from "./page-header";
 
 function ContentHeader({
   title,
@@ -19,98 +16,17 @@ function ContentHeader({
   wishCount: number;
 }) {
   return (
-    <HStack padding={4} justifyContent={"space-between"}>
-      <Stack>
-        <Heading size="4xl" fontFamily="mono" fontWeight="bold">
-          {title}
-        </Heading>
-        <Text>{description}</Text>
-      </Stack>
-      <Stack>
-        <Tooltip
-          lazyMount
-          unmountOnExit
-          content={"Available for free with an iRacing subscription"}
-          showArrow
-          positioning={{ placement: "left" }}
-          openDelay={200}
-          closeDelay={100}
-        >
-          <HStack>
-            <Badge
-              size="sm"
-              variant="solid"
-              minWidth={"28px"}
-              justifyContent={"center"}
-              colorPalette={"green"}
-            >
-              {freeCount}
-            </Badge>
-            <Checkbox
-              readOnly={true}
-              colorPalette={"green"}
-              checked={true}
-              icon={<FontAwesomeIcon icon={faSackXmark} />}
-            >
-              <Text>Free</Text>
-            </Checkbox>
-          </HStack>
-        </Tooltip>
-        <Tooltip
-          lazyMount
-          unmountOnExit
-          content={"Content you already purchased"}
-          showArrow
-          positioning={{ placement: "left" }}
-          openDelay={200}
-          closeDelay={100}
-        >
-          <HStack>
-            <Badge
-              size="sm"
-              variant="solid"
-              minWidth={"28px"}
-              justifyContent={"center"}
-            >
-              {ownedCount}
-            </Badge>
-            <Checkbox readOnly={true} checked={true}>
-              <Text>Owned</Text>
-            </Checkbox>
-          </HStack>
-        </Tooltip>
-        <Tooltip
-          lazyMount
-          unmountOnExit
-          content={
-            "Content you wish to buy, select to preview it in your season planner"
-          }
-          showArrow
-          positioning={{ placement: "left" }}
-          openDelay={200}
-          closeDelay={100}
-        >
-          <HStack>
-            <Badge
-              size="sm"
-              variant="solid"
-              minWidth={"28px"}
-              justifyContent={"center"}
-              colorPalette={"blue"}
-            >
-              {wishCount}
-            </Badge>
-            <Checkbox
-              readOnly={true}
-              colorPalette={"blue"}
-              checked={true}
-              icon={<FontAwesomeIcon icon={faBookmark} />}
-            >
-              <Text>Wishlist</Text>
-            </Checkbox>
-          </HStack>
-        </Tooltip>
-      </Stack>
+    <HStack
+      padding={{ base: "unset", md: 4 }}
+      justifyContent={"space-between"}
+      alignItems={"start"}
+    >
+      <PageHeader title={title} description={description} />
+      <CheckboxCounts
+        freeCount={freeCount}
+        ownedCount={ownedCount}
+        wishCount={wishCount}
+      />
     </HStack>
   );
 }

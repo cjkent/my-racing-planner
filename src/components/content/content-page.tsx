@@ -3,6 +3,7 @@ import { TContent } from "@/ir-data/utils/types";
 import { Flex } from "@chakra-ui/react";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import ContentSubPage from "../nav-bar/content-sub-page";
 import ContentFilterPanel from "./content-filter-panel";
 import ContentHeader from "./content-header";
 import ContentTable from "./content-table";
@@ -73,6 +74,8 @@ function ContentPage({
         title={title}
         description={description}
       />
+
+      <ContentSubPage hideFrom={"md"} />
 
       <ContentFilterPanel
         tabs={tabs}

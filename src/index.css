@@ -4,6 +4,7 @@
 
   color-scheme: light dark;
   background-color: transparent;
+  overflow: hidden;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
