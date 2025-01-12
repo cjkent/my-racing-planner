@@ -8,7 +8,7 @@ function App() {
     <Flex
       background={{ base: "gray.300", _dark: "gray.900" }}
       width="100vw"
-      height="100vh"
+      height="100dvh"
       overflow={"hidden"}
       direction={{ base: "column", md: "row" }}
     >

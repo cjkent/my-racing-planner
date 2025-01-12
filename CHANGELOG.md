@@ -26,3 +26,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 ## 0.3.1
 
 - Improved Season Planner table cells colors
+
+## 0.3.2
+
+- Fixed viewport height on iOS devices bug related to using 100vh instead of 100dvh
