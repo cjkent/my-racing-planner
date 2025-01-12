@@ -21,7 +21,7 @@ function SeasonFilterPanel() {
             aria-label="Settings"
             variant={"outline"}
             size={"lg"}
-            bgColor={{ base: "bg", _hover: "bg.muted" }}
+            bgColor={{ base: "bg.muted", _hover: "bg" }}
             borderRadius={"md"}
           >
             <FontAwesomeIcon icon={faGears} />

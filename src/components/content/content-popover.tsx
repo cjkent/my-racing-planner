@@ -39,7 +39,7 @@ function ContentPopover({
               const owned = myContent.includes(contentItem?.sku);
               return (
                 contentItem && (
-                  <Table.Row key={item}>
+                  <Table.Row bgColor={"transparent"} key={item}>
                     <Table.Cell w={"20px"} p={0} borderBottom={0} px={"4px"}>
                       <Checkbox
                         size={"xs"}

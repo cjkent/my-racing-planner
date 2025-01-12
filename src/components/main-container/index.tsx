@@ -16,10 +16,9 @@ function MainContainer({ ...props }: StackProps) {
         height="100%"
         width={"100%"}
         padding="8px"
-        bg={"gray.200"}
-        overflow={"hidden"}
-        borderColor={"gray.300"}
-        _dark={{ bg: "gray.800", borderColor: "gray.700" }}
+        bg={"irbgc.light"}
+        borderColor={"irborder.light"}
+        _dark={{ bg: "irbgc.dark", borderColor: "irborder.dark" }}
         md={{
           borderRadius: "xl",
           borderWidth: "1px",

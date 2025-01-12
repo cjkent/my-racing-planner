@@ -41,7 +41,7 @@ function SeriesTable<T extends string | number | Dict | undefined>({
       <Table.ScrollArea width="100%" borderRadius={"md"}>
         <Table.Root stickyHeader size="sm" striped>
           <Table.Header>
-            <Table.Row>
+            <Table.Row bgColor={"bg.muted"}>
               <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
                 <VisuallyHidden>Favorite</VisuallyHidden>
               </Table.ColumnHeader>
@@ -72,7 +72,7 @@ function SeriesTable<T extends string | number | Dict | undefined>({
           <Table.Body>
             <For
               fallback={
-                <Table.Row>
+                <Table.Row bgColor={"transparent"}>
                   <Table.Cell colSpan={8} minWidth={"100%"}>
                     <EmptyState
                       icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}

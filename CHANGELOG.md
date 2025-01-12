@@ -35,3 +35,4 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 
 - Improved PWA safe-area
 - Added iOS PWA icon
+- Changed colors to look more like iracing.com

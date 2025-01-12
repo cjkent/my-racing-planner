@@ -6,12 +6,11 @@ import BottomNavBar from "../nav-bar/bottom-nav-bar";
 function App() {
   return (
     <Flex
-      background={{ base: "gray.300", _dark: "gray.900" }}
+      background={{ base: "irbg.light", _dark: "irbg.dark" }}
       width="100vw"
       height="100dvh"
       paddingTop={"env(safe-area-inset-top)"}
       // paddingBottom={"env(safe-area-inset-bottom)"}
-      overflow={"hidden"}
       direction={{ base: "column", md: "row" }}
     >
       <NavBar hideBelow="md" minW="80px" height="100%" />

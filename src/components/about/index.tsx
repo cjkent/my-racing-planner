@@ -19,7 +19,7 @@ function AboutPage() {
         overflowY={"auto"}
         textAlign={"justify"}
         borderRadius={"md"}
-        bgColor={"bg"}
+        bgColor={"bg.muted"}
         flex={1}
       >
         <section>

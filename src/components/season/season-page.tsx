@@ -110,7 +110,7 @@ function SeasonPage() {
         <Flex
           flex={1}
           borderRadius={"md"}
-          bgColor={"bg"}
+          bgColor={"bg.muted"}
           p={4}
           justifyContent={"center"}
         >
@@ -135,7 +135,7 @@ function SeasonPage() {
       {favoriteSeries.length > 0 && <SeasonFilterPanel />}
 
       {favoriteSeries.length > 0 && filteredFavorites.length === 0 && (
-        <Flex flex={1} borderRadius={"md"} bgColor={"bg"} p={4}>
+        <Flex flex={1} borderRadius={"md"} bgColor={"bg.muted"} p={4}>
           <EmptyState
             icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
             title="No series found"
@@ -159,7 +159,7 @@ function SeasonPage() {
             <Table.ScrollArea borderRadius={"md"}>
               <Table.Root size="sm" showColumnBorder>
                 <Table.Header>
-                  <Table.Row>
+                  <Table.Row bgColor={"bg.muted"}>
                     <Table.ColumnHeader textAlign={"center"} width="60px">
                       Week
                     </Table.ColumnHeader>
@@ -217,7 +217,7 @@ function SeasonPage() {
                                       position={"absolute"}
                                       right={1}
                                       top={1}
-                                      bgColor={"bg"}
+                                      bgColor={"bg.muted"}
                                       px={2}
                                       rounded={"4px"}
                                     >
@@ -266,6 +266,7 @@ function SeasonPage() {
 
                       return (
                         <Table.Row
+                          bgColor={"bg.muted"}
                           key={date}
                           height="60px"
                           borderYWidth={thisWeek ? "2px" : undefined}

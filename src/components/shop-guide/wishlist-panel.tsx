@@ -76,7 +76,7 @@ function WishlistPanel() {
       w={"100%"}
       h={"100%"}
       maxH={"100%"}
-      bgColor={"bg"}
+      bgColor={"bg.muted"}
       p={4}
     >
       <HStack justifyContent={"space-between"}>
@@ -88,7 +88,7 @@ function WishlistPanel() {
               aria-label="Settings"
               variant={"outline"}
               size={"lg"}
-              bgColor={{ base: "bg", _hover: "bg.muted" }}
+              bgColor={{ base: "bg.muted", _hover: "bg" }}
               borderRadius={"md"}
             >
               <FontAwesomeIcon icon={faGears} />

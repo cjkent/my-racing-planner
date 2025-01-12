@@ -87,7 +87,7 @@ function TracksUsed() {
     <Flex
       flex={1}
       borderRadius={"md"}
-      bgColor={"bg"}
+      // bgColor={"bg.muted"}
       overflowY={"auto"}
       maxH={"100%"}
       w={"100%"}
@@ -97,7 +97,7 @@ function TracksUsed() {
       <Table.ScrollArea borderRadius={"md"} width={"100%"}>
         <Table.Root striped>
           <Table.Header>
-            <Table.Row>
+            <Table.Row bgColor={"bg.muted"}>
               <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
                 <VisuallyHidden>Owned content</VisuallyHidden>
               </Table.ColumnHeader>
@@ -108,7 +108,7 @@ function TracksUsed() {
           <Table.Body>
             <For
               fallback={
-                <Table.Row>
+                <Table.Row bgColor={"transparent"}>
                   <Table.Cell colSpan={8} minWidth={"100%"}>
                     <EmptyState
                       icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
@@ -131,7 +131,7 @@ function TracksUsed() {
                 const owned = myTracks.includes(item.sku);
                 const wish = wishTracks.includes(item.sku);
                 return (
-                  <Table.Row key={item.id}>
+                  <Table.Row bgColor={"transparent"} key={item.id}>
                     <Table.Cell
                       minWidth={"40px"}
                       textAlign={"center"}

@@ -34,7 +34,7 @@ function SeriesPopover({
                 SERIES_JSON[item.toString() as keyof typeof SERIES_JSON];
               return (
                 series && (
-                  <Table.Row key={item}>
+                  <Table.Row bgColor={"transparent"} key={item}>
                     <Table.Cell
                       w={"20px"}
                       textAlign={"center"}

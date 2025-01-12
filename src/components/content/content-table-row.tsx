@@ -68,7 +68,7 @@ function ContentTableRow({
     content === "cars" ? [setMyCar, setWishCar] : [setMyTrack, setWishTrack];
 
   return (
-    <Table.Row>
+    <Table.Row bgColor={"transparent"}>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
         <Checkbox
           readOnly={free}

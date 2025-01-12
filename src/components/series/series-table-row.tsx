@@ -54,7 +54,7 @@ function SeriesTableRow({
   official: boolean;
 }) {
   return (
-    <Table.Row>
+    <Table.Row bgColor={"transparent"}>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
         <StarCheckbox
           onClick={(e) => e.stopPropagation()}
