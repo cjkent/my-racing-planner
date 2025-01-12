@@ -67,7 +67,10 @@ function MoreMenuButton() {
             onClick={() => (document.activeElement as HTMLElement).blur()}
           />
         </DrawerTrigger>
-        <DrawerContent roundedTop={"l3"}>
+        <DrawerContent
+          roundedTop={"l3"}
+          // paddingBottom={"env(safe-area-inset-bottom)"}
+        >
           <DrawerBody>
             <Stack>
               <MoreMenuItem

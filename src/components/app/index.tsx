@@ -9,6 +9,8 @@ function App() {
       background={{ base: "gray.300", _dark: "gray.900" }}
       width="100vw"
       height="100dvh"
+      paddingTop={"env(safe-area-inset-top)"}
+      // paddingBottom={"env(safe-area-inset-bottom)"}
       overflow={"hidden"}
       direction={{ base: "column", md: "row" }}
     >
