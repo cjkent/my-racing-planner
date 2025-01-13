@@ -26,10 +26,14 @@ function ContentSubPage({ ...props }: StackProps) {
       >
         <Tabs.List flex={1} width={"100%"}>
           <Tabs.Trigger value={ETabContent.Cars} width={"100%"}>
-            <Text textWrap={"nowrap"}>Cars</Text>
+            <Text textWrap={"nowrap"} userSelect={"none"}>
+              Cars
+            </Text>
           </Tabs.Trigger>
           <Tabs.Trigger value={ETabContent.Tracks} width={"100%"}>
-            <Text textWrap={"nowrap"}>Tracks</Text>
+            <Text textWrap={"nowrap"} userSelect={"none"}>
+              Tracks
+            </Text>
           </Tabs.Trigger>
         </Tabs.List>
       </Tabs.Root>

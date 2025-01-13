@@ -60,7 +60,7 @@ function SeriesPage() {
 
       <SeriesTable
         list={list}
-        children={(item) => (
+        rows={(item) => (
           <SeriesTableRow
             key={item.id}
             id={item.id}

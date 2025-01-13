@@ -184,6 +184,8 @@ function SeasonPage() {
                               <VStack>
                                 {series.logo && (
                                   <Image
+                                    userSelect={"none"}
+                                    draggable={false}
                                     h="40px"
                                     fit="contain"
                                     src={`${IR_URL.image}/img/logos/series/${series.logo}`}

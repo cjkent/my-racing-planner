@@ -86,7 +86,7 @@ function ContentPage({
 
       <ContentTable
         list={list}
-        children={(item) => (
+        rows={(item) => (
           <ContentTableRow
             key={item.id}
             id={item.id}

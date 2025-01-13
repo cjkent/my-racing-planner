@@ -54,6 +54,7 @@ function SeasonFilterPanel() {
               <Text
                 hideBelow={tab === "All" ? undefined : "md"}
                 textWrap={"nowrap"}
+                userSelect={"none"}
               >
                 {tab}
               </Text>

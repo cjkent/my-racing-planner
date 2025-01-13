@@ -33,7 +33,7 @@ function MoreMenuItem({
   disabled?: boolean;
 }) {
   return (
-    <HStack {...rest} color={disabled ? "gray" : undefined}>
+    <HStack userSelect={"none"} {...rest} color={disabled ? "gray" : undefined}>
       <Icon
         height={"22px"}
         width={"22px"}

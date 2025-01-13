@@ -106,6 +106,8 @@ function ContentTableRow({
               key={logo}
               content={
                 <Image
+                  userSelect={"none"}
+                  draggable={false}
                   h={"80px"}
                   w={"160px"}
                   fit="contain"
@@ -117,7 +119,13 @@ function ContentTableRow({
               openDelay={200}
               closeDelay={100}
             >
-              <Image h="24px" fit="contain" src={`${IR_URL.image}${logo}`} />
+              <Image
+                userSelect={"none"}
+                draggable={false}
+                h="24px"
+                fit="contain"
+                src={`${IR_URL.image}${logo}`}
+              />
             </Tooltip>
           </Center>
         )}

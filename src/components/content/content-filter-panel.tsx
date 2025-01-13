@@ -93,6 +93,7 @@ function ContentFilterPanel<T extends string>({
               <Text
                 hideBelow={tab === "All" ? undefined : "md"}
                 textWrap={"nowrap"}
+                userSelect={"none"}
               >
                 {tab}
               </Text>

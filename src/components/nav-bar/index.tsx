@@ -38,6 +38,7 @@ function NavBar({ ...props }: StackProps) {
       paddingTop={3}
       paddingBottom={1.5}
       color={{ base: "gray.700", _dark: "gray.300" }}
+      overflowY={"auto"}
     >
       <Stack
         justifyContent={"flex-start"}
@@ -54,6 +55,8 @@ function NavBar({ ...props }: StackProps) {
           closeDelay={100}
         >
           <Image
+            userSelect={"none"}
+            draggable={false}
             w={"40px"}
             h={"40px"}
             src="/my-racing-planner/my-racing-planner-icon.svg"

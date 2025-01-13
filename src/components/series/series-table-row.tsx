@@ -71,6 +71,8 @@ function SeriesTableRow({
               key={logo}
               content={
                 <Image
+                  userSelect={"none"}
+                  draggable={false}
                   h={"80px"}
                   w={"160px"}
                   fit="contain"
@@ -83,6 +85,8 @@ function SeriesTableRow({
               closeDelay={100}
             >
               <Image
+                userSelect={"none"}
+                draggable={false}
                 h="24px"
                 fit="contain"
                 src={`${IR_URL.image}/img/logos/series/${logo}`}

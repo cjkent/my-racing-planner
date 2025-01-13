@@ -50,10 +50,11 @@ function NavBarButton({
         bg={selected ? "blue.600/40" : "transparent"}
         _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
         p={"6px"}
+        userSelect={"none"}
       >
         <FontAwesomeIcon icon={icon} />
       </Icon>
-      <Text textAlign={"center"} fontSize="10px">
+      <Text userSelect={"none"} textAlign={"center"} fontSize="10px">
         {label}
       </Text>
     </Stack>
