@@ -13,7 +13,7 @@ function App() {
       // paddingBottom={"env(safe-area-inset-bottom)"}
       direction={{ base: "column", md: "row" }}
     >
-      <NavBar hideBelow="md" minW="80px" height="100%" />
+      <NavBar zIndex={10} hideBelow="md" minW="80px" height="100%" />
       <MainContainer
         height="100%"
         maxW={"calc(100%-80px)"}
