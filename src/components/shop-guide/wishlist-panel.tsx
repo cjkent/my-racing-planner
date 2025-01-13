@@ -213,9 +213,14 @@ function WishlistPanel() {
         </Stack>
       </HStack>
       <Button
+        as={"a"}
         disabled={wishList.length < 1}
         size="lg"
-        href={`${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`}
+        href={
+          wishList.length > 0
+            ? `${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`
+            : undefined
+        }
         target="_blank"
         rel="noreferrer"
         colorPalette={"blue"}
