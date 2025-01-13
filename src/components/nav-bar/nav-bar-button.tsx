@@ -21,10 +21,9 @@ function NavBarButton({
       cursor={!disabled ? "pointer" : undefined}
       alignItems={"center"}
       gap={"0"}
+      opacity={disabled ? 0.4 : undefined}
       color={
-        disabled
-          ? "gray"
-          : selected
+        !disabled && selected
           ? { base: "blue.900", _dark: "blue.300" }
           : undefined
       }

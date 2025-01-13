@@ -1,3 +1,4 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import { ETabs, setSelectedPage, useUi } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
@@ -28,14 +29,21 @@ const tabsTop = [
 function NavBar({ ...props }: StackProps) {
   const { selectedPage } = useUi();
   const { colorMode, toggleColorMode } = useColorMode();
+  const { height } = useWindowSize();
+  const small = height <= 680;
   return (
     <Stack
       {...props}
       justifyContent="space-between"
-      paddingTop="16px"
-      paddingBottom="12px"
+      paddingTop={3}
+      paddingBottom={1.5}
+      color={{ base: "gray.700", _dark: "gray.300" }}
     >
-      <Stack justifyContent={"flex-start"} alignItems={"center"} gap={3}>
+      <Stack
+        justifyContent={"flex-start"}
+        alignItems={"center"}
+        gap={small ? 1.5 : 3}
+      >
         <Tooltip
           lazyMount
           unmountOnExit
@@ -50,7 +58,7 @@ function NavBar({ ...props }: StackProps) {
             h={"40px"}
             src="/my-racing-planner/my-racing-planner-icon.svg"
             alt="my=racing-planner-icon"
-            mb={5}
+            mb={3}
           />
         </Tooltip>
         <For
@@ -66,7 +74,11 @@ function NavBar({ ...props }: StackProps) {
           )}
         />
       </Stack>
-      <Stack justifyContent={"flex-start"} alignItems={"center"} gap={3}>
+      <Stack
+        justifyContent={"flex-start"}
+        alignItems={"center"}
+        gap={small ? 1.5 : 3}
+      >
         <NavBarButton
           key={"about"}
           label={"About"}

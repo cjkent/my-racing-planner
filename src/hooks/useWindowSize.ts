@@ -31,6 +31,7 @@ function getBreakpointBooleans(width: number) {
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState<{
+    height: number;
     breakpoint: keyof typeof breakpoints;
     size: {
       base: boolean;
@@ -41,6 +42,7 @@ function useWindowSize() {
       "2xl": boolean;
     };
   }>({
+    height: 0,
     breakpoint: "base",
     size: {
       base: false,
@@ -55,9 +57,11 @@ function useWindowSize() {
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
+      const height = window.innerHeight;
       setWindowSize({
         breakpoint: getBreakpoint(width),
         size: getBreakpointBooleans(width),
+        height,
       });
     }
     window.addEventListener("resize", handleResize);

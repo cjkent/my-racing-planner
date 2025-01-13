@@ -31,6 +31,7 @@ function BottomNavBar({ ...props }: StackProps) {
       alignItems={"center"}
       gap={3}
       px={"1rem"}
+      color={{ base: "gray.700", _dark: "gray.300" }}
     >
       <For
         each={tabsAction}
