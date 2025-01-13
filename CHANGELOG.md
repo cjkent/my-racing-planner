@@ -44,3 +44,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Adjusted colors on navigation to look more like iracing.com
 - Added version number to About page
 - Fixed container shadow being cut by overflow
+
+## 0.3.5
+
+- Improved code splitting a bit by lay loading pages

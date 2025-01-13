@@ -1,12 +1,12 @@
 import { ETabs, useUi } from "@/store/ui";
 import { Flex, Stack, StackProps } from "@chakra-ui/react";
-import { Suspense } from "react";
-import AboutPage from "../about";
-import CarsPage from "../content/cars-page";
-import TracksPage from "../content/tracks-page";
-import SeasonPage from "../season/season-page";
-import SeriesPage from "../series/series-page";
-import ShopPage from "../shop-guide/shop-page";
+import { lazy, Suspense } from "react";
+const AboutPage = lazy(() => import("../about"));
+const CarsPage = lazy(() => import("../content/cars-page"));
+const TracksPage = lazy(() => import("../content/tracks-page"));
+const SeasonPage = lazy(() => import("../season/season-page"));
+const SeriesPage = lazy(() => import("../series/series-page"));
+const ShopPage = lazy(() => import("../shop-guide/shop-page"));
 
 function MainContainer({ ...props }: StackProps) {
   const { selectedPage } = useUi();
