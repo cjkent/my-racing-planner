@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 cookie-jar.txt
+iracing-api/docs/*
 iracing-api/raw/*
 iracing-api/parsed/*
