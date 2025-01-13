@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { EmptyState } from "../ui/empty-state";
 
 type Dict<T = any> = Record<string, T>;
@@ -25,9 +25,10 @@ function ContentTable<T extends string | number | Dict | undefined>({
   list: T[] | readonly T[] | undefined;
   children: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
 }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState<number>(1);
-  const pageSize = 40;
 
+  const pageSize = 40;
   const start = (page - 1) * pageSize;
   const end = start + pageSize;
   const each = useMemo(() => list?.slice(start, end), [list, start, end]);
@@ -36,9 +37,13 @@ function ContentTable<T extends string | number | Dict | undefined>({
     setPage(1);
   }, [list]);
 
+  useEffect(() => {
+    scrollRef.current?.scrollTo(0, 0);
+  }, [list, page]);
+
   return (
     <Stack alignItems={"end"} overflow={"auto"} gap={2}>
-      <Table.ScrollArea width="100%" borderRadius={"md"}>
+      <Table.ScrollArea width="100%" borderRadius={"md"} ref={scrollRef}>
         <Table.Root stickyHeader size="sm" striped>
           <Table.Header>
             <Table.Row bgColor={"bg.muted"}>

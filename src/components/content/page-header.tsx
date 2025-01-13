@@ -11,7 +11,7 @@ function PageHeader({
   return (
     <Stack
       pl={{ base: "0.5rem", md: "unset" }}
-      gap={{ base: "0.25rem", md: "0.5rem" }}
+      gap={{ base: "0", md: "0.5rem" }}
       {...rest}
     >
       <Heading

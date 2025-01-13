@@ -26,11 +26,9 @@ function BottomNavBar({ ...props }: StackProps) {
     <HStack
       {...props}
       justifyContent="space-between"
-      paddingTop="16px"
-      paddingBottom="12px"
-      alignItems={"center"}
-      gap={3}
+      p="0.75rem"
       px={"1rem"}
+      alignItems={"center"}
       color={{ base: "gray.700", _dark: "gray.300" }}
     >
       <For

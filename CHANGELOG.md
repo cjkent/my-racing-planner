@@ -48,3 +48,4 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 ## 0.3.5
 
 - Improved code splitting a bit by lay loading pages
+- Make tables scroll to top when changing pages
