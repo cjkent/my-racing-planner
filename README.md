@@ -106,9 +106,3 @@ Contributions are welcome! If you'd like to improve this project, please:
 3. Commit your changes (`git commit -m 'Add feature-name'`)
 4. Push to the branch (`git push origin feature-name`)
 5. Open a pull request
-
----
-
-## License
-
-Details for license will be added soon.
