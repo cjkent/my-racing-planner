@@ -12,7 +12,7 @@ function AboutPage() {
       <PageHeader
         padding={4}
         title="About"
-        description="About My Racing Planner and why it was created"
+        description={`About My Racing Planner (v${APP_VERSION})`}
       />
       <Stack
         p={{ base: 4, md: 10 }}
@@ -36,7 +36,7 @@ function AboutPage() {
               target="_blank"
               rel="noreferrer"
             >
-              change logs file
+              change log file
             </Link>
             .
           </Text>

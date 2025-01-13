@@ -42,3 +42,4 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Fixed checkout button link
 - Improved spacing on left navigation menu for small screens
 - Adjusted colors on navigation to look more like iracing.com
+- Added version number to About page
