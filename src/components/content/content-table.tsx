@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { EmptyState } from "../ui/empty-state";
 
 type Dict<T = any> = Record<string, T>;
@@ -30,7 +30,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
 
   const start = (page - 1) * pageSize;
   const end = start + pageSize;
-  const each = list?.slice(start, end);
+  const each = useMemo(() => list?.slice(start, end), [list, start, end]);
 
   useEffect(() => {
     setPage(1);
