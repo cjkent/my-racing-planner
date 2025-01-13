@@ -1,3 +1,4 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import { useIr } from "@/store/ir";
 import { HStack, Stack } from "@chakra-ui/react";
 import { useMemo } from "react";
@@ -8,6 +9,9 @@ import PageHeader from "../content/page-header";
 
 function SeasonHeader() {
   const { myTracks, wishTracks, favoriteSeries } = useIr();
+
+  const { height } = useWindowSize();
+  const notSmall = (value: any) => (height <= 680 ? undefined : value);
 
   const counts = useMemo(
     () =>
@@ -40,7 +44,7 @@ function SeasonHeader() {
 
   return (
     <HStack
-      padding={{ base: "unset", md: 4 }}
+      padding={{ base: "unset", md: notSmall(4) }}
       justifyContent={"space-between"}
       alignItems={"start"}
     >

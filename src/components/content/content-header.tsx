@@ -1,3 +1,4 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import { HStack } from "@chakra-ui/react";
 import CheckboxCounts from "./checkbox-counts";
 import PageHeader from "./page-header";
@@ -15,9 +16,11 @@ function ContentHeader({
   ownedCount: number;
   wishCount: number;
 }) {
+  const { height } = useWindowSize();
+  const notSmall = (value: any) => (height <= 680 ? undefined : value);
   return (
     <HStack
-      padding={{ base: "unset", md: 4 }}
+      padding={{ base: "unset", md: notSmall(4) }}
       justifyContent={"space-between"}
       alignItems={"start"}
     >

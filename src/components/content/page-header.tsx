@@ -1,3 +1,4 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import { Heading, Stack, StackProps, Text } from "@chakra-ui/react";
 
 function PageHeader({
@@ -8,14 +9,16 @@ function PageHeader({
   title: string;
   description: string;
 }) {
+  const { height } = useWindowSize();
+  const notSmall = (value: any) => (height <= 680 ? undefined : value);
   return (
     <Stack
-      pl={{ base: "0.5rem", md: "unset" }}
-      gap={{ base: "0", md: "0.5rem" }}
+      pl={{ base: "0.5rem", md: notSmall("unset") }}
+      gap={{ base: "0", md: notSmall("0.5rem") }}
       {...rest}
     >
       <Heading
-        size={{ base: "2xl", md: "4xl" }}
+        size={{ base: "2xl", md: notSmall("4xl") }}
         fontFamily="mono"
         fontWeight="bold"
       >

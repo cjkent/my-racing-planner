@@ -50,3 +50,4 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Improved code splitting a bit by lay loading pages
 - Make tables scroll to top when changing pages
 - Disabled text selection on images and button texts
+- Reduced header height on small height screen
