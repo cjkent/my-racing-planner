@@ -166,7 +166,6 @@ function TracksUsed() {
                       />
                     </Table.Cell>
                     <Table.Cell
-                      width={"100%"}
                       display={"flex"}
                       p={1}
                       borderBottom={0}

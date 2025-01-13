@@ -20,7 +20,8 @@ function App() {
         flex={1}
         overflowX={"auto"}
         padding={{ base: "0", md: "12px" }}
-        paddingLeft={{ base: "0", md: "0" }}
+        paddingLeft={{ base: "0", md: "80px" }}
+        marginLeft={{ base: "0", md: "-80px" }}
       />
       <BottomNavBar hideFrom="md" />
     </Flex>
