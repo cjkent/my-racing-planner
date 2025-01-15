@@ -57,3 +57,4 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Added loading lazy to images
 - Added Hash Router using Wouter
 - Added Google analytics for page visits and outbound clicks
+- Added Privacy Policy page

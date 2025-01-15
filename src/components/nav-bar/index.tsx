@@ -4,6 +4,7 @@ import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
   faCircleQuestion,
+  faFileShield,
   faFlagCheckered,
   faInfoCircle,
   faLanguage,
@@ -91,6 +92,13 @@ function NavBar({ ...props }: StackProps) {
           icon={faInfoCircle}
           selected={location === ETabs.About}
           onClick={() => navigate(ETabs.About)}
+        />
+        <NavBarButton
+          key={"pp"}
+          label={"Privacy"}
+          icon={faFileShield}
+          selected={location === ETabs.Privacy}
+          onClick={() => navigate(ETabs.Privacy)}
         />
         <HelpDialog>
           <NavBarButton

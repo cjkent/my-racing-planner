@@ -21,6 +21,7 @@ import {
 import {
   faBookmark,
   faCar,
+  faFileShield,
   faFlagCheckered,
   faGears,
   faLanguage,
@@ -34,7 +35,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropsWithChildren, useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { Link as LinkWouter, useLocation } from "wouter";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
@@ -260,6 +261,13 @@ function HelpDialog({ children }: PropsWithChildren) {
                   Theme <FontAwesomeIcon size="xs" icon={faMoon} />
                 </strong>
                 : Choose your theme from light and dark options.
+              </List.Item>
+              <List.Item>
+                <strong>
+                  Privacy <FontAwesomeIcon size="xs" icon={faFileShield} />
+                </strong>
+                : No personal data collected, visit the{" "}
+                <LinkWouter to="/pp">Privacy Policy</LinkWouter> for detail.
               </List.Item>
               <List.Item>
                 <strong>
