@@ -184,6 +184,7 @@ function SeasonPage() {
                               <VStack>
                                 {series.logo && (
                                   <Image
+                                    loading="lazy"
                                     userSelect={"none"}
                                     draggable={false}
                                     h="40px"

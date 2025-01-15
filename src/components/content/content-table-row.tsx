@@ -106,6 +106,7 @@ function ContentTableRow({
               key={logo}
               content={
                 <Image
+                  loading="lazy"
                   userSelect={"none"}
                   draggable={false}
                   h={"80px"}
@@ -120,6 +121,7 @@ function ContentTableRow({
               closeDelay={100}
             >
               <Image
+                loading="lazy"
                 userSelect={"none"}
                 draggable={false}
                 h="24px"
