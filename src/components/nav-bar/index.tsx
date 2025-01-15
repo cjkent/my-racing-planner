@@ -18,6 +18,7 @@ import { useLocation } from "wouter";
 import HelpDialog from "../help";
 import { useColorMode } from "../ui/color-mode";
 import { Tooltip } from "../ui/tooltip";
+import MoreMenuButton from "./more-menu-button";
 import NavBarButton from "./nav-bar-button";
 
 const tabsTop = [
@@ -31,7 +32,8 @@ const tabsTop = [
 function NavBar({ ...props }: StackProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { height } = useWindowSize();
-  const small = height <= 680;
+  const tiny = height <= 615;
+  const small = !tiny && height <= 680;
 
   const [location, navigate] = useLocation();
 
@@ -81,51 +83,58 @@ function NavBar({ ...props }: StackProps) {
           )}
         />
       </Stack>
-      <Stack
-        justifyContent={"flex-start"}
-        alignItems={"center"}
-        gap={small ? 1.5 : 3}
-      >
-        <NavBarButton
-          key={"about"}
-          label={"About"}
-          icon={faInfoCircle}
-          selected={location === ETabs.About}
-          onClick={() => navigate(ETabs.About)}
-        />
-        <NavBarButton
-          key={"pp"}
-          label={"Privacy"}
-          icon={faFileShield}
-          selected={location === ETabs.Privacy}
-          onClick={() => navigate(ETabs.Privacy)}
-        />
-        <HelpDialog>
+
+      {tiny ? (
+        <Stack justifyContent={"flex-start"} alignItems={"center"}>
+          <MoreMenuButton />
+        </Stack>
+      ) : (
+        <Stack
+          justifyContent={"flex-start"}
+          alignItems={"center"}
+          gap={small ? 1.5 : 3}
+        >
           <NavBarButton
-            key={"help"}
-            label={"Help"}
-            icon={faCircleQuestion}
-            selected={false}
-            onClick={() => (document.activeElement as HTMLElement).blur()}
+            key={"about"}
+            label={"About"}
+            icon={faInfoCircle}
+            selected={location === ETabs.About}
+            onClick={() => navigate(ETabs.About)}
           />
-        </HelpDialog>
+          <NavBarButton
+            key={"pp"}
+            label={"Privacy"}
+            icon={faFileShield}
+            selected={location === ETabs.Privacy}
+            onClick={() => navigate(ETabs.Privacy)}
+          />
+          <HelpDialog>
+            <NavBarButton
+              key={"help"}
+              label={"Help"}
+              icon={faCircleQuestion}
+              selected={false}
+              onClick={() => (document.activeElement as HTMLElement).blur()}
+            />
+          </HelpDialog>
 
-        <NavBarButton
-          key={"language"}
-          label={"English"}
-          icon={faLanguage}
-          selected={false}
-          disabled
-        />
+          <NavBarButton
+            key={"language"}
+            label={"English"}
+            icon={faLanguage}
+            selected={false}
+            disabled
+          />
 
-        <NavBarButton
-          key={"color-mode"}
-          label={colorMode === "light" ? "Light" : "Dark"}
-          icon={colorMode === "light" ? faSun : faMoon}
-          selected={false}
-          onClick={toggleColorMode}
-        />
-      </Stack>
+          <NavBarButton
+            key={"color-mode"}
+            label={colorMode === "light" ? "Light" : "Dark"}
+            icon={colorMode === "light" ? faSun : faMoon}
+            selected={false}
+            onClick={toggleColorMode}
+          />
+        </Stack>
+      )}
     </Stack>
   );
 }

@@ -11,6 +11,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
   faCircleQuestion,
+  faFileShield,
   faInfoCircle,
   faLanguage,
   faMoon,
@@ -34,7 +35,12 @@ function MoreMenuItem({
   disabled?: boolean;
 }) {
   return (
-    <HStack userSelect={"none"} {...rest} color={disabled ? "gray" : undefined}>
+    <HStack
+      userSelect={"none"}
+      {...rest}
+      color={disabled ? "gray" : undefined}
+      _hover={!disabled ? { bgColor: "whiteAlpha.200" } : undefined}
+    >
       <Icon
         height={"22px"}
         width={"22px"}
@@ -49,13 +55,13 @@ function MoreMenuItem({
   );
 }
 
-function MoreMenuButton() {
+function MoreMenuButton({ ...props }: StackProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false);
 
   const [_, navigate] = useLocation();
   return (
-    <HStack wrap="wrap">
+    <HStack wrap="wrap" {...props}>
       <DrawerRoot
         placement={"bottom"}
         open={isOpen}
@@ -82,6 +88,15 @@ function MoreMenuButton() {
                 onClick={() => {
                   setIsOpen(false);
                   navigate(ETabs.About);
+                }}
+              />
+              <Separator />
+              <MoreMenuItem
+                label="Privacy"
+                icon={faFileShield}
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate(ETabs.Privacy);
                 }}
               />
               <Separator />
