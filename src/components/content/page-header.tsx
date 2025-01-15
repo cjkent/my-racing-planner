@@ -24,7 +24,9 @@ function PageHeader({
       >
         {title}
       </Heading>
-      <Text fontSize={{ base: "xs", md: "unset" }}>{description}</Text>
+      <Text fontSize={{ base: "xs", md: "unset" }} userSelect={"none"}>
+        {description}
+      </Text>
     </Stack>
   );
 }

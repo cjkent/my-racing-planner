@@ -39,7 +39,14 @@ function MoreMenuItem({
       userSelect={"none"}
       {...rest}
       color={disabled ? "gray" : undefined}
-      _hover={!disabled ? { bgColor: "whiteAlpha.200" } : undefined}
+      _hover={
+        !disabled
+          ? {
+              base: { bgColor: "blackAlpha.200" },
+              _dark: { bgColor: "whiteAlpha.200" },
+            }
+          : undefined
+      }
     >
       <Icon
         height={"22px"}
