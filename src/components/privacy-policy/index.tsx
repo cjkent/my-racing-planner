@@ -21,7 +21,7 @@ function PrivacyPolicyPage() {
         flex={1}
       >
         <section>
-          <Heading>Information Collected</Heading>
+          <Heading>Collected Data</Heading>
           <Text as="p">
             I do not collect or store any personal or sensitive data from users.
           </Text>
@@ -63,9 +63,9 @@ function PrivacyPolicyPage() {
         <section>
           <Heading mt={2}>Third-Party Links</Heading>
           <Text as="p">
-            Our site contains links to third-party websites (e.g., iRacing.com).
-            Once you leave our site, we are not responsible for the privacy
-            practices or content of those external websites.
+            This site contains a link to a third-party website (iRacing.com).
+            Once leaving this site, the privacy practices and content of the
+            external website are not controlled or managed by this site.
           </Text>
         </section>
 
