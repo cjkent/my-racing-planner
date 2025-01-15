@@ -1,6 +1,7 @@
-import { Flex, Stack, StackProps } from "@chakra-ui/react";
+import { usePageTracking } from "@/hooks/usePageTracking";
+import { Flex, Spinner, Stack, StackProps } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
-import { Route, Switch } from "wouter";
+import { Redirect, Route, Switch } from "wouter";
 const AboutPage = lazy(() => import("../about"));
 const CarsPage = lazy(() => import("../content/cars-page"));
 const TracksPage = lazy(() => import("../content/tracks-page"));
@@ -9,6 +10,8 @@ const SeriesPage = lazy(() => import("../series/series-page"));
 const ShopPage = lazy(() => import("../shop-guide/shop-page"));
 
 function MainContainer({ ...props }: StackProps) {
+  usePageTracking();
+
   return (
     <Stack {...props}>
       <Flex
@@ -24,7 +27,13 @@ function MainContainer({ ...props }: StackProps) {
           boxShadow: "rgba(5, 5, 15, 0.16) 0px 12px 24px -2px",
         }}
       >
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
+              <Spinner size={"xl"} borderWidth="4px" />
+            </Flex>
+          }
+        >
           <Switch>
             <Route path="/" component={SeasonPage} />
             <Route path="/series" component={SeriesPage} />
@@ -33,8 +42,9 @@ function MainContainer({ ...props }: StackProps) {
             <Route path="/checkout" component={ShopPage} />
             <Route path="/about" component={AboutPage} />
 
-            {/* Default route in a switch */}
-            <Route>404: No such page!</Route>
+            <Route>
+              <Redirect to="/" />
+            </Route>
           </Switch>
         </Suspense>
       </Flex>
