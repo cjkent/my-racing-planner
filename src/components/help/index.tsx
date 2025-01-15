@@ -102,7 +102,6 @@ function HelpDialog({ children }: PropsWithChildren) {
               Planner Page, helping you analyze your content more effectively.
             </Text>
           </section>
-
           <section>
             <Heading mt={2} size={"md"}>
               Wishlist and Checkbox States
@@ -157,9 +156,7 @@ function HelpDialog({ children }: PropsWithChildren) {
               Keep clicking to cycle all states.
             </Text>
           </section>
-
           <Separator my={3} />
-
           <section>
             <Heading mt={2}>
               The <Em>My Season</Em>{" "}
@@ -191,7 +188,7 @@ function HelpDialog({ children }: PropsWithChildren) {
               </List.Item>
             </List.Root>
 
-            <Heading my={2} size={"md"}>
+            <Heading mt={2} size={"md"}>
               Use the table options <FontAwesomeIcon size="xs" icon={faGears} />
             </Heading>
 
@@ -222,9 +219,7 @@ function HelpDialog({ children }: PropsWithChildren) {
               </List.Item>
             </List.Root>
           </section>
-
           <Separator my={3} />
-
           <section>
             <Heading mt={2}>
               Checkout at the <Em>Shop Guide</Em>{" "}
@@ -244,9 +239,7 @@ function HelpDialog({ children }: PropsWithChildren) {
               This project is not affiliated with or endorsed by iRacing.com.
             </Text>
           </section>
-
           <Separator my={3} />
-
           <section>
             <Heading mt={2}>More</Heading>
             <List.Root>
@@ -309,6 +302,53 @@ function HelpDialog({ children }: PropsWithChildren) {
                 .
               </List.Item>
             </List.Root>
+          </section>
+          <Separator my={3} />
+          <section>
+            <Heading mt={2}>Add to Home Screen (Mobile)</Heading>
+            <Text mb={2} as="p">
+              This site can be installed as a Progressive Web App (PWA) for a
+              more app-like experience. Follow the steps below to add it to your
+              home screen:
+            </Text>
+
+            <Heading mt={2} size={"md"}>
+              For iOS (Safari)
+            </Heading>
+            <List.Root as="ol">
+              <List.Item>
+                Open this site in Safari on an iPhone or iPad.
+              </List.Item>
+              <List.Item>
+                Tap the Share button (the square icon with an arrow pointing
+                up).
+              </List.Item>
+              <List.Item>Scroll down and select Add to Home Screen.</List.Item>
+              <List.Item>
+                Confirm by tapping Add in the top-right corner.
+              </List.Item>
+            </List.Root>
+
+            <Heading mt={2} size={"md"}>
+              For Android (Chrome)
+            </Heading>
+            <List.Root as="ol">
+              <List.Item>
+                Open this site in Chrome on an Android device.
+              </List.Item>
+              <List.Item>
+                Tap the Menu button (three dots in the top-right corner)).
+              </List.Item>
+              <List.Item>Select Add to Home Screen.</List.Item>
+              <List.Item>
+                Confirm by tapping Add and choose whether to add it
+                automatically or manually.
+              </List.Item>
+            </List.Root>
+            <Text my={2} as="p">
+              After adding, the PWA will appear on the home screen and behave
+              like a native app, offering a seamless experience.
+            </Text>
           </section>
         </DialogBody>
         <DialogCloseTrigger />
