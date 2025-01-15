@@ -1,5 +1,6 @@
-import { ETabs, setSelectedPage, useUi } from "@/store/ui";
+import { ETabs } from "@/store/ui";
 import { Stack, StackProps, Tabs, Text } from "@chakra-ui/react";
+import { useLocation } from "wouter";
 
 enum ETabContent {
   Cars = "Cars",
@@ -7,9 +8,9 @@ enum ETabContent {
 }
 
 function ContentSubPage({ ...props }: StackProps) {
-  const { selectedPage } = useUi();
+  const [location, navigate] = useLocation();
   const page =
-    selectedPage === ETabs.MyCars ? ETabContent.Cars : ETabContent.Tracks;
+    location === ETabs.MyCars ? ETabContent.Cars : ETabContent.Tracks;
   return (
     <Stack {...props}>
       <Tabs.Root
@@ -19,9 +20,7 @@ function ContentSubPage({ ...props }: StackProps) {
         flex={1}
         value={page}
         onValueChange={(e) =>
-          setSelectedPage(
-            e.value === ETabContent.Cars ? ETabs.MyCars : ETabs.MyTracks,
-          )
+          navigate(e.value === ETabContent.Cars ? ETabs.MyCars : ETabs.MyTracks)
         }
       >
         <Tabs.List flex={1} width={"100%"}>

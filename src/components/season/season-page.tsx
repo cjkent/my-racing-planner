@@ -8,7 +8,7 @@ import {
   setWishTrack,
   useIr,
 } from "@/store/ir";
-import { ETabs, setHelpPresented, setSelectedPage, useUi } from "@/store/ui";
+import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import {
   Flex,
   For,
@@ -43,6 +43,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import ContentPopover from "../content/content-popover";
@@ -74,6 +75,8 @@ function SeasonPage() {
     seasonShowThisWeek,
     seasonCategory,
   } = useUi();
+
+  const [_, navigate] = useLocation();
 
   const [filteredFavorites, setFilteredFavorites] = useState(favoriteSeries);
   useEffect(() => {
@@ -125,7 +128,7 @@ function SeasonPage() {
                   Read the Help Page instructions
                 </Link>
               </List.Item>
-              <List.Item onClick={() => setSelectedPage(ETabs.MySeries)}>
+              <List.Item onClick={() => navigate(ETabs.MySeries)}>
                 <Link>Go directly to the My Series page</Link>
               </List.Item>
             </List.Root>

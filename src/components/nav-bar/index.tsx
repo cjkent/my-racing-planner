@@ -1,5 +1,5 @@
 import useWindowSize from "@/hooks/useWindowSize";
-import { ETabs, setSelectedPage, useUi } from "@/store/ui";
+import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
@@ -13,6 +13,7 @@ import {
   faSun,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "wouter";
 import HelpDialog from "../help";
 import { useColorMode } from "../ui/color-mode";
 import { Tooltip } from "../ui/tooltip";
@@ -27,10 +28,12 @@ const tabsTop = [
 ];
 
 function NavBar({ ...props }: StackProps) {
-  const { selectedPage } = useUi();
   const { colorMode, toggleColorMode } = useColorMode();
   const { height } = useWindowSize();
   const small = height <= 680;
+
+  const [location, navigate] = useLocation();
+
   return (
     <Stack
       {...props}
@@ -71,8 +74,8 @@ function NavBar({ ...props }: StackProps) {
               key={tab.index}
               label={tab.label}
               icon={tab.icon}
-              selected={selectedPage === tab.index}
-              onClick={() => setSelectedPage(tab.index)}
+              selected={location === tab.index}
+              onClick={() => navigate(tab.index)}
             />
           )}
         />
@@ -86,8 +89,8 @@ function NavBar({ ...props }: StackProps) {
           key={"about"}
           label={"About"}
           icon={faInfoCircle}
-          selected={selectedPage === ETabs.About}
-          onClick={() => setSelectedPage(ETabs.About)}
+          selected={location === ETabs.About}
+          onClick={() => navigate(ETabs.About)}
         />
         <HelpDialog>
           <NavBarButton

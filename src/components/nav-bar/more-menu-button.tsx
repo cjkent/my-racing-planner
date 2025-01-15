@@ -5,7 +5,7 @@ import {
   DrawerRoot,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { ETabs, setSelectedPage } from "@/store/ui";
+import { ETabs } from "@/store/ui";
 import { HStack, Icon, Separator, Stack, StackProps } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { useLocation } from "wouter";
 import HelpDialog from "../help";
 import { useColorMode } from "../ui/color-mode";
 import NavBarButton from "./nav-bar-button";
@@ -51,6 +52,8 @@ function MoreMenuItem({
 function MoreMenuButton() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false);
+
+  const [_, navigate] = useLocation();
   return (
     <HStack wrap="wrap">
       <DrawerRoot
@@ -78,7 +81,7 @@ function MoreMenuButton() {
                 icon={faInfoCircle}
                 onClick={() => {
                   setIsOpen(false);
-                  setSelectedPage(ETabs.About);
+                  navigate(ETabs.About);
                 }}
               />
               <Separator />

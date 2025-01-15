@@ -3,17 +3,13 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export enum ETabs {
-  MySeason,
-  MySeries,
-  MyCars,
-  MyTracks,
-  ShopGuide,
-  About,
+  MySeason = "/",
+  MySeries = "/series",
+  MyCars = "/cars",
+  MyTracks = "/tracks",
+  ShopGuide = "/checkout",
+  About = "/about",
 }
-
-export const useUiStore = create(() => ({
-  selectedPage: ETabs.MySeason,
-}));
 
 export const useUiStorePersist = create(
   persist(
@@ -35,9 +31,6 @@ export const useUiStorePersist = create(
     },
   ),
 );
-
-export const setSelectedPage = (index: ETabs) =>
-  useUiStore.setState(() => ({ selectedPage: index }));
 
 export const setSeasonShowReorder = (value: boolean) =>
   useUiStorePersist.setState(() => ({ seasonShowReorder: value }));
@@ -73,7 +66,6 @@ export const setHelpPresented = (value: boolean) =>
   useUiStorePersist.setState(() => ({ helpPresented: value }));
 
 export const useUi = () => {
-  const selectedPage = useUiStore((state) => state.selectedPage);
   const seasonShowReorder = useUiStorePersist(
     (state) => state.seasonShowReorder,
   );
@@ -101,7 +93,6 @@ export const useUi = () => {
   const helpPresented = useUiStorePersist((state) => state.helpPresented);
 
   return {
-    selectedPage,
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,

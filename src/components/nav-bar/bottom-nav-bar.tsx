@@ -1,4 +1,4 @@
-import { ETabs, setSelectedPage, useUi } from "@/store/ui";
+import { ETabs } from "@/store/ui";
 import { For, HStack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
@@ -7,16 +7,17 @@ import {
   faShoppingBag,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "wouter";
 import MoreMenuButton from "./more-menu-button";
 import NavBarButton from "./nav-bar-button";
 
 function BottomNavBar({ ...props }: StackProps) {
-  const { selectedPage } = useUi();
+  const [location, navigate] = useLocation();
 
   const tabsAction = [
     { label: "My Season", icon: faTableCellsLarge, index: ETabs.MySeason },
     { label: "My Series", icon: faFlagCheckered, index: ETabs.MySeries },
-    selectedPage === ETabs.MyTracks
+    location === ETabs.MyTracks
       ? { label: "My Content", icon: faRoad, index: ETabs.MyTracks }
       : { label: "My Content", icon: faCar, index: ETabs.MyCars },
     { label: "Shop Guide", icon: faShoppingBag, index: ETabs.ShopGuide },
@@ -38,8 +39,8 @@ function BottomNavBar({ ...props }: StackProps) {
             key={tab.index}
             label={tab.label}
             icon={tab.icon}
-            selected={selectedPage === tab.index}
-            onClick={() => setSelectedPage(tab.index)}
+            selected={location === tab.index}
+            onClick={() => navigate(tab.index)}
           />
         )}
       />

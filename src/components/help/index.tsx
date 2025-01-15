@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import useWindowSize from "@/hooks/useWindowSize";
-import { ETabs, setHelpPresented, setSelectedPage, useUi } from "@/store/ui";
+import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import {
   Box,
   Em,
@@ -34,6 +34,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropsWithChildren, useEffect, useState } from "react";
+import { useLocation } from "wouter";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
@@ -43,11 +44,13 @@ function HelpDialog({ children }: PropsWithChildren) {
 
   const { size } = useWindowSize();
 
+  const [_, navigate] = useLocation();
+
   useEffect(() => {
     if (!helpPresented) {
       setOpen(true);
       setHelpPresented(true);
-      setSelectedPage(ETabs.MySeries);
+      navigate(ETabs.MySeries);
     }
   }, [helpPresented]);
 
