@@ -10,9 +10,11 @@ import {
 import useWindowSize from "@/hooks/useWindowSize";
 import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import {
+  Badge,
   Box,
   Em,
   Heading,
+  Icon,
   Link,
   List,
   Separator,
@@ -31,6 +33,7 @@ import {
   faRoad,
   faSackXmark,
   faShoppingBag,
+  faStar,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -82,7 +85,13 @@ function HelpDialog({ children }: PropsWithChildren) {
               Select your favorite series. Your chosen series will appear at the
               Season Planner page.
             </Text>
-            <Text as="p">Use the Start Checkbox to mark your favorites</Text>
+            <Text as="p">
+              Use the <Em>Star Checkbox</Em>{" "}
+              <Icon color={"orange"}>
+                <FontAwesomeIcon icon={faStar} />
+              </Icon>{" "}
+              to mark your favorites
+            </Text>
 
             <Box my={3} />
 
@@ -247,7 +256,10 @@ function HelpDialog({ children }: PropsWithChildren) {
                 <strong>
                   Language <FontAwesomeIcon size="xs" icon={faLanguage} />
                 </strong>
-                : Choose your preferred language
+                : Choose your preferred language.{" "}
+                <Badge size="xs" colorPalette={"red"}>
+                  soon ™
+                </Badge>
               </List.Item>
               <List.Item>
                 <strong>
@@ -266,7 +278,15 @@ function HelpDialog({ children }: PropsWithChildren) {
                 <strong>
                   Buy me a coffee <FontAwesomeIcon size="xs" icon={faMugHot} />
                 </strong>
-                : Contribute by donating to the project.
+                :{" "}
+                <Link
+                  href="https://buymeacoffee.com/adrianulima"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Contribute by donating
+                </Link>
+                .
               </List.Item>
               <List.Item>
                 <strong>

@@ -2,6 +2,10 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.4.2
+
+- Improved help page text styles and typos
+
 ## 0.4.1
 
 - Fixed hover highlight on "More menu" when in light color mode
