@@ -260,7 +260,7 @@ function HelpDialog({ children }: PropsWithChildren) {
                   Privacy <FontAwesomeIcon size="xs" icon={faFileShield} />
                 </strong>
                 : No personal data collected, visit the{" "}
-                <LinkWouter to="/pp">Privacy Policy</LinkWouter> for detail.
+                <LinkWouter to="/about">Privacy Policy</LinkWouter> for detail.
               </List.Item>
               <List.Item>
                 <strong>

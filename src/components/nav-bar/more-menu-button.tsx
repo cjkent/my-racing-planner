@@ -11,7 +11,6 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
   faCircleQuestion,
-  faFileShield,
   faInfoCircle,
   faLanguage,
   faMoon,
@@ -117,15 +116,6 @@ function MoreMenuButton({ ...props }: StackProps) {
               >
                 <BMCIcon />
               </MoreMenuItem>
-              <Separator />
-              <MoreMenuItem
-                label="Privacy"
-                icon={faFileShield}
-                onClick={() => {
-                  setIsOpen(false);
-                  navigate(ETabs.Privacy);
-                }}
-              />
               <Separator />
               <HelpDialog>
                 <MoreMenuItem

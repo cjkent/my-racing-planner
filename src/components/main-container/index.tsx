@@ -4,7 +4,6 @@ import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "wouter";
 const AboutPage = lazy(() => import("../about"));
 const CarsPage = lazy(() => import("../content/cars-page"));
-const PrivacyPolicyPagePage = lazy(() => import("../privacy-policy"));
 const SeasonPage = lazy(() => import("../season/season-page"));
 const SeriesPage = lazy(() => import("../series/series-page"));
 const ShopPage = lazy(() => import("../shop-guide/shop-page"));
@@ -42,7 +41,6 @@ function MainContainer({ ...props }: StackProps) {
             <Route path="/tracks" component={TracksPage} />
             <Route path="/checkout" component={ShopPage} />
             <Route path="/about" component={AboutPage} />
-            <Route path="/pp" component={PrivacyPolicyPagePage} />
 
             <Route>
               <Redirect to="/" />

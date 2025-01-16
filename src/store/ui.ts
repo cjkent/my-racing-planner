@@ -9,7 +9,6 @@ export enum ETabs {
   MyTracks = "/tracks",
   ShopGuide = "/checkout",
   About = "/about",
-  Privacy = "/pp",
 }
 
 export const useUiStorePersist = create(
