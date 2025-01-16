@@ -7,6 +7,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Fixed hover highlight on "More menu" when in light color mode
 - Added Buy me a Coffee link
 - Merged About and Privacy Policy pages
+- Replaced buttons by anchors on navigation menu items
 
 ## 0.4.0
 

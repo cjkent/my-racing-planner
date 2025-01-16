@@ -106,6 +106,14 @@ function MoreMenuButton({ ...props }: StackProps) {
                 }}
               />
               <Separator />
+              <HelpDialog>
+                <MoreMenuItem
+                  label="Help"
+                  icon={faCircleQuestion}
+                  onClick={() => (document.activeElement as HTMLElement).blur()}
+                />
+              </HelpDialog>
+              <Separator />
               <MoreMenuItem
                 label="Buy me a Coffee"
                 onClick={() => setIsOpen(false)}
@@ -116,14 +124,6 @@ function MoreMenuButton({ ...props }: StackProps) {
               >
                 <BMCIcon />
               </MoreMenuItem>
-              <Separator />
-              <HelpDialog>
-                <MoreMenuItem
-                  label="Help"
-                  icon={faCircleQuestion}
-                  onClick={() => (document.activeElement as HTMLElement).blur()}
-                />
-              </HelpDialog>
               <Separator />
               <MoreMenuItem
                 label="Change Language"

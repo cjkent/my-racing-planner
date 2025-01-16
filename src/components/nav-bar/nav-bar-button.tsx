@@ -15,8 +15,6 @@ function NavBarButton({
   label?: string;
   icon?: IconProp;
   selected?: boolean;
-  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
-  disabled?: boolean;
 }) {
   return (
     <Button

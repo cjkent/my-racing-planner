@@ -13,7 +13,7 @@ import {
   faSun,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import BMCIcon from "../bmc/icon";
 import HelpDialog from "../help";
 import { useColorMode } from "../ui/color-mode";
@@ -35,7 +35,7 @@ function NavBar({ ...props }: StackProps) {
   const tiny = height <= 615;
   const small = !tiny && height <= 680;
 
-  const [location, navigate] = useLocation();
+  const [location] = useLocation();
 
   return (
     <Stack
@@ -78,7 +78,8 @@ function NavBar({ ...props }: StackProps) {
               label={tab.label}
               icon={tab.icon}
               selected={location === tab.index}
-              onClick={() => navigate(tab.index)}
+              as={Link}
+              href={tab.index}
             />
           )}
         />
@@ -99,20 +100,9 @@ function NavBar({ ...props }: StackProps) {
             label={"About"}
             icon={faInfoCircle}
             selected={location === ETabs.About}
-            onClick={() => navigate(ETabs.About)}
+            as={Link}
+            href={ETabs.About}
           />
-
-          <NavBarButton
-            key={"buy-me-a-coffee"}
-            label="Coffee"
-            selected={false}
-            as={"a"}
-            href="https://buymeacoffee.com/adrianulima"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <BMCIcon />
-          </NavBarButton>
 
           <HelpDialog>
             <NavBarButton
@@ -123,6 +113,18 @@ function NavBar({ ...props }: StackProps) {
               onClick={() => (document.activeElement as HTMLElement).blur()}
             />
           </HelpDialog>
+
+          <NavBarButton
+            key={"buy-me-a-coffee"}
+            label="Support"
+            selected={false}
+            as="a"
+            href="https://buymeacoffee.com/adrianulima"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BMCIcon />
+          </NavBarButton>
 
           <NavBarButton
             key={"language"}

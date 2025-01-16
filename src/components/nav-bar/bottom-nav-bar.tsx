@@ -7,12 +7,12 @@ import {
   faShoppingBag,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import MoreMenuButton from "./more-menu-button";
 import NavBarButton from "./nav-bar-button";
 
 function BottomNavBar({ ...props }: StackProps) {
-  const [location, navigate] = useLocation();
+  const [location] = useLocation();
 
   const tabsAction = [
     { label: "My Season", icon: faTableCellsLarge, index: ETabs.MySeason },
@@ -40,7 +40,8 @@ function BottomNavBar({ ...props }: StackProps) {
             label={tab.label}
             icon={tab.icon}
             selected={location === tab.index}
-            onClick={() => navigate(tab.index)}
+            as={Link}
+            href={tab.index}
           />
         )}
       />
