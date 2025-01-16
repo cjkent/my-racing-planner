@@ -1,6 +1,7 @@
-import { Icon, Stack, Text } from "@chakra-ui/react";
+import { Icon, Text } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, ButtonProps } from "../ui/button";
 
 function NavBarButton({
   icon,
@@ -8,19 +9,23 @@ function NavBarButton({
   selected,
   onClick,
   disabled,
-}: {
-  label: string;
-  icon: IconProp;
+  children,
+  ...rest
+}: ButtonProps & {
+  label?: string;
+  icon?: IconProp;
   selected?: boolean;
-  onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   disabled?: boolean;
 }) {
   return (
-    <Stack
-      as={"button"}
+    <Button
+      unstyled
+      display={"flex"}
+      flexDirection={"column"}
       cursor={!disabled ? "pointer" : undefined}
       alignItems={"center"}
-      gap={"0"}
+      justifyItems={"center"}
       opacity={disabled ? 0.4 : undefined}
       color={
         !disabled && selected
@@ -40,24 +45,31 @@ function NavBarButton({
             }
           : undefined
       }
+      {...rest}
     >
-      <Icon
-        height={"22px"}
-        width={"22px"}
-        borderRadius={"6px"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        bg={selected ? "blue.600/40" : "transparent"}
-        _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
-        p={"6px"}
-        userSelect={"none"}
-      >
-        <FontAwesomeIcon icon={icon} />
-      </Icon>
-      <Text userSelect={"none"} textAlign={"center"} fontSize="10px">
-        {label}
-      </Text>
-    </Stack>
+      {icon ? (
+        <Icon
+          height={"22px"}
+          width={"22px"}
+          borderRadius={"6px"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          bg={selected ? "blue.600/40" : "transparent"}
+          _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
+          p={"6px"}
+          userSelect={"none"}
+        >
+          <FontAwesomeIcon icon={icon} />
+        </Icon>
+      ) : (
+        children
+      )}
+      {label && (
+        <Text userSelect={"none"} textAlign={"center"} fontSize="10px">
+          {label}
+        </Text>
+      )}
+    </Button>
   );
 }
 

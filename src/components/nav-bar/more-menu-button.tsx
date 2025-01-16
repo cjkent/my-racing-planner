@@ -20,7 +20,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useLocation } from "wouter";
+import BMCIcon from "../bmc/icon";
 import HelpDialog from "../help";
+import { Button, ButtonProps } from "../ui/button";
 import { useColorMode } from "../ui/color-mode";
 import NavBarButton from "./nav-bar-button";
 
@@ -28,14 +30,15 @@ function MoreMenuItem({
   label,
   icon,
   disabled,
+  children,
   ...rest
-}: StackProps & {
+}: ButtonProps & {
   label: string;
-  icon: IconProp;
-  disabled?: boolean;
+  icon?: IconProp;
 }) {
   return (
-    <HStack
+    <Button
+      unstyled
       userSelect={"none"}
       {...rest}
       color={disabled ? "gray" : undefined}
@@ -48,17 +51,23 @@ function MoreMenuItem({
           : undefined
       }
     >
-      <Icon
-        height={"22px"}
-        width={"22px"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        p={"6px"}
-      >
-        <FontAwesomeIcon icon={icon} />
-      </Icon>
-      {label}
-    </HStack>
+      <HStack>
+        {icon ? (
+          <Icon
+            height={"22px"}
+            width={"22px"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            p={"6px"}
+          >
+            <FontAwesomeIcon icon={icon} />
+          </Icon>
+        ) : (
+          children
+        )}
+        {label}
+      </HStack>
+    </Button>
   );
 }
 
@@ -97,6 +106,17 @@ function MoreMenuButton({ ...props }: StackProps) {
                   navigate(ETabs.About);
                 }}
               />
+              <Separator />
+              <MoreMenuItem
+                label="Buy me a Coffee"
+                onClick={() => setIsOpen(false)}
+                as={"a"}
+                href="https://buymeacoffee.com/adrianulima"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BMCIcon />
+              </MoreMenuItem>
               <Separator />
               <MoreMenuItem
                 label="Privacy"

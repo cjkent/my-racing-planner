@@ -55,6 +55,7 @@ function SeriesPage() {
         tabs={ECarCategories}
         tab={tabCategory}
         onTabChange={setTabCategory}
+        search={search}
         onSearchChange={setSearch}
       />
 

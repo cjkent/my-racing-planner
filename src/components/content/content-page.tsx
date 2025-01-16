@@ -81,6 +81,7 @@ function ContentPage({
         tabs={tabs}
         tab={tabCategory}
         onTabChange={setTabCategory}
+        search={search}
         onSearchChange={setSearch}
       />
 

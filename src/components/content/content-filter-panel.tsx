@@ -3,26 +3,25 @@ import { CategoryIcon } from "@/ir-data/utils/icons";
 import { HStack, IconButton, Input, Tabs, Text } from "@chakra-ui/react";
 import { faCircleXmark, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import { InputGroup } from "../ui/input-group";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 
 function ContentFilterPanel<T extends string>({
   tabs,
   tab,
+  search,
   onTabChange,
   onSearchChange,
 }: {
   tabs: { [key: string]: string };
   tab: T;
+  search: string;
   onTabChange: (value: T) => void;
   onSearchChange: (value: string) => void;
 }) {
-  const [search, setSearch] = useState<string>("");
   const { size } = useWindowSize();
 
   const setSearchWrapper = (newValue: string) => {
-    setSearch(newValue);
     onSearchChange(newValue);
   };
 
@@ -32,7 +31,7 @@ function ContentFilterPanel<T extends string>({
       alignItems={"center"}
     >
       <PopoverRoot
-        open={!!search.trim() ? true : undefined}
+        open={!!search?.trim() ? true : undefined}
         positioning={{ placement: size.md ? "right" : "top-start" }}
       >
         <PopoverTrigger asChild>
@@ -52,7 +51,7 @@ function ContentFilterPanel<T extends string>({
             maxWidth={"100%"}
             startElement={<FontAwesomeIcon icon={faSearch} />}
             endElement={
-              !!search.trim() ? (
+              !!search?.trim() ? (
                 <FontAwesomeIcon
                   onClick={() => setSearchWrapper("")}
                   cursor={"pointer"}

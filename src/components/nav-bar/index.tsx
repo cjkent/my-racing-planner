@@ -15,6 +15,7 @@ import {
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "wouter";
+import BMCIcon from "../bmc/icon";
 import HelpDialog from "../help";
 import { useColorMode } from "../ui/color-mode";
 import { Tooltip } from "../ui/tooltip";
@@ -42,7 +43,7 @@ function NavBar({ ...props }: StackProps) {
       {...props}
       justifyContent="space-between"
       paddingTop={3}
-      paddingBottom={1.5}
+      paddingBottom={2}
       color={{ base: "gray.700", _dark: "gray.300" }}
       overflowY={"auto"}
     >
@@ -101,6 +102,19 @@ function NavBar({ ...props }: StackProps) {
             selected={location === ETabs.About}
             onClick={() => navigate(ETabs.About)}
           />
+
+          <NavBarButton
+            key={"buy-me-a-coffee"}
+            label="Coffee"
+            selected={false}
+            as={"a"}
+            href="https://buymeacoffee.com/adrianulima"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BMCIcon />
+          </NavBarButton>
+
           <NavBarButton
             key={"pp"}
             label={"Privacy"}
@@ -108,6 +122,7 @@ function NavBar({ ...props }: StackProps) {
             selected={location === ETabs.Privacy}
             onClick={() => navigate(ETabs.Privacy)}
           />
+
           <HelpDialog>
             <NavBarButton
               key={"help"}
