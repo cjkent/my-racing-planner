@@ -107,6 +107,14 @@ function SeasonPage() {
     }
   }
 
+  const [hideHeaderText, setHideHeaderText] = useState(false);
+  const [tableScroll, setTableScroll] = useState(false);
+  const handleScroll = (event: any) => {
+    const scrollTop = event.currentTarget.scrollTop;
+    const scrolled = tableScroll ? scrollTop > 0 : scrollTop > 60;
+    setTableScroll(scrolled);
+  };
+
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
       <SeasonHeader />
@@ -160,7 +168,10 @@ function SeasonPage() {
             strategy={horizontalListSortingStrategy}
             disabled={!seasonShowReorder}
           >
-            <Table.ScrollArea borderRadius={"md"}>
+            <Table.ScrollArea
+              borderRadius={"md"}
+              onScroll={seasonStickyHeader ? handleScroll : undefined}
+            >
               <Table.Root
                 size="sm"
                 showColumnBorder
@@ -200,6 +211,7 @@ function SeasonPage() {
                                     src={`${IR_URL.image}/img/logos/series/${series.logo}`}
                                   />
                                 )}
+
                                 <Tooltip
                                   lazyMount
                                   unmountOnExit
@@ -213,8 +225,20 @@ function SeasonPage() {
                                     textAlign={"center"}
                                     lineClamp="2"
                                     maxW={"200px"}
+                                    opacity={
+                                      !seasonStickyHeader || !tableScroll
+                                        ? 1
+                                        : 0
+                                    }
+                                    transition={"opacity 0.2s linear"}
+                                    onTransitionEnd={() =>
+                                      setHideHeaderText(tableScroll)
+                                    }
                                   >
-                                    {series.name}
+                                    {(!seasonStickyHeader ||
+                                      !tableScroll ||
+                                      !hideHeaderText) &&
+                                      series.name}
                                   </Text>
                                 </Tooltip>
                               </VStack>

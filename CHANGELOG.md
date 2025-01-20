@@ -6,6 +6,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 
 - Improved help page text styles and typos
 - Added Sticky header to season planner settings
+- Added smooth transition for sticky header
 
 ## 0.4.1
 
