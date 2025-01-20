@@ -6,6 +6,7 @@ import {
   setSeasonShowReorder,
   setSeasonShowThisWeek,
   setSeasonShowWishlist,
+  setSeasonStickyHeader,
   useUi,
 } from "@/store/ui";
 import { For, VStack } from "@chakra-ui/react";
@@ -14,6 +15,7 @@ import { Tooltip } from "../ui/tooltip";
 
 function SeasonSettingsPopover() {
   const {
+    seasonStickyHeader,
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
@@ -44,6 +46,13 @@ function SeasonSettingsPopover() {
       tooltip: "Highlight all cells with the same hovered track",
       checked: seasonHighlight,
       setChecked: setSeasonHighlight,
+    },
+    {
+      id: "sticky",
+      text: "Sticky headers",
+      tooltip: "Keep column headers always visible.",
+      checked: seasonStickyHeader,
+      setChecked: setSeasonStickyHeader,
     },
     {
       id: "reorder",

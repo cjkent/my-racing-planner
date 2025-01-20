@@ -66,6 +66,7 @@ function SeasonPage() {
   const { myTracks, wishTracks, favoriteSeries } = useIr();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
   const {
+    seasonStickyHeader,
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
@@ -160,7 +161,11 @@ function SeasonPage() {
             disabled={!seasonShowReorder}
           >
             <Table.ScrollArea borderRadius={"md"}>
-              <Table.Root size="sm" showColumnBorder>
+              <Table.Root
+                size="sm"
+                showColumnBorder
+                stickyHeader={seasonStickyHeader}
+              >
                 <Table.Header>
                   <Table.Row bgColor={"bg.muted"}>
                     <Table.ColumnHeader textAlign={"center"} width="60px">
