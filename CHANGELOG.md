@@ -2,6 +2,11 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.5.0
+
+- Improved car switching series to show cars on season planner table
+- Added option to special promo of some countries
+
 ## 0.4.2
 
 - Improved help page text styles and typos

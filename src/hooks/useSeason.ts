@@ -2,6 +2,13 @@ import { useIr } from "@/store/ir";
 import { useMemo } from "react";
 import SERIES_JSON from "../ir-data/series.json";
 
+type TWWeek = {
+  weekNum: number;
+  date: string;
+  track: { id: number; name: string };
+  cars?: { id: number; name: string }[];
+};
+
 export function getPreviousTuesday(date: string): string {
   const inputDate = new Date(date);
   const utcDay = inputDate.getUTCDay();
@@ -42,21 +49,22 @@ const useSeason = () => {
 
   const seriesDateMap = useMemo(
     () =>
-      favoriteSeries.reduce(
-        (acc, curr) => ({
+      favoriteSeries.reduce((acc, curr) => {
+        const series = SERIES_JSON[curr.toString() as keyof typeof SERIES_JSON];
+        return {
           ...acc,
-          [curr]: SERIES_JSON[
-            curr.toString() as keyof typeof SERIES_JSON
-          ].weeks.reduce(
-            (acc2, curr2) => ({
+          [curr]: series.weeks.reduce((acc2, curr2: TWWeek) => {
+            const date = getPreviousTuesday(curr2.date);
+            return {
               ...acc2,
-              [getPreviousTuesday(curr2.date)]: curr2.track.id,
-            }),
-            {},
-          ),
-        }),
-        {},
-      ),
+              [date]: curr2.track.id,
+              ...(series.switching
+                ? { [`${date}_cars`]: curr2.cars?.map((c) => c.id) }
+                : {}),
+            };
+          }, {}),
+        };
+      }, {}),
     [favoriteSeries],
   );
 

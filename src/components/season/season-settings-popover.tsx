@@ -27,6 +27,13 @@ function SeasonSettingsPopover() {
 
   const settingsList = [
     {
+      id: "hover",
+      text: "Highlight on track hover",
+      tooltip: "Highlight all cells with the same hovered track",
+      checked: seasonHighlight,
+      setChecked: setSeasonHighlight,
+    },
+    {
       id: "checkboxes",
       text: "Show content checkboxes",
       tooltip: "Show track checkboxes to quickly switch tracks you own",
@@ -39,13 +46,6 @@ function SeasonSettingsPopover() {
       tooltip: "Show cars dropdown to quickly switch cars you own",
       checked: seasonShowCarsDropdown,
       setChecked: setSeasonShowCarsDropdown,
-    },
-    {
-      id: "hover",
-      text: "Highlight on track hover",
-      tooltip: "Highlight all cells with the same hovered track",
-      checked: seasonHighlight,
-      setChecked: setSeasonHighlight,
     },
     {
       id: "sticky",

@@ -5,10 +5,7 @@
     "category": "oval",
     "laps": 35,
     "duration": 30,
-    "season": {
-      "id": 5281,
-      "name": "Legends Cup by Go Motorsports Shop - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -132,10 +129,7 @@
     "category": "oval",
     "laps": 115,
     "duration": null,
-    "season": {
-      "id": 5271,
-      "name": "CARS Late Model Stock Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -260,10 +254,7 @@
     "category": "formula_car",
     "laps": 15,
     "duration": null,
-    "season": {
-      "id": 5246,
-      "name": "Skip Barber Race Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -392,10 +383,7 @@
     "category": "oval",
     "laps": 40,
     "duration": null,
-    "season": {
-      "id": 5275,
-      "name": "SK Modified Weekly Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -520,10 +508,7 @@
     "category": "oval",
     "laps": 60,
     "duration": null,
-    "season": {
-      "id": 5333,
-      "name": "NASCAR iRacing Class C Series Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -617,10 +602,7 @@
     "category": "oval",
     "laps": 80,
     "duration": null,
-    "season": {
-      "id": 5288,
-      "name": "Silver Crown Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -745,10 +727,7 @@
     "category": "oval",
     "laps": 100,
     "duration": null,
-    "season": {
-      "id": 5290,
-      "name": "NASCAR Class A Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -879,10 +858,7 @@
     "category": "oval",
     "laps": 110,
     "duration": null,
-    "season": {
-      "id": 5332,
-      "name": "NASCAR iRacing Class B Series Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -978,10 +954,7 @@
     "category": "sports_car",
     "laps": 10,
     "duration": null,
-    "season": {
-      "id": 5213,
-      "name": "Spec Racer Ford Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -1110,10 +1083,7 @@
     "category": "formula_car",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5257,
-      "name": "iRacing Lotus 79 Grand Prix Series- 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -1241,10 +1211,7 @@
     "category": "sports_car",
     "laps": 14,
     "duration": null,
-    "season": {
-      "id": 5221,
-      "name": "Radical Esports Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -1372,10 +1339,7 @@
     "category": "oval",
     "laps": 80,
     "duration": null,
-    "season": {
-      "id": 5279,
-      "name": "NASCAR Tour Modified Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -1501,10 +1465,7 @@
     "category": "oval",
     "laps": 55,
     "duration": null,
-    "season": {
-      "id": 5287,
-      "name": "NASCAR Xfinity Series - Fixed - 2025 Season 1 Fixed "
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -1636,10 +1597,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 25,
-    "season": {
-      "id": 5206,
-      "name": "Production Car Challenge by Sim-Lab - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -1771,10 +1729,7 @@
     "category": "oval",
     "laps": 15,
     "duration": null,
-    "season": {
-      "id": 5267,
-      "name": "NASCAR Carburetor Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": false,
     "fixed": true,
     "multiclass": false,
@@ -1911,10 +1866,7 @@
     "category": "oval",
     "laps": 40,
     "duration": 60,
-    "season": {
-      "id": 5289,
-      "name": "Sprint Car Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -2040,10 +1992,7 @@
     "category": "oval",
     "laps": 100,
     "duration": null,
-    "season": {
-      "id": 5258,
-      "name": "INDYCAR Series - Oval - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2170,10 +2119,7 @@
     "category": "formula_car",
     "laps": 23,
     "duration": null,
-    "season": {
-      "id": 5260,
-      "name": "INDYCAR Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -2302,10 +2248,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 12,
-    "season": {
-      "id": 5201,
-      "name": "Global Mazda MX-5 Cup by Fanatec - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2435,10 +2378,7 @@
     "category": "oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5284,
-      "name": "NASCAR Class C Maconi Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2568,10 +2508,7 @@
     "category": "formula_car",
     "laps": 8,
     "duration": null,
-    "season": {
-      "id": 5259,
-      "name": "INDYCAR Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2700,10 +2637,7 @@
     "category": "oval",
     "laps": 35,
     "duration": null,
-    "season": {
-      "id": 5273,
-      "name": "ARCA Menards Series - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2832,10 +2766,7 @@
     "category": "oval",
     "laps": 20,
     "duration": null,
-    "season": {
-      "id": 5270,
-      "name": "Rookie Street Stock Series by Fanatec - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -2962,10 +2893,7 @@
     "category": "oval",
     "laps": 50,
     "duration": null,
-    "season": {
-      "id": 5278,
-      "name": "Street Stock Series by Next Level Racing - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -3090,10 +3018,7 @@
     "category": "oval",
     "laps": 50,
     "duration": null,
-    "season": {
-      "id": 5291,
-      "name": "NASCAR Class A Series - Fixed - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -3224,10 +3149,7 @@
     "category": "formula_car",
     "laps": 16,
     "duration": null,
-    "season": {
-      "id": 5256,
-      "name": "Lotus 49 Grand Prix Legends - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -3355,10 +3277,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 25,
-    "season": {
-      "id": 5214,
-      "name": "Global Sports Car Challenge by Fanatec - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": true,
@@ -3487,10 +3406,7 @@
     "category": "oval",
     "laps": 60,
     "duration": null,
-    "season": {
-      "id": 5282,
-      "name": "Super Late Model Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -3616,10 +3532,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 40,
-    "season": {
-      "id": 5231,
-      "name": "GT Sprint Series by Simucube - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -3757,10 +3670,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 30,
-    "season": {
-      "id": 5224,
-      "name": "Advanced Mazda MX-5 Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -3889,10 +3799,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 180,
-    "season": {
-      "id": 5230,
-      "name": "GT Endurance Series by Simucube - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -4030,10 +3937,7 @@
     "category": "oval",
     "laps": 10,
     "duration": null,
-    "season": {
-      "id": 5266,
-      "name": "NASCAR Pickup Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": false,
     "fixed": true,
     "multiclass": false,
@@ -4173,10 +4077,7 @@
     "category": "formula_car",
     "laps": 36,
     "duration": null,
-    "season": {
-      "id": 5263,
-      "name": "Formula A - Grand Prix Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -4305,10 +4206,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 40,
-    "season": {
-      "id": 5222,
-      "name": "IMSA Vintage Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -4439,10 +4337,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5298,
-      "name": "DIRTcar Limited Late Model Series - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -4565,10 +4460,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5297,
-      "name": "DIRTcar 305 Sprint Car Series by Fanatec - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -4691,10 +4583,7 @@
     "category": "sports_car",
     "laps": 6,
     "duration": null,
-    "season": {
-      "id": 5227,
-      "name": "iRacing Porsche Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -4822,10 +4711,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5304,
-      "name": "DIRTcar 360 Sprint Car Series 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -4945,10 +4831,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5307,
-      "name": "DIRTcar Pro Late Model Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5069,10 +4952,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5312,
-      "name": "World of Outlaws Sprint Car Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5193,10 +5073,7 @@
     "category": "dirt_oval",
     "laps": 50,
     "duration": 50,
-    "season": {
-      "id": 5316,
-      "name": "World of Outlaws Late Model Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5316,10 +5193,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5315,
-      "name": "AMSOIL USAC Sprint Car 2025 - Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -5440,10 +5314,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5306,
-      "name": "USAC 360 Sprint Car Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5565,10 +5436,7 @@
     "category": "dirt_oval",
     "laps": 25,
     "duration": 25,
-    "season": {
-      "id": 5301,
-      "name": "DIRTcar Class C Dirt Street Stock Series - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -5690,10 +5558,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5296,
-      "name": "Dirt Legends Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5817,10 +5682,7 @@
     "category": "dirt_road",
     "laps": 10,
     "duration": 20,
-    "season": {
-      "id": 5320,
-      "name": "Rallycross Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -5953,10 +5815,7 @@
     "category": "dirt_oval",
     "laps": 25,
     "duration": 25,
-    "season": {
-      "id": 5302,
-      "name": "Dirt Midget Cup - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -6078,10 +5937,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 360,
-    "season": {
-      "id": 5234,
-      "name": "Global Endurance Tour by CONSPIT - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -6173,10 +6029,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5207,
-      "name": "Ferrari GT3 Challenge - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -6305,10 +6158,7 @@
     "category": "dirt_oval",
     "laps": 40,
     "duration": 30,
-    "season": {
-      "id": 5317,
-      "name": "World of Outlaws Late Model Series - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -6428,10 +6278,7 @@
     "category": "dirt_road",
     "laps": 12,
     "duration": null,
-    "season": {
-      "id": 5326,
-      "name": "Pro 4 Off-Road Racing Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -6554,10 +6401,7 @@
     "category": "sports_car",
     "laps": 26,
     "duration": null,
-    "season": {
-      "id": 5225,
-      "name": "Supercars Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -6687,10 +6531,7 @@
     "category": "sports_car",
     "laps": 26,
     "duration": null,
-    "season": {
-      "id": 5226,
-      "name": "Supercars Series - Australian Servers - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -6820,10 +6661,7 @@
     "category": "oval",
     "laps": 90,
     "duration": null,
-    "season": {
-      "id": 5286,
-      "name": "NASCAR 1987 Legends Cup  - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -6953,10 +6791,7 @@
     "category": "formula_car",
     "laps": 20,
     "duration": null,
-    "season": {
-      "id": 5255,
-      "name": "US Open Wheel C - Indy Pro 2000 Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -7085,10 +6920,7 @@
     "category": "oval",
     "laps": 60,
     "duration": null,
-    "season": {
-      "id": 5283,
-      "name": "Super Late Model Series - Fixed - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -7214,10 +7046,7 @@
     "category": "oval",
     "laps": 80,
     "duration": null,
-    "season": {
-      "id": 5280,
-      "name": "NASCAR Tour Modified Series - Fixed - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -7343,10 +7172,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 160,
-    "season": {
-      "id": 5236,
-      "name": "IMSA Endurance Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -7437,10 +7263,7 @@
     "category": "dirt_oval",
     "laps": 50,
     "duration": 50,
-    "season": {
-      "id": 5310,
-      "name": "Big Block Modified Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -7562,10 +7385,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 30,
-    "season": {
-      "id": 5250,
-      "name": "Dallara Formula iR - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -7695,10 +7515,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5215,
-      "name": "TCR Virtual Challenge - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -7829,10 +7646,7 @@
     "category": "formula_car",
     "laps": 6,
     "duration": null,
-    "season": {
-      "id": 5251,
-      "name": "Formula C -  Dallara F3 Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -7963,10 +7777,7 @@
     "category": "sports_car",
     "laps": 5,
     "duration": null,
-    "season": {
-      "id": 5229,
-      "name": "Proto-GT Challenge by Thrustmaster 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -8100,10 +7911,7 @@
     "category": "oval",
     "laps": 60,
     "duration": null,
-    "season": {
-      "id": 5272,
-      "name": "CARS Late Model Stock Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8228,10 +8036,7 @@
     "category": "oval",
     "laps": 40,
     "duration": null,
-    "season": {
-      "id": 5276,
-      "name": "SK Modified Series - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8356,10 +8161,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 25,
-    "season": {
-      "id": 5309,
-      "name": "DIRTcar UMP Modified Series - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8481,10 +8283,7 @@
     "category": "formula_car",
     "laps": 12,
     "duration": null,
-    "season": {
-      "id": 5241,
-      "name": "US Open Wheel D - USF 2000 Series  - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8613,10 +8412,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5232,
-      "name": "GT3 Challenge Fixed by Fanatec - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8754,10 +8550,7 @@
     "category": "dirt_oval",
     "laps": 20,
     "duration": null,
-    "season": {
-      "id": 5293,
-      "name": "DIRTcar Street Stock Rookie Racing Series by MOZA 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -8884,10 +8677,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 45,
-    "season": {
-      "id": 5237,
-      "name": "IMSA iRacing Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -9032,10 +8822,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 12,
-    "season": {
-      "id": 5239,
-      "name": "Formula Vee Series by trophi.ai - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9164,10 +8951,7 @@
     "category": "formula_car",
     "laps": 6,
     "duration": null,
-    "season": {
-      "id": 5252,
-      "name": "Formula C - Thrustmaster Dallara F3 Series -2025 Season 1-Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9298,10 +9082,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5235,
-      "name": "Prototype Challenge  - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9435,10 +9216,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5313,
-      "name": "World of Outlaws Sprint Car Series - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9559,10 +9337,7 @@
     "category": "dirt_road",
     "laps": 8,
     "duration": null,
-    "season": {
-      "id": 5319,
-      "name": "Volkswagen Beetle Lite iRX Rookie Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9693,10 +9468,7 @@
     "category": "dirt_road",
     "laps": 8,
     "duration": null,
-    "season": {
-      "id": 5321,
-      "name": "iRX Volkswagen Beetle Lite Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -9827,10 +9599,7 @@
     "category": "dirt_road",
     "laps": 8,
     "duration": null,
-    "season": {
-      "id": 5322,
-      "name": "Rallycross Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -9963,10 +9732,7 @@
     "category": "dirt_road",
     "laps": 8,
     "duration": null,
-    "season": {
-      "id": 5323,
-      "name": "Pro 2 Lite Off-Road Rookie Racing Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10091,10 +9857,7 @@
     "category": "dirt_road",
     "laps": 10,
     "duration": null,
-    "season": {
-      "id": 5324,
-      "name": "Pro 4 Off-Road Racing Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10218,10 +9981,7 @@
     "category": "dirt_road",
     "laps": 10,
     "duration": null,
-    "season": {
-      "id": 5325,
-      "name": "Pro 2 Off-Road Racing Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10344,10 +10104,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": null,
-    "season": {
-      "id": 5299,
-      "name": "DIRTcar 358 Modified Series 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10470,10 +10227,7 @@
     "category": "oval",
     "laps": 25,
     "duration": null,
-    "season": {
-      "id": 5265,
-      "name": "Dallara DW12 Dash - 2025 Season 1"
-    },
+    "switching": false,
     "official": false,
     "fixed": true,
     "multiclass": false,
@@ -10609,10 +10363,7 @@
     "category": "sports_car",
     "laps": 6,
     "duration": null,
-    "season": {
-      "id": 5228,
-      "name": "iRacing Porsche Cup  - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10740,10 +10491,7 @@
     "category": "oval",
     "laps": 120,
     "duration": null,
-    "season": {
-      "id": 5199,
-      "name": "Winter iRacing NASCAR Series - Fixed - 2024 Season"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -10881,10 +10629,7 @@
     "category": "oval",
     "laps": 120,
     "duration": null,
-    "season": {
-      "id": 5200,
-      "name": "Winter iRacing NASCAR Series - 2024 Season"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -11022,10 +10767,7 @@
     "category": "oval",
     "laps": 40,
     "duration": null,
-    "season": {
-      "id": 5268,
-      "name": "Rookie Legends Cup by Simshop 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -11151,10 +10893,7 @@
     "category": "formula_car",
     "laps": 18,
     "duration": null,
-    "season": {
-      "id": 5264,
-      "name": "Formula A - Grand Prix Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -11283,10 +11022,7 @@
     "category": "dirt_road",
     "laps": 10,
     "duration": null,
-    "season": {
-      "id": 5327,
-      "name": "Pro 2 Off-Road Racing Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -11410,10 +11146,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5217,
-      "name": "GT4 Falken Tyre Challenge - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -11544,10 +11277,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 120,
-    "season": {
-      "id": 5220,
-      "name": "IMSA Michelin Pilot Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -11630,10 +11360,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5223,
-      "name": "Stock Car Brasil - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -11763,10 +11490,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5245,
-      "name": "FIA Formula 4 Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -11895,10 +11619,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5244,
-      "name": "FIA Formula 4 Challenge- 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12027,10 +11748,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 30,
-    "season": {
-      "id": 5218,
-      "name": "Sports Car Challenge by Falken Tyre - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,
@@ -12162,10 +11880,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 30,
-    "season": {
-      "id": 5216,
-      "name": "TCR Virtual Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -12296,10 +12011,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5211,
-      "name": "Mission R Challenge - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12429,10 +12141,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5203,
-      "name": "GR Buttkicker Cup - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12562,10 +12271,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5305,
-      "name": "DIRTcar 360 Sprint Car Series - Fixed 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12685,10 +12391,7 @@
     "category": "dirt_oval",
     "laps": 25,
     "duration": 25,
-    "season": {
-      "id": 5303,
-      "name": "Dirt Midget Cup - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12810,10 +12513,7 @@
     "category": "dirt_oval",
     "laps": 30,
     "duration": 30,
-    "season": {
-      "id": 5308,
-      "name": "DIRTcar Pro Late Model Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -12934,10 +12634,7 @@
     "category": "dirt_oval",
     "laps": 50,
     "duration": 50,
-    "season": {
-      "id": 5311,
-      "name": "Big Block Modified Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13059,10 +12756,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5205,
-      "name": "Clio Cup - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13190,10 +12884,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 12,
-    "season": {
-      "id": 5240,
-      "name": "Formula 1600 Rookie Sim-Motion Series - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13322,10 +13013,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5243,
-      "name": "Motorsport UK FF 1600 Trophy by Thrustmaster - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -13454,10 +13142,7 @@
     "category": "oval",
     "laps": 80,
     "duration": null,
-    "season": {
-      "id": 5285,
-      "name": "NASCAR Gen 4 Cup Series - 2025 Season 1 Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13584,10 +13269,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5219,
-      "name": "LMP3 Trophy - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13714,15 +13396,45 @@
     "category": "sports_car",
     "laps": 3,
     "duration": null,
-    "season": {
-      "id": 5209,
-      "name": "Ring Meister by Ricmotech - 2025 Season 1"
-    },
+    "switching": true,
     "official": true,
     "fixed": true,
     "multiclass": false,
     "cars": [
-      143
+      112,
+      147,
+      146,
+      153,
+      143,
+      67,
+      192,
+      190,
+      162,
+      150,
+      189,
+      135,
+      157,
+      119,
+      23,
+      64,
+      26,
+      195,
+      109,
+      127,
+      93,
+      92,
+      102,
+      194,
+      176,
+      132,
+      184,
+      173,
+      185,
+      133,
+      188,
+      156,
+      169,
+      191
     ],
     "license": {
       "id": 3,
@@ -13735,6 +13447,24 @@
       {
         "weekNum": 0,
         "date": "2024-12-17",
+        "cars": [
+          {
+            "id": 112,
+            "name": "Audi RS 3 LMS TCR"
+          },
+          {
+            "id": 147,
+            "name": "Honda Civic Type R TCR"
+          },
+          {
+            "id": 146,
+            "name": "Hyundai Elantra N TCR"
+          },
+          {
+            "id": 153,
+            "name": "Hyundai Veloster N TCR"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13744,6 +13474,12 @@
       {
         "weekNum": 1,
         "date": "2024-12-24",
+        "cars": [
+          {
+            "id": 143,
+            "name": "Porsche 911 GT3 Cup (992)"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13753,6 +13489,12 @@
       {
         "weekNum": 2,
         "date": "2024-12-31",
+        "cars": [
+          {
+            "id": 67,
+            "name": "Global Mazda MX-5 Cup"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13762,6 +13504,16 @@
       {
         "weekNum": 3,
         "date": "2025-01-07",
+        "cars": [
+          {
+            "id": 192,
+            "name": "Supercars Chevrolet Camaro Gen 3"
+          },
+          {
+            "id": 190,
+            "name": "Supercars Ford Mustang Gen 3"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13771,6 +13523,12 @@
       {
         "weekNum": 4,
         "date": "2025-01-14",
+        "cars": [
+          {
+            "id": 162,
+            "name": "Renault Clio"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13780,6 +13538,28 @@
       {
         "weekNum": 5,
         "date": "2025-01-21",
+        "cars": [
+          {
+            "id": 150,
+            "name": "Aston Martin Vantage GT4"
+          },
+          {
+            "id": 189,
+            "name": "BMW M4 G82 GT4"
+          },
+          {
+            "id": 135,
+            "name": "McLaren 570S GT4"
+          },
+          {
+            "id": 157,
+            "name": "Mercedes-AMG GT4"
+          },
+          {
+            "id": 119,
+            "name": "Porsche 718 Cayman GT4 Clubsport MR"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13789,6 +13569,12 @@
       {
         "weekNum": 6,
         "date": "2025-01-28",
+        "cars": [
+          {
+            "id": 23,
+            "name": "SCCA Spec Racer Ford"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13798,6 +13584,16 @@
       {
         "weekNum": 7,
         "date": "2025-02-04",
+        "cars": [
+          {
+            "id": 64,
+            "name": "Aston Martin DBR9 GT1"
+          },
+          {
+            "id": 26,
+            "name": "Chevrolet Corvette C6.R GT1"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13807,6 +13603,12 @@
       {
         "weekNum": 8,
         "date": "2025-02-11",
+        "cars": [
+          {
+            "id": 195,
+            "name": "BMW M2 CS Racing"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13816,6 +13618,28 @@
       {
         "weekNum": 9,
         "date": "2025-02-18",
+        "cars": [
+          {
+            "id": 109,
+            "name": "BMW M8 GTE"
+          },
+          {
+            "id": 127,
+            "name": "Chevrolet Corvette C8.R GTE"
+          },
+          {
+            "id": 93,
+            "name": "Ferrari 488 GTE"
+          },
+          {
+            "id": 92,
+            "name": "Ford GTE"
+          },
+          {
+            "id": 102,
+            "name": "Porsche 911 RSR"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13825,6 +13649,48 @@
       {
         "weekNum": 10,
         "date": "2025-02-25",
+        "cars": [
+          {
+            "id": 194,
+            "name": "Acura NSX GT3 EVO 22"
+          },
+          {
+            "id": 176,
+            "name": "Audi R8 LMS EVO II GT3"
+          },
+          {
+            "id": 132,
+            "name": "BMW M4 GT3"
+          },
+          {
+            "id": 184,
+            "name": "Chevrolet Corvette Z06 GT3.R"
+          },
+          {
+            "id": 173,
+            "name": "Ferrari 296 GT3"
+          },
+          {
+            "id": 185,
+            "name": "Ford Mustang GT3"
+          },
+          {
+            "id": 133,
+            "name": "Lamborghini Huracán GT3 EVO"
+          },
+          {
+            "id": 188,
+            "name": "McLaren 720S GT3 EVO"
+          },
+          {
+            "id": 156,
+            "name": "Mercedes-AMG GT3 2020"
+          },
+          {
+            "id": 169,
+            "name": "Porsche 911 GT3 R (992)"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13834,6 +13700,12 @@
       {
         "weekNum": 11,
         "date": "2025-03-04",
+        "cars": [
+          {
+            "id": 191,
+            "name": "Mini Stock"
+          }
+        ],
         "track": {
           "id": 249,
           "name": "Nürburgring Nordschleife",
@@ -13848,10 +13720,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5210,
-      "name": "Mustang Skip Barber  Challenge - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -13980,10 +13849,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 45,
-    "season": {
-      "id": 5233,
-      "name": "GTE Sprint Series by CONSPIT  - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -14118,10 +13984,7 @@
     "category": "formula_car",
     "laps": 26,
     "duration": null,
-    "season": {
-      "id": 5261,
-      "name": "Formula B - Super Formula Series 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -14251,10 +14114,7 @@
     "category": "formula_car",
     "laps": 15,
     "duration": null,
-    "season": {
-      "id": 5262,
-      "name": "Formula B - Super Formula Series - Fixed 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -14384,17 +14244,26 @@
     "category": "oval",
     "laps": 18,
     "duration": null,
-    "season": {
-      "id": 5277,
-      "name": "Draft Master Challenge by Simagic 2025 Season 1"
-    },
+    "switching": true,
     "official": true,
     "fixed": true,
     "multiclass": false,
     "cars": [
+      154,
+      124,
+      125,
+      175,
       139,
       140,
-      141
+      141,
+      179,
+      114,
+      115,
+      116,
+      111,
+      123,
+      155,
+      22
     ],
     "license": {
       "id": 2,
@@ -14407,6 +14276,24 @@
       {
         "weekNum": 0,
         "date": "2024-12-17",
+        "cars": [
+          {
+            "id": 154,
+            "name": "NASCAR Legends Buick LeSabre - 1987"
+          },
+          {
+            "id": 124,
+            "name": "NASCAR Legends Chevrolet Monte Carlo - 1987"
+          },
+          {
+            "id": 125,
+            "name": "NASCAR Legends Ford Thunderbird - 1987"
+          },
+          {
+            "id": 175,
+            "name": "NASCAR Legends Pontiac Grand Prix - 1987"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14415,6 +14302,20 @@
       {
         "weekNum": 1,
         "date": "2024-12-24",
+        "cars": [
+          {
+            "id": 139,
+            "name": "NASCAR Cup Series Next Gen Chevrolet Camaro ZL1"
+          },
+          {
+            "id": 140,
+            "name": "NASCAR Cup Series Next Gen Ford Mustang"
+          },
+          {
+            "id": 141,
+            "name": "NASCAR Cup Series Next Gen Toyota Camry"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14423,6 +14324,12 @@
       {
         "weekNum": 2,
         "date": "2024-12-31",
+        "cars": [
+          {
+            "id": 179,
+            "name": "SRX"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14431,6 +14338,20 @@
       {
         "weekNum": 3,
         "date": "2025-01-07",
+        "cars": [
+          {
+            "id": 114,
+            "name": "NASCAR XFINITY Chevrolet Camaro"
+          },
+          {
+            "id": 115,
+            "name": "NASCAR XFINITY Ford Mustang"
+          },
+          {
+            "id": 116,
+            "name": "NASCAR XFINITY Toyota Supra"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14439,6 +14360,20 @@
       {
         "weekNum": 4,
         "date": "2025-01-14",
+        "cars": [
+          {
+            "id": 111,
+            "name": "NASCAR Truck Chevrolet Silverado"
+          },
+          {
+            "id": 123,
+            "name": "NASCAR Truck Ford F150"
+          },
+          {
+            "id": 155,
+            "name": "NASCAR Truck Toyota Tundra TRD Pro"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14447,6 +14382,12 @@
       {
         "weekNum": 5,
         "date": "2025-01-21",
+        "cars": [
+          {
+            "id": 22,
+            "name": "[Legacy] NASCAR Cup Chevrolet Impala COT - 2009"
+          }
+        ],
         "track": {
           "id": 116,
           "name": "Talladega Superspeedway"
@@ -14455,6 +14396,24 @@
       {
         "weekNum": 6,
         "date": "2025-01-28",
+        "cars": [
+          {
+            "id": 154,
+            "name": "NASCAR Legends Buick LeSabre - 1987"
+          },
+          {
+            "id": 124,
+            "name": "NASCAR Legends Chevrolet Monte Carlo - 1987"
+          },
+          {
+            "id": 125,
+            "name": "NASCAR Legends Ford Thunderbird - 1987"
+          },
+          {
+            "id": 175,
+            "name": "NASCAR Legends Pontiac Grand Prix - 1987"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14464,6 +14423,20 @@
       {
         "weekNum": 7,
         "date": "2025-02-04",
+        "cars": [
+          {
+            "id": 139,
+            "name": "NASCAR Cup Series Next Gen Chevrolet Camaro ZL1"
+          },
+          {
+            "id": 140,
+            "name": "NASCAR Cup Series Next Gen Ford Mustang"
+          },
+          {
+            "id": 141,
+            "name": "NASCAR Cup Series Next Gen Toyota Camry"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14473,6 +14446,12 @@
       {
         "weekNum": 8,
         "date": "2025-02-11",
+        "cars": [
+          {
+            "id": 179,
+            "name": "SRX"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14482,6 +14461,20 @@
       {
         "weekNum": 9,
         "date": "2025-02-18",
+        "cars": [
+          {
+            "id": 114,
+            "name": "NASCAR XFINITY Chevrolet Camaro"
+          },
+          {
+            "id": 115,
+            "name": "NASCAR XFINITY Ford Mustang"
+          },
+          {
+            "id": 116,
+            "name": "NASCAR XFINITY Toyota Supra"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14491,6 +14484,20 @@
       {
         "weekNum": 10,
         "date": "2025-02-25",
+        "cars": [
+          {
+            "id": 111,
+            "name": "NASCAR Truck Chevrolet Silverado"
+          },
+          {
+            "id": 123,
+            "name": "NASCAR Truck Ford F150"
+          },
+          {
+            "id": 155,
+            "name": "NASCAR Truck Toyota Tundra TRD Pro"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14500,6 +14507,12 @@
       {
         "weekNum": 11,
         "date": "2025-03-04",
+        "cars": [
+          {
+            "id": 22,
+            "name": "[Legacy] NASCAR Cup Chevrolet Impala COT - 2009"
+          }
+        ],
         "track": {
           "id": 191,
           "name": "Daytona International Speedway",
@@ -14514,10 +14527,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 35,
-    "season": {
-      "id": 5238,
-      "name": "IMSA iRacing Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": true,
@@ -14662,10 +14672,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5247,
-      "name": "FIA F4 Esports Regional Tour  - Asia Pacific - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -14792,10 +14799,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5248,
-      "name": "FIA F4 Esports Regional Tour  - Americas - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -14925,10 +14929,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5249,
-      "name": "FIA F4 Esports Regional Tour - Europe - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15056,10 +15057,7 @@
     "category": "dirt_oval",
     "laps": 25,
     "duration": null,
-    "season": {
-      "id": 5294,
-      "name": "Micro Winged Sprint Car Rookie Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15184,10 +15182,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 30,
-    "season": {
-      "id": 5253,
-      "name": "Formula C - Super Formula Lights - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": false,
@@ -15316,10 +15311,7 @@
     "category": "formula_car",
     "laps": null,
     "duration": 20,
-    "season": {
-      "id": 5254,
-      "name": "Formula C - Super Formula Lights - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15448,14 +15440,12 @@
     "category": "dirt_oval",
     "laps": 50,
     "duration": null,
-    "season": {
-      "id": 5300,
-      "name": "Outlaw Micro Showdown 2025 Season 1"
-    },
+    "switching": true,
     "official": true,
     "fixed": false,
     "multiclass": false,
     "cars": [
+      182,
       183
     ],
     "license": {
@@ -15469,6 +15459,12 @@
       {
         "weekNum": 0,
         "date": "2024-12-17",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 514,
           "name": "Kokomo Speedway",
@@ -15478,6 +15474,12 @@
       {
         "weekNum": 1,
         "date": "2024-12-24",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 514,
           "name": "Kokomo Speedway",
@@ -15487,6 +15489,12 @@
       {
         "weekNum": 2,
         "date": "2024-12-31",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 513,
           "name": "Millbridge Speedway"
@@ -15495,6 +15503,12 @@
       {
         "weekNum": 3,
         "date": "2025-01-07",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 513,
           "name": "Millbridge Speedway"
@@ -15503,6 +15517,12 @@
       {
         "weekNum": 4,
         "date": "2025-01-14",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 497,
           "name": "Kevin Harvick's Kern Raceway",
@@ -15512,6 +15532,12 @@
       {
         "weekNum": 5,
         "date": "2025-01-21",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 497,
           "name": "Kevin Harvick's Kern Raceway",
@@ -15521,6 +15547,12 @@
       {
         "weekNum": 6,
         "date": "2025-01-28",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 331,
           "name": "Chili Bowl"
@@ -15529,6 +15561,12 @@
       {
         "weekNum": 7,
         "date": "2025-02-04",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 331,
           "name": "Chili Bowl"
@@ -15537,6 +15575,12 @@
       {
         "weekNum": 8,
         "date": "2025-02-11",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 513,
           "name": "Millbridge Speedway"
@@ -15545,6 +15589,12 @@
       {
         "weekNum": 9,
         "date": "2025-02-18",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 513,
           "name": "Millbridge Speedway"
@@ -15553,6 +15603,12 @@
       {
         "weekNum": 10,
         "date": "2025-02-25",
+        "cars": [
+          {
+            "id": 182,
+            "name": "Dirt Outlaw Micro Sprint Car - Winged"
+          }
+        ],
         "track": {
           "id": 303,
           "name": "Limaland Motorsports Park"
@@ -15561,6 +15617,12 @@
       {
         "weekNum": 11,
         "date": "2025-03-04",
+        "cars": [
+          {
+            "id": 183,
+            "name": "Dirt Outlaw Micro Sprint Car - Non-Winged"
+          }
+        ],
         "track": {
           "id": 303,
           "name": "Limaland Motorsports Park"
@@ -15574,10 +15636,7 @@
     "category": "oval",
     "laps": 40,
     "duration": null,
-    "season": {
-      "id": 5274,
-      "name": "SRX Series - Fixed - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15701,10 +15760,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5212,
-      "name": "BMW M Power Challenge - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15833,10 +15889,7 @@
     "category": "dirt_oval",
     "laps": 25,
     "duration": null,
-    "season": {
-      "id": 5295,
-      "name": "Micro Non Wing Sprint Car Rookie Series - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -15961,10 +16014,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5208,
-      "name": "Rain Master - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16102,10 +16152,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 15,
-    "season": {
-      "id": 5204,
-      "name": "Legends Road Cup by Go Motorsports Shop - 2025 Season 1 "
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16234,10 +16281,7 @@
     "category": "oval",
     "laps": 25,
     "duration": null,
-    "season": {
-      "id": 5242,
-      "name": "Jr Open Wheel Oval Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16364,10 +16408,7 @@
     "category": "oval",
     "laps": 15,
     "duration": null,
-    "season": {
-      "id": 5269,
-      "name": "Mini Stock Rookie Series by Thrustmaster - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16492,10 +16533,7 @@
     "category": "dirt_oval",
     "laps": 20,
     "duration": null,
-    "season": {
-      "id": 5292,
-      "name": "Dirt Mini Stock Rookie Series 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16622,14 +16660,12 @@
     "category": "dirt_oval",
     "laps": 40,
     "duration": null,
-    "season": {
-      "id": 5196,
-      "name": "World of Outlaws Pro Qualifying Series - 2024 Season"
-    },
+    "switching": true,
     "official": true,
     "fixed": false,
     "multiclass": false,
     "cars": [
+      84,
       86
     ],
     "license": {
@@ -16643,6 +16679,12 @@
       {
         "weekNum": 0,
         "date": "2024-11-06",
+        "cars": [
+          {
+            "id": 84,
+            "name": "Dirt Late Model - Super"
+          }
+        ],
         "track": {
           "id": 279,
           "name": "Volusia Speedway Park"
@@ -16651,6 +16693,12 @@
       {
         "weekNum": 1,
         "date": "2024-11-13",
+        "cars": [
+          {
+            "id": 86,
+            "name": "Dirt Sprint Car - 410"
+          }
+        ],
         "track": {
           "id": 373,
           "name": "Weedsport Speedway"
@@ -16659,6 +16707,12 @@
       {
         "weekNum": 2,
         "date": "2024-11-20",
+        "cars": [
+          {
+            "id": 84,
+            "name": "Dirt Late Model - Super"
+          }
+        ],
         "track": {
           "id": 274,
           "name": "Williams Grove Speedway"
@@ -16667,6 +16721,12 @@
       {
         "weekNum": 3,
         "date": "2024-11-27",
+        "cars": [
+          {
+            "id": 86,
+            "name": "Dirt Sprint Car - 410"
+          }
+        ],
         "track": {
           "id": 462,
           "name": "Lincoln Speedway"
@@ -16675,6 +16735,12 @@
       {
         "weekNum": 4,
         "date": "2024-12-04",
+        "cars": [
+          {
+            "id": 84,
+            "name": "Dirt Late Model - Super"
+          }
+        ],
         "track": {
           "id": 438,
           "name": "Federated Auto Parts Raceway at I-55"
@@ -16683,6 +16749,12 @@
       {
         "weekNum": 5,
         "date": "2024-12-11",
+        "cars": [
+          {
+            "id": 86,
+            "name": "Dirt Sprint Car - 410"
+          }
+        ],
         "track": {
           "id": 305,
           "name": "Knoxville Raceway"
@@ -16691,6 +16763,12 @@
       {
         "weekNum": 6,
         "date": "2025-01-01",
+        "cars": [
+          {
+            "id": 86,
+            "name": "Dirt Sprint Car - 410"
+          }
+        ],
         "track": {
           "id": 531,
           "name": "Huset's Speedway"
@@ -16699,6 +16777,12 @@
       {
         "weekNum": 7,
         "date": "2025-01-08",
+        "cars": [
+          {
+            "id": 84,
+            "name": "Dirt Late Model - Super"
+          }
+        ],
         "track": {
           "id": 344,
           "name": "Fairbury Speedway"
@@ -16707,6 +16791,12 @@
       {
         "weekNum": 8,
         "date": "2025-01-15",
+        "cars": [
+          {
+            "id": 86,
+            "name": "Dirt Sprint Car - 410"
+          }
+        ],
         "track": {
           "id": 273,
           "name": "Eldora Speedway"
@@ -16715,6 +16805,12 @@
       {
         "weekNum": 9,
         "date": "2025-01-22",
+        "cars": [
+          {
+            "id": 84,
+            "name": "Dirt Late Model - Super"
+          }
+        ],
         "track": {
           "id": 314,
           "name": "The Dirt Track at Charlotte"
@@ -16728,10 +16824,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 12,
-    "season": {
-      "id": 5202,
-      "name": "BMW M2 Cup - 2025 Season 1 - Fixed"
-    },
+    "switching": false,
     "official": true,
     "fixed": true,
     "multiclass": false,
@@ -16861,10 +16954,7 @@
     "category": "sports_car",
     "laps": null,
     "duration": 120,
-    "season": {
-      "id": 5334,
-      "name": "IMSA Sportscar Endurance Challenge - 2025 Season 1"
-    },
+    "switching": false,
     "official": true,
     "fixed": false,
     "multiclass": true,

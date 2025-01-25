@@ -182,7 +182,9 @@
     "free": false,
     "price": 3.25,
     "sku": 10068,
-    "series": [],
+    "series": [
+      538
+    ],
     "logo": "/img/logos/partners/chevrolet-logo.png"
   },
   "23": {
@@ -195,6 +197,7 @@
     "price": 0,
     "sku": 10087,
     "series": [
+      526,
       63
     ],
     "logo": "/img/logos/partners/scca-logo.png"
@@ -245,6 +248,7 @@
     "price": 12.95,
     "sku": 10113,
     "series": [
+      526,
       432
     ],
     "logo": "/img/logos/partners/chevrolet-logo.png"
@@ -693,6 +697,7 @@
     "price": 12.95,
     "sku": 10389,
     "series": [
+      526,
       432
     ],
     "logo": "/img/logos/partners/astonmartin-logo.png"
@@ -709,6 +714,7 @@
     "series": [
       139,
       112,
+      526,
       231
     ],
     "logo": "/img/logos/partners/mazda-logo.png"
@@ -835,6 +841,7 @@
       291,
       306,
       517,
+      570,
       308,
       369
     ]
@@ -937,6 +944,7 @@
     "price": 12.95,
     "sku": 10412,
     "series": [
+      570,
       308,
       369
     ],
@@ -1060,6 +1068,7 @@
     "price": 12.95,
     "sku": 10429,
     "series": [
+      526,
       535
     ],
     "logo": "/img/logos/partners/ford-logo.png"
@@ -1074,6 +1083,7 @@
     "price": 12.95,
     "sku": 10431,
     "series": [
+      526,
       535
     ],
     "logo": "/img/logos/partners/ferrari-logo.png"
@@ -1183,6 +1193,7 @@
     "price": 12.95,
     "sku": 10445,
     "series": [
+      526,
       535
     ],
     "logo": "/img/logos/partners/porsche-logo.png"
@@ -1277,6 +1288,7 @@
     "price": 12.95,
     "sku": 10457,
     "series": [
+      526,
       535
     ],
     "logo": "/img/logos/partners/bmw-logo.png"
@@ -1303,6 +1315,7 @@
     "price": 12.95,
     "sku": 10459,
     "series": [
+      538,
       164,
       47
     ],
@@ -1318,6 +1331,7 @@
     "price": 12.95,
     "sku": 10461,
     "series": [
+      526,
       430,
       503,
       492
@@ -1348,6 +1362,7 @@
     "price": 12.95,
     "sku": 10464,
     "series": [
+      538,
       103,
       62
     ],
@@ -1363,6 +1378,7 @@
     "price": 12.95,
     "sku": 10465,
     "series": [
+      538,
       103,
       62
     ],
@@ -1378,6 +1394,7 @@
     "price": 12.95,
     "sku": 10466,
     "series": [
+      538,
       103,
       62
     ],
@@ -1417,6 +1434,7 @@
     "price": 12.95,
     "sku": 10473,
     "series": [
+      526,
       491,
       502,
       492,
@@ -1475,6 +1493,7 @@
     "price": 12.95,
     "sku": 10481,
     "series": [
+      538,
       164,
       47
     ],
@@ -1492,6 +1511,7 @@
     "series": [
       481,
       482,
+      538,
       413
     ],
     "logo": "/img/logos/partners/chevrolet-logo.png"
@@ -1508,6 +1528,7 @@
     "series": [
       481,
       482,
+      538,
       413
     ],
     "logo": "/img/logos/partners/ford-logo.png"
@@ -1522,6 +1543,7 @@
     "price": 12.95,
     "sku": 10484,
     "series": [
+      526,
       535
     ],
     "logo": "/img/logos/partners/chevrolet-logo.png"
@@ -1592,6 +1614,7 @@
     "sku": 10494,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -1613,6 +1636,7 @@
     "sku": 10495,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -1648,6 +1672,7 @@
     "price": 12.95,
     "sku": 10497,
     "series": [
+      526,
       491,
       502,
       492,
@@ -1798,6 +1823,7 @@
     "price": 12.95,
     "sku": 10516,
     "series": [
+      526,
       430,
       503,
       492
@@ -1814,6 +1840,7 @@
     "price": 12.95,
     "sku": 10517,
     "series": [
+      526,
       430,
       503,
       492
@@ -1862,6 +1889,7 @@
     "price": 12.95,
     "sku": 10523,
     "series": [
+      526,
       491,
       502,
       492,
@@ -1907,6 +1935,7 @@
     "price": 12.95,
     "sku": 10526,
     "series": [
+      526,
       430,
       503,
       492
@@ -1925,6 +1954,7 @@
     "series": [
       481,
       482,
+      538,
       413
     ],
     "logo": "/img/logos/partners/buicklesabre87-logo.png"
@@ -1939,6 +1969,7 @@
     "price": 12.95,
     "sku": 10530,
     "series": [
+      538,
       164,
       47
     ],
@@ -1955,6 +1986,7 @@
     "sku": 10532,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -1975,6 +2007,7 @@
     "price": 12.95,
     "sku": 10533,
     "series": [
+      526,
       491,
       502,
       492,
@@ -2055,7 +2088,8 @@
     "sku": 10548,
     "series": [
       519,
-      112
+      112,
+      526
     ],
     "logo": "/img/logos/partners/renault-logo.png"
   },
@@ -2149,6 +2183,7 @@
     "sku": 10555,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2228,6 +2263,7 @@
     "series": [
       353,
       559,
+      526,
       237,
       228,
       444,
@@ -2268,6 +2304,7 @@
     "series": [
       481,
       482,
+      538,
       413
     ],
     "logo": "/img/logos/partners/pontiac-logo.png"
@@ -2283,6 +2320,7 @@
     "sku": 10567,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2318,7 +2356,8 @@
     "price": 12.95,
     "sku": 10572,
     "series": [
-      554
+      554,
+      538
     ],
     "logo": "/img/logos/partners/srx-logo.png"
   },
@@ -2369,7 +2408,9 @@
     "free": true,
     "price": 0,
     "sku": 10573,
-    "series": [],
+    "series": [
+      553
+    ],
     "group": 180
   },
   "183": {
@@ -2397,6 +2438,7 @@
     "sku": 10576,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2418,6 +2460,7 @@
     "sku": 10580,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2476,6 +2519,7 @@
     "sku": 10583,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2496,6 +2540,7 @@
     "price": 12.95,
     "sku": 10584,
     "series": [
+      526,
       557,
       491,
       502,
@@ -2514,6 +2559,7 @@
     "price": 12.95,
     "sku": 10585,
     "series": [
+      526,
       399,
       405
     ],
@@ -2529,6 +2575,7 @@
     "price": 0,
     "sku": 10586,
     "series": [
+      526,
       564
     ]
   },
@@ -2542,6 +2589,7 @@
     "price": 12.95,
     "sku": 10587,
     "series": [
+      526,
       399,
       405
     ],
@@ -2571,6 +2619,7 @@
     "sku": 10590,
     "series": [
       559,
+      526,
       237,
       228,
       444,
@@ -2591,7 +2640,8 @@
     "price": 0,
     "sku": 10591,
     "series": [
-      571
+      571,
+      526
     ],
     "logo": "/img/logos/partners/bmw-logo.png"
   },

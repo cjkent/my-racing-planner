@@ -44,6 +44,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
+import CARS_JSON from "../../ir-data/cars.json";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import ContentPopover from "../content/content-popover";
@@ -63,7 +64,7 @@ import SortableColumnHeader from "./sortable-column-header";
 
 function SeasonPage() {
   const { weeksStartDates, seriesDateMap } = useSeason();
-  const { myTracks, wishTracks, favoriteSeries } = useIr();
+  const { myCars, wishCars, myTracks, wishTracks, favoriteSeries } = useIr();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
   const {
     seasonStickyHeader,
@@ -343,6 +344,51 @@ function SeasonPage() {
                                   seriesId as keyof typeof seriesDateMap
                                 ][date];
 
+                              const cars: number[] =
+                                seriesDateMap[
+                                  seriesId as keyof typeof seriesDateMap
+                                ][`${date}_cars`] || [];
+                              const freeAny = cars.some(
+                                (carId) =>
+                                  CARS_JSON[
+                                    carId.toString() as keyof typeof CARS_JSON
+                                  ].free,
+                              );
+                              const ownAny = cars.some((carId) =>
+                                myCars.includes(
+                                  CARS_JSON[
+                                    carId.toString() as keyof typeof CARS_JSON
+                                  ].sku,
+                                ),
+                              );
+                              const wishAny = cars.some((carId) =>
+                                wishCars.includes(
+                                  CARS_JSON[
+                                    carId.toString() as keyof typeof CARS_JSON
+                                  ].sku,
+                                ),
+                              );
+
+                              const colorCar =
+                                cars.length > 0
+                                  ? {
+                                      base: freeAny
+                                        ? "green.400"
+                                        : ownAny
+                                        ? "teal.400"
+                                        : wishAny
+                                        ? "blue.400"
+                                        : "red.400",
+                                      _dark: freeAny
+                                        ? "green.600"
+                                        : ownAny
+                                        ? "teal.600"
+                                        : wishAny
+                                        ? "blue.600"
+                                        : "red.600",
+                                    }
+                                  : undefined;
+
                               const track =
                                 TRACKS_JSON[
                                   trackId as keyof typeof TRACKS_JSON
@@ -421,11 +467,44 @@ function SeasonPage() {
                                         {track.name}
                                       </Text>
 
+                                      {seasonShowCarsDropdown &&
+                                        cars.length > 0 && (
+                                          <PopoverRoot lazyMount unmountOnExit>
+                                            <PopoverTrigger asChild>
+                                              <HStack
+                                                gap={1}
+                                                justifyContent={"center"}
+                                                cursor={"pointer"}
+                                                position={"absolute"}
+                                                right={1}
+                                                top={1}
+                                                bgColor={colorCar}
+                                                color={"fg"}
+                                                px={2}
+                                                rounded={"4px"}
+                                              >
+                                                <FontAwesomeIcon icon={faCar} />
+                                                {cars.length}
+                                                <FontAwesomeIcon
+                                                  icon={faCaretDown}
+                                                />
+                                              </HStack>
+                                            </PopoverTrigger>
+                                            <PopoverContent p={2}>
+                                              <PopoverArrow />
+                                              <ContentPopover
+                                                content="cars"
+                                                list={cars}
+                                              />
+                                            </PopoverContent>
+                                          </PopoverRoot>
+                                        )}
+
                                       {seasonShowCheckboxes && (
                                         <Checkbox
                                           size={"xs"}
                                           position={"absolute"}
-                                          right={1}
+                                          left={1}
                                           top={1}
                                           readOnly={track.free}
                                           colorPalette={

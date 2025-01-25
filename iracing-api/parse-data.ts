@@ -34,9 +34,13 @@ const isLegacy = (name: string) => {
 
       const cars = [
         ...new Set(
-          curr.car_class_ids
-            .map((c: keyof typeof classesById) => classesById[c])
-            .flat(),
+          curr.car_switching
+            ? curr.schedules
+                .map((w: any) => w.race_week_cars.map((c: any) => c.car_id))
+                .flat()
+            : curr.car_class_ids
+                .map((c: keyof typeof classesById) => classesById[c])
+                .flat(),
         ),
       ];
       const tracks = curr.schedules.map((w: any) => w.track.track_id);
@@ -207,10 +211,8 @@ const isLegacy = (name: string) => {
       category: season.schedules[0].category,
       laps: season.schedules[0].race_lap_limit,
       duration: season.schedules[0].race_time_limit,
-      season: {
-        id: season.season_id,
-        name: season.season_name,
-      },
+      // season: { id: season.season_id, name: season.season_name },
+      switching: season.car_switching,
       official: season.official,
       fixed: season.fixed_setup,
       multiclass: season.multiclass,
@@ -223,6 +225,12 @@ const isLegacy = (name: string) => {
       weeks: season.schedules.map((week: any) => ({
         weekNum: week.race_week_num,
         date: week.start_date,
+        cars: season.car_switching
+          ? week.race_week_cars.map((c: any) => ({
+              id: c.car_id,
+              name: c.car_name,
+            }))
+          : undefined,
         track: {
           id: week.track.track_id,
           name: week.track.track_name,
