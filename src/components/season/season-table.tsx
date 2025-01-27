@@ -27,7 +27,7 @@ import useSeason from "./useSeason";
 function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
   const { weeksStartDates, seriesDateMap } = useSeason();
   const { favoriteSeries } = useIr();
-  const { seasonStickyHeader, seasonShowReorder } = useUi();
+  const { seasonShowReorder } = useUi();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
 
   const sensors = useSensors(useSensor(PointerSensor));
@@ -62,15 +62,8 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
         strategy={horizontalListSortingStrategy}
         disabled={!seasonShowReorder}
       >
-        <Table.ScrollArea
-          borderRadius={"md"}
-          onScroll={seasonStickyHeader ? handleScroll : undefined}
-        >
-          <Table.Root
-            size="sm"
-            showColumnBorder
-            stickyHeader={seasonStickyHeader}
-          >
+        <Table.ScrollArea borderRadius={"md"} onScroll={handleScroll}>
+          <Table.Root size="sm" showColumnBorder stickyHeader>
             <SeasonTableHeader
               filteredFavorites={filteredFavorites}
               tableScroll={tableScroll}

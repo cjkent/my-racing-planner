@@ -14,7 +14,6 @@ export enum ETabs {
 export const useUiStorePersist = create(
   persist(
     () => ({
-      seasonStickyHeader: true,
       seasonShowReorder: true,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
@@ -32,9 +31,6 @@ export const useUiStorePersist = create(
     },
   ),
 );
-
-export const setSeasonStickyHeader = (value: boolean) =>
-  useUiStorePersist.setState(() => ({ seasonStickyHeader: value }));
 
 export const setSeasonShowReorder = (value: boolean) =>
   useUiStorePersist.setState(() => ({ seasonShowReorder: value }));
@@ -70,9 +66,6 @@ export const setHelpPresented = (value: boolean) =>
   useUiStorePersist.setState(() => ({ helpPresented: value }));
 
 export const useUi = () => {
-  const seasonStickyHeader = useUiStorePersist(
-    (state) => state.seasonStickyHeader,
-  );
   const seasonShowReorder = useUiStorePersist(
     (state) => state.seasonShowReorder,
   );
@@ -100,7 +93,6 @@ export const useUi = () => {
   const helpPresented = useUiStorePersist((state) => state.helpPresented);
 
   return {
-    seasonStickyHeader,
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,

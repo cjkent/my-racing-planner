@@ -219,10 +219,6 @@ function HelpDialog({ children }: PropsWithChildren) {
                 with the same hovered track
               </List.Item>
               <List.Item>
-                <strong>Sticky headers</strong>: Keep column headers always
-                visible
-              </List.Item>
-              <List.Item>
                 <strong>Show wishlist</strong>: Either wishlist items should be
                 colored
               </List.Item>

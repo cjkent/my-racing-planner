@@ -6,6 +6,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 
 - Improved car switching series to show cars on season planner table
 - Added option to special promo of some countries
+- Removed Sticky header from season planner settings, kept always true
 
 ## 0.4.2
 

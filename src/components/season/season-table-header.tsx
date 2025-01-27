@@ -14,8 +14,7 @@ function SeasonTableHeader({
   tableScroll: boolean;
   filteredFavorites: number[];
 }) {
-  const { seasonStickyHeader, seasonShowReorder, seasonShowCarsDropdown } =
-    useUi();
+  const { seasonShowReorder, seasonShowCarsDropdown } = useUi();
   const [hideHeaderText, setHideHeaderText] = useState(false);
   return (
     <Table.Header>
@@ -64,14 +63,11 @@ function SeasonTableHeader({
                         textAlign={"center"}
                         lineClamp="2"
                         maxW={"200px"}
-                        opacity={!seasonStickyHeader || !tableScroll ? 1 : 0}
+                        opacity={!tableScroll ? 1 : 0}
                         transition={"opacity 0.2s linear"}
                         onTransitionEnd={() => setHideHeaderText(tableScroll)}
                       >
-                        {(!seasonStickyHeader ||
-                          !tableScroll ||
-                          !hideHeaderText) &&
-                          series.name}
+                        {(!tableScroll || !hideHeaderText) && series.name}
                       </Text>
                     </Tooltip>
                   </VStack>
