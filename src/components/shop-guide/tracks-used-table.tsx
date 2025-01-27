@@ -1,4 +1,4 @@
-import { getPreviousTuesday } from "@/hooks/useSeason";
+import { getPreviousTuesday } from "@/components/season/useSeason";
 import { useIr } from "@/store/ir";
 import { Flex, For, Table, VisuallyHidden } from "@chakra-ui/react";
 import { useMemo } from "react";

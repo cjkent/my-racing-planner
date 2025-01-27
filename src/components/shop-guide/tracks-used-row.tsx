@@ -1,10 +1,8 @@
-import { setMyTrack, setWishTrack, useIr } from "@/store/ir";
+import { useIr } from "@/store/ir";
 import { Badge, HStack, Table, Text } from "@chakra-ui/react";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SERIES_JSON from "../../ir-data/series.json";
+import ContentCheckbox from "../content/content-checkbox";
 import ContentNameBadge from "../content/content-name-badge";
-import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
 function TracksUsedRow({
@@ -19,11 +17,9 @@ function TracksUsedRow({
   };
 }) {
   const { myTracks, wishTracks } = useIr();
-  const owned = myTracks.includes(item.sku);
-  const wish = wishTracks.includes(item.sku);
 
   return (
-    <Table.Row bgColor={"transparent"} key={item.id}>
+    <Table.Row bgColor={"transparent"}>
       <Table.Cell
         minWidth={"40px"}
         textAlign={"center"}
@@ -31,28 +27,14 @@ function TracksUsedRow({
         borderBottom={0}
         px={"4px"}
       >
-        <Checkbox
+        <ContentCheckbox
           size={"sm"}
           mt={"2px"}
-          colorPalette={wish ? "blue" : undefined}
-          checked={owned || wish}
-          controlProps={{
-            borderColor: !wish && !owned ? "gray.400" : undefined,
-          }}
-          icon={
-            wish ? <FontAwesomeIcon size="xs" icon={faBookmark} /> : undefined
-          }
-          onClick={(e) => e.stopPropagation()}
-          onCheckedChange={() => {
-            if (owned) {
-              setMyTrack(item.sku, false);
-              setWishTrack(item.sku, true);
-            } else if (wish) {
-              setWishTrack(item.sku, false);
-            } else {
-              setMyTrack(item.sku, true);
-            }
-          }}
+          content={"tracks"}
+          sku={item.sku}
+          free={false}
+          owned={myTracks.includes(item?.sku)}
+          wish={wishTracks.includes(item?.sku)}
         />
       </Table.Cell>
       <Table.Cell display={"flex"} p={1} borderBottom={0} px={"4px"}>

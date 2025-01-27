@@ -7,7 +7,6 @@ import {
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { Category } from "@/ir-data/utils/types";
 import { IR_URL } from "@/ir-data/utils/urls";
-import { setMyCar, setMyTrack, setWishCar, setWishTrack } from "@/store/ir";
 import {
   Badge,
   Center,
@@ -17,19 +16,17 @@ import {
   Table,
   Text,
 } from "@chakra-ui/react";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import {
   faCaretDown,
   faFlagCheckered,
-  faSackXmark,
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import PriceBadge from "../badges/price-badge";
 import SeriesPopover from "../series/series-popover";
-import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
+import ContentCheckbox from "./content-checkbox";
 import ContentNameBadge from "./content-name-badge";
 import InfoButton from "./info-button";
 
@@ -64,37 +61,15 @@ function ContentTableRow({
   skuIcon: IconDefinition;
   infoUrl: string;
 }) {
-  const [setMy, setWish] =
-    content === "cars" ? [setMyCar, setWishCar] : [setMyTrack, setWishTrack];
-
   return (
     <Table.Row bgColor={"transparent"}>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
-        <Checkbox
-          readOnly={free}
-          colorPalette={free ? "green" : wish ? "blue" : undefined}
-          checked={free || owned || wish}
-          controlProps={{
-            borderColor: !free && !wish && !owned ? "gray.400" : undefined,
-          }}
-          icon={
-            free ? (
-              <FontAwesomeIcon size={"xs"} icon={faSackXmark} />
-            ) : wish ? (
-              <FontAwesomeIcon size={"xs"} icon={faBookmark} />
-            ) : undefined
-          }
-          onClick={(e) => e.stopPropagation()}
-          onCheckedChange={() => {
-            if (owned) {
-              setMy(sku, false);
-              setWish(sku, true);
-            } else if (wish) {
-              setWish(sku, false);
-            } else {
-              setMy(sku, true);
-            }
-          }}
+        <ContentCheckbox
+          content={content}
+          sku={sku}
+          free={free}
+          owned={owned}
+          wish={wish}
         />
       </Table.Cell>
       <Table.Cell minWidth={"60px"} textAlign={"center"}>

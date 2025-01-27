@@ -1,8 +1,8 @@
 import { useIr } from "@/store/ir";
 import { useMemo } from "react";
-import SERIES_JSON from "../ir-data/series.json";
+import SERIES_JSON from "../../ir-data/series.json";
 
-type TWWeek = {
+type TWeek = {
   weekNum: number;
   date: string;
   track: { id: number; name: string };
@@ -53,7 +53,7 @@ const useSeason = () => {
         const series = SERIES_JSON[curr.toString() as keyof typeof SERIES_JSON];
         return {
           ...acc,
-          [curr]: series.weeks.reduce((acc2, curr2: TWWeek) => {
+          [curr]: series.weeks.reduce((acc2, curr2: TWeek) => {
             const date = getPreviousTuesday(curr2.date);
             return {
               ...acc2,
