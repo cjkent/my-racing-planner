@@ -20,13 +20,7 @@ function TracksUsedRow({
 
   return (
     <Table.Row bgColor={"transparent"}>
-      <Table.Cell
-        minWidth={"40px"}
-        textAlign={"center"}
-        p={0}
-        borderBottom={0}
-        px={"4px"}
-      >
+      <Table.Cell textAlign={"center"} p={0} borderBottom={0} px={"4px"}>
         <ContentCheckbox
           size={"sm"}
           mt={"2px"}
@@ -37,16 +31,16 @@ function TracksUsedRow({
           wish={wishTracks.includes(item?.sku)}
         />
       </Table.Cell>
-      <Table.Cell display={"flex"} p={1} borderBottom={0} px={"4px"}>
-        <ContentNameBadge name={item.name} />
-      </Table.Cell>
       <Table.Cell
-        minWidth={"90px"}
-        textAlign={"center"}
+        width="100%"
+        display={"flex"}
         p={1}
         borderBottom={0}
         px={"4px"}
       >
+        <ContentNameBadge name={item.name} />
+      </Table.Cell>
+      <Table.Cell textAlign={"center"} p={1} borderBottom={0} px={"4px"}>
         <Tooltip
           lazyMount
           unmountOnExit

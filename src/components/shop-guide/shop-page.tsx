@@ -13,7 +13,6 @@ enum ETab {
 function ShopPage() {
   const [tab, setTab] = useState<ETab>(ETab.TracksUsed);
   const { size } = useWindowSize();
-
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
       <ShopGuideHeader />

@@ -28,7 +28,7 @@ function ContentNameBadge({
   children,
 }: PropsWithChildren<{ name: string }>) {
   return (
-    <Text fontWeight={"bold"}>
+    <Text fontWeight={"bold"} truncate>
       {children}
       <NameWithBadges name={name} />
     </Text>

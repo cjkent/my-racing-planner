@@ -10,7 +10,6 @@ import TracksUsedRow from "./tracks-used-row";
 
 function TracksUsedTable() {
   const { wishTracks, favoriteSeries } = useIr();
-
   const tracksMap = useMemo(
     () =>
       favoriteSeries.reduce((acc, curr) => {
@@ -38,7 +37,6 @@ function TracksUsedTable() {
       }, {} as { id: number; name: string; sku: number; weeks: { [key: number]: string[] }; used: number }[]),
     [favoriteSeries],
   );
-
   const tracksList = useMemo(
     () =>
       Object.values(tracksMap)
@@ -66,22 +64,20 @@ function TracksUsedTable() {
         ),
     [tracksMap],
   );
-
   return (
     <Flex
       flex={1}
       borderRadius={"md"}
       overflowY={"auto"}
       maxH={"100%"}
-      w={"100%"}
       h={"100%"}
       alignItems={"start"}
     >
-      <Table.ScrollArea borderRadius={"md"} width={"100%"}>
-        <Table.Root striped>
+      <Table.ScrollArea borderRadius={"md"} width={"100%"} overflowX={"hidden"}>
+        <Table.Root striped stickyHeader>
           <Table.Header>
             <Table.Row bgColor={"bg.muted"}>
-              <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
+              <Table.ColumnHeader textAlign={"center"}>
                 <VisuallyHidden>Owned content</VisuallyHidden>
               </Table.ColumnHeader>
               <Table.ColumnHeader width="100%">Name</Table.ColumnHeader>
