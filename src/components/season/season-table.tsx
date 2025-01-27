@@ -28,6 +28,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
   const { weeksStartDates, seriesDateMap } = useSeason();
   const { favoriteSeries } = useIr();
   const { seasonStickyHeader, seasonShowReorder } = useUi();
+  const [highlightTrack, setHighlightTrack] = useState<number>(-1);
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -83,6 +84,8 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
                     key={date}
                     date={date}
                     filteredFavorites={filteredFavorites}
+                    highlightTrack={highlightTrack}
+                    setHighlightTrack={setHighlightTrack}
                   />
                 )}
               />

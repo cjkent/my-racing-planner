@@ -1,7 +1,7 @@
 import { useIr } from "@/store/ir";
 import { useUi } from "@/store/ui";
 import { For, Table, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import ContentCheckbox from "../content/content-checkbox";
 import SeasonTableCarsPopover from "./season-table-cars-popover";
@@ -13,13 +13,16 @@ function SeasonTableRow({
   date,
   seriesDateMap,
   filteredFavorites,
+  highlightTrack,
+  setHighlightTrack,
 }: {
   date: string;
   seriesDateMap: { [key: number]: any };
   filteredFavorites: number[];
+  highlightTrack: number;
+  setHighlightTrack: (n: number) => void;
 }) {
   const { myTracks, wishTracks } = useIr();
-  const [highlightTrack, setHighlightTrack] = useState<number>(-1);
   const {
     seasonShowReorder,
     seasonShowCheckboxes,
