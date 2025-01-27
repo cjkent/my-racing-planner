@@ -2,7 +2,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { Flex, HStack, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import ShopGuideHeader from "./shop-guide-header";
-import TracksUsed from "./tracks-used";
+import TracksUsedTable from "./tracks-used-table";
 import WishlistPanel from "./wishlist-panel";
 
 enum ETab {
@@ -38,7 +38,7 @@ function ShopPage() {
       </Stack>
 
       <HStack flex={1} alignItems={"start"} overflow={"hidden"} gap={2}>
-        {(tab === ETab.TracksUsed || size.md) && <TracksUsed />}
+        {(tab === ETab.TracksUsed || size.md) && <TracksUsedTable />}
         {(tab === ETab.WishlistPanel || size.md) && <WishlistPanel />}
       </HStack>
     </Flex>

@@ -1,25 +1,16 @@
-import { IR_URL } from "@/ir-data/utils/urls";
 import { useIr } from "@/store/ir";
-import {
-  setShopLoyaltyDiscount,
-  setShopVolumeDiscount,
-  useUi,
-} from "@/store/ui";
+import { useUi } from "@/store/ui";
 import {
   Flex,
   For,
   FormatNumber,
   HStack,
-  IconButton,
   Separator,
   Stack,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import {
-  faArrowUpRightFromSquare,
   faCar,
-  faGears,
   faMagnifyingGlass,
   faRoad,
 } from "@fortawesome/free-solid-svg-icons";
@@ -27,11 +18,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment, useMemo } from "react";
 import CARS_LIST from "../../ir-data/utils/cars";
 import TRACKS_LIST from "../../ir-data/utils/tracks";
-import { Button } from "../ui/button";
 import { EmptyState } from "../ui/empty-state";
-import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
-import { Switch } from "../ui/switch";
-import { Tooltip } from "../ui/tooltip";
+import CheckoutButton from "./checkout-button";
+import ShopSettingsPopover from "./shop-settings-popover";
 
 function WishlistPanel() {
   const { wishCars, wishTracks } = useIr();
@@ -81,64 +70,7 @@ function WishlistPanel() {
     >
       <HStack justifyContent={"space-between"}>
         <Text textStyle="3xl">Wishlist</Text>
-
-        <PopoverRoot positioning={{ placement: "left-start" }}>
-          <PopoverTrigger asChild>
-            <IconButton
-              aria-label="Settings"
-              variant={"outline"}
-              size={"lg"}
-              bgColor={{ base: "bg.muted", _hover: "bg" }}
-              borderRadius={"md"}
-            >
-              <FontAwesomeIcon icon={faGears} />
-            </IconButton>
-          </PopoverTrigger>
-          <PopoverContent>
-            <VStack alignItems={"start"} p={2}>
-              <Tooltip
-                lazyMount
-                unmountOnExit
-                content={"Apply iRacing discounts for bundle purchases"}
-                showArrow
-                positioning={{ placement: "top" }}
-                openDelay={200}
-                closeDelay={100}
-                ids={{ trigger: "volumeDiscount" }}
-              >
-                <Switch
-                  ids={{ root: "volumeDiscount" }}
-                  checked={shopVolumeDiscount}
-                  onCheckedChange={({ checked }) =>
-                    setShopVolumeDiscount(checked)
-                  }
-                >
-                  Volume discount
-                </Switch>
-              </Tooltip>
-              <Tooltip
-                lazyMount
-                unmountOnExit
-                content={"Apply iRacing loyalty discount"}
-                showArrow
-                positioning={{ placement: "top" }}
-                openDelay={200}
-                closeDelay={100}
-                ids={{ trigger: "loyaltyDiscount" }}
-              >
-                <Switch
-                  ids={{ root: "loyaltyDiscount" }}
-                  checked={shopLoyaltyDiscount}
-                  onCheckedChange={({ checked }) =>
-                    setShopLoyaltyDiscount(checked)
-                  }
-                >
-                  Loyalty discount
-                </Switch>
-              </Tooltip>
-            </VStack>
-          </PopoverContent>
-        </PopoverRoot>
+        <ShopSettingsPopover />
       </HStack>
 
       <Stack overflowY="auto" flex={1}>
@@ -212,22 +144,7 @@ function WishlistPanel() {
           </Text>
         </Stack>
       </HStack>
-      <Button
-        as={"a"}
-        disabled={wishList.length < 1}
-        size="lg"
-        href={
-          wishList.length > 0
-            ? `${IR_URL.store}?skus=${wishList.map((c) => c.sku)}`
-            : undefined
-        }
-        target="_blank"
-        rel="noreferrer"
-        colorPalette={"blue"}
-      >
-        Checkout on iRacing.com store
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-      </Button>
+      <CheckoutButton wishList={wishList} />
     </Stack>
   );
 }
