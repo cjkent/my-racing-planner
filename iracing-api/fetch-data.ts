@@ -16,8 +16,8 @@ import {
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 (async () => {
-  const email = process.env.IR_EMAIL ?? "";
-  const password = process.env.IR_PASSWORD ?? "";
+  const email = process.env.IRACING_USERNAME ?? "";
+  const password = process.env.IRACING_PASSWORD ?? "";
 
   await authenticate(email, password);
 

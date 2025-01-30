@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+.env
+
 cookie-jar.txt
 iracing-api/docs/*
 iracing-api/raw/*
