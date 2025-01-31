@@ -1,4 +1,4 @@
-import SORTED_TRACKS, { FREE_TRACKS } from "@/ir-data/utils/tracks";
+import SORTED_TRACKS, { FREE_TRACKS_COUNT } from "@/ir-data/utils/tracks";
 import { ETrackCategories } from "@/ir-data/utils/types";
 import { IR_URL } from "@/ir-data/utils/urls";
 import { useIr } from "@/store/ir";
@@ -15,7 +15,7 @@ function TracksPage() {
       description={
         "Mark the tracks you own and select your favorites. Use the wishlist to preview the content before you buy it."
       }
-      freeCount={FREE_TRACKS}
+      freeCount={FREE_TRACKS_COUNT}
       infoUrl={(id) => `${IR_URL.members}/shop/tracks?trackId=${id}`}
       myContent={myTracks}
       skuIcon={faRoad}

@@ -17,4 +17,4 @@ const SORTED_CARS: TContent[] = Object.values(CARS_JSON)
 
 export default SORTED_CARS;
 
-export const FREE_CARS = SORTED_CARS.filter((c) => c.free).length;
+export const FREE_CARS_COUNT = SORTED_CARS.filter((c) => c.free).length;

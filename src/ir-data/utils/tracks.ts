@@ -17,4 +17,4 @@ const SORTED_TRACKS: TContent[] = Object.values(TRACKS_JSON)
 
 export default SORTED_TRACKS;
 
-export const FREE_TRACKS = SORTED_TRACKS.filter((c) => c.free).length;
+export const FREE_TRACKS_COUNT = SORTED_TRACKS.filter((c) => c.free).length;
