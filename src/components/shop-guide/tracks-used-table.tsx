@@ -73,26 +73,30 @@ function TracksUsedTable() {
       h={"100%"}
       alignItems={"start"}
     >
-      <Table.ScrollArea borderRadius={"md"} width={"100%"} overflowX={"hidden"}>
-        <Table.Root striped stickyHeader>
-          <Table.Header>
-            <Table.Row bgColor={"bg.muted"}>
-              <Table.ColumnHeader textAlign={"center"}>
-                <VisuallyHidden>Owned content</VisuallyHidden>
-              </Table.ColumnHeader>
-              <Table.ColumnHeader width="100%">Name</Table.ColumnHeader>
-              <Table.ColumnHeader textAlign={"center"}>Used</Table.ColumnHeader>
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            <For
-              fallback={<TracksUsedEmpty />}
-              each={tracksList}
-              children={(item) => <TracksUsedRow item={item} key={item.id} />}
-            />
-          </Table.Body>
-        </Table.Root>
-      </Table.ScrollArea>
+      <Table.Root
+        striped
+        stickyHeader
+        height={"100%"}
+        borderRadius={"md"}
+        width={"100%"}
+      >
+        <Table.Header>
+          <Table.Row bgColor={"bg.muted"}>
+            <Table.ColumnHeader textAlign={"center"}>
+              <VisuallyHidden>Owned content</VisuallyHidden>
+            </Table.ColumnHeader>
+            <Table.ColumnHeader width="100%">Name</Table.ColumnHeader>
+            <Table.ColumnHeader textAlign={"center"}>Used</Table.ColumnHeader>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <For
+            fallback={<TracksUsedEmpty />}
+            each={tracksList}
+            children={(item) => <TracksUsedRow item={item} key={item.id} />}
+          />
+        </Table.Body>
+      </Table.Root>
     </Flex>
   );
 }

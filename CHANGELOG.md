@@ -2,6 +2,11 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.5.1
+
+- Fixed empty tracks used table style
+- Fixed tracks used table sticky header
+
 ## 0.5.0
 
 - Improved car switching series to show cars on season planner table
