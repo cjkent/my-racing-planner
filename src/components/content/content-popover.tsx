@@ -33,6 +33,7 @@ function ContentPopover({
                         size={"xs"}
                         mt={"4px"}
                         content={content}
+                        contentId={contentItem.id}
                         sku={contentItem.sku}
                         free={contentItem.free}
                         owned={myContent.includes(contentItem?.sku)}

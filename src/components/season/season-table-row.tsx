@@ -1,3 +1,4 @@
+import { ownNurbCombined, wishNurbCombined } from "@/ir-data/utils/tracks";
 import { useIr } from "@/store/ir";
 import { useUi } from "@/store/ui";
 import { For, Table, Text } from "@chakra-ui/react";
@@ -57,8 +58,12 @@ function SeasonTableRow({
             ] || [];
 
           const track = TRACKS_JSON[trackId as keyof typeof TRACKS_JSON];
-          const wish = track && wishTracks.includes(track.sku);
-          const owned = track && myTracks.includes(track.sku);
+          const wish =
+            (track && wishTracks.includes(track.sku)) ||
+            wishNurbCombined(track.id, wishTracks, myTracks);
+          const owned =
+            (track && myTracks.includes(track.sku)) ||
+            ownNurbCombined(track.id, myTracks);
           const highlight = highlightTrack === track?.sku;
           const color = track && {
             _dark: track.free
@@ -124,6 +129,7 @@ function SeasonTableRow({
                       top={1}
                       content={"tracks"}
                       sku={track.sku}
+                      contentId={track.id}
                       free={track.free}
                       owned={owned}
                       wish={wish}

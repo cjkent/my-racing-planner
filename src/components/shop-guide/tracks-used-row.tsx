@@ -26,6 +26,7 @@ function TracksUsedRow({
           mt={"2px"}
           content={"tracks"}
           sku={item.sku}
+          contentId={item.id}
           free={false}
           owned={myTracks.includes(item?.sku)}
           wish={wishTracks.includes(item?.sku)}

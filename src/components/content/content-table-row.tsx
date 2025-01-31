@@ -66,6 +66,7 @@ function ContentTableRow({
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
         <ContentCheckbox
           content={content}
+          contentId={id}
           sku={sku}
           free={free}
           owned={owned}
