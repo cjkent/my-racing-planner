@@ -274,7 +274,8 @@ function HelpDialog({ children, ...rest }: DialogRootProps) {
                   Privacy <FontAwesomeIcon size="xs" icon={faFileShield} />
                 </strong>
                 : No personal data collected, visit the{" "}
-                <LinkWouter to="/about">Privacy Policy</LinkWouter> for detail.
+                <LinkWouter to={ETabs.PrivacyPolicy}>Privacy Policy</LinkWouter>{" "}
+                for detail.
               </List.Item>
               <List.Item>
                 <strong>
