@@ -12,6 +12,7 @@ import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import {
   Badge,
   Box,
+  DialogRootProps,
   Em,
   Heading,
   Icon,
@@ -37,12 +38,12 @@ import {
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PropsWithChildren, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link as LinkWouter, useLocation } from "wouter";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
-function HelpDialog({ children }: PropsWithChildren) {
+function HelpDialog({ children, ...rest }: DialogRootProps) {
   const { helpPresented } = useUi();
   const [open, setOpen] = useState(!helpPresented);
 
@@ -67,6 +68,7 @@ function HelpDialog({ children }: PropsWithChildren) {
       scrollBehavior="inside"
       placement="center"
       motionPreset="slide-in-bottom"
+      {...rest}
     >
       <DialogTrigger asChild>{children}</DialogTrigger>
 

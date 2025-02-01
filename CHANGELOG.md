@@ -2,6 +2,11 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.5.4
+
+- Implemented Top bar and moved some items from nav bar
+- Separated Privacy Policy from About page
+
 ## 0.5.3
 
 - Improved performance of season table when clicking track checkboxes

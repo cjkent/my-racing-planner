@@ -1,7 +1,6 @@
 import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
-import { usePageScroll } from "../page/usePageScroll";
+import { useScroll } from "../app/useScroll";
 import { Tooltip } from "../ui/tooltip";
-import PrivacyPolicy from "./privacy-policy";
 
 const contributors = [
   { name: "Adriano Lima", github: "adrianulima" },
@@ -9,7 +8,7 @@ const contributors = [
 ];
 
 function About() {
-  const { onScroll } = usePageScroll();
+  const { onScroll } = useScroll();
   return (
     <Stack
       p={{ base: 4, md: 10 }}
@@ -126,8 +125,6 @@ function About() {
           />
         </List.Root>
       </section>
-
-      <PrivacyPolicy />
     </Stack>
   );
 }

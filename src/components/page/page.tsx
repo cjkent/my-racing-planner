@@ -1,5 +1,5 @@
-import { Flex } from "@chakra-ui/react";
-import { createContext, ReactNode, useState } from "react";
+import { Flex, FlexProps } from "@chakra-ui/react";
+import { createContext } from "react";
 
 export type TPageContext = {
   scrolled: boolean;
@@ -8,21 +8,8 @@ export type TPageContext = {
 
 export const PageContext = createContext<TPageContext>({} as TPageContext);
 
-function Page({ children }: { children: ReactNode }) {
-  const [scrolled, setScrolled] = useState(false);
-
-  const onScroll: React.UIEventHandler<HTMLDivElement> = (event) => {
-    const scrollTop = event.currentTarget.scrollTop;
-    setScrolled(scrolled ? scrollTop > 0 : scrollTop > 150);
-  };
-
-  return (
-    <PageContext.Provider value={{ scrolled, onScroll }}>
-      <Flex direction="column" height="100%" width="100%">
-        {children}
-      </Flex>
-    </PageContext.Provider>
-  );
+function Page({ ...props }: FlexProps) {
+  return <Flex direction="column" height="100%" width="100%" {...props} />;
 }
 
 export default Page;

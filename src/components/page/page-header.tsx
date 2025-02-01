@@ -1,9 +1,9 @@
 import useWindowSize from "@/hooks/useWindowSize";
 import { Collapsible, HStack, Stack } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
+import { useScroll } from "../app/useScroll";
 import CheckboxCounts from "./checkbox-counts";
 import PageTitle from "./page-title";
-import { usePageScroll } from "./usePageScroll";
 
 function PageHeader({
   title,
@@ -23,7 +23,7 @@ function PageHeader({
   const notSmall = (value: any) => (height <= 680 ? undefined : value);
   const showCounts =
     freeCount != undefined || ownedCount != undefined || wishCount != undefined;
-  const { scrolled } = usePageScroll();
+  const { scrolled } = useScroll();
   return (
     <Collapsible.Root open={!scrolled}>
       <Collapsible.Content>

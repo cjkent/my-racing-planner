@@ -46,7 +46,9 @@ function BottomNavBar({ ...props }: StackProps) {
         )}
       />
 
-      <MoreMenuButton />
+      <MoreMenuButton
+        selected={location === ETabs.About || location === ETabs.PrivacyPolicy}
+      />
     </HStack>
   );
 }

@@ -3,20 +3,15 @@ import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
-  faCircleQuestion,
+  faFileShield,
   faFlagCheckered,
   faInfoCircle,
-  faLanguage,
-  faMoon,
   faRoad,
   faShoppingBag,
-  faSun,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "wouter";
 import BMCIcon from "../bmc/icon";
-import HelpDialog from "../help";
-import { useColorMode } from "../ui/color-mode";
 import { Tooltip } from "../ui/tooltip";
 import MoreMenuButton from "./more-menu-button";
 import NavBarButton from "./nav-bar-button";
@@ -30,13 +25,10 @@ const tabsTop = [
 ];
 
 function NavBar({ ...props }: StackProps) {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { height } = useWindowSize();
   const tiny = height <= 615;
   const small = !tiny && height <= 680;
-
   const [location] = useLocation();
-
   return (
     <Stack
       {...props}
@@ -87,7 +79,11 @@ function NavBar({ ...props }: StackProps) {
 
       {tiny ? (
         <Stack justifyContent={"flex-start"} alignItems={"center"}>
-          <MoreMenuButton />
+          <MoreMenuButton
+            selected={
+              location === ETabs.About || location === ETabs.PrivacyPolicy
+            }
+          />
         </Stack>
       ) : (
         <Stack
@@ -104,15 +100,14 @@ function NavBar({ ...props }: StackProps) {
             href={ETabs.About}
           />
 
-          <HelpDialog>
-            <NavBarButton
-              key={"help"}
-              label={"Help"}
-              icon={faCircleQuestion}
-              selected={false}
-              onClick={() => (document.activeElement as HTMLElement).blur()}
-            />
-          </HelpDialog>
+          <NavBarButton
+            key={"pp"}
+            label={"Privacy"}
+            icon={faFileShield}
+            selected={location === ETabs.PrivacyPolicy}
+            as={Link}
+            href={ETabs.PrivacyPolicy}
+          />
 
           <NavBarButton
             key={"buy-me-a-coffee"}
@@ -125,22 +120,6 @@ function NavBar({ ...props }: StackProps) {
           >
             <BMCIcon />
           </NavBarButton>
-
-          <NavBarButton
-            key={"language"}
-            label={"English"}
-            icon={faLanguage}
-            selected={false}
-            disabled
-          />
-
-          <NavBarButton
-            key={"color-mode"}
-            label={colorMode === "light" ? "Light" : "Dark"}
-            icon={colorMode === "light" ? faSun : faMoon}
-            selected={false}
-            onClick={toggleColorMode}
-          />
         </Stack>
       )}
     </Stack>

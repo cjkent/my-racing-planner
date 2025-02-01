@@ -1,0 +1,30 @@
+import { IconButton, IconButtonProps } from "@chakra-ui/react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Tooltip } from "../ui/tooltip";
+
+function TopBarButton({
+  tooltip,
+  icon,
+  trigger,
+  ...rest
+}: IconButtonProps & { tooltip: string; icon: IconProp; trigger?: string }) {
+  return (
+    <Tooltip
+      lazyMount
+      unmountOnExit
+      content={tooltip}
+      showArrow
+      positioning={{ placement: "bottom" }}
+      openDelay={200}
+      closeDelay={100}
+      ids={trigger ? { trigger } : undefined}
+    >
+      <IconButton size={"sm"} variant={"ghost"} {...rest}>
+        <FontAwesomeIcon icon={icon} />
+      </IconButton>
+    </Tooltip>
+  );
+}
+
+export default TopBarButton;

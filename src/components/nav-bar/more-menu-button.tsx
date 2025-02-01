@@ -11,6 +11,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
   faCircleQuestion,
+  faFileShield,
   faInfoCircle,
   faLanguage,
   faMoon,
@@ -70,10 +71,12 @@ function MoreMenuItem({
   );
 }
 
-function MoreMenuButton({ ...props }: StackProps) {
+function MoreMenuButton({
+  selected,
+  ...props
+}: StackProps & { selected?: boolean }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false);
-
   const [_, navigate] = useLocation();
   return (
     <HStack wrap="wrap" {...props}>
@@ -87,14 +90,11 @@ function MoreMenuButton({ ...props }: StackProps) {
           <NavBarButton
             label={"More"}
             icon={faBars}
-            selected={false}
+            selected={selected}
             onClick={() => (document.activeElement as HTMLElement).blur()}
           />
         </DrawerTrigger>
-        <DrawerContent
-          roundedTop={"l3"}
-          // paddingBottom={"env(safe-area-inset-bottom)"}
-        >
+        <DrawerContent roundedTop={"l3"}>
           <DrawerBody>
             <Stack>
               <MoreMenuItem
@@ -106,13 +106,14 @@ function MoreMenuButton({ ...props }: StackProps) {
                 }}
               />
               <Separator />
-              <HelpDialog>
-                <MoreMenuItem
-                  label="Help"
-                  icon={faCircleQuestion}
-                  onClick={() => (document.activeElement as HTMLElement).blur()}
-                />
-              </HelpDialog>
+              <MoreMenuItem
+                label="Privacy Policy"
+                icon={faFileShield}
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate(ETabs.PrivacyPolicy);
+                }}
+              />
               <Separator />
               <MoreMenuItem
                 label="Buy me a Coffee"
@@ -125,8 +126,16 @@ function MoreMenuButton({ ...props }: StackProps) {
                 <BMCIcon />
               </MoreMenuItem>
               <Separator />
+              <HelpDialog>
+                <MoreMenuItem
+                  label="Help"
+                  icon={faCircleQuestion}
+                  onClick={() => (document.activeElement as HTMLElement).blur()}
+                />
+              </HelpDialog>
+              <Separator />
               <MoreMenuItem
-                label="Change Language"
+                label="Switch Language"
                 icon={faLanguage}
                 disabled
               />

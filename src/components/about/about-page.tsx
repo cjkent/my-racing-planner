@@ -7,7 +7,7 @@ function AboutPage() {
     <Page>
       <PageHeader
         title="About"
-        description={`About My Racing Planner (v${APP_VERSION}) and Privacy Policy`}
+        description={`About My Racing Planner (v${APP_VERSION})`}
       />
       <About />
     </Page>
