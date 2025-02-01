@@ -2,7 +2,7 @@ import { usePageTracking } from "@/hooks/usePageTracking";
 import { Flex, Spinner, Stack, StackProps } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "wouter";
-const AboutPage = lazy(() => import("../about"));
+const AboutPage = lazy(() => import("../about/about-page"));
 const CarsPage = lazy(() => import("../content/cars-page"));
 const SeasonPage = lazy(() => import("../season/season-page"));
 const SeriesPage = lazy(() => import("../series/series-page"));
