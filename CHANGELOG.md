@@ -6,6 +6,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 
 - Fixed empty tracks used table style
 - Fixed tracks used table sticky header
+- Implemented header collapse on page content scroll
 
 ## 0.5.0
 
