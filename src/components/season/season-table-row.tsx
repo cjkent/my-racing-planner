@@ -59,11 +59,13 @@ function SeasonTableRow({
 
           const track = TRACKS_JSON[trackId as keyof typeof TRACKS_JSON];
           const wish =
-            (track && wishTracks.includes(track.sku)) ||
-            wishNurbCombined(track.id, wishTracks, myTracks);
+            track &&
+            (wishTracks.includes(track.sku) ||
+              wishNurbCombined(track.id, wishTracks, myTracks));
           const owned =
-            (track && myTracks.includes(track.sku)) ||
-            ownNurbCombined(track.id, myTracks);
+            track &&
+            (myTracks.includes(track.sku) ||
+              ownNurbCombined(track.id, myTracks));
           const highlight = highlightTrack === track?.sku;
           const color = track && {
             _dark: track.free

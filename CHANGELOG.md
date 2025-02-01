@@ -2,6 +2,10 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.5.2
+
+- Fix crash when track is undefined on season table
+
 ## 0.5.1
 
 - Fixed empty tracks used table style
