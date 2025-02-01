@@ -2,7 +2,6 @@ import { usePageTracking } from "@/hooks/usePageTracking";
 import { Flex, Spinner, Stack, StackProps } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "wouter";
-import ContainerProvider from "./ContainerProvider";
 const AboutPage = lazy(() => import("../about"));
 const CarsPage = lazy(() => import("../content/cars-page"));
 const SeasonPage = lazy(() => import("../season/season-page"));
@@ -28,28 +27,26 @@ function MainContainer({ ...props }: StackProps) {
           boxShadow: "rgba(5, 5, 15, 0.16) 0px 12px 24px -2px",
         }}
       >
-        <ContainerProvider>
-          <Suspense
-            fallback={
-              <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
-                <Spinner size={"xl"} borderWidth="4px" />
-              </Flex>
-            }
-          >
-            <Switch>
-              <Route path="/" component={SeasonPage} />
-              <Route path="/series" component={SeriesPage} />
-              <Route path="/cars" component={CarsPage} />
-              <Route path="/tracks" component={TracksPage} />
-              <Route path="/checkout" component={ShopPage} />
-              <Route path="/about" component={AboutPage} />
+        <Suspense
+          fallback={
+            <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
+              <Spinner size={"xl"} borderWidth="4px" />
+            </Flex>
+          }
+        >
+          <Switch>
+            <Route path="/" component={SeasonPage} />
+            <Route path="/series" component={SeriesPage} />
+            <Route path="/cars" component={CarsPage} />
+            <Route path="/tracks" component={TracksPage} />
+            <Route path="/checkout" component={ShopPage} />
+            <Route path="/about" component={AboutPage} />
 
-              <Route>
-                <Redirect to="/" />
-              </Route>
-            </Switch>
-          </Suspense>
-        </ContainerProvider>
+            <Route>
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </Suspense>
       </Flex>
     </Stack>
   );

@@ -1,6 +1,6 @@
 import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
-import { useContainer } from "../main-container/useContainer";
 import PageHeader from "../page/page-header";
+import { usePageScroll } from "../page/usePageScroll";
 import { Tooltip } from "../ui/tooltip";
 
 const contributors = [
@@ -8,7 +8,7 @@ const contributors = [
   { name: "Juni Lima", github: "junilima" },
 ];
 function AboutPage() {
-  const { onScroll } = useContainer();
+  const { onScroll } = usePageScroll();
   return (
     <Stack height="100%" width="100%" gap="8px">
       <PageHeader

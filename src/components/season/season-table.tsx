@@ -20,7 +20,7 @@ import {
   SortableContext,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
-import { useContainer } from "../main-container/useContainer";
+import { usePageScroll } from "../page/usePageScroll";
 import SeasonTableHeader from "./season-table-header";
 import SeasonTableRow from "./season-table-row";
 import useSeason from "./useSeason";
@@ -30,7 +30,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
   const { favoriteSeries } = useIr();
   const { seasonShowReorder } = useUi();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
-  const { onScroll } = useContainer();
+  const { onScroll } = usePageScroll();
 
   const sensors = useSensors(useSensor(PointerSensor));
 

@@ -2,9 +2,9 @@ import useDebounce from "@/hooks/useDebounce";
 import SORTED_SERIES from "@/ir-data/utils/series";
 import { ECarCategories } from "@/ir-data/utils/types";
 import { useIr } from "@/store/ir";
-import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import ContentFilterPanel from "../content/content-filter-panel";
+import Page from "../page/page";
 import PageHeader from "../page/page-header";
 import SeriesTable from "./series-table";
 import SeriesTableRow from "./series-table-row";
@@ -49,7 +49,7 @@ function SeriesPage() {
   }, [debouncedSearch, tabCategory]);
 
   return (
-    <Flex direction="column" height="100%" width="100%" gap="8px">
+    <Page>
       <PageHeader
         title="My Favorite Series"
         description="Select the series you wanna see in your season planner"
@@ -85,7 +85,7 @@ function SeriesPage() {
           );
         }}
       />
-    </Flex>
+    </Page>
   );
 }
 

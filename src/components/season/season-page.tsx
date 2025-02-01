@@ -1,9 +1,9 @@
 import { ECarCategories } from "@/ir-data/utils/types";
 import { useIr } from "@/store/ir";
 import { useUi } from "@/store/ui";
-import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
+import Page from "../page/page";
 import SeasonFilterPanel from "./season-filter-panel";
 import SeasonHeader from "./season-header";
 import SeasonPageEmpty from "./season-page-empty";
@@ -30,7 +30,7 @@ function SeasonPage() {
   }, [seasonCategory, favoriteSeries]);
 
   return (
-    <Flex direction="column" height="100%" width="100%" gap="8px">
+    <Page>
       <SeasonHeader />
       {favoriteSeries.length > 0 && <SeasonFilterPanel />}
       {favoriteSeries.length === 0 && <SeasonPageEmpty />}
@@ -40,7 +40,7 @@ function SeasonPage() {
       {filteredFavorites.length > 0 && (
         <SeasonTable filteredFavorites={filteredFavorites} />
       )}
-    </Flex>
+    </Page>
   );
 }
 

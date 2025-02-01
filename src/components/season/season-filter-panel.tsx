@@ -11,10 +11,7 @@ function SeasonFilterPanel() {
   const { seasonCategory } = useUi();
 
   return (
-    <HStack
-      justifyContent={{ md: "space-between", base: "center" }}
-      alignItems={"start"}
-    >
+    <HStack justifyContent={{ md: "space-between", base: "center" }} mb={2}>
       <PopoverRoot positioning={{ placement: "right-start" }}>
         <PopoverTrigger asChild>
           <IconButton

@@ -26,10 +26,7 @@ function ContentFilterPanel<T extends string>({
   };
 
   return (
-    <HStack
-      justifyContent={{ md: "space-between", base: "center" }}
-      alignItems={"center"}
-    >
+    <HStack justifyContent={{ md: "space-between", base: "center" }} mb={2}>
       <PopoverRoot
         open={!!search?.trim() ? true : undefined}
         positioning={{ placement: size.md ? "right" : "top-start" }}

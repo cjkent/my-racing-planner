@@ -1,9 +1,9 @@
 import useDebounce from "@/hooks/useDebounce";
 import { TContent } from "@/ir-data/utils/types";
-import { Flex } from "@chakra-ui/react";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import ContentSubPage from "../nav-bar/content-sub-page";
+import Page from "../page/page";
 import PageHeader from "../page/page-header";
 import ContentFilterPanel from "./content-filter-panel";
 import ContentTable from "./content-table";
@@ -66,7 +66,7 @@ function ContentPage({
   }, [debouncedSearch, tabCategory]);
 
   return (
-    <Flex direction="column" height="100%" width="100%" gap="8px">
+    <Page>
       <PageHeader
         freeCount={freeCount}
         ownedCount={myContent.length ?? 0}
@@ -111,7 +111,7 @@ function ContentPage({
           );
         }}
       />
-    </Flex>
+    </Page>
   );
 }
 
