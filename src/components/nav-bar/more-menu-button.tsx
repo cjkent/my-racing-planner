@@ -11,6 +11,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
   faCircleQuestion,
+  faFileLines,
   faFileShield,
   faInfoCircle,
   faLanguage,
@@ -21,7 +22,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useLocation } from "wouter";
 import BMCIcon from "../bmc/icon";
-import HelpDialog from "../help";
+import ChangelogDialog from "../changelog/changelog-dialog";
+import HelpDialog from "../help/help-dialog";
 import { Button, ButtonProps } from "../ui/button";
 import { useColorMode } from "../ui/color-mode";
 import NavBarButton from "./nav-bar-button";
@@ -133,6 +135,14 @@ function MoreMenuButton({
                   onClick={() => (document.activeElement as HTMLElement).blur()}
                 />
               </HelpDialog>
+              <Separator />
+              <ChangelogDialog>
+                <MoreMenuItem
+                  label="Change Log"
+                  icon={faFileLines}
+                  onClick={() => (document.activeElement as HTMLElement).blur()}
+                />
+              </ChangelogDialog>
               <Separator />
               <MoreMenuItem
                 label="Switch Language"

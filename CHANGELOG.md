@@ -1,13 +1,14 @@
 # My Racing Planner Change Log
 
-All notable changes to the "my-racing-planner" project will be documented in this file.
+All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
-## 0.5.4
+## 0.6.0
 
-- Implemented Top bar and moved some items from nav bar
-- Separated Privacy Policy from About page
-- Implemented infinity table instead of paginated
-- Fixed series table empty state
+- Implemented Top bar and moved some items from Nav bar
+- Separated Privacy Policy from About page to a dedicated page
+- Implemented infinity table instead of pagination
+- Fixed series table empty state wrong width
+- Added change log dialog automatically loading from markdown file
 
 ## 0.5.3
 

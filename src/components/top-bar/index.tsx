@@ -2,12 +2,14 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { Collapsible, HStack, StackProps } from "@chakra-ui/react";
 import {
   faCircleQuestion,
+  faFileLines,
   faLanguage,
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { useScroll } from "../app/useScroll";
-import HelpDialog from "../help";
+import ChangelogDialog from "../changelog/changelog-dialog";
+import HelpDialog from "../help/help-dialog";
 import { useColorMode } from "../ui/color-mode";
 import TopBarButton from "./top-bar-button";
 
@@ -30,6 +32,15 @@ function TopBar({ ...props }: StackProps) {
                 trigger={"help-dialog"}
               />
             </HelpDialog>
+
+            <ChangelogDialog ids={{ trigger: "changelog-dialog" }}>
+              <TopBarButton
+                tooltip={"Open Change Log Dialog"}
+                icon={faFileLines}
+                onClick={() => (document.activeElement as HTMLElement).blur()}
+                trigger={"changelog-dialog"}
+              />
+            </ChangelogDialog>
 
             <TopBarButton
               tooltip={"Switch Language"}

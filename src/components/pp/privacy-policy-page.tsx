@@ -7,7 +7,7 @@ function PrivacyPolicyPage() {
     <Page>
       <PageHeader
         title="Privacy Policy"
-        description={"How user's personal data is handled on this site"}
+        description={"Last updated: Wed 15 Jan, 2025"}
       />
       <PrivacyPolicy />
     </Page>

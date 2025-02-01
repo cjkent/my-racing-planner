@@ -14,12 +14,6 @@ function PrivacyPolicy() {
       flex={1}
       onScroll={onScroll}
     >
-      <Heading size={"3xl"} mt={6}>
-        Privacy Policy
-      </Heading>
-      <Text mb={2} as="p">
-        Last updated: Wed 15 Jan, 2025
-      </Text>
       <section>
         <Heading>Collected Data</Heading>
         <Text as="p">

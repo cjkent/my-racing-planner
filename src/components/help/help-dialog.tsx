@@ -46,9 +46,7 @@ import { Tooltip } from "../ui/tooltip";
 function HelpDialog({ children, ...rest }: DialogRootProps) {
   const { helpPresented } = useUi();
   const [open, setOpen] = useState(!helpPresented);
-
   const { size } = useWindowSize();
-
   const [_, navigate] = useLocation();
 
   useEffect(() => {
@@ -64,7 +62,7 @@ function HelpDialog({ children, ...rest }: DialogRootProps) {
       lazyMount
       open={open}
       onOpenChange={(e) => setOpen(e.open)}
-      size={size.md ? "lg" : "full"}
+      size={size.lg ? "xl" : size.md ? "lg" : "full"}
       scrollBehavior="inside"
       placement="center"
       motionPreset="slide-in-bottom"
@@ -274,7 +272,12 @@ function HelpDialog({ children, ...rest }: DialogRootProps) {
                   Privacy <FontAwesomeIcon size="xs" icon={faFileShield} />
                 </strong>
                 : No personal data collected, visit the{" "}
-                <LinkWouter to={ETabs.PrivacyPolicy}>Privacy Policy</LinkWouter>{" "}
+                <LinkWouter
+                  to={ETabs.PrivacyPolicy}
+                  onClick={() => setOpen(false)}
+                >
+                  Privacy Policy
+                </LinkWouter>{" "}
                 for detail.
               </List.Item>
               <List.Item>
