@@ -4,7 +4,7 @@ import {
   wishNurbCombined,
 } from "@/ir-data/utils/tracks";
 import { useIr } from "@/store/ir";
-import { Icon, IconProps, Text } from "@chakra-ui/react";
+import { Box, Icon, IconProps, Text } from "@chakra-ui/react";
 import { BsInfoCircle, BsInfoCircleFill } from "react-icons/bs";
 
 import { Tooltip } from "../ui/tooltip";
@@ -45,10 +45,16 @@ function NurbInfoIcon({
         width={px}
         alignItems={"center"}
         justifyContent={"center"}
-        color={wish ? "blue.solid" : undefined}
+        color={wish ? "blue.solid" : !owned ? "gray.500" : undefined}
         {...rest}
       >
-        {owned || wish ? <BsInfoCircleFill /> : <BsInfoCircle />}
+        <Box>
+          {owned || wish ? (
+            <BsInfoCircleFill size={"100%"} />
+          ) : (
+            <BsInfoCircle size={"100%"} />
+          )}
+        </Box>
       </Icon>
     </Tooltip>
   );
