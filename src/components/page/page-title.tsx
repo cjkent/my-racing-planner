@@ -12,11 +12,7 @@ function PageTitle({
   const { height } = useWindowSize();
   const notSmall = (value: any) => (height <= 680 ? undefined : value);
   return (
-    <Stack
-      pl={{ base: "0.5rem", md: notSmall("unset") }}
-      gap={{ base: "0", md: notSmall("0.5rem") }}
-      {...rest}
-    >
+    <Stack pl={{ base: "0.5rem", md: notSmall("unset") }} gap={0} {...rest}>
       <Heading
         size={{ base: "2xl", md: notSmall("4xl") }}
         fontFamily="mono"
