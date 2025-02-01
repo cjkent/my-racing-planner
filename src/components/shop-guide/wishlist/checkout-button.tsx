@@ -1,7 +1,7 @@
 import { IR_URL } from "@/ir-data/utils/urls";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 function CheckoutButton({ wishList }: { wishList: { sku: number }[] }) {
   return (

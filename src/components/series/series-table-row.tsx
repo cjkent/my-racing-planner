@@ -21,8 +21,8 @@ import DurationBadge from "../badges/duration-badge";
 import LicenseBadge from "../badges/license-badge";
 import ContentNameBadge from "../content/content-name-badge";
 import ContentPopover from "../content/content-popover";
-import StarCheckbox from "../content/star-checkbox";
 import { Tooltip } from "../ui/tooltip";
+import StarCheckbox from "./star-checkbox";
 
 function SeriesTableRow({
   id,

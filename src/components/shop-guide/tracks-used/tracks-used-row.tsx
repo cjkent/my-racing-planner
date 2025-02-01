@@ -1,9 +1,9 @@
 import { useIr } from "@/store/ir";
 import { Badge, HStack, Table, Text } from "@chakra-ui/react";
-import SERIES_JSON from "../../ir-data/series.json";
-import ContentCheckbox from "../content/content-checkbox";
-import ContentNameBadge from "../content/content-name-badge";
-import { Tooltip } from "../ui/tooltip";
+import SERIES_JSON from "../../../ir-data/series.json";
+import ContentCheckbox from "../../content/content-checkbox";
+import ContentNameBadge from "../../content/content-name-badge";
+import { Tooltip } from "../../ui/tooltip";
 
 function TracksUsedRow({
   item,

@@ -4,10 +4,10 @@ import { Flex } from "@chakra-ui/react";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import ContentSubPage from "../nav-bar/content-sub-page";
+import PageHeader from "../page/page-header";
 import ContentFilterPanel from "./content-filter-panel";
 import ContentTable from "./content-table";
 import ContentTableRow from "./content-table-row";
-import PageHeader from "./page-header";
 
 function ContentPage({
   allTab,
@@ -73,9 +73,9 @@ function ContentPage({
         wishCount={wish.length ?? 0}
         title={title}
         description={description}
-      />
-
-      <ContentSubPage hideFrom={"md"} />
+      >
+        <ContentSubPage hideFrom={"md"} />
+      </PageHeader>
 
       <ContentFilterPanel
         tabs={tabs}

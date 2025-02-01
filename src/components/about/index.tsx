@@ -1,6 +1,6 @@
 import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
-import PageHeader from "../content/page-header";
 import { useContainer } from "../main-container/useContainer";
+import PageHeader from "../page/page-header";
 import { Tooltip } from "../ui/tooltip";
 
 const contributors = [

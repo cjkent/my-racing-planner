@@ -2,7 +2,7 @@ import { useIr } from "@/store/ir";
 import { Flex, Table } from "@chakra-ui/react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { EmptyState } from "../ui/empty-state";
+import { EmptyState } from "../../ui/empty-state";
 
 function TracksUsedEmpty() {
   const { favoriteSeries } = useIr();

@@ -4,7 +4,7 @@ import CARS_JSON from "../../ir-data/cars.json";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
 import LicenseBadge from "../badges/license-badge";
-import StarCheckbox from "../content/star-checkbox";
+import StarCheckbox from "./star-checkbox";
 
 function SeriesPopover({
   content,

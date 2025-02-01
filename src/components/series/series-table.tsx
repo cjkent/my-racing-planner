@@ -1,5 +1,5 @@
 import { Table, VisuallyHidden } from "@chakra-ui/react";
-import PaginatedTable from "../content/paginated-table";
+import PaginatedTable from "../table/paginated-table";
 
 type Dict<T = any> = Record<string, T>;
 function SeriesTable<T extends string | number | Dict | undefined>({

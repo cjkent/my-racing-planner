@@ -2,14 +2,16 @@ import { getPreviousTuesday } from "@/components/season/useSeason";
 import { useIr } from "@/store/ir";
 import { Flex, For, Table, VisuallyHidden } from "@chakra-ui/react";
 import { useMemo } from "react";
-import SERIES_JSON from "../../ir-data/series.json";
-import TRACKS_JSON from "../../ir-data/tracks.json";
-import TRACKS_LIST from "../../ir-data/utils/tracks";
+import SERIES_JSON from "../../../ir-data/series.json";
+import TRACKS_JSON from "../../../ir-data/tracks.json";
+import TRACKS_LIST from "../../../ir-data/utils/tracks";
+import { useContainer } from "../../main-container/useContainer";
 import TracksUsedEmpty from "./tracks-used-empty";
 import TracksUsedRow from "./tracks-used-row";
 
 function TracksUsedTable() {
   const { wishTracks, favoriteSeries } = useIr();
+  const { onScroll } = useContainer();
   const tracksMap = useMemo(
     () =>
       favoriteSeries.reduce((acc, curr) => {
@@ -72,6 +74,7 @@ function TracksUsedTable() {
       maxH={"100%"}
       h={"100%"}
       alignItems={"start"}
+      onScroll={onScroll}
     >
       <Table.Root
         striped

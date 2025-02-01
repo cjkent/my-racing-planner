@@ -5,7 +5,7 @@ import { useIr } from "@/store/ir";
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useMemo, useState } from "react";
 import ContentFilterPanel from "../content/content-filter-panel";
-import PageHeader from "../content/page-header";
+import PageHeader from "../page/page-header";
 import SeriesTable from "./series-table";
 import SeriesTableRow from "./series-table-row";
 

@@ -2,7 +2,7 @@ import { useIr } from "@/store/ir";
 import { useMemo } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
-import PageHeader from "../content/page-header";
+import PageHeader from "../page/page-header";
 
 function SeasonHeader() {
   const { myTracks, wishTracks, favoriteSeries } = useIr();

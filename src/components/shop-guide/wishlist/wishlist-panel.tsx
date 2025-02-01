@@ -15,12 +15,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment, useMemo } from "react";
-import CARS_LIST from "../../ir-data/utils/cars";
-import TRACKS_LIST from "../../ir-data/utils/tracks";
-import { EmptyState } from "../ui/empty-state";
+import CARS_LIST from "../../../ir-data/utils/cars";
+import TRACKS_LIST from "../../../ir-data/utils/tracks";
+import { EmptyState } from "../../ui/empty-state";
+import ShopSettingsPopover from "../shop-settings-popover";
 import CheckoutButton from "./checkout-button";
 import PriceDiscountPanel from "./price-discount-panel";
-import ShopSettingsPopover from "./shop-settings-popover";
 
 function WishlistPanel() {
   const { wishCars, wishTracks } = useIr();
