@@ -16,7 +16,7 @@ import {
   faRoad,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useMemo } from "react";
 import DurationBadge from "../badges/duration-badge";
 import LicenseBadge from "../badges/license-badge";
 import ContentNameBadge from "../content/content-name-badge";
@@ -29,7 +29,7 @@ function SeriesTableRow({
   logo,
   name,
   cars,
-  tracks,
+  weeks,
   favorite,
   fixed,
   category,
@@ -43,7 +43,7 @@ function SeriesTableRow({
   logo?: string;
   name: string;
   cars: number[];
-  tracks: number[];
+  weeks: { track: { id: number } }[];
   favorite: boolean;
   fixed: boolean;
   category: string;
@@ -53,6 +53,7 @@ function SeriesTableRow({
   laps: number | null;
   official: boolean;
 }) {
+  const tracks = useMemo(() => [...new Set(weeks.map((w) => w.track.id))], []);
   return (
     <Table.Row bgColor={"transparent"}>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
