@@ -87,25 +87,29 @@ function ContentPage({
 
       <ContentTable
         list={list}
-        rows={(item) => (
-          <ContentTableRow
-            key={item.id}
-            id={item.id}
-            sku={item.sku}
-            content={content}
-            infoUrl={infoUrl(item.id)}
-            skuIcon={skuIcon}
-            price={item.price}
-            name={item.name}
-            logo={item.logo}
-            categories={item.categories}
-            free={item.free}
-            skuGroup={item.skuGroup ? Object.values(item.skuGroup) : undefined}
-            series={item.skuSeries ? item.skuSeries : item.series}
-            owned={myContent.includes(item.sku)}
-            wish={wish.includes(item.sku)}
-          />
-        )}
+        rows={(item) => {
+          const owned = myContent.includes(item.sku);
+          const wished = !owned && wish.includes(item.sku);
+          return (
+            <ContentTableRow
+              key={item.id}
+              id={item.id}
+              sku={item.sku}
+              content={content}
+              infoUrl={infoUrl(item.id)}
+              skuIcon={skuIcon}
+              price={item.price}
+              name={item.name}
+              logo={item.logo}
+              categories={item.categories}
+              free={item.free}
+              skuGroup={item.skuGroup}
+              series={item.skuSeries ? item.skuSeries : item.series}
+              owned={owned}
+              wish={wished}
+            />
+          );
+        }}
       />
     </Flex>
   );

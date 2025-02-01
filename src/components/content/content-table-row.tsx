@@ -56,11 +56,12 @@ function ContentTableRow({
   free: boolean;
   owned: boolean;
   wish: boolean;
-  skuGroup?: string[];
+  skuGroup?: { [key: string]: string };
   series?: number[];
   skuIcon: IconDefinition;
   infoUrl: string;
 }) {
+  const skuItems = skuGroup ? Object.values(skuGroup) : [];
   return (
     <Table.Row bgColor={"transparent"}>
       <Table.Cell minWidth={"40px"} textAlign={"center"}>
@@ -116,7 +117,7 @@ function ContentTableRow({
           <Tooltip
             lazyMount
             unmountOnExit
-            content={skuGroup.map((c) => (
+            content={skuItems.map((c) => (
               <Text key={c} as="p">
                 {c}
               </Text>
@@ -128,7 +129,7 @@ function ContentTableRow({
           >
             <Badge variant={"solid"} _light={{ bg: "gray.600" }}>
               <FontAwesomeIcon icon={skuIcon} size="sm" />
-              {skuGroup.length}
+              {skuItems.length}
             </Badge>
           </Tooltip>
         )}
