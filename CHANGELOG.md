@@ -2,6 +2,10 @@
 
 All notable changes to the "my-racing-planner" project will be documented in this file.
 
+## 0.5.3
+
+- Improved performance of season table when clicking track checkboxes
+
 ## 0.5.2
 
 - Fix crash when track is undefined on season table
