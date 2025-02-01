@@ -9,6 +9,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 - Implemented an infinite table instead of pagination.
 - Fixed incorrect width of the series table empty state.
 - Added a changelog dialog that automatically loads from repo's markdown file.
+- Made week column of the season table sticky
 
 ## 0.5.3
 

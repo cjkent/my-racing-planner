@@ -26,8 +26,11 @@ function SeasonTableRowDateCell({
   return (
     <Table.Cell
       width="60px"
-      bgColor={thisWeek ? "bg.inverted" : undefined}
+      bgColor={thisWeek ? "bg.inverted" : "bg.muted"}
       color={thisWeek ? "bg" : undefined}
+      position={"sticky"}
+      left={"0"}
+      zIndex="docked"
     >
       <Tooltip
         lazyMount

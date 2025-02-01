@@ -16,8 +16,15 @@ function SeasonTableHeader({
   const { scrolled } = useScroll();
   return (
     <Table.Header>
-      <Table.Row bgColor={"bg.muted"}>
-        <Table.ColumnHeader textAlign={"center"} width="60px">
+      <Table.Row bgColor={"bg.muted"} zIndex="sticky">
+        <Table.ColumnHeader
+          textAlign={"center"}
+          width="60px"
+          bgColor={"bg.muted"}
+          position={"sticky"}
+          left={"0"}
+          zIndex="sticky"
+        >
           Week
         </Table.ColumnHeader>
 

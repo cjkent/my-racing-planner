@@ -1,8 +1,8 @@
 import { Flex, Stack } from "@chakra-ui/react";
-import MainContainer from "../main-container";
-import NavBar from "../nav-bar";
+import MainContainer from "../main-container/main-container";
 import BottomNavBar from "../nav-bar/bottom-nav-bar";
-import TopBar from "../top-bar";
+import NavBar from "../nav-bar/nav-bar";
+import TopBar from "../top-bar/top-bar";
 import ScrollContextProvider from "./scroll-context";
 
 function App() {
