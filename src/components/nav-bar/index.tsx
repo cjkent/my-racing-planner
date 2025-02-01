@@ -33,8 +33,7 @@ function NavBar({ ...props }: StackProps) {
     <Stack
       {...props}
       justifyContent="space-between"
-      paddingTop={3}
-      paddingBottom={2}
+      py={3}
       color={{ base: "gray.700", _dark: "gray.300" }}
       overflowY={"auto"}
     >

@@ -1,5 +1,5 @@
 import { Table, VisuallyHidden } from "@chakra-ui/react";
-import PaginatedTable from "../table/paginated-table";
+import InfinityTable from "../table/infinity-table";
 
 type Dict<T = any> = Record<string, T>;
 function ContentTable<T extends string | number | Dict | undefined>({
@@ -10,7 +10,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
 }) {
   return (
-    <PaginatedTable list={list} rows={rows}>
+    <InfinityTable list={list} rows={rows}>
       <Table.Row bgColor={"bg.muted"}>
         <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
           <VisuallyHidden>Owned content</VisuallyHidden>
@@ -35,7 +35,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
           <VisuallyHidden>Info on iracing.com</VisuallyHidden>
         </Table.ColumnHeader>
       </Table.Row>
-    </PaginatedTable>
+    </InfinityTable>
   );
 }
 

@@ -1,5 +1,5 @@
 import { Table, VisuallyHidden } from "@chakra-ui/react";
-import PaginatedTable from "../table/paginated-table";
+import InfinityTable from "../table/infinity-table";
 
 type Dict<T = any> = Record<string, T>;
 function SeriesTable<T extends string | number | Dict | undefined>({
@@ -10,7 +10,7 @@ function SeriesTable<T extends string | number | Dict | undefined>({
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
 }) {
   return (
-    <PaginatedTable list={list} rows={rows}>
+    <InfinityTable list={list} rows={rows}>
       <Table.Row bgColor={"bg.muted"}>
         <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
           <VisuallyHidden>Favorite</VisuallyHidden>
@@ -38,7 +38,7 @@ function SeriesTable<T extends string | number | Dict | undefined>({
           License
         </Table.ColumnHeader>
       </Table.Row>
-    </PaginatedTable>
+    </InfinityTable>
   );
 }
 
