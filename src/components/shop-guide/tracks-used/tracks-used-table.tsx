@@ -72,7 +72,7 @@ function TracksUsedTable() {
       borderRadius={"md"}
       overflowY={"auto"}
       maxH={"100%"}
-      h={"100%"}
+      h={tracksList.length > 0 ? undefined : "100%"}
       alignItems={"start"}
       onScroll={onScroll}
     >
