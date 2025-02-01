@@ -3,7 +3,7 @@ import SORTED_SERIES from "@/ir-data/utils/series";
 import { ECarCategories } from "@/ir-data/utils/types";
 import { useIr } from "@/store/ir";
 import { Flex } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ContentFilterPanel from "../content/content-filter-panel";
 import SeriesHeader from "./series-header";
 import SeriesTable from "./series-table";
@@ -61,24 +61,30 @@ function SeriesPage() {
 
       <SeriesTable
         list={list}
-        rows={(item) => (
-          <SeriesTableRow
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            logo={item.logo}
-            category={item.category}
-            favorite={favoriteSeries.includes(item.id)}
-            fixed={item.fixed}
-            cars={item.cars}
-            tracks={[...new Set(item.weeks.map((w) => w.track.id))]}
-            license={item.license.letter}
-            color={item.license.color}
-            duration={item.duration}
-            laps={item.laps}
-            official={item.official}
-          />
-        )}
+        rows={(item) => {
+          const tracks = useMemo(
+            () => [...new Set(item.weeks.map((w) => w.track.id))],
+            [item.id],
+          );
+          return (
+            <SeriesTableRow
+              key={item.id}
+              id={item.id}
+              name={item.name}
+              logo={item.logo}
+              category={item.category}
+              favorite={favoriteSeries.includes(item.id)}
+              fixed={item.fixed}
+              cars={item.cars}
+              tracks={tracks}
+              license={item.license.letter}
+              color={item.license.color}
+              duration={item.duration}
+              laps={item.laps}
+              official={item.official}
+            />
+          );
+        }}
       />
     </Flex>
   );

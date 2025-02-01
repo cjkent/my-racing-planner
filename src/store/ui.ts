@@ -17,7 +17,7 @@ export const useUiStorePersist = create(
       seasonShowReorder: true,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
-      seasonHighlight: false,
+      seasonHighlight: true,
       seasonShowWishlist: true,
       seasonShowOwned: true,
       seasonShowThisWeek: true,
