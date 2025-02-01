@@ -1,8 +1,9 @@
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { ETabs } from "@/store/ui";
-import { Flex, Spinner } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "wouter";
+import LoadingContainer from "../page/loading-container";
 
 const AboutPage = lazy(() => import("../about/about-page"));
 const CarsPage = lazy(() => import("../content/cars-page"));
@@ -29,13 +30,7 @@ function MainContainer() {
         boxShadow: "rgba(5, 5, 15, 0.16) 0px 12px 24px -2px",
       }}
     >
-      <Suspense
-        fallback={
-          <Flex flex={1} justifyContent={"center"} alignItems={"center"}>
-            <Spinner size={"xl"} borderWidth="4px" />
-          </Flex>
-        }
-      >
+      <Suspense fallback={<LoadingContainer />}>
         <Switch>
           <Route path={ETabs.MySeason} component={SeasonPage} />
           <Route path={ETabs.MySeries} component={SeriesPage} />

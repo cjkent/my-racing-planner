@@ -2,7 +2,7 @@ import { Heading, Link, List, Stack, Text } from "@chakra-ui/react";
 import { useScroll } from "../app/useScroll";
 import { Tooltip } from "../ui/tooltip";
 
-function PrivacyPolicy() {
+function PrivacyPolicyContent() {
   const { onScroll } = useScroll();
   return (
     <Stack
@@ -112,4 +112,4 @@ function PrivacyPolicy() {
   );
 }
 
-export default PrivacyPolicy;
+export default PrivacyPolicyContent;

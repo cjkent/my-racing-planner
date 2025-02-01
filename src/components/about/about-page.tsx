@@ -1,6 +1,8 @@
+import { lazy, Suspense } from "react";
+import LoadingContainer from "../page/loading-container";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
-import About from "./about";
+const AboutContent = lazy(() => import("./about-content"));
 
 function AboutPage() {
   return (
@@ -9,7 +11,9 @@ function AboutPage() {
         title="About"
         description={`About My Racing Planner (v${APP_VERSION})`}
       />
-      <About />
+      <Suspense fallback={<LoadingContainer />}>
+        <AboutContent />
+      </Suspense>
     </Page>
   );
 }

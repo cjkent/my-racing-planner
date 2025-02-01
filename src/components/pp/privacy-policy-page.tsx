@@ -1,6 +1,8 @@
+import { lazy, Suspense } from "react";
+import LoadingContainer from "../page/loading-container";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
-import PrivacyPolicy from "./privacy-policy";
+const PrivacyPolicyContent = lazy(() => import("./privacy-policy-content"));
 
 function PrivacyPolicyPage() {
   return (
@@ -9,7 +11,9 @@ function PrivacyPolicyPage() {
         title="Privacy Policy"
         description={"Last updated: Wed 15 Jan, 2025"}
       />
-      <PrivacyPolicy />
+      <Suspense fallback={<LoadingContainer />}>
+        <PrivacyPolicyContent />
+      </Suspense>
     </Page>
   );
 }

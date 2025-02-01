@@ -7,7 +7,7 @@ const contributors = [
   { name: "Juni Lima", github: "junilima" },
 ];
 
-function About() {
+function AboutContent() {
   const { onScroll } = useScroll();
   return (
     <Stack
@@ -129,4 +129,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutContent;
