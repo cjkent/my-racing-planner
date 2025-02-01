@@ -1,33 +1,46 @@
 import useWindowSize from "@/hooks/useWindowSize";
-import { Heading, Stack, StackProps, Text } from "@chakra-ui/react";
+import { Collapsible, HStack } from "@chakra-ui/react";
+import { useContainer } from "../main-container/useContainer";
+import CheckboxCounts from "./checkbox-counts";
+import PageTitle from "./page-title";
 
 function PageHeader({
   title,
   description,
-  ...rest
-}: StackProps & {
+  freeCount,
+  ownedCount,
+  wishCount,
+}: {
   title: string;
   description: string;
+  freeCount?: number;
+  ownedCount?: number;
+  wishCount?: number;
 }) {
   const { height } = useWindowSize();
   const notSmall = (value: any) => (height <= 680 ? undefined : value);
+  const showCounts =
+    freeCount != undefined || ownedCount != undefined || wishCount != undefined;
+  const { scrolled } = useContainer();
   return (
-    <Stack
-      pl={{ base: "0.5rem", md: notSmall("unset") }}
-      gap={{ base: "0", md: notSmall("0.5rem") }}
-      {...rest}
-    >
-      <Heading
-        size={{ base: "2xl", md: notSmall("4xl") }}
-        fontFamily="mono"
-        fontWeight="bold"
-      >
-        {title}
-      </Heading>
-      <Text fontSize={{ base: "xs", md: "unset" }} userSelect={"none"}>
-        {description}
-      </Text>
-    </Stack>
+    <Collapsible.Root open={!scrolled}>
+      <Collapsible.Content>
+        <HStack
+          padding={{ base: "unset", md: notSmall(4) }}
+          justifyContent={"space-between"}
+          alignItems={"start"}
+        >
+          <PageTitle title={title} description={description} />
+          {showCounts && (
+            <CheckboxCounts
+              freeCount={freeCount ?? 0}
+              ownedCount={ownedCount ?? 0}
+              wishCount={wishCount ?? 0}
+            />
+          )}
+        </HStack>
+      </Collapsible.Content>
+    </Collapsible.Root>
   );
 }
 

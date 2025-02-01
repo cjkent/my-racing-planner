@@ -1,7 +1,7 @@
 import useWindowSize from "@/hooks/useWindowSize";
 import { Flex, HStack, Stack, Tabs, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import ShopGuideHeader from "./shop-guide-header";
+import PageHeader from "../content/page-header";
 import TracksUsedTable from "./tracks-used-table";
 import WishlistPanel from "./wishlist-panel";
 
@@ -15,7 +15,11 @@ function ShopPage() {
   const { size } = useWindowSize();
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
-      <ShopGuideHeader />
+      <PageHeader
+        title="Shop Guide"
+        description="See the tracks most used by your favorite series. Checkout your
+          wishlist items at iracing.com"
+      />
       <Stack hideFrom={"md"}>
         <Tabs.Root
           size={"sm"}

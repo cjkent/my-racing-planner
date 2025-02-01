@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/pagination";
 import { For, HStack, Stack, Table } from "@chakra-ui/react";
 import { PropsWithChildren, useEffect, useMemo, useRef, useState } from "react";
+import { useContainer } from "../main-container/useContainer";
 import PaginatedTableEmpty from "./paginated-table-empty";
 
 type Dict<T = any> = Record<string, T>;
@@ -19,6 +20,7 @@ function PaginatedTable<T extends string | number | Dict | undefined>({
 }>) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState<number>(1);
+  const { onScroll } = useContainer();
 
   const pageSize = 40;
   const start = (page - 1) * pageSize;
@@ -35,7 +37,12 @@ function PaginatedTable<T extends string | number | Dict | undefined>({
 
   return (
     <Stack alignItems={"end"} overflow={"auto"} gap={2}>
-      <Table.ScrollArea width="100%" borderRadius={"md"} ref={scrollRef}>
+      <Table.ScrollArea
+        width="100%"
+        borderRadius={"md"}
+        ref={scrollRef}
+        onScroll={onScroll}
+      >
         <Table.Root stickyHeader size="sm" striped>
           <Table.Header>{children}</Table.Header>
           <Table.Body>

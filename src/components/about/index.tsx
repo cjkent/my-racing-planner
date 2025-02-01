@@ -1,5 +1,6 @@
 import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
 import PageHeader from "../content/page-header";
+import { useContainer } from "../main-container/useContainer";
 import { Tooltip } from "../ui/tooltip";
 
 const contributors = [
@@ -7,10 +8,10 @@ const contributors = [
   { name: "Juni Lima", github: "junilima" },
 ];
 function AboutPage() {
+  const { onScroll } = useContainer();
   return (
     <Stack height="100%" width="100%" gap="8px">
       <PageHeader
-        padding={4}
         title="About"
         description={`About My Racing Planner (v${APP_VERSION}) and Privacy Policy`}
       />
@@ -21,6 +22,7 @@ function AboutPage() {
         borderRadius={"md"}
         bgColor={"bg.muted"}
         flex={1}
+        onScroll={onScroll}
       >
         <section>
           <Heading>Data Updates</Heading>

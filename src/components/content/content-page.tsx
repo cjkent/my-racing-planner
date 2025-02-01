@@ -5,9 +5,9 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import ContentSubPage from "../nav-bar/content-sub-page";
 import ContentFilterPanel from "./content-filter-panel";
-import ContentHeader from "./content-header";
 import ContentTable from "./content-table";
 import ContentTableRow from "./content-table-row";
+import PageHeader from "./page-header";
 
 function ContentPage({
   allTab,
@@ -67,7 +67,7 @@ function ContentPage({
 
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
-      <ContentHeader
+      <PageHeader
         freeCount={freeCount}
         ownedCount={myContent.length ?? 0}
         wishCount={wish.length ?? 0}

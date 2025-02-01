@@ -1,21 +1,19 @@
 import { IR_URL } from "@/ir-data/utils/urls";
 import { useUi } from "@/store/ui";
-import { For, Image, Table, Text, VStack } from "@chakra-ui/react";
-import { useState } from "react";
+import { Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
 import SERIES_JSON from "../../ir-data/series.json";
+import { useContainer } from "../main-container/useContainer";
 import { Tooltip } from "../ui/tooltip";
 import SeasonCarsPopover from "./season-cars-popover";
 import SortableColumnHeader from "./sortable-column-header";
 
 function SeasonTableHeader({
-  tableScroll,
   filteredFavorites,
 }: {
-  tableScroll: boolean;
   filteredFavorites: number[];
 }) {
   const { seasonShowReorder, seasonShowCarsDropdown } = useUi();
-  const [hideHeaderText, setHideHeaderText] = useState(false);
+  const { scrolled } = useContainer();
   return (
     <Table.Header>
       <Table.Row bgColor={"bg.muted"}>
@@ -50,26 +48,27 @@ function SeasonTableHeader({
                       />
                     )}
 
-                    <Tooltip
-                      lazyMount
-                      unmountOnExit
-                      content={series.name}
-                      showArrow
-                      positioning={{ placement: "bottom" }}
-                      openDelay={200}
-                      closeDelay={100}
-                    >
-                      <Text
-                        textAlign={"center"}
-                        lineClamp="2"
-                        maxW={"200px"}
-                        opacity={!tableScroll ? 1 : 0}
-                        transition={"opacity 0.2s linear"}
-                        onTransitionEnd={() => setHideHeaderText(tableScroll)}
-                      >
-                        {(!tableScroll || !hideHeaderText) && series.name}
-                      </Text>
-                    </Tooltip>
+                    <Collapsible.Root open={!scrolled}>
+                      <Collapsible.Content>
+                        <Tooltip
+                          lazyMount
+                          unmountOnExit
+                          content={series.name}
+                          showArrow
+                          positioning={{ placement: "bottom" }}
+                          openDelay={200}
+                          closeDelay={100}
+                        >
+                          <Text
+                            textAlign={"center"}
+                            lineClamp="2"
+                            maxW={"200px"}
+                          >
+                            {series.name}
+                          </Text>
+                        </Tooltip>
+                      </Collapsible.Content>
+                    </Collapsible.Root>
                   </VStack>
                   {seasonShowCarsDropdown && (
                     <SeasonCarsPopover cars={series.cars} />

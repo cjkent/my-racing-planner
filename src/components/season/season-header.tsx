@@ -1,18 +1,11 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { useIr } from "@/store/ir";
-import { HStack, Stack } from "@chakra-ui/react";
 import { useMemo } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
 import TRACKS_JSON from "../../ir-data/tracks.json";
-import CheckboxCounts from "../content/checkbox-counts";
 import PageHeader from "../content/page-header";
 
 function SeasonHeader() {
   const { myTracks, wishTracks, favoriteSeries } = useIr();
-
-  const { height } = useWindowSize();
-  const notSmall = (value: any) => (height <= 680 ? undefined : value);
-
   const counts = useMemo(
     () =>
       favoriteSeries.reduce(
@@ -43,23 +36,13 @@ function SeasonHeader() {
   );
 
   return (
-    <HStack
-      padding={{ base: "unset", md: notSmall(4) }}
-      justifyContent={"space-between"}
-      alignItems={"start"}
-    >
-      <Stack>
-        <PageHeader
-          title="My Season Planner"
-          description="Plan your season weeks, you can drag and drop series columns"
-        />
-      </Stack>
-      <CheckboxCounts
-        freeCount={counts.free}
-        ownedCount={counts.owned}
-        wishCount={counts.wish}
-      />
-    </HStack>
+    <PageHeader
+      freeCount={counts.free}
+      ownedCount={counts.owned}
+      wishCount={counts.wish}
+      title="My Season Planner"
+      description="Plan your season weeks, you can drag and drop series columns"
+    />
   );
 }
 

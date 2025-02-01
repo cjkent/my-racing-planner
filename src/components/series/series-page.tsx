@@ -5,7 +5,7 @@ import { useIr } from "@/store/ir";
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useMemo, useState } from "react";
 import ContentFilterPanel from "../content/content-filter-panel";
-import SeriesHeader from "./series-header";
+import PageHeader from "../content/page-header";
 import SeriesTable from "./series-table";
 import SeriesTableRow from "./series-table-row";
 
@@ -50,7 +50,10 @@ function SeriesPage() {
 
   return (
     <Flex direction="column" height="100%" width="100%" gap="8px">
-      <SeriesHeader />
+      <PageHeader
+        title="My Favorite Series"
+        description="Select the series you wanna see in your season planner"
+      />
       <ContentFilterPanel
         tabs={ECarCategories}
         tab={tabCategory}

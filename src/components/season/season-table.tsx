@@ -20,6 +20,7 @@ import {
   SortableContext,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
+import { useContainer } from "../main-container/useContainer";
 import SeasonTableHeader from "./season-table-header";
 import SeasonTableRow from "./season-table-row";
 import useSeason from "./useSeason";
@@ -29,6 +30,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
   const { favoriteSeries } = useIr();
   const { seasonShowReorder } = useUi();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
+  const { onScroll } = useContainer();
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -43,13 +45,6 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
     }
   }
 
-  const [tableScroll, setTableScroll] = useState(false);
-  const handleScroll = (event: any) => {
-    const scrollTop = event.currentTarget.scrollTop;
-    const scrolled = tableScroll ? scrollTop > 0 : scrollTop > 60;
-    setTableScroll(scrolled);
-  };
-
   return (
     <DndContext
       sensors={sensors}
@@ -62,12 +57,9 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
         strategy={horizontalListSortingStrategy}
         disabled={!seasonShowReorder}
       >
-        <Table.ScrollArea borderRadius={"md"} onScroll={handleScroll}>
+        <Table.ScrollArea borderRadius={"md"} onScroll={onScroll}>
           <Table.Root size="sm" showColumnBorder stickyHeader>
-            <SeasonTableHeader
-              filteredFavorites={filteredFavorites}
-              tableScroll={tableScroll}
-            />
+            <SeasonTableHeader filteredFavorites={filteredFavorites} />
             <Table.Body>
               <For
                 each={weeksStartDates}
