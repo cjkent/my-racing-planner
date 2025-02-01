@@ -52,7 +52,12 @@ function WishlistPanel() {
         <ShopSettingsPopover />
       </HStack>
 
-      <Stack overflowY="auto" flex={1}>
+      <Stack
+        overflowY="auto"
+        flex={1}
+        fontSize={{ base: "sm", md: "md" }}
+        gap={{ base: 1, md: 2 }}
+      >
         <Separator />
         <For
           fallback={

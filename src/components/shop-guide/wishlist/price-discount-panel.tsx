@@ -55,7 +55,7 @@ function PriceDiscountPanel({ wishList }: { wishList: { price: number }[] }) {
               {discount}% discount (
               {shopLoyaltyDiscount ? "loyalty" : `${wishList.length} items`})
             </Text>
-            <Separator mt={2} />
+            <Separator mt={1} />
           </>
         )}
         <Text fontSize={"2xl"}>

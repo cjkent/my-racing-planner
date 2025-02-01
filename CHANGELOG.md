@@ -6,6 +6,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 
 - Improved performance of season table when clicking track checkboxes
 - Fix tracks used table broken with little amount of tracks
+- Improved Wishlist list on small screens
 
 ## 0.5.2
 
