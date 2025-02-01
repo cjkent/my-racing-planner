@@ -7,6 +7,7 @@ All notable changes to the "my-racing-planner" project will be documented in thi
 - Implemented Top bar and moved some items from nav bar
 - Separated Privacy Policy from About page
 - Implemented infinity table instead of paginated
+- Fixed series table empty state
 
 ## 0.5.3
 

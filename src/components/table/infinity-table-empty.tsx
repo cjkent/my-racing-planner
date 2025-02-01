@@ -3,10 +3,10 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { EmptyState } from "../ui/empty-state";
 
-function InfinityTableEmpty() {
+function InfinityTableEmpty({ cols }: { cols: number }) {
   return (
     <Table.Row bgColor={"transparent"}>
-      <Table.Cell colSpan={8} minWidth={"100%"}>
+      <Table.Cell colSpan={cols} minWidth={"100%"}>
         <EmptyState
           icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
           title="No results found"

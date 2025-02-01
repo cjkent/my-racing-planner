@@ -10,7 +10,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
 }) {
   return (
-    <InfinityTable list={list} rows={rows}>
+    <InfinityTable list={list} rows={rows} cols={8}>
       <Table.Row bgColor={"bg.muted"}>
         <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
           <VisuallyHidden>Owned content</VisuallyHidden>

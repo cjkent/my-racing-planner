@@ -8,10 +8,12 @@ type Dict<T = any> = Record<string, T>;
 function InfinityTable<T extends string | number | Dict | undefined>({
   list,
   rows,
+  cols,
   children,
 }: PropsWithChildren<{
   list: T[] | readonly T[] | undefined;
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
+  cols: number;
 }>) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState<number>(1);
@@ -62,7 +64,11 @@ function InfinityTable<T extends string | number | Dict | undefined>({
       <Table.Root stickyHeader size="sm" striped>
         <Table.Header>{children}</Table.Header>
         <Table.Body>
-          <For fallback={<InfinityTableEmpty />} each={each} children={rows} />
+          <For
+            fallback={<InfinityTableEmpty cols={cols} />}
+            each={each}
+            children={rows}
+          />
           {loading && <InfinityTableLoading />}
         </Table.Body>
       </Table.Root>
