@@ -1,4 +1,5 @@
 import { Flex, Stack } from "@chakra-ui/react";
+import TransferContentDialog from "../export/tranfer-content-dialog";
 import MainContainer from "../main-container/main-container";
 import BottomNavBar from "../nav-bar/bottom-nav-bar";
 import NavBar from "../nav-bar/nav-bar";
@@ -31,6 +32,8 @@ function App() {
         </Stack>
       </ScrollContextProvider>
       <BottomNavBar hideFrom="md" />
+
+      <TransferContentDialog />
     </Flex>
   );
 }

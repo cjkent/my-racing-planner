@@ -1,19 +1,12 @@
-import { Heading, Link, List, Stack, Text } from "@chakra-ui/react";
-import { useScroll } from "../app/useScroll";
+import { Heading, Link, List, Text } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 
 function PrivacyPolicyContent() {
-  const { onScroll } = useScroll();
   return (
-    <Stack
-      p={{ base: 4, md: 10 }}
-      overflowY={"auto"}
-      textAlign={"justify"}
-      borderRadius={"md"}
-      bgColor={"bg.muted"}
-      flex={1}
-      onScroll={onScroll}
-    >
+    <>
+      <Text textAlign={"center"} as="p">
+        Last updated Wed 15 Jan, 2025
+      </Text>
       <section>
         <Heading>Collected Data</Heading>
         <Text as="p">
@@ -108,7 +101,7 @@ function PrivacyPolicyContent() {
           .
         </Text>
       </section>
-    </Stack>
+    </>
   );
 }
 

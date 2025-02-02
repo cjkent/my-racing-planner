@@ -5,25 +5,27 @@ import {
   DrawerRoot,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { ETabs } from "@/store/ui";
 import { HStack, Icon, Separator, Stack, StackProps } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
   faCircleQuestion,
   faFileLines,
-  faFileShield,
   faInfoCircle,
   faLanguage,
   faMoon,
+  faShareFromSquare,
+  faShieldHalved,
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { useLocation } from "wouter";
+import AboutDialog from "../about/about-dialog";
 import BMCIcon from "../bmc/icon";
 import ChangelogDialog from "../changelog/changelog-dialog";
+import ExportDialog from "../export/export-dialog";
 import HelpDialog from "../help/help-dialog";
+import PrivacyPolicyAnalog from "../privacy-policy/privacy-policy-dialog";
 import { Button, ButtonProps } from "../ui/button";
 import { useColorMode } from "../ui/color-mode";
 import NavBarButton from "./nav-bar-button";
@@ -79,43 +81,38 @@ function MoreMenuButton({
 }: StackProps & { selected?: boolean }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false);
-  const [_, navigate] = useLocation();
   return (
     <HStack wrap="wrap" {...props}>
       <DrawerRoot
         placement={"bottom"}
         open={isOpen}
-        onOpenChange={({ open }) => setIsOpen(open)}
+        onOpenChange={(e) => {
+          (document.activeElement as HTMLElement).blur();
+          setIsOpen(e.open);
+        }}
       >
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-          <NavBarButton
-            label={"More"}
-            icon={faBars}
-            selected={selected}
-            onClick={() => (document.activeElement as HTMLElement).blur()}
-          />
+          <NavBarButton label={"More"} icon={faBars} selected={selected} />
         </DrawerTrigger>
         <DrawerContent roundedTop={"l3"}>
           <DrawerBody>
             <Stack>
-              <MoreMenuItem
-                label="About"
-                icon={faInfoCircle}
-                onClick={() => {
-                  setIsOpen(false);
-                  navigate(ETabs.About);
-                }}
-              />
+              <AboutDialog>
+                <MoreMenuItem label="About" icon={faInfoCircle} />
+              </AboutDialog>
               <Separator />
-              <MoreMenuItem
-                label="Privacy Policy"
-                icon={faFileShield}
-                onClick={() => {
-                  setIsOpen(false);
-                  navigate(ETabs.PrivacyPolicy);
-                }}
-              />
+              <HelpDialog>
+                <MoreMenuItem label="Help" icon={faCircleQuestion} />
+              </HelpDialog>
+              <Separator />
+              <PrivacyPolicyAnalog>
+                <MoreMenuItem label="Privacy Policy" icon={faShieldHalved} />
+              </PrivacyPolicyAnalog>
+              <Separator />
+              <ChangelogDialog>
+                <MoreMenuItem label="Change Log" icon={faFileLines} />
+              </ChangelogDialog>
               <Separator />
               <MoreMenuItem
                 label="Buy me a Coffee"
@@ -128,21 +125,12 @@ function MoreMenuButton({
                 <BMCIcon />
               </MoreMenuItem>
               <Separator />
-              <HelpDialog>
+              <ExportDialog>
                 <MoreMenuItem
-                  label="Help"
-                  icon={faCircleQuestion}
-                  onClick={() => (document.activeElement as HTMLElement).blur()}
+                  label="Export My Content"
+                  icon={faShareFromSquare}
                 />
-              </HelpDialog>
-              <Separator />
-              <ChangelogDialog>
-                <MoreMenuItem
-                  label="Change Log"
-                  icon={faFileLines}
-                  onClick={() => (document.activeElement as HTMLElement).blur()}
-                />
-              </ChangelogDialog>
+              </ExportDialog>
               <Separator />
               <MoreMenuItem
                 label="Switch Language"

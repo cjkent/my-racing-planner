@@ -11,29 +11,34 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, useSearch } from "wouter";
 import LoadingContainer from "../page/loading-container";
 const HelpContent = lazy(() => import("./help-content"));
 
 function HelpDialog({ children, ...rest }: DialogRootProps) {
+  const query = useSearch();
   const { helpPresented } = useUi();
-  const [open, setOpen] = useState(!helpPresented);
+  const [isOpen, setIsOpen] = useState(!query && !helpPresented);
   const { size } = useWindowSize();
   const [_, navigate] = useLocation();
 
   useEffect(() => {
-    if (!helpPresented) {
-      setOpen(true);
+    if (!query && !helpPresented) {
+      setIsOpen(true);
       setHelpPresented(true);
       navigate(ETabs.MySeries);
     }
-  }, [helpPresented]);
+  }, [query, helpPresented]);
 
   return (
     <DialogRoot
       lazyMount
-      open={open}
-      onOpenChange={(e) => setOpen(e.open)}
+      unmountOnExit
+      open={isOpen}
+      onOpenChange={(e) => {
+        (document.activeElement as HTMLElement).blur();
+        setIsOpen(e.open);
+      }}
       size={size.lg ? "xl" : size.md ? "lg" : "full"}
       scrollBehavior="inside"
       placement="center"
@@ -48,7 +53,7 @@ function HelpDialog({ children, ...rest }: DialogRootProps) {
         </DialogHeader>
         <DialogBody px={{ base: 4, md: 10 }} textAlign={"justify"}>
           <Suspense fallback={<LoadingContainer />}>
-            <HelpContent close={() => setOpen(false)} />
+            <HelpContent />
           </Suspense>
         </DialogBody>
         <DialogCloseTrigger />

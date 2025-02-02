@@ -6,6 +6,7 @@ interface DialogContentProps extends ChakraDialog.ContentProps {
   portalled?: boolean;
   portalRef?: React.RefObject<HTMLElement>;
   backdrop?: boolean;
+  full?: boolean;
 }
 
 export const DialogContent = React.forwardRef<
@@ -17,6 +18,7 @@ export const DialogContent = React.forwardRef<
     portalled = true,
     portalRef,
     backdrop = true,
+    full,
     ...rest
   } = props;
 
@@ -27,7 +29,7 @@ export const DialogContent = React.forwardRef<
         <ChakraDialog.Content
           ref={ref}
           {...rest}
-          css={{ "&": { minH: "100dvh" } }}
+          css={full ? { "&": { minH: "100dvh" } } : undefined}
           paddingTop={"env(safe-area-inset-top)"}
           asChild={false}
         >

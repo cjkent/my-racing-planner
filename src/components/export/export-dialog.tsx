@@ -9,20 +9,26 @@ import {
 } from "@/components/ui/dialog";
 import useWindowSize from "@/hooks/useWindowSize";
 import { DialogRootProps } from "@chakra-ui/react";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import LoadingContainer from "../page/loading-container";
-const ChangelogContent = lazy(() => import("./changelog-content"));
+const ExportContent = lazy(() => import("./export-content"));
 
-function ChangelogDialog({ children, ...rest }: DialogRootProps) {
-  const [open, setOpen] = useState(false);
+function ExportDialog({ children, ...rest }: DialogRootProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const { size } = useWindowSize();
+
+  useEffect(() => {
+    (document.activeElement as HTMLElement).blur();
+  }, [isOpen]);
+
   return (
     <DialogRoot
       lazyMount
-      open={open}
+      unmountOnExit
+      open={isOpen}
       onOpenChange={(e) => {
         (document.activeElement as HTMLElement).blur();
-        setOpen(e.open);
+        setIsOpen(e.open);
       }}
       size={size.lg ? "xl" : size.md ? "lg" : "full"}
       scrollBehavior="inside"
@@ -34,11 +40,11 @@ function ChangelogDialog({ children, ...rest }: DialogRootProps) {
 
       <DialogContent>
         <DialogHeader textAlign={"center"}>
-          <DialogTitle>My Racing Planner Change Log</DialogTitle>
+          <DialogTitle>Export My Content</DialogTitle>
         </DialogHeader>
         <DialogBody px={{ base: 4, md: 10 }} textAlign={"justify"}>
           <Suspense fallback={<LoadingContainer />}>
-            <ChangelogContent />
+            <ExportContent />
           </Suspense>
         </DialogBody>
         <DialogCloseTrigger />
@@ -47,4 +53,4 @@ function ChangelogDialog({ children, ...rest }: DialogRootProps) {
   );
 }
 
-export default ChangelogDialog;
+export default ExportDialog;

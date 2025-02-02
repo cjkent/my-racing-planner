@@ -11,9 +11,9 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useState } from "react";
 import LoadingContainer from "../page/loading-container";
-const ChangelogContent = lazy(() => import("./changelog-content"));
+const PrivacyPolicyContent = lazy(() => import("./privacy-policy-content"));
 
-function ChangelogDialog({ children, ...rest }: DialogRootProps) {
+function PrivacyPolicyAnalog({ children, ...rest }: DialogRootProps) {
   const [open, setOpen] = useState(false);
   const { size } = useWindowSize();
   return (
@@ -34,11 +34,11 @@ function ChangelogDialog({ children, ...rest }: DialogRootProps) {
 
       <DialogContent>
         <DialogHeader textAlign={"center"}>
-          <DialogTitle>My Racing Planner Change Log</DialogTitle>
+          <DialogTitle>Privacy Policy</DialogTitle>
         </DialogHeader>
         <DialogBody px={{ base: 4, md: 10 }} textAlign={"justify"}>
           <Suspense fallback={<LoadingContainer />}>
-            <ChangelogContent />
+            <PrivacyPolicyContent />
           </Suspense>
         </DialogBody>
         <DialogCloseTrigger />
@@ -47,4 +47,4 @@ function ChangelogDialog({ children, ...rest }: DialogRootProps) {
   );
 }
 
-export default ChangelogDialog;
+export default PrivacyPolicyAnalog;

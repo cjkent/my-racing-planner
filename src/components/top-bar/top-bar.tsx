@@ -3,56 +3,60 @@ import { Collapsible, HStack, StackProps } from "@chakra-ui/react";
 import {
   faCircleQuestion,
   faFileLines,
-  faLanguage,
-  faMoon,
-  faSun,
+  faInfoCircle,
+  faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
+import AboutDialog from "../about/about-dialog";
 import { useScroll } from "../app/useScroll";
 import ChangelogDialog from "../changelog/changelog-dialog";
 import HelpDialog from "../help/help-dialog";
-import { useColorMode } from "../ui/color-mode";
+import PrivacyPolicyAnalog from "../privacy-policy/privacy-policy-dialog";
 import TopBarButton from "./top-bar-button";
+import UserDropdown from "./user-dropdown";
 
 function TopBar({ ...props }: StackProps) {
   const { scrolled } = useScroll();
-  const { colorMode, toggleColorMode } = useColorMode();
   const { height } = useWindowSize();
-  const tiny = height <= 615;
+  const tiny = height <= 480; // TODO: Move to context (rename scroll context)
 
   return (
     !tiny && (
       <Collapsible.Root open={!scrolled}>
         <Collapsible.Content>
           <HStack justifyContent={"end"} {...props}>
+            <AboutDialog ids={{ trigger: "about-dialog" }}>
+              <TopBarButton
+                tooltip={"About"}
+                icon={faInfoCircle}
+                trigger={"about-dialog"}
+              />
+            </AboutDialog>
+
             <HelpDialog ids={{ trigger: "help-dialog" }}>
               <TopBarButton
-                tooltip={"Open Help Dialog"}
+                tooltip={"Help"}
                 icon={faCircleQuestion}
-                onClick={() => (document.activeElement as HTMLElement).blur()}
                 trigger={"help-dialog"}
               />
             </HelpDialog>
 
+            <PrivacyPolicyAnalog ids={{ trigger: "privacy-policy" }}>
+              <TopBarButton
+                tooltip={"Privacy Policy"}
+                icon={faShieldHalved}
+                trigger={"privacy-policy"}
+              />
+            </PrivacyPolicyAnalog>
+
             <ChangelogDialog ids={{ trigger: "changelog-dialog" }}>
               <TopBarButton
-                tooltip={"Open Change Log Dialog"}
+                tooltip={"Change Log"}
                 icon={faFileLines}
-                onClick={() => (document.activeElement as HTMLElement).blur()}
                 trigger={"changelog-dialog"}
               />
             </ChangelogDialog>
 
-            <TopBarButton
-              tooltip={"Switch Language"}
-              icon={faLanguage}
-              disabled
-            />
-
-            <TopBarButton
-              tooltip={"Toggle Color Mode"}
-              icon={colorMode === "light" ? faSun : faMoon}
-              onClick={toggleColorMode}
-            />
+            <UserDropdown />
           </HStack>
         </Collapsible.Content>
       </Collapsible.Root>

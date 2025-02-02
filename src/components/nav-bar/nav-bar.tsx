@@ -3,9 +3,7 @@ import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
-  faFileShield,
   faFlagCheckered,
-  faInfoCircle,
   faRoad,
   faShoppingBag,
   faTableCellsLarge,
@@ -26,7 +24,7 @@ const tabsTop = [
 
 function NavBar({ ...props }: StackProps) {
   const { height } = useWindowSize();
-  const tiny = height <= 615;
+  const tiny = height <= 480;
   const small = !tiny && height <= 680;
   const [location] = useLocation();
   return (
@@ -78,11 +76,7 @@ function NavBar({ ...props }: StackProps) {
 
       {tiny ? (
         <Stack justifyContent={"flex-start"} alignItems={"center"}>
-          <MoreMenuButton
-            selected={
-              location === ETabs.About || location === ETabs.PrivacyPolicy
-            }
-          />
+          <MoreMenuButton selected={false} />
         </Stack>
       ) : (
         <Stack
@@ -91,26 +85,8 @@ function NavBar({ ...props }: StackProps) {
           gap={small ? 1.5 : 3}
         >
           <NavBarButton
-            key={"about"}
-            label={"About"}
-            icon={faInfoCircle}
-            selected={location === ETabs.About}
-            as={Link}
-            href={ETabs.About}
-          />
-
-          <NavBarButton
-            key={"pp"}
-            label={"Privacy"}
-            icon={faFileShield}
-            selected={location === ETabs.PrivacyPolicy}
-            as={Link}
-            href={ETabs.PrivacyPolicy}
-          />
-
-          <NavBarButton
             key={"buy-me-a-coffee"}
-            label="Support"
+            label="Donate"
             selected={false}
             as="a"
             href="https://buymeacoffee.com/adrianulima"

@@ -20,7 +20,12 @@ function TopBarButton({
       closeDelay={100}
       ids={trigger ? { trigger } : undefined}
     >
-      <IconButton size={"sm"} variant={"ghost"} {...rest}>
+      <IconButton
+        size={"sm"}
+        variant={"ghost"}
+        {...rest}
+        color={{ base: "gray.700", _dark: "gray.300" }}
+      >
         <FontAwesomeIcon icon={icon} />
       </IconButton>
     </Tooltip>

@@ -1,4 +1,3 @@
-import { ETabs } from "@/store/ui";
 import {
   Badge,
   Box,
@@ -13,7 +12,6 @@ import {
 import {
   faBookmark,
   faCar,
-  faFileShield,
   faFlagCheckered,
   faGears,
   faLanguage,
@@ -22,16 +20,16 @@ import {
   faMugHot,
   faRoad,
   faSackXmark,
+  faShieldHalved,
   faShoppingBag,
   faStar,
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link as LinkWouter } from "wouter";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
-function HelpContent({ close }: { close: () => void }) {
+function HelpContent() {
   return (
     <>
       <section>
@@ -224,13 +222,9 @@ function HelpContent({ close }: { close: () => void }) {
           </List.Item>
           <List.Item>
             <strong>
-              Privacy <FontAwesomeIcon size="xs" icon={faFileShield} />
+              Privacy <FontAwesomeIcon size="xs" icon={faShieldHalved} />
             </strong>
-            : No personal data collected, visit the{" "}
-            <LinkWouter to={ETabs.PrivacyPolicy} onClick={close}>
-              Privacy Policy
-            </LinkWouter>{" "}
-            for detail.
+            : No personal data collected, visit the Privacy Policy for detail.
           </List.Item>
           <List.Item>
             <strong>

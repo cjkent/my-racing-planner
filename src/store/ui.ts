@@ -8,8 +8,6 @@ export enum ETabs {
   MyCars = "/cars",
   MyTracks = "/tracks",
   ShopGuide = "/checkout",
-  About = "/about",
-  PrivacyPolicy = "/privacy-policy",
 }
 
 export const useUiStorePersist = create(

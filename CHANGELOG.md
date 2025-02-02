@@ -10,6 +10,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 - Fixed incorrect width of the series table empty state.
 - Added a changelog dialog that automatically loads from repo's markdown file.
 - Made week column of the season table sticky
+- Implemented preferences transfer to other devices using url and qr code
 
 ## 0.5.3
 

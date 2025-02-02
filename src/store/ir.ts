@@ -22,6 +22,10 @@ export const useIrStore = create(
   ),
 );
 
+export const setContentStore = (store: IMyContentStore) => {
+  useIrStore.setState(store);
+};
+
 export const setMyCar = (id: number, enabled: boolean) =>
   useIrStore.setState((state: IMyContentStore) => ({
     myCars: enabled

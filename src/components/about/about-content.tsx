@@ -1,5 +1,4 @@
-import { For, Heading, Link, List, Stack, Text } from "@chakra-ui/react";
-import { useScroll } from "../app/useScroll";
+import { For, Heading, Link, List, Text } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 
 const contributors = [
@@ -8,17 +7,8 @@ const contributors = [
 ];
 
 function AboutContent() {
-  const { onScroll } = useScroll();
   return (
-    <Stack
-      p={{ base: 4, md: 10 }}
-      overflowY={"auto"}
-      textAlign={"justify"}
-      borderRadius={"md"}
-      bgColor={"bg.muted"}
-      flex={1}
-      onScroll={onScroll}
-    >
+    <>
       <section>
         <Heading>Data Updates</Heading>
         <Text as="p">
@@ -26,15 +16,7 @@ function AboutContent() {
           season. All data is fetched directly from the iRacing public API.
         </Text>
         <Text as="p" mt={2}>
-          For detailed update history, visit the{" "}
-          <Link
-            href="https://github.com/adrianulima/my-racing-planner/blob/main/CHANGELOG.md"
-            target="_blank"
-            rel="noreferrer"
-          >
-            change log file
-          </Link>
-          .
+          For detailed update history, visit the Change Log.
         </Text>
       </section>
 
@@ -125,7 +107,7 @@ function AboutContent() {
           />
         </List.Root>
       </section>
-    </Stack>
+    </>
   );
 }
 
