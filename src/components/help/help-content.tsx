@@ -1,3 +1,5 @@
+import { useDialogTracking } from "@/hooks/useDialogTracking";
+import { EDialogs } from "@/store/ui";
 import {
   Badge,
   Box,
@@ -30,6 +32,7 @@ import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
 function HelpContent() {
+  useDialogTracking(EDialogs.Help);
   return (
     <>
       <section>

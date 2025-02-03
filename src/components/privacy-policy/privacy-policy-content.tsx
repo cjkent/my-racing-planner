@@ -1,4 +1,6 @@
+import { useDialogTracking } from "@/hooks/useDialogTracking";
 import { setPrivacyPolicyRead } from "@/store/notifications";
+import { EDialogs } from "@/store/ui";
 import { Heading, Link, List, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Tooltip } from "../ui/tooltip";
@@ -6,6 +8,7 @@ import { Tooltip } from "../ui/tooltip";
 export const PRIVACY_VERSION = "Wed 15 Jan, 2025";
 
 function PrivacyPolicyContent() {
+  useDialogTracking(EDialogs.PrivacyPolicy);
   useEffect(setPrivacyPolicyRead, []);
   return (
     <>

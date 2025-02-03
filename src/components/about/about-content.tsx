@@ -1,3 +1,5 @@
+import { useDialogTracking } from "@/hooks/useDialogTracking";
+import { EDialogs } from "@/store/ui";
 import { For, Heading, Link, List, Text } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 
@@ -7,6 +9,7 @@ const contributors = [
 ];
 
 function AboutContent() {
+  useDialogTracking(EDialogs.About);
   return (
     <>
       <section>

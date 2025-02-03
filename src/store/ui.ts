@@ -10,6 +10,13 @@ export enum ETabs {
   ShopGuide = "/checkout",
 }
 
+export enum EDialogs {
+  About = "/about",
+  Help = "/help",
+  PrivacyPolicy = "/privacy-policy",
+  Changelog = "/changelog",
+}
+
 export const useUiStorePersist = create(
   persist(
     () => ({

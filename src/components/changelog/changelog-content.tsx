@@ -1,9 +1,12 @@
+import { useDialogTracking } from "@/hooks/useDialogTracking";
 import { setChangelogRead } from "@/store/notifications";
+import { EDialogs } from "@/store/ui";
 import { Heading, List, Text } from "@chakra-ui/react";
 import Markdown from "markdown-to-jsx";
 import { useEffect } from "react";
 
 function ChangelogContent() {
+  useDialogTracking(EDialogs.Changelog);
   useEffect(setChangelogRead, []);
   return (
     <Markdown
