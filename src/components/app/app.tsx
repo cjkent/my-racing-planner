@@ -26,6 +26,7 @@ function App() {
           padding={{ base: "0", md: "12px" }}
           paddingLeft={{ base: "0", md: "80px" }}
           marginLeft={{ base: "0", md: "-80px" }}
+          gap={0}
         >
           <TopBar hideBelow="md" />
           <MainContainer />

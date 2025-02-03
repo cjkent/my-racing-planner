@@ -6,6 +6,7 @@ import { Button } from "../../ui/button";
 function CheckoutButton({ wishList }: { wishList: { sku: number }[] }) {
   return (
     <Button
+      id="checkout"
       as={"a"}
       disabled={wishList.length < 1}
       size="lg"

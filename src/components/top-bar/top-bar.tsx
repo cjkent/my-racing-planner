@@ -1,3 +1,4 @@
+import { useNotifications } from "@/store/notifications";
 import { Collapsible, HStack, StackProps } from "@chakra-ui/react";
 import {
   faCircleQuestion,
@@ -18,11 +19,14 @@ function TopBar({ ...props }: StackProps) {
     scrolled,
     screen: { height },
   } = useAppLayout();
+
+  const { changelog, privacyPolicy } = useNotifications();
+
   return (
     !height.tiny && (
       <Collapsible.Root open={!scrolled}>
         <Collapsible.Content>
-          <HStack justifyContent={"end"} {...props}>
+          <HStack justifyContent={"end"} mb={scrolled ? 0 : 2} {...props}>
             <AboutDialog ids={{ trigger: "about-dialog" }}>
               <TopBarButton
                 tooltip={"About"}
@@ -44,6 +48,7 @@ function TopBar({ ...props }: StackProps) {
                 tooltip={"Privacy Policy"}
                 icon={faShieldHalved}
                 trigger={"privacy-policy"}
+                notification={privacyPolicy}
               />
             </PrivacyPolicyAnalog>
 
@@ -52,6 +57,7 @@ function TopBar({ ...props }: StackProps) {
                 tooltip={"Change Log"}
                 icon={faFileLines}
                 trigger={"changelog-dialog"}
+                notification={changelog}
               />
             </ChangelogDialog>
 

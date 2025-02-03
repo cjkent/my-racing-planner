@@ -18,6 +18,7 @@ function PrivacyPolicyAnalog({ children, ...rest }: DialogRootProps) {
   const {
     screen: { width },
   } = useAppLayout();
+
   return (
     <DialogRoot
       lazyMount

@@ -20,7 +20,7 @@ function UserDropdown() {
         <Avatar
           // name="Adriano Lima"
           // src="link-to-avatar"
-          shape="rounded"
+          // shape="rounded"
           colorPalette={"bg"}
           size="sm"
         />

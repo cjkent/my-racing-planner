@@ -1,7 +1,10 @@
+import { setChangelogRead } from "@/store/notifications";
 import { Heading, List, Text } from "@chakra-ui/react";
 import Markdown from "markdown-to-jsx";
+import { useEffect } from "react";
 
 function ChangelogContent() {
+  useEffect(setChangelogRead, []);
   return (
     <Markdown
       options={{

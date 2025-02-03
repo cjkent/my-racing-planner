@@ -1,11 +1,16 @@
+import { setPrivacyPolicyRead } from "@/store/notifications";
 import { Heading, Link, List, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { Tooltip } from "../ui/tooltip";
 
+export const PRIVACY_VERSION = "Wed 15 Jan, 2025";
+
 function PrivacyPolicyContent() {
+  useEffect(setPrivacyPolicyRead, []);
   return (
     <>
       <Text textAlign={"center"} as="p">
-        Last updated Wed 15 Jan, 2025
+        Last updated {PRIVACY_VERSION}
       </Text>
       <section>
         <Heading>Collected Data</Heading>

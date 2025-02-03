@@ -11,6 +11,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 - Added a changelog dialog that automatically loads from repo's markdown file.
 - Made week column of the season table sticky
 - Implemented preferences transfer to other devices using url and qr code
+- Implemented ui notification store and added to privacy policy and changelog buttons
 
 ## 0.5.3
 

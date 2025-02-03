@@ -18,6 +18,7 @@ function ChangelogDialog({ children, ...rest }: DialogRootProps) {
   const {
     screen: { width },
   } = useAppLayout();
+
   return (
     <DialogRoot
       lazyMount
