@@ -7,17 +7,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import useScreenSize from "@/hooks/useScreenSize";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useEffect, useState } from "react";
-import { useAppLayout } from "../app/useAppLayout";
 import LoadingContainer from "../page/loading-container";
 const ExportContent = lazy(() => import("./export-content"));
 
 function ExportDialog({ children, ...rest }: DialogRootProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const {
-    screen: { width },
-  } = useAppLayout();
+  const { width } = useScreenSize();
 
   useEffect(() => {
     (document.activeElement as HTMLElement).blur();

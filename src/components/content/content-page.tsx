@@ -2,10 +2,10 @@ import useDebounce from "@/hooks/useDebounce";
 import { TContent } from "@/ir-data/utils/types";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import ContentSubPage from "../nav-bar/content-sub-page";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
 import ContentFilterPanel from "./content-filter-panel";
+import ContentSubPage from "./content-sub-page";
 import ContentTable from "./content-table";
 import ContentTableRow from "./content-table-row";
 

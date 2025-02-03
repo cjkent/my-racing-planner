@@ -1,8 +1,8 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { Badge, HStack, Stack, Text } from "@chakra-ui/react";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faSackXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useAppLayout } from "../app/useAppLayout";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
@@ -15,9 +15,7 @@ function CheckboxCounts({
   ownedCount: number;
   wishCount: number;
 }) {
-  const {
-    screen: { height },
-  } = useAppLayout();
+  const { height } = useScreenSize();
   const ifNotSmall = (value: any) => (height.small ? undefined : value);
   return (
     <Stack gap={{ base: "4px", md: ifNotSmall("8px") }}>

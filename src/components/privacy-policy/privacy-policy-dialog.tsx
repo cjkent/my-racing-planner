@@ -7,18 +7,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import useScreenSize from "@/hooks/useScreenSize";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useState } from "react";
-import { useAppLayout } from "../app/useAppLayout";
 import LoadingContainer from "../page/loading-container";
 const PrivacyPolicyContent = lazy(() => import("./privacy-policy-content"));
 
 function PrivacyPolicyAnalog({ children, ...rest }: DialogRootProps) {
   const [open, setOpen] = useState(false);
-  const {
-    screen: { width },
-  } = useAppLayout();
-
+  const { width } = useScreenSize();
   return (
     <DialogRoot
       lazyMount

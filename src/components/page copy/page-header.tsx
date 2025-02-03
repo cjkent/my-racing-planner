@@ -1,3 +1,4 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { Collapsible, HStack, Stack } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { useAppLayout } from "../app/useAppLayout";
@@ -18,10 +19,8 @@ function PageHeader({
   ownedCount?: number;
   wishCount?: number;
 }>) {
-  const {
-    scrolled,
-    screen: { height },
-  } = useAppLayout();
+  const { scrolled } = useAppLayout();
+  const { height } = useScreenSize();
   const ifNotSmall = (value: any) => (height.small ? undefined : value);
   const showCounts =
     freeCount != undefined || ownedCount != undefined || wishCount != undefined;

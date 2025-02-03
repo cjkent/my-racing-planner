@@ -1,4 +1,4 @@
-import { Icon, Text } from "@chakra-ui/react";
+import { Box, Circle, Float, Icon, Text } from "@chakra-ui/react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, ButtonProps } from "../ui/button";
@@ -7,6 +7,7 @@ function NavBarButton({
   icon,
   label,
   selected,
+  notification,
   onClick,
   disabled,
   children,
@@ -15,6 +16,7 @@ function NavBarButton({
   label?: string;
   icon?: IconProp;
   selected?: boolean;
+  notification?: boolean;
 }) {
   return (
     <Button
@@ -45,23 +47,30 @@ function NavBarButton({
       }
       {...rest}
     >
-      {icon ? (
-        <Icon
-          height={"22px"}
-          width={"22px"}
-          borderRadius={"6px"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          bg={selected ? "blue.600/40" : "transparent"}
-          _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
-          p={"6px"}
-          userSelect={"none"}
-        >
-          <FontAwesomeIcon icon={icon} />
-        </Icon>
-      ) : (
-        children
-      )}
+      <Box position={"relative"}>
+        {icon ? (
+          <Icon
+            height={"22px"}
+            width={"22px"}
+            borderRadius={"6px"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            bg={selected ? "blue.600/40" : "transparent"}
+            _hover={!disabled && !selected ? { bg: "gray.400/30" } : undefined}
+            p={"6px"}
+            userSelect={"none"}
+          >
+            <FontAwesomeIcon icon={icon} />
+          </Icon>
+        ) : (
+          children
+        )}
+        {notification && (
+          <Float placement="top-end" offsetX="2" offsetY="2">
+            <Circle bg="red" size="10px" />
+          </Float>
+        )}
+      </Box>
       {label && (
         <Text userSelect={"none"} textAlign={"center"} fontSize="10px">
           {label}

@@ -7,11 +7,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import useScreenSize from "@/hooks/useScreenSize";
 import { ETabs, setHelpPresented, useUi } from "@/store/ui";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { useLocation, useSearch } from "wouter";
-import { useAppLayout } from "../app/useAppLayout";
 import LoadingContainer from "../page/loading-container";
 const HelpContent = lazy(() => import("./help-content"));
 
@@ -19,9 +19,7 @@ function HelpDialog({ children, ...rest }: DialogRootProps) {
   const query = useSearch();
   const { helpPresented } = useUi();
   const [isOpen, setIsOpen] = useState(!query && !helpPresented);
-  const {
-    screen: { width },
-  } = useAppLayout();
+  const { width } = useScreenSize();
   const [_, navigate] = useLocation();
 
   useEffect(() => {

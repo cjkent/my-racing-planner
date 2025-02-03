@@ -1,8 +1,8 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { HStack, IconButton, Input, Tabs, Text } from "@chakra-ui/react";
 import { faCircleXmark, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useAppLayout } from "../app/useAppLayout";
 import { InputGroup } from "../ui/input-group";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 
@@ -19,9 +19,7 @@ function ContentFilterPanel<T extends string>({
   onTabChange: (value: T) => void;
   onSearchChange: (value: string) => void;
 }) {
-  const {
-    screen: { width },
-  } = useAppLayout();
+  const { width } = useScreenSize();
 
   const setSearchWrapper = (newValue: string) => {
     onSearchChange(newValue);

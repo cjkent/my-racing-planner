@@ -1,5 +1,5 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { Heading, Stack, StackProps, Text } from "@chakra-ui/react";
-import { useAppLayout } from "../app/useAppLayout";
 
 function PageTitle({
   title,
@@ -9,9 +9,7 @@ function PageTitle({
   title: string;
   description: string;
 }) {
-  const {
-    screen: { height },
-  } = useAppLayout();
+  const { height } = useScreenSize();
   const ifNotSmall = (value: any) => (height.small ? undefined : value);
   return (
     <Stack pl={{ base: "0.5rem", md: ifNotSmall("unset") }} gap={0} {...rest}>

@@ -1,3 +1,4 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { useNotifications } from "@/store/notifications";
 import { Collapsible, HStack, StackProps } from "@chakra-ui/react";
 import {
@@ -15,13 +16,9 @@ import TopBarButton from "./top-bar-button";
 import UserDropdown from "./user-dropdown";
 
 function TopBar({ ...props }: StackProps) {
-  const {
-    scrolled,
-    screen: { height },
-  } = useAppLayout();
-
+  const { scrolled } = useAppLayout();
+  const { height } = useScreenSize();
   const { changelog, privacyPolicy } = useNotifications();
-
   return (
     !height.tiny && (
       <Collapsible.Root open={!scrolled}>

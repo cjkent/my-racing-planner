@@ -1,3 +1,4 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
@@ -8,7 +9,6 @@ import {
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "wouter";
-import { useAppLayout } from "../app/useAppLayout";
 import BMCIcon from "../bmc/icon";
 import { Tooltip } from "../ui/tooltip";
 import MoreMenuButton from "./more-menu-button";
@@ -23,9 +23,7 @@ const tabsTop = [
 ];
 
 function NavBar({ ...props }: StackProps) {
-  const {
-    screen: { height },
-  } = useAppLayout();
+  const { height } = useScreenSize();
   const [location] = useLocation();
   return (
     <Stack
