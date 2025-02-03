@@ -16,7 +16,7 @@ function TracksPage() {
         "Mark the tracks you own and select your favorites. Use the wishlist to preview the content before you buy it."
       }
       freeCount={FREE_TRACKS_COUNT}
-      infoUrl={(id) => `${IR_URL.members}/shop/tracks?trackId=${id}`}
+      infoUrl={(id) => `${IR_URL.members}/web/shop/tracks?trackId=${id}`}
       myContent={myTracks}
       skuIcon={faRoad}
       tabs={ETrackCategories}

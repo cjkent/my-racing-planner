@@ -16,7 +16,7 @@ function CarsPage() {
         "Mark the cars you own and select your favorites. Use the wishlist to preview the content before you buy it."
       }
       freeCount={FREE_CARS_COUNT}
-      infoUrl={(id) => `${IR_URL.members}/shop/cars?carId=${id}`}
+      infoUrl={(id) => `${IR_URL.members}/web/shop/cars?carId=${id}`}
       myContent={myCars}
       skuIcon={faCar}
       tabs={ECarCategories}
