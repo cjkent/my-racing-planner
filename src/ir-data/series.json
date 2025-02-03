@@ -3795,7 +3795,7 @@
   },
   "237": {
     "id": 237,
-    "name": "GT Endurance Simucube Series",
+    "name": "GT Endurance Series by Simucube",
     "category": "sports_car",
     "laps": null,
     "duration": 180,
@@ -5933,7 +5933,7 @@
   },
   "331": {
     "id": 331,
-    "name": "Global Endurance CONSPIT Tour",
+    "name": "Global Endurance Tour by CONSPIT",
     "category": "sports_car",
     "laps": null,
     "duration": 360,
@@ -7590,9 +7590,9 @@
         "weekNum": 6,
         "date": "2025-01-28",
         "track": {
-          "id": 233,
+          "id": 234,
           "name": "Donington Park Racing Circuit",
-          "config": "Grand Prix"
+          "config": "National"
         }
       },
       {
@@ -9078,7 +9078,7 @@
   },
   "457": {
     "id": 457,
-    "name": "LMP2 Prototype  Challenge – Fixed",
+    "name": "Prototype  Challenge – Fixed",
     "category": "sports_car",
     "laps": null,
     "duration": 20,
@@ -11142,7 +11142,7 @@
   },
   "491": {
     "id": 491,
-    "name": "GT4 Falken Tyre Challenge - Fixed",
+    "name": "GT4 Challenge by Falken Tyre",
     "category": "sports_car",
     "laps": null,
     "duration": 15,
@@ -11742,9 +11742,676 @@
       }
     ]
   },
+  "500": {
+    "id": 500,
+    "name": "Dirt Super Late Model Tour",
+    "category": "dirt_oval",
+    "laps": 60,
+    "duration": 60,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      84
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_500.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-01-21",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-01-28",
+        "track": {
+          "id": 438,
+          "name": "Federated Auto Parts Raceway at I-55"
+        }
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-02-04",
+        "track": {
+          "id": 452,
+          "name": "Lucas Oil Speedway"
+        }
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-02-11",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-02-18",
+        "track": {
+          "id": 520,
+          "name": "Oswego Speedway",
+          "config": "Dirt"
+        }
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-02-25",
+        "track": {
+          "id": 531,
+          "name": "Huset's Speedway"
+        }
+      },
+      {
+        "weekNum": 6,
+        "date": "2025-03-04",
+        "track": {
+          "id": 303,
+          "name": "Limaland Motorsports Park"
+        }
+      },
+      {
+        "weekNum": 7,
+        "date": "2025-03-18",
+        "track": {
+          "id": 314,
+          "name": "The Dirt Track at Charlotte"
+        }
+      },
+      {
+        "weekNum": 8,
+        "date": "2025-03-25",
+        "track": {
+          "id": 344,
+          "name": "Fairbury Speedway"
+        }
+      },
+      {
+        "weekNum": 9,
+        "date": "2025-04-01",
+        "track": {
+          "id": 494,
+          "name": "Kevin Harvick's Kern Raceway",
+          "config": "Dirt Track"
+        }
+      },
+      {
+        "weekNum": 10,
+        "date": "2025-04-08",
+        "track": {
+          "id": 305,
+          "name": "Knoxville Raceway"
+        }
+      },
+      {
+        "weekNum": 11,
+        "date": "2025-04-15",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 12,
+        "date": "2025-04-22",
+        "track": {
+          "id": 446,
+          "name": "Port Royal Speedway"
+        }
+      },
+      {
+        "weekNum": 13,
+        "date": "2025-04-29",
+        "track": {
+          "id": 462,
+          "name": "Lincoln Speedway"
+        }
+      },
+      {
+        "weekNum": 14,
+        "date": "2025-05-06",
+        "track": {
+          "id": 387,
+          "name": "Cedar Lake Speedway"
+        }
+      },
+      {
+        "weekNum": 15,
+        "date": "2025-05-13",
+        "track": {
+          "id": 274,
+          "name": "Williams Grove Speedway"
+        }
+      },
+      {
+        "weekNum": 16,
+        "date": "2025-05-20",
+        "track": {
+          "id": 452,
+          "name": "Lucas Oil Speedway"
+        }
+      },
+      {
+        "weekNum": 17,
+        "date": "2025-05-27",
+        "track": {
+          "id": 320,
+          "name": "Kokomo Speedway",
+          "config": "Tires in"
+        }
+      },
+      {
+        "weekNum": 18,
+        "date": "2025-06-03",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 19,
+        "date": "2025-06-17",
+        "track": {
+          "id": 438,
+          "name": "Federated Auto Parts Raceway at I-55"
+        }
+      },
+      {
+        "weekNum": 20,
+        "date": "2025-06-24",
+        "track": {
+          "id": 351,
+          "name": "Lernerville Speedway"
+        }
+      },
+      {
+        "weekNum": 21,
+        "date": "2025-07-01",
+        "track": {
+          "id": 462,
+          "name": "Lincoln Speedway"
+        }
+      },
+      {
+        "weekNum": 22,
+        "date": "2025-07-08",
+        "track": {
+          "id": 452,
+          "name": "Lucas Oil Speedway"
+        }
+      },
+      {
+        "weekNum": 23,
+        "date": "2025-07-15",
+        "track": {
+          "id": 531,
+          "name": "Huset's Speedway"
+        }
+      },
+      {
+        "weekNum": 24,
+        "date": "2025-07-22",
+        "track": {
+          "id": 344,
+          "name": "Fairbury Speedway"
+        }
+      },
+      {
+        "weekNum": 25,
+        "date": "2025-07-29",
+        "track": {
+          "id": 387,
+          "name": "Cedar Lake Speedway"
+        }
+      },
+      {
+        "weekNum": 26,
+        "date": "2025-08-05",
+        "track": {
+          "id": 520,
+          "name": "Oswego Speedway",
+          "config": "Dirt"
+        }
+      },
+      {
+        "weekNum": 27,
+        "date": "2025-08-12",
+        "track": {
+          "id": 494,
+          "name": "Kevin Harvick's Kern Raceway",
+          "config": "Dirt Track"
+        }
+      },
+      {
+        "weekNum": 28,
+        "date": "2025-08-19",
+        "track": {
+          "id": 446,
+          "name": "Port Royal Speedway"
+        }
+      },
+      {
+        "weekNum": 29,
+        "date": "2025-08-26",
+        "track": {
+          "id": 351,
+          "name": "Lernerville Speedway"
+        }
+      },
+      {
+        "weekNum": 30,
+        "date": "2025-09-02",
+        "track": {
+          "id": 320,
+          "name": "Kokomo Speedway",
+          "config": "Tires in"
+        }
+      },
+      {
+        "weekNum": 31,
+        "date": "2025-09-16",
+        "track": {
+          "id": 305,
+          "name": "Knoxville Raceway"
+        }
+      },
+      {
+        "weekNum": 32,
+        "date": "2025-09-23",
+        "track": {
+          "id": 274,
+          "name": "Williams Grove Speedway"
+        }
+      },
+      {
+        "weekNum": 33,
+        "date": "2025-09-30",
+        "track": {
+          "id": 373,
+          "name": "Weedsport Speedway"
+        }
+      },
+      {
+        "weekNum": 34,
+        "date": "2025-10-07",
+        "track": {
+          "id": 514,
+          "name": "Kokomo Speedway",
+          "config": "Tires out"
+        }
+      },
+      {
+        "weekNum": 35,
+        "date": "2025-10-14",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 36,
+        "date": "2025-10-21",
+        "track": {
+          "id": 288,
+          "name": "Lanier National Speedway",
+          "config": "Dirt"
+        }
+      },
+      {
+        "weekNum": 37,
+        "date": "2025-10-28",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 38,
+        "date": "2025-11-04",
+        "track": {
+          "id": 314,
+          "name": "The Dirt Track at Charlotte"
+        }
+      }
+    ]
+  },
+  "501": {
+    "id": 501,
+    "name": "Dirt 410 Sprint Car Tour",
+    "category": "dirt_oval",
+    "laps": 40,
+    "duration": 60,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      86
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_501.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-02-05",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-02-12",
+        "track": {
+          "id": 303,
+          "name": "Limaland Motorsports Park"
+        }
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-02-19",
+        "track": {
+          "id": 387,
+          "name": "Cedar Lake Speedway"
+        }
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-02-26",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-03-05",
+        "track": {
+          "id": 314,
+          "name": "The Dirt Track at Charlotte"
+        }
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-03-19",
+        "track": {
+          "id": 494,
+          "name": "Kevin Harvick's Kern Raceway",
+          "config": "Dirt Track"
+        }
+      },
+      {
+        "weekNum": 6,
+        "date": "2025-03-26",
+        "track": {
+          "id": 320,
+          "name": "Kokomo Speedway",
+          "config": "Tires in"
+        }
+      },
+      {
+        "weekNum": 7,
+        "date": "2025-04-02",
+        "track": {
+          "id": 351,
+          "name": "Lernerville Speedway"
+        }
+      },
+      {
+        "weekNum": 8,
+        "date": "2025-04-09",
+        "track": {
+          "id": 438,
+          "name": "Federated Auto Parts Raceway at I-55"
+        }
+      },
+      {
+        "weekNum": 9,
+        "date": "2025-04-16",
+        "track": {
+          "id": 305,
+          "name": "Knoxville Raceway"
+        }
+      },
+      {
+        "weekNum": 10,
+        "date": "2025-04-23",
+        "track": {
+          "id": 446,
+          "name": "Port Royal Speedway"
+        }
+      },
+      {
+        "weekNum": 11,
+        "date": "2025-04-30",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 12,
+        "date": "2025-05-07",
+        "track": {
+          "id": 274,
+          "name": "Williams Grove Speedway"
+        }
+      },
+      {
+        "weekNum": 13,
+        "date": "2025-05-14",
+        "track": {
+          "id": 462,
+          "name": "Lincoln Speedway"
+        }
+      },
+      {
+        "weekNum": 14,
+        "date": "2025-05-21",
+        "track": {
+          "id": 344,
+          "name": "Fairbury Speedway"
+        }
+      },
+      {
+        "weekNum": 15,
+        "date": "2025-05-28",
+        "track": {
+          "id": 373,
+          "name": "Weedsport Speedway"
+        }
+      },
+      {
+        "weekNum": 16,
+        "date": "2025-06-04",
+        "track": {
+          "id": 305,
+          "name": "Knoxville Raceway"
+        }
+      },
+      {
+        "weekNum": 17,
+        "date": "2025-06-18",
+        "track": {
+          "id": 531,
+          "name": "Huset's Speedway"
+        }
+      },
+      {
+        "weekNum": 18,
+        "date": "2025-06-25",
+        "track": {
+          "id": 387,
+          "name": "Cedar Lake Speedway"
+        }
+      },
+      {
+        "weekNum": 19,
+        "date": "2025-07-02",
+        "track": {
+          "id": 452,
+          "name": "Lucas Oil Speedway"
+        }
+      },
+      {
+        "weekNum": 20,
+        "date": "2025-07-09",
+        "track": {
+          "id": 514,
+          "name": "Kokomo Speedway",
+          "config": "Tires out"
+        }
+      },
+      {
+        "weekNum": 21,
+        "date": "2025-07-16",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 22,
+        "date": "2025-07-23",
+        "track": {
+          "id": 274,
+          "name": "Williams Grove Speedway"
+        }
+      },
+      {
+        "weekNum": 23,
+        "date": "2025-07-30",
+        "track": {
+          "id": 438,
+          "name": "Federated Auto Parts Raceway at I-55"
+        }
+      },
+      {
+        "weekNum": 24,
+        "date": "2025-08-06",
+        "track": {
+          "id": 305,
+          "name": "Knoxville Raceway"
+        }
+      },
+      {
+        "weekNum": 25,
+        "date": "2025-08-13",
+        "track": {
+          "id": 520,
+          "name": "Oswego Speedway",
+          "config": "Dirt"
+        }
+      },
+      {
+        "weekNum": 26,
+        "date": "2025-08-20",
+        "track": {
+          "id": 344,
+          "name": "Fairbury Speedway"
+        }
+      },
+      {
+        "weekNum": 27,
+        "date": "2025-08-27",
+        "track": {
+          "id": 531,
+          "name": "Huset's Speedway"
+        }
+      },
+      {
+        "weekNum": 28,
+        "date": "2025-09-03",
+        "track": {
+          "id": 494,
+          "name": "Kevin Harvick's Kern Raceway",
+          "config": "Dirt Track"
+        }
+      },
+      {
+        "weekNum": 29,
+        "date": "2025-09-17",
+        "track": {
+          "id": 273,
+          "name": "Eldora Speedway"
+        }
+      },
+      {
+        "weekNum": 30,
+        "date": "2025-09-24",
+        "track": {
+          "id": 446,
+          "name": "Port Royal Speedway"
+        }
+      },
+      {
+        "weekNum": 31,
+        "date": "2025-10-01",
+        "track": {
+          "id": 274,
+          "name": "Williams Grove Speedway"
+        }
+      },
+      {
+        "weekNum": 32,
+        "date": "2025-10-08",
+        "track": {
+          "id": 462,
+          "name": "Lincoln Speedway"
+        }
+      },
+      {
+        "weekNum": 33,
+        "date": "2025-10-15",
+        "track": {
+          "id": 452,
+          "name": "Lucas Oil Speedway"
+        }
+      },
+      {
+        "weekNum": 34,
+        "date": "2025-10-22",
+        "track": {
+          "id": 351,
+          "name": "Lernerville Speedway"
+        }
+      },
+      {
+        "weekNum": 35,
+        "date": "2025-10-29",
+        "track": {
+          "id": 279,
+          "name": "Volusia Speedway Park"
+        }
+      },
+      {
+        "weekNum": 36,
+        "date": "2025-11-05",
+        "track": {
+          "id": 314,
+          "name": "The Dirt Track at Charlotte"
+        }
+      }
+    ]
+  },
   "502": {
     "id": 502,
-    "name": "Falken Tyre Sports Car Challenge",
+    "name": "Sports Car Challenge by Falken Tyre",
     "category": "sports_car",
     "laps": null,
     "duration": 30,
@@ -12137,7 +12804,7 @@
   },
   "514": {
     "id": 514,
-    "name": "GR Buttkicker Cup - Fixed",
+    "name": "Toyota GR86 Cup by Buttkicker",
     "category": "sports_car",
     "laps": null,
     "duration": 15,
@@ -17023,6 +17690,534 @@
         "track": {
           "id": 18,
           "name": "Road America",
+          "config": "Full Course"
+        }
+      }
+    ]
+  },
+  "574": {
+    "id": 574,
+    "name": "Super Late Model Tour",
+    "category": "oval",
+    "laps": 200,
+    "duration": null,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      54
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_574.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-02-12",
+        "track": {
+          "id": 190,
+          "name": "New Smyrna Speedway"
+        }
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-03-05",
+        "track": {
+          "id": 414,
+          "name": "Hickory Motor Speedway"
+        }
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-03-19",
+        "track": {
+          "id": 248,
+          "name": "Five Flags Speedway"
+        }
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-04-02",
+        "track": {
+          "id": 500,
+          "name": "Slinger Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-04-09",
+        "track": {
+          "id": 131,
+          "name": "New Hampshire Motor Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-04-23",
+        "track": {
+          "id": 23,
+          "name": "Irwindale Speedway",
+          "config": "Outer"
+        }
+      },
+      {
+        "weekNum": 6,
+        "date": "2025-05-07",
+        "track": {
+          "id": 366,
+          "name": "North Wilkesboro Speedway",
+          "config": "1987"
+        }
+      },
+      {
+        "weekNum": 7,
+        "date": "2025-05-21",
+        "track": {
+          "id": 414,
+          "name": "Hickory Motor Speedway"
+        }
+      },
+      {
+        "weekNum": 8,
+        "date": "2025-06-04",
+        "track": {
+          "id": 94,
+          "name": "The Milwaukee Mile"
+        }
+      },
+      {
+        "weekNum": 9,
+        "date": "2025-06-18",
+        "track": {
+          "id": 500,
+          "name": "Slinger Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 10,
+        "date": "2025-07-02",
+        "track": {
+          "id": 12,
+          "name": "Oxford Plains Speedway"
+        }
+      },
+      {
+        "weekNum": 11,
+        "date": "2025-07-16",
+        "track": {
+          "id": 11,
+          "name": "Stafford Motor Speedway",
+          "config": "Full Course"
+        }
+      },
+      {
+        "weekNum": 12,
+        "date": "2025-07-23",
+        "track": {
+          "id": 16,
+          "name": "USA International Speedway",
+          "config": "Asphalt"
+        }
+      },
+      {
+        "weekNum": 13,
+        "date": "2025-08-06",
+        "track": {
+          "id": 232,
+          "name": "Lucas Oil Indianapolis Raceway Park",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 14,
+        "date": "2025-08-20",
+        "track": {
+          "id": 12,
+          "name": "Oxford Plains Speedway"
+        }
+      },
+      {
+        "weekNum": 15,
+        "date": "2025-08-27",
+        "track": {
+          "id": 271,
+          "name": "The Bullring"
+        }
+      },
+      {
+        "weekNum": 16,
+        "date": "2025-09-17",
+        "track": {
+          "id": 493,
+          "name": "Kevin Harvick's Kern Raceway",
+          "config": "Asphalt Track"
+        }
+      },
+      {
+        "weekNum": 17,
+        "date": "2025-10-08",
+        "track": {
+          "id": 286,
+          "name": "Myrtle Beach Speedway"
+        }
+      },
+      {
+        "weekNum": 18,
+        "date": "2025-10-15",
+        "track": {
+          "id": 256,
+          "name": "Southern National Motorsports Park"
+        }
+      },
+      {
+        "weekNum": 19,
+        "date": "2025-10-29",
+        "track": {
+          "id": 374,
+          "name": "Nashville Fairgrounds Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 20,
+        "date": "2025-11-05",
+        "track": {
+          "id": 190,
+          "name": "New Smyrna Speedway"
+        }
+      },
+      {
+        "weekNum": 21,
+        "date": "2025-11-19",
+        "track": {
+          "id": 14,
+          "name": "South Boston Speedway"
+        }
+      },
+      {
+        "weekNum": 22,
+        "date": "2025-12-03",
+        "track": {
+          "id": 248,
+          "name": "Five Flags Speedway"
+        }
+      }
+    ]
+  },
+  "575": {
+    "id": 575,
+    "name": "NASCAR Modified Tour",
+    "category": "oval",
+    "laps": 200,
+    "duration": null,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      31
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_575.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-02-06",
+        "track": {
+          "id": 190,
+          "name": "New Smyrna Speedway"
+        }
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-02-27",
+        "track": {
+          "id": 414,
+          "name": "Hickory Motor Speedway"
+        }
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-03-20",
+        "track": {
+          "id": 14,
+          "name": "South Boston Speedway"
+        }
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-03-27",
+        "track": {
+          "id": 161,
+          "name": "Thompson Speedway Motorsports Park",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-04-10",
+        "track": {
+          "id": 414,
+          "name": "Hickory Motor Speedway"
+        }
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-04-24",
+        "track": {
+          "id": 11,
+          "name": "Stafford Motor Speedway",
+          "config": "Full Course"
+        }
+      },
+      {
+        "weekNum": 6,
+        "date": "2025-05-01",
+        "track": {
+          "id": 16,
+          "name": "USA International Speedway",
+          "config": "Asphalt"
+        }
+      },
+      {
+        "weekNum": 7,
+        "date": "2025-05-15",
+        "track": {
+          "id": 366,
+          "name": "North Wilkesboro Speedway",
+          "config": "1987"
+        }
+      },
+      {
+        "weekNum": 8,
+        "date": "2025-05-29",
+        "track": {
+          "id": 500,
+          "name": "Slinger Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 9,
+        "date": "2025-06-26",
+        "track": {
+          "id": 256,
+          "name": "Southern National Motorsports Park"
+        }
+      },
+      {
+        "weekNum": 10,
+        "date": "2025-07-10",
+        "track": {
+          "id": 94,
+          "name": "The Milwaukee Mile"
+        }
+      },
+      {
+        "weekNum": 11,
+        "date": "2025-07-17",
+        "track": {
+          "id": 11,
+          "name": "Stafford Motor Speedway",
+          "config": "Full Course"
+        }
+      },
+      {
+        "weekNum": 12,
+        "date": "2025-08-07",
+        "track": {
+          "id": 161,
+          "name": "Thompson Speedway Motorsports Park",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 13,
+        "date": "2025-08-14",
+        "track": {
+          "id": 31,
+          "name": "Richmond Raceway"
+        }
+      },
+      {
+        "weekNum": 14,
+        "date": "2025-08-28",
+        "track": {
+          "id": 518,
+          "name": "Oswego Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 15,
+        "date": "2025-09-18",
+        "track": {
+          "id": 131,
+          "name": "New Hampshire Motor Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 16,
+        "date": "2025-09-25",
+        "track": {
+          "id": 11,
+          "name": "Stafford Motor Speedway",
+          "config": "Full Course"
+        }
+      },
+      {
+        "weekNum": 17,
+        "date": "2025-10-16",
+        "track": {
+          "id": 232,
+          "name": "Lucas Oil Indianapolis Raceway Park",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 18,
+        "date": "2025-10-23",
+        "track": {
+          "id": 33,
+          "name": "Martinsville Speedway"
+        }
+      },
+      {
+        "weekNum": 19,
+        "date": "2025-11-13",
+        "track": {
+          "id": 374,
+          "name": "Nashville Fairgrounds Speedway",
+          "config": "Oval"
+        }
+      },
+      {
+        "weekNum": 20,
+        "date": "2025-11-27",
+        "track": {
+          "id": 286,
+          "name": "Myrtle Beach Speedway"
+        }
+      }
+    ]
+  },
+  "577": {
+    "id": 577,
+    "name": "Dale Jr's Driven to Give 400",
+    "category": "oval",
+    "laps": 400,
+    "duration": null,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      191
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_577.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-01-30",
+        "track": {
+          "id": 169,
+          "name": "Iowa Speedway",
+          "config": "Oval"
+        }
+      }
+    ]
+  },
+  "578": {
+    "id": 578,
+    "name": "Racing Prodigy BMW M2 CS Racing Cup",
+    "category": "sports_car",
+    "laps": null,
+    "duration": 20,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      195
+    ],
+    "license": {
+      "id": 1,
+      "name": "Rookie",
+      "letter": "R",
+      "color": "fc0706"
+    },
+    "logo": "seriesid_578.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-01-24",
+        "track": {
+          "id": 489,
+          "name": "Circuit de Lédenon"
+        }
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-01-31",
+        "track": {
+          "id": 515,
+          "name": "Circuito de Navarra",
+          "config": "Speed Circuit"
+        }
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-02-07",
+        "track": {
+          "id": 95,
+          "name": "Sebring International Raceway",
+          "config": "International"
+        }
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-02-14",
+        "track": {
+          "id": 166,
+          "name": "Okayama International Circuit",
+          "config": "Full Course"
+        }
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-02-21",
+        "track": {
+          "id": 523,
+          "name": "Circuit de Spa-Francorchamps",
+          "config": "Grand Prix Pits"
+        }
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-02-28",
+        "track": {
+          "id": 47,
+          "name": "WeatherTech Raceway at Laguna Seca",
           "config": "Full Course"
         }
       }

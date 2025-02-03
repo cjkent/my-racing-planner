@@ -58,16 +58,16 @@ export const apiGetLicenses = async () => {
   return apiGet("/data/lookup/licenses");
 };
 
-export const apiGetSeasons = async (
-  season_year: string,
-  season_quarter: string,
-) => {
-  return apiGet("/data/season/list", { season_year, season_quarter });
-};
+// export const apiGetSeasons = async (
+//   season_year: string,
+//   season_quarter: string,
+// ) => {
+//   return apiGet("/data/season/list", { season_year, season_quarter });
+// };
 
-export const apiGetSeries = async () => {
-  return apiGet("/data/series/get");
-};
+// export const apiGetSeries = async () => {
+//   return apiGet("/data/series/get");
+// };
 
 export const apiGetSeriesAssets = async () => {
   return apiGet("/data/series/assets");
@@ -75,4 +75,14 @@ export const apiGetSeriesAssets = async () => {
 
 export const apiGetSeriesSeasons = async () => {
   return apiGet("/data/series/seasons");
+};
+
+export const apiGetSeriesPastSeasons = async (series_id: string) => {
+  return apiGet("/data/series/past_seasons", { series_id });
+};
+
+export const apiGetTest = async () => {
+  return apiGet("/data/series/past_seasons", {
+    series_id: "572",
+  });
 };

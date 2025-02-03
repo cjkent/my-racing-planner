@@ -2,6 +2,11 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.6.1
+
+- Updated Season Series getting latest data from iRacing
+- Fixed My content wrong position on mobile bottom navigation bar
+
 ## 0.6.0
 
 - Implemented top bar and moved some items from the navigation bar.

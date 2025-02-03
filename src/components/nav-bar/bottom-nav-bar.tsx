@@ -17,10 +17,10 @@ function BottomNavBar({ ...props }: StackProps) {
   const tabsAction = [
     { label: "My Season", icon: faTableCellsLarge, index: ETabs.MySeason },
     { label: "My Series", icon: faFlagCheckered, index: ETabs.MySeries },
-    { label: "Shop Guide", icon: faShoppingBag, index: ETabs.ShopGuide },
     location === ETabs.MyTracks
       ? { label: "My Content", icon: faRoad, index: ETabs.MyTracks }
       : { label: "My Content", icon: faCar, index: ETabs.MyCars },
+    { label: "Shop Guide", icon: faShoppingBag, index: ETabs.ShopGuide },
   ];
 
   return (
