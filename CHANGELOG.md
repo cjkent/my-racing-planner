@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.6.2
+
+- Little improvement to license badge, looking better on light theme
+
 ## 0.6.1
 
 - Updated Season Series getting latest data from iRacing

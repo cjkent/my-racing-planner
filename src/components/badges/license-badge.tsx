@@ -9,10 +9,12 @@ function LicenseBadge({
   letter: string;
   color: string;
 }) {
+  const dark = darkenHexColor(`#${color}`, 0.3);
+  const light = lightenHexColor(`#${color}`, 0.7);
   return (
     <Badge
-      bg={darkenHexColor(`#${color}`, 0.3)}
-      color={lightenHexColor(`#${color}`, 0.7)}
+      bg={{ base: light, _dark: dark }}
+      color={{ base: dark, _dark: light }}
       borderColor={`#${color}`}
       borderWidth={1}
       fontWeight={"bold"}
