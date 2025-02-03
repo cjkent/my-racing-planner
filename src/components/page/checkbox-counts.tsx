@@ -1,8 +1,8 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { Badge, HStack, Stack, Text } from "@chakra-ui/react";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faSackXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAppLayout } from "../app/useAppLayout";
 import { Checkbox } from "../ui/checkbox";
 import { Tooltip } from "../ui/tooltip";
 
@@ -15,10 +15,12 @@ function CheckboxCounts({
   ownedCount: number;
   wishCount: number;
 }) {
-  const { height } = useWindowSize();
-  const notSmall = (value: any) => (height <= 680 ? undefined : value);
+  const {
+    screen: { height },
+  } = useAppLayout();
+  const ifNotSmall = (value: any) => (height.small ? undefined : value);
   return (
-    <Stack gap={{ base: "4px", md: notSmall("8px") }}>
+    <Stack gap={{ base: "4px", md: ifNotSmall("8px") }}>
       <Tooltip
         lazyMount
         unmountOnExit
@@ -28,18 +30,18 @@ function CheckboxCounts({
         openDelay={200}
         closeDelay={100}
       >
-        <HStack gap={{ base: "4px", md: notSmall("8px") }}>
+        <HStack gap={{ base: "4px", md: ifNotSmall("8px") }}>
           <Badge
-            size={{ base: "xs", md: notSmall("sm") }}
+            size={{ base: "xs", md: ifNotSmall("sm") }}
             variant="solid"
-            minWidth={{ base: "24px", md: notSmall("28px") }}
+            minWidth={{ base: "24px", md: ifNotSmall("28px") }}
             justifyContent={"center"}
             colorPalette={"green"}
           >
             {freeCount}
           </Badge>
           <Checkbox
-            size={{ base: "sm", md: notSmall("md") }}
+            size={{ base: "sm", md: ifNotSmall("md") }}
             readOnly={true}
             colorPalette={"green"}
             checked={true}
@@ -58,17 +60,17 @@ function CheckboxCounts({
         openDelay={200}
         closeDelay={100}
       >
-        <HStack gap={{ base: "4px", md: notSmall("8px") }}>
+        <HStack gap={{ base: "4px", md: ifNotSmall("8px") }}>
           <Badge
-            size={{ base: "xs", md: notSmall("sm") }}
+            size={{ base: "xs", md: ifNotSmall("sm") }}
             variant="solid"
-            minWidth={{ base: "24px", md: notSmall("28px") }}
+            minWidth={{ base: "24px", md: ifNotSmall("28px") }}
             justifyContent={"center"}
           >
             {ownedCount}
           </Badge>
           <Checkbox
-            size={{ base: "sm", md: notSmall("md") }}
+            size={{ base: "sm", md: ifNotSmall("md") }}
             readOnly={true}
             checked={true}
           >
@@ -87,18 +89,18 @@ function CheckboxCounts({
         openDelay={200}
         closeDelay={100}
       >
-        <HStack gap={{ base: "4px", md: notSmall("8px") }}>
+        <HStack gap={{ base: "4px", md: ifNotSmall("8px") }}>
           <Badge
-            size={{ base: "xs", md: notSmall("sm") }}
+            size={{ base: "xs", md: ifNotSmall("sm") }}
             variant="solid"
-            minWidth={{ base: "24px", md: notSmall("28px") }}
+            minWidth={{ base: "24px", md: ifNotSmall("28px") }}
             justifyContent={"center"}
             colorPalette={"blue"}
           >
             {wishCount}
           </Badge>
           <Checkbox
-            size={{ base: "sm", md: notSmall("md") }}
+            size={{ base: "sm", md: ifNotSmall("md") }}
             readOnly={true}
             colorPalette={"blue"}
             checked={true}

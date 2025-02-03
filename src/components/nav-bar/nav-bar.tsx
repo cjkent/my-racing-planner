@@ -1,4 +1,3 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
@@ -9,6 +8,7 @@ import {
   faTableCellsLarge,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "wouter";
+import { useAppLayout } from "../app/useAppLayout";
 import BMCIcon from "../bmc/icon";
 import { Tooltip } from "../ui/tooltip";
 import MoreMenuButton from "./more-menu-button";
@@ -23,9 +23,9 @@ const tabsTop = [
 ];
 
 function NavBar({ ...props }: StackProps) {
-  const { height } = useWindowSize();
-  const tiny = height <= 480;
-  const small = !tiny && height <= 680;
+  const {
+    screen: { height },
+  } = useAppLayout();
   const [location] = useLocation();
   return (
     <Stack
@@ -38,7 +38,7 @@ function NavBar({ ...props }: StackProps) {
       <Stack
         justifyContent={"flex-start"}
         alignItems={"center"}
-        gap={small ? 1.5 : 3}
+        gap={!height.tiny && height.small ? 1.5 : 3}
       >
         <Tooltip
           lazyMount
@@ -74,7 +74,7 @@ function NavBar({ ...props }: StackProps) {
         />
       </Stack>
 
-      {tiny ? (
+      {height.tiny ? (
         <Stack justifyContent={"flex-start"} alignItems={"center"}>
           <MoreMenuButton selected={false} />
         </Stack>
@@ -82,7 +82,7 @@ function NavBar({ ...props }: StackProps) {
         <Stack
           justifyContent={"flex-start"}
           alignItems={"center"}
-          gap={small ? 1.5 : 3}
+          gap={!height.tiny && height.small ? 1.5 : 3}
         >
           <NavBarButton
             key={"buy-me-a-coffee"}

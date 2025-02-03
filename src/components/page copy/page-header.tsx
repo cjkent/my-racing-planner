@@ -1,8 +1,8 @@
 import { Collapsible, HStack, Stack } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { useAppLayout } from "../app/useAppLayout";
-import CheckboxCounts from "./checkbox-counts";
-import PageTitle from "./page-title";
+import CheckboxCounts from "../page/checkbox-counts";
+import PageTitle from "../page/page-title";
 
 function PageHeader({
   title,

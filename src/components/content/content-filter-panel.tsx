@@ -1,8 +1,8 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { HStack, IconButton, Input, Tabs, Text } from "@chakra-ui/react";
 import { faCircleXmark, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAppLayout } from "../app/useAppLayout";
 import { InputGroup } from "../ui/input-group";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 
@@ -19,7 +19,9 @@ function ContentFilterPanel<T extends string>({
   onTabChange: (value: T) => void;
   onSearchChange: (value: string) => void;
 }) {
-  const { size } = useWindowSize();
+  const {
+    screen: { width },
+  } = useAppLayout();
 
   const setSearchWrapper = (newValue: string) => {
     onSearchChange(newValue);
@@ -29,7 +31,7 @@ function ContentFilterPanel<T extends string>({
     <HStack justifyContent={{ md: "space-between", base: "center" }} mb={2}>
       <PopoverRoot
         open={!!search?.trim() ? true : undefined}
-        positioning={{ placement: size.md ? "right" : "top-start" }}
+        positioning={{ placement: width.md ? "right" : "top-start" }}
       >
         <PopoverTrigger asChild>
           <IconButton

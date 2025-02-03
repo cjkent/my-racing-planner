@@ -1,4 +1,3 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { Collapsible, HStack, StackProps } from "@chakra-ui/react";
 import {
   faCircleQuestion,
@@ -7,7 +6,7 @@ import {
   faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
 import AboutDialog from "../about/about-dialog";
-import { useScroll } from "../app/useScroll";
+import { useAppLayout } from "../app/useAppLayout";
 import ChangelogDialog from "../changelog/changelog-dialog";
 import HelpDialog from "../help/help-dialog";
 import PrivacyPolicyAnalog from "../privacy-policy/privacy-policy-dialog";
@@ -15,12 +14,12 @@ import TopBarButton from "./top-bar-button";
 import UserDropdown from "./user-dropdown";
 
 function TopBar({ ...props }: StackProps) {
-  const { scrolled } = useScroll();
-  const { height } = useWindowSize();
-  const tiny = height <= 480; // TODO: Move to context (rename scroll context)
-
+  const {
+    scrolled,
+    screen: { height },
+  } = useAppLayout();
   return (
-    !tiny && (
+    !height.tiny && (
       <Collapsible.Root open={!scrolled}>
         <Collapsible.Content>
           <HStack justifyContent={"end"} {...props}>

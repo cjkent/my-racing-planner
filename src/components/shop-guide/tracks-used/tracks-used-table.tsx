@@ -5,13 +5,13 @@ import { useMemo } from "react";
 import SERIES_JSON from "../../../ir-data/series.json";
 import TRACKS_JSON from "../../../ir-data/tracks.json";
 import TRACKS_LIST from "../../../ir-data/utils/tracks";
-import { useScroll } from "../../app/useScroll";
+import { useAppLayout } from "../../app/useAppLayout";
 import TracksUsedEmpty from "./tracks-used-empty";
 import TracksUsedRow from "./tracks-used-row";
 
 function TracksUsedTable() {
   const { wishTracks, favoriteSeries } = useIr();
-  const { onScroll } = useScroll();
+  const { onScroll } = useAppLayout();
   const tracksMap = useMemo(
     () =>
       favoriteSeries.reduce((acc, curr) => {

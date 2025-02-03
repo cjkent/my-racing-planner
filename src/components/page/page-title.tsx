@@ -1,5 +1,5 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { Heading, Stack, StackProps, Text } from "@chakra-ui/react";
+import { useAppLayout } from "../app/useAppLayout";
 
 function PageTitle({
   title,
@@ -9,12 +9,14 @@ function PageTitle({
   title: string;
   description: string;
 }) {
-  const { height } = useWindowSize();
-  const notSmall = (value: any) => (height <= 680 ? undefined : value);
+  const {
+    screen: { height },
+  } = useAppLayout();
+  const ifNotSmall = (value: any) => (height.small ? undefined : value);
   return (
-    <Stack pl={{ base: "0.5rem", md: notSmall("unset") }} gap={0} {...rest}>
+    <Stack pl={{ base: "0.5rem", md: ifNotSmall("unset") }} gap={0} {...rest}>
       <Heading
-        size={{ base: "2xl", md: notSmall("4xl") }}
+        size={{ base: "2xl", md: ifNotSmall("4xl") }}
         fontFamily="mono"
         fontWeight="bold"
       >

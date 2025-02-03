@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import {
   faLanguage,
   faMoon,
@@ -28,18 +28,27 @@ function UserDropdown() {
       <MenuContent>
         {/* {!signedIn && (
           <MenuItem value="login" valueText="Log In" disabled>
-            <Box w={"1rem"}>
+            <Flex justifyContent={"center"} w={"1rem"}>
               <FontAwesomeIcon icon={faRightToBracket} />
-            </Box>
+            </Flex>
             <Box flex="1">Log In</Box>
           </MenuItem>
         )} */}
 
+        <ExportDialog>
+          <MenuItem value="export" valueText="Export My Content">
+            <Flex justifyContent={"center"} w={"1rem"}>
+              <FontAwesomeIcon icon={faShareFromSquare} />
+            </Flex>
+            <Box flex="1">Export My Content</Box>
+          </MenuItem>
+        </ExportDialog>
+
         <MenuItem value="language" valueText="Language" disabled>
-          <Box w={"1rem"}>
+          <Flex justifyContent={"center"} w={"1rem"}>
             <FontAwesomeIcon icon={faLanguage} />
-          </Box>
-          <Box flex="1">Language</Box>
+          </Flex>
+          <Box flex="1">Switch Language</Box>
         </MenuItem>
 
         <MenuItem
@@ -47,26 +56,17 @@ function UserDropdown() {
           valueText="Toggle Theme"
           onClick={toggleColorMode}
         >
-          <Box w={"1rem"}>
+          <Flex justifyContent={"center"} w={"1rem"}>
             <FontAwesomeIcon icon={colorMode === "light" ? faSun : faMoon} />
-          </Box>
-          <Box flex="1">Color Mode</Box>
+          </Flex>
+          <Box flex="1">Toggle Color Mode</Box>
         </MenuItem>
-
-        <ExportDialog>
-          <MenuItem value="export" valueText="Export My Content">
-            <Box w={"1rem"}>
-              <FontAwesomeIcon icon={faShareFromSquare} />
-            </Box>
-            <Box flex="1">Export My Content</Box>
-          </MenuItem>
-        </ExportDialog>
 
         {/* {signedIn && (
           <MenuItem value="logout" valueText="Log Out">
-            <Box w={"1rem"}>
+            <Flex justifyContent={"center"} w={"1rem"}>
               <FontAwesomeIcon icon={faPowerOff} />
-            </Box>
+            </Flex>
             <Box flex="1">Log Out</Box>
           </MenuItem>
         )} */}

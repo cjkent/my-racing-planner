@@ -1,18 +1,21 @@
+import useScreenSize, { TScreenSize } from "@/hooks/useScreenSize";
 import { createContext, PropsWithChildren, useEffect, useState } from "react";
 import { useLocation } from "wouter";
 
-type TScrollContext = {
+type TAppLayoutContext = {
   scrolled: boolean;
   onScroll: React.UIEventHandler<HTMLDivElement>;
+  screen: TScreenSize;
 };
 
-export const ScrollContext = createContext<TScrollContext>(
-  {} as TScrollContext,
+export const AppLayoutContext = createContext<TAppLayoutContext>(
+  {} as TAppLayoutContext,
 );
 
-function ScrollContextProvider({ children }: PropsWithChildren) {
+function AppLayoutContextProvider({ children }: PropsWithChildren) {
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
+  const screen = useScreenSize();
 
   useEffect(() => {
     setScrolled(false);
@@ -24,10 +27,10 @@ function ScrollContextProvider({ children }: PropsWithChildren) {
   };
 
   return (
-    <ScrollContext.Provider value={{ scrolled, onScroll }}>
+    <AppLayoutContext.Provider value={{ scrolled, onScroll, screen }}>
       {children}
-    </ScrollContext.Provider>
+    </AppLayoutContext.Provider>
   );
 }
 
-export default ScrollContextProvider;
+export default AppLayoutContextProvider;

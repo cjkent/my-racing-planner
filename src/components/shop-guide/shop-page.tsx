@@ -1,6 +1,6 @@
-import useWindowSize from "@/hooks/useWindowSize";
 import { HStack } from "@chakra-ui/react";
 import { useState } from "react";
+import { useAppLayout } from "../app/useAppLayout";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
 import ShopSubPage, { EShopTab } from "./shop-sub-page";
@@ -9,7 +9,9 @@ import WishlistPanel from "./wishlist/wishlist-panel";
 
 function ShopPage() {
   const [tab, setTab] = useState<EShopTab>(EShopTab.TracksUsed);
-  const { size } = useWindowSize();
+  const {
+    screen: { width },
+  } = useAppLayout();
   return (
     <Page>
       <PageHeader
@@ -21,8 +23,8 @@ function ShopPage() {
       </PageHeader>
 
       <HStack flex={1} alignItems={"start"} overflow={"hidden"} gap={2}>
-        {(tab === EShopTab.TracksUsed || size.md) && <TracksUsedTable />}
-        {(tab === EShopTab.WishlistPanel || size.md) && <WishlistPanel />}
+        {(tab === EShopTab.TracksUsed || width.md) && <TracksUsedTable />}
+        {(tab === EShopTab.WishlistPanel || width.md) && <WishlistPanel />}
       </HStack>
     </Page>
   );

@@ -2,7 +2,7 @@ import { IR_URL } from "@/ir-data/utils/urls";
 import { useUi } from "@/store/ui";
 import { Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
 import SERIES_JSON from "../../ir-data/series.json";
-import { useScroll } from "../app/useScroll";
+import { useAppLayout } from "../app/useAppLayout";
 import { Tooltip } from "../ui/tooltip";
 import SeasonCarsPopover from "./season-cars-popover";
 import SortableColumnHeader from "./sortable-column-header";
@@ -13,7 +13,7 @@ function SeasonTableHeader({
   filteredFavorites: number[];
 }) {
   const { seasonShowReorder, seasonShowCarsDropdown } = useUi();
-  const { scrolled } = useScroll();
+  const { scrolled } = useAppLayout();
   return (
     <Table.Header>
       <Table.Row bgColor={"bg.muted"} zIndex="sticky">

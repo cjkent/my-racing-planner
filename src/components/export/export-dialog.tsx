@@ -7,15 +7,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import useWindowSize from "@/hooks/useWindowSize";
 import { DialogRootProps } from "@chakra-ui/react";
 import { lazy, Suspense, useEffect, useState } from "react";
+import { useAppLayout } from "../app/useAppLayout";
 import LoadingContainer from "../page/loading-container";
 const ExportContent = lazy(() => import("./export-content"));
 
 function ExportDialog({ children, ...rest }: DialogRootProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { size } = useWindowSize();
+  const {
+    screen: { width },
+  } = useAppLayout();
 
   useEffect(() => {
     (document.activeElement as HTMLElement).blur();
@@ -30,7 +32,7 @@ function ExportDialog({ children, ...rest }: DialogRootProps) {
         (document.activeElement as HTMLElement).blur();
         setIsOpen(e.open);
       }}
-      size={size.lg ? "xl" : size.md ? "lg" : "full"}
+      size={width.lg ? "xl" : width.md ? "lg" : "full"}
       scrollBehavior="inside"
       placement="center"
       motionPreset="slide-in-bottom"

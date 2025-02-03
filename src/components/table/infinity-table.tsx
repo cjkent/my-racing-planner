@@ -1,6 +1,6 @@
 import { For, Table } from "@chakra-ui/react";
 import { PropsWithChildren, useEffect, useMemo, useRef, useState } from "react";
-import { useScroll } from "../app/useScroll";
+import { useAppLayout } from "../app/useAppLayout";
 import InfinityTableEmpty from "./infinity-table-empty";
 import InfinityTableLoading from "./infinity-table-loading";
 
@@ -17,7 +17,7 @@ function InfinityTable<T extends string | number | Dict | undefined>({
 }>) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState<number>(1);
-  const { onScroll } = useScroll();
+  const { onScroll } = useAppLayout();
 
   const pageSize = 20;
   const loading = page * pageSize < (list?.length ?? 0);

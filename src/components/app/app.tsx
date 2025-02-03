@@ -4,7 +4,7 @@ import MainContainer from "../main-container/main-container";
 import BottomNavBar from "../nav-bar/bottom-nav-bar";
 import NavBar from "../nav-bar/nav-bar";
 import TopBar from "../top-bar/top-bar";
-import ScrollContextProvider from "./scroll-context";
+import AppLayoutContextProvider from "./app-layout-context";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       paddingTop={"env(safe-area-inset-top)"}
       direction={{ base: "column", md: "row" }}
     >
-      <ScrollContextProvider>
+      <AppLayoutContextProvider>
         <NavBar zIndex={10} hideBelow="md" minW="80px" height="100%" />
         <Stack
           maxH="100%"
@@ -30,7 +30,7 @@ function App() {
           <TopBar hideBelow="md" />
           <MainContainer />
         </Stack>
-      </ScrollContextProvider>
+      </AppLayoutContextProvider>
       <BottomNavBar hideFrom="md" />
 
       <TransferContentDialog />
