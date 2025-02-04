@@ -44,9 +44,15 @@ function ContentCheckbox({
       }}
       icon={
         free ? (
-          <FontAwesomeIcon size="xs" icon={faSackXmark} />
+          <FontAwesomeIcon
+            size={size === "xs" ? "2xs" : "xs"}
+            icon={faSackXmark}
+          />
         ) : wish ? (
-          <FontAwesomeIcon size="xs" icon={faBookmark} />
+          <FontAwesomeIcon
+            size={size === "xs" ? "2xs" : "xs"}
+            icon={faBookmark}
+          />
         ) : undefined
       }
       onClick={(e) => e.stopPropagation()}

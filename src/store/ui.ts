@@ -20,9 +20,10 @@ export enum EDialogs {
 export const useUiStorePersist = create(
   persist(
     () => ({
-      seasonShowReorder: true,
       seasonShowCheckboxes: false,
       seasonShowCarsDropdown: false,
+      seasonShowTrackConfig: false,
+      seasonShowReorder: true,
       seasonHighlight: true,
       seasonShowWishlist: true,
       seasonShowOwned: true,
@@ -46,6 +47,9 @@ export const setSeasonShowCheckboxes = (value: boolean) =>
 
 export const setSeasonShowCarsDropdown = (value: boolean) =>
   useUiStorePersist.setState(() => ({ seasonShowCarsDropdown: value }));
+
+export const setSeasonShowTrackConfig = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ seasonShowTrackConfig: value }));
 
 export const setSeasonHighlight = (value: boolean) =>
   useUiStorePersist.setState(() => ({ seasonHighlight: value }));
@@ -81,6 +85,9 @@ export const useUi = () => {
   const seasonShowCarsDropdown = useUiStorePersist(
     (state) => state.seasonShowCarsDropdown,
   );
+  const seasonShowTrackConfig = useUiStorePersist(
+    (state) => state.seasonShowTrackConfig,
+  );
   const seasonHighlight = useUiStorePersist((state) => state.seasonHighlight);
   const seasonShowWishlist = useUiStorePersist(
     (state) => state.seasonShowWishlist,
@@ -102,6 +109,7 @@ export const useUi = () => {
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
+    seasonShowTrackConfig,
     seasonHighlight,
     seasonShowWishlist,
     seasonShowOwned,

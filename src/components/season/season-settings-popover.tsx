@@ -5,6 +5,7 @@ import {
   setSeasonShowOwned,
   setSeasonShowReorder,
   setSeasonShowThisWeek,
+  setSeasonShowTrackConfig,
   setSeasonShowWishlist,
   useUi,
 } from "@/store/ui";
@@ -17,6 +18,7 @@ function SeasonSettingsPopover() {
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
+    seasonShowTrackConfig,
     seasonHighlight,
     seasonShowThisWeek,
     seasonShowWishlist,
@@ -37,6 +39,13 @@ function SeasonSettingsPopover() {
       tooltip: "Show cars dropdown to quickly switch cars you own",
       checked: seasonShowCarsDropdown,
       setChecked: setSeasonShowCarsDropdown,
+    },
+    {
+      id: "config",
+      text: "Show track config",
+      tooltip: "Show track configuration used that week",
+      checked: seasonShowTrackConfig,
+      setChecked: setSeasonShowTrackConfig,
     },
     {
       id: "hover",

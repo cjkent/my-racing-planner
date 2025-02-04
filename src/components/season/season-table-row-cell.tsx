@@ -12,6 +12,7 @@ function SeasonTableRowCell({
   free,
   id,
   name,
+  config,
   sku,
   date,
   seriesDateMap,
@@ -25,6 +26,7 @@ function SeasonTableRowCell({
   free: boolean;
   id: number;
   name: string;
+  config: string;
   sku: number;
   date: string;
   seriesDateMap: { [key: number]: any };
@@ -35,6 +37,7 @@ function SeasonTableRowCell({
     seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
+    seasonShowTrackConfig,
     seasonHighlight,
     seasonShowWishlist,
     seasonShowOwned,
@@ -85,9 +88,26 @@ function SeasonTableRowCell({
       bgColor={seasonHighlight && highlight ? color : bgColor}
       color={seasonHighlight && highlight ? "bg" : color}
     >
-      <Text textAlign={"center"} lineClamp="3">
+      <Text
+        userSelect={"none"}
+        textAlign={"center"}
+        lineClamp="3"
+        lineHeight={"18px"}
+      >
         {name}
       </Text>
+      {seasonShowTrackConfig && config && (
+        <Text
+          userSelect={"none"}
+          textAlign={"center"}
+          lineClamp="3"
+          lineHeight={"12px"}
+          fontSize={"10px"}
+          mt="2px"
+        >
+          ({config})
+        </Text>
+      )}
       {seasonShowCarsDropdown && cars.length > 0 && (
         <SeasonTableCarsPopover cars={cars} />
       )}

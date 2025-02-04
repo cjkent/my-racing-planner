@@ -17,6 +17,7 @@ function PageTitle({
         size={{ base: "2xl", md: ifNotSmall("4xl") }}
         fontFamily="mono"
         fontWeight="bold"
+        userSelect={"none"}
       >
         {title}
       </Heading>

@@ -1,8 +1,12 @@
 import { useIr } from "@/store/ir";
+import { StackProps } from "@chakra-ui/react";
 import CARS_JSON from "../../ir-data/cars.json";
 import SeasonCarsPopover from "./season-cars-popover";
 
-function SeasonTableCarsPopover({ cars }: { cars: number[] }) {
+function SeasonTableCarsPopover({
+  cars,
+  ...rest
+}: StackProps & { cars: number[] }) {
   const { myCars, wishCars } = useIr();
   const freeAny = cars.some(
     (carId) => CARS_JSON[carId.toString() as keyof typeof CARS_JSON].free,
@@ -36,7 +40,9 @@ function SeasonTableCarsPopover({ cars }: { cars: number[] }) {
         }
       : undefined;
 
-  return <SeasonCarsPopover cars={cars} bgColor={colorCar} color={"fg"} />;
+  return (
+    <SeasonCarsPopover cars={cars} bgColor={colorCar} color={"fg"} {...rest} />
+  );
 }
 
 export default SeasonTableCarsPopover;

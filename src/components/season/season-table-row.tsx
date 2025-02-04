@@ -60,6 +60,7 @@ function SeasonTableRow({
               free={track.free}
               id={track.id}
               name={track.name}
+              config={track.config}
               sku={track.sku}
               date={date}
               seriesDateMap={seriesDateMap}
