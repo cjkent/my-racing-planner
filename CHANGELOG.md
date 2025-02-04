@@ -6,6 +6,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 
 - Little improvement to license badge, looking better on light theme
 - Added track config to season planner table
+- Track highlight color more subtle on the season planner table
 
 ## 0.6.1
 

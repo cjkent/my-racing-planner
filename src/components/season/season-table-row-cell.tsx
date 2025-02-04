@@ -77,6 +77,22 @@ function SeasonTableRowCell({
       ? "blue.800"
       : "red.800",
   };
+  const bgColorHighlight = {
+    _dark: free
+      ? "green.900"
+      : seasonShowOwned && owned
+      ? "teal.900"
+      : seasonShowWishlist && wish
+      ? "blue.900"
+      : "red.900",
+    base: free
+      ? "green.200"
+      : seasonShowOwned && owned
+      ? "teal.200"
+      : seasonShowWishlist && wish
+      ? "blue.200"
+      : "red.200",
+  };
   return (
     <SortableColumnCell
       dragEnabled={seasonShowReorder}
@@ -85,8 +101,8 @@ function SeasonTableRowCell({
       position={"relative"}
       onMouseEnter={() => seasonHighlight && setHighlightTrack(sku)}
       onMouseLeave={() => seasonHighlight && setHighlightTrack(-1)}
-      bgColor={seasonHighlight && highlight ? color : bgColor}
-      color={seasonHighlight && highlight ? "bg" : color}
+      bgColor={seasonHighlight && highlight ? bgColorHighlight : bgColor}
+      color={color}
     >
       <Text
         userSelect={"none"}
@@ -103,7 +119,7 @@ function SeasonTableRowCell({
           lineClamp="3"
           lineHeight={"12px"}
           fontSize={"10px"}
-          mt="2px"
+          pt="2px"
         >
           ({config})
         </Text>
