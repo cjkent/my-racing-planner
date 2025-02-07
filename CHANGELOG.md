@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.6.3
+
+- Added Filter to My Series table to show only favorite series
+
 ## 0.6.2
 
 - Little improvement to license badge, looking better on light theme

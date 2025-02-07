@@ -6,8 +6,10 @@ import { useEffect, useState } from "react";
 import ContentFilterPanel from "../content/content-filter-panel";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
+import { Tooltip } from "../ui/tooltip";
 import SeriesTable from "./series-table";
 import SeriesTableRow from "./series-table-row";
+import StarCheckbox from "./star-checkbox";
 
 function SeriesPage() {
   const [tabCategory, setTabCategory] = useState<ECarCategories>(
@@ -15,6 +17,7 @@ function SeriesPage() {
   );
   const [search, setSearch] = useState<string>("");
   const [list, setList] = useState(SORTED_SERIES);
+  const [filterFavs, setFilterFavs] = useState(false);
 
   const debouncedSearch = useDebounce(search, 500);
 
@@ -30,23 +33,28 @@ function SeriesPage() {
                 content.category as keyof typeof ECarCategories
               ] === tabCategory,
           );
+
+    const filteredContentWithFavs = !!filterFavs
+      ? filteredContent.filter((content) => favoriteSeries.includes(content.id))
+      : filteredContent;
+
     const trimmedSearch = debouncedSearch
       .trim()
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
     const filteredContentWithSearch = !!trimmedSearch
-      ? filteredContent.filter((content) =>
+      ? filteredContentWithFavs.filter((content) =>
           content.name
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
             .includes(trimmedSearch),
         )
-      : filteredContent;
+      : filteredContentWithFavs;
 
     setList(filteredContentWithSearch);
-  }, [debouncedSearch, tabCategory]);
+  }, [debouncedSearch, tabCategory, filterFavs]);
 
   return (
     <Page>
@@ -63,6 +71,25 @@ function SeriesPage() {
       />
 
       <SeriesTable
+        filterButton={
+          <Tooltip
+            lazyMount
+            unmountOnExit
+            content={"Filter favorite series only"}
+            showArrow
+            openDelay={200}
+            closeDelay={100}
+            ids={{ trigger: "favFilter" }}
+          >
+            <StarCheckbox
+              ids={{ root: "favFilter" }}
+              gray
+              onClick={(e) => e.stopPropagation()}
+              checked={filterFavs}
+              onCheckedChange={(e) => setFilterFavs(!!e.checked)}
+            />
+          </Tooltip>
+        }
         list={list}
         rows={(item) => {
           return (

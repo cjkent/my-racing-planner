@@ -1,19 +1,22 @@
 import { Table, VisuallyHidden } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import InfinityTable from "../table/infinity-table";
 
 type Dict<T = any> = Record<string, T>;
 function SeriesTable<T extends string | number | Dict | undefined>({
   list,
   rows,
+  filterButton,
 }: {
   list: T[] | readonly T[] | undefined;
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
+  filterButton?: ReactNode;
 }) {
   return (
     <InfinityTable list={list} rows={rows} cols={9}>
       <Table.Row bgColor={"bg.muted"}>
         <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
-          <VisuallyHidden>Favorite</VisuallyHidden>
+          {filterButton}
         </Table.ColumnHeader>
         <Table.ColumnHeader minWidth={"60px"} textAlign={"center"}>
           <VisuallyHidden>Series Logo</VisuallyHidden>

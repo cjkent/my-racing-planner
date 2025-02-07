@@ -11,9 +11,11 @@ import { Checkbox } from "../ui/checkbox";
 function StarCheckbox({
   checked,
   onCheckedChange,
+  gray,
   ...rest
 }: CheckboxRootProps & {
   checked: boolean;
+  gray?: boolean;
   onCheckedChange: (details: CheckboxCheckedChangeDetails) => void;
 }) {
   return (
@@ -23,7 +25,10 @@ function StarCheckbox({
       controlProps={{ border: "0", p: 0, _checked: { bg: "transparent" } }}
       size={"lg"}
       icon={
-        <Icon _hover={{ color: "yellow" }} color={checked ? "orange" : "gray"}>
+        <Icon
+          _hover={{ color: gray ? "fg" : "yellow" }}
+          color={checked && !gray ? "orange" : "gray"}
+        >
           <FontAwesomeIcon icon={checked ? faStar : faStarOutline} size="lg" />
         </Icon>
       }
