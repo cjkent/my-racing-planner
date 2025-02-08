@@ -8,15 +8,20 @@ function PriceDiscountPanel({ wishList }: { wishList: { price: number }[] }) {
     () => wishList.reduce((acc, curr) => acc + curr.price, 0),
     [wishList],
   );
+
+  const discountEligibleCount = wishList.filter(
+    (item) => item.price > 6,
+  ).length;
+
   const discount = shopLoyaltyDiscount
     ? 20
     : !shopVolumeDiscount
     ? 0
-    : wishList.length < 3
+    : discountEligibleCount < 3
     ? 0
-    : wishList.length < 6
+    : discountEligibleCount < 6
     ? 10
-    : wishList.length < 20
+    : discountEligibleCount < 20
     ? 15
     : 20;
   const discountAmount = (totalPrice * discount) / 100;
@@ -53,7 +58,10 @@ function PriceDiscountPanel({ wishList }: { wishList: { price: number }[] }) {
               fontWeight={"normal"}
             >
               {discount}% discount (
-              {shopLoyaltyDiscount ? "loyalty" : `${wishList.length} items`})
+              {shopLoyaltyDiscount
+                ? "loyalty"
+                : `${discountEligibleCount} items`}
+              )
             </Text>
             <Separator mt={1} />
           </>

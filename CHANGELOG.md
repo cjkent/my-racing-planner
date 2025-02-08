@@ -5,6 +5,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 ## 0.6.4
 
 - Added link to Volume Discount blog post on iRacing site
+- Fixed cases where content bellow $6 were counting to volume discount
 
 ## 0.6.3
 
