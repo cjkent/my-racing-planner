@@ -26,7 +26,7 @@ function PrivacyPolicyContent() {
         <Heading mt={2}>LocalStorage</Heading>
         <Text as="p">
           This site uses your browser's localStorage to save UI settings like
-          theme and also the tracks and cars mark as owned or wished.
+          theme and also the tracks and cars marked as owned or wished.
         </Text>
         <Text my={2} as="p">
           This data is stored locally on your device and is not sent to the

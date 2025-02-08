@@ -3,8 +3,11 @@ import {
   setShopVolumeDiscount,
   useUi,
 } from "@/store/ui";
-import { IconButton, VStack } from "@chakra-ui/react";
-import { faGears } from "@fortawesome/free-solid-svg-icons";
+import { HStack, IconButton, Link, VStack } from "@chakra-ui/react";
+import {
+  faArrowUpRightFromSquare,
+  faGears,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PopoverContent, PopoverRoot, PopoverTrigger } from "../ui/popover";
 import { Switch } from "../ui/switch";
@@ -27,24 +30,46 @@ function ShopSettingsPopover() {
       </PopoverTrigger>
       <PopoverContent>
         <VStack alignItems={"start"} p={2}>
-          <Tooltip
-            lazyMount
-            unmountOnExit
-            content={"Apply iRacing discounts for bundle purchases"}
-            showArrow
-            positioning={{ placement: "top" }}
-            openDelay={200}
-            closeDelay={100}
-            ids={{ trigger: "volumeDiscount" }}
-          >
-            <Switch
-              ids={{ root: "volumeDiscount" }}
-              checked={shopVolumeDiscount}
-              onCheckedChange={({ checked }) => setShopVolumeDiscount(checked)}
+          <HStack>
+            <Tooltip
+              lazyMount
+              unmountOnExit
+              content={"Apply iRacing discounts for bundle purchases"}
+              showArrow
+              positioning={{ placement: "top" }}
+              openDelay={200}
+              closeDelay={100}
+              ids={{ trigger: "volumeDiscount" }}
             >
-              Volume discount
-            </Switch>
-          </Tooltip>
+              <Switch
+                ids={{ root: "volumeDiscount" }}
+                checked={shopVolumeDiscount}
+                onCheckedChange={({ checked }) =>
+                  setShopVolumeDiscount(checked)
+                }
+              >
+                Volume discount
+              </Switch>
+            </Tooltip>
+
+            <Tooltip
+              lazyMount
+              unmountOnExit
+              content={"Go to iRacing's official Volume Discounts blog post"}
+              showArrow
+              positioning={{ placement: "top" }}
+              openDelay={200}
+              closeDelay={100}
+            >
+              <Link
+                href="https://www.iracing.com/volume-discounts/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </Link>
+            </Tooltip>
+          </HStack>
           <Tooltip
             lazyMount
             unmountOnExit
