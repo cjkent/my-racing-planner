@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.7.0
+
+- Removed Info Link to iRacing members site on Content tables
+
 ## 0.6.4
 
 - Added link to Volume Discount blog post on iRacing site

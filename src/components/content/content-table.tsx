@@ -13,7 +13,7 @@ function ContentTable<T extends string | number | Dict | undefined>({
   filterButton?: ReactNode;
 }) {
   return (
-    <InfinityTable list={list} rows={rows} cols={8}>
+    <InfinityTable list={list} rows={rows} cols={7}>
       <Table.Row bgColor={"bg.muted"}>
         <Table.ColumnHeader minWidth={"40px"} textAlign={"center"}>
           {filterButton}
@@ -33,9 +33,6 @@ function ContentTable<T extends string | number | Dict | undefined>({
         </Table.ColumnHeader>
         <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
           Price
-        </Table.ColumnHeader>
-        <Table.ColumnHeader minWidth={"90px"}>
-          <VisuallyHidden>Info on iracing.com</VisuallyHidden>
         </Table.ColumnHeader>
       </Table.Row>
     </InfinityTable>

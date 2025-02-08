@@ -29,7 +29,6 @@ function ContentPage({
   contentListJson,
   description,
   freeCount,
-  infoUrl,
   myContent,
   skuIcon,
   tabs,
@@ -41,7 +40,6 @@ function ContentPage({
   contentListJson: TContent[];
   description: string;
   freeCount: number;
-  infoUrl: (id: number) => string;
   myContent: number[];
   skuIcon: IconDefinition;
   tabs: { [key: string]: string };
@@ -171,7 +169,6 @@ function ContentPage({
               id={item.id}
               sku={item.sku}
               content={content}
-              infoUrl={infoUrl(item.id)}
               skuIcon={skuIcon}
               price={item.price}
               name={item.name}

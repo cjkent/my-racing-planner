@@ -28,7 +28,6 @@ import SeriesPopover from "../series/series-popover";
 import { Tooltip } from "../ui/tooltip";
 import ContentCheckbox from "./content-checkbox";
 import ContentNameBadge from "./content-name-badge";
-import InfoButton from "./info-button";
 
 function ContentTableRow({
   content,
@@ -42,7 +41,6 @@ function ContentTableRow({
   skuGroup,
   series,
   skuIcon,
-  infoUrl,
   owned,
   wish,
 }: {
@@ -59,7 +57,6 @@ function ContentTableRow({
   skuGroup?: { [key: string]: string };
   series?: number[];
   skuIcon: IconDefinition;
-  infoUrl: string;
 }) {
   const skuItems = skuGroup ? Object.values(skuGroup) : [];
   return (
@@ -176,9 +173,6 @@ function ContentTableRow({
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <PriceBadge price={price} />
-      </Table.Cell>
-      <Table.Cell minWidth={"90px"} textAlign="end">
-        <InfoButton href={infoUrl} />
       </Table.Cell>
     </Table.Row>
   );
