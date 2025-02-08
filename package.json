@@ -11,7 +11,9 @@
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
     "fetch-data": "pnpx tsx iracing-api/fetch-data.ts",
-    "parse-data": "pnpx tsx iracing-api/parse-data.ts"
+    "parse-data": "pnpx tsx iracing-api/parse-data.ts",
+    "fetch-past": "pnpx tsx iracing-api/fetch-past.ts",
+    "parse-past": "pnpx tsx iracing-api/parse-past.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.2.3",

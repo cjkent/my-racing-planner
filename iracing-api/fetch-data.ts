@@ -7,6 +7,7 @@ import {
   apiGetCarClasses,
   apiGetCars,
   apiGetLicenses,
+  apiGetSeries,
   apiGetSeriesAssets,
   apiGetSeriesSeasons,
   apiGetTrackAssets,
@@ -19,6 +20,11 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 (async () => {
   const email = process.env.IRACING_USERNAME ?? "";
   const password = process.env.IRACING_PASSWORD ?? "";
+
+  if (email === "" || password === "") {
+    console.error("Missing iRacing credentials");
+    return;
+  }
 
   await authenticate(email, password);
 
@@ -50,12 +56,12 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
     JSON.stringify(trackAssets.data, null, 2),
   );
 
-  console.log("Fetching series.json");
-  // const series = await apiGetSeries();
-  // await writeFile(
-  //   path.join(dirname, "./raw/series.json"),
-  //   JSON.stringify(series.data, null, 2),
-  // );
+  console.log("Fetching all-series.json");
+  const series = await apiGetSeries();
+  await writeFile(
+    path.join(dirname, "./raw/all-series.json"),
+    JSON.stringify(series.data, null, 2),
+  );
 
   console.log("Fetching series-season.json");
   const seriesSeason = await apiGetSeriesSeasons();

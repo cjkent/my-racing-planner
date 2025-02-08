@@ -65,9 +65,9 @@ export const apiGetLicenses = async () => {
 //   return apiGet("/data/season/list", { season_year, season_quarter });
 // };
 
-// export const apiGetSeries = async () => {
-//   return apiGet("/data/series/get");
-// };
+export const apiGetSeries = async () => {
+  return apiGet("/data/series/get");
+};
 
 export const apiGetSeriesAssets = async () => {
   return apiGet("/data/series/assets");
@@ -79,10 +79,4 @@ export const apiGetSeriesSeasons = async () => {
 
 export const apiGetSeriesPastSeasons = async (series_id: string) => {
   return apiGet("/data/series/past_seasons", { series_id });
-};
-
-export const apiGetTest = async () => {
-  return apiGet("/data/series/past_seasons", {
-    series_id: "572",
-  });
 };
