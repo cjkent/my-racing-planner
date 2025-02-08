@@ -131,14 +131,13 @@ function ContentPage({
           >
             <Checkbox
               ids={{ root: "checkFilter" }}
-              colorPalette={"gray"}
               checked={filterFree || filterOwned || filterWish}
               controlProps={{
                 bgColor:
                   filterFree || filterOwned || filterWish
-                    ? { _hover: "black", base: "gray.400" }
+                    ? { _hover: "fg", base: "gray.400" }
                     : undefined,
-                borderColor: { _hover: "black", base: "gray.400" },
+                borderColor: { _hover: "fg", base: "gray.400" },
               }}
               icon={
                 filterFree ? (
