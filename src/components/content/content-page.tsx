@@ -1,13 +1,27 @@
 import useDebounce from "@/hooks/useDebounce";
 import { TContent } from "@/ir-data/utils/types";
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookmark,
+  faSackXmark,
+  IconDefinition,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import Page from "../page/page";
 import PageHeader from "../page/page-header";
+import { Checkbox } from "../ui/checkbox";
+import { Tooltip } from "../ui/tooltip";
 import ContentFilterPanel from "./content-filter-panel";
 import ContentSubPage from "./content-sub-page";
 import ContentTable from "./content-table";
 import ContentTableRow from "./content-table-row";
+
+enum EContentCheckState {
+  None,
+  Free,
+  Wish,
+  Owned,
+}
 
 function ContentPage({
   allTab,
@@ -37,6 +51,11 @@ function ContentPage({
   const [tabCategory, setTabCategory] = useState<string>(allTab);
   const [search, setSearch] = useState<string>("");
   const [list, setList] = useState(contentListJson);
+  const [filterChecks, setFilterChecks] = useState(EContentCheckState.None);
+
+  const filterOwned = filterChecks === EContentCheckState.Owned;
+  const filterWish = filterChecks === EContentCheckState.Wish;
+  const filterFree = filterChecks === EContentCheckState.Free;
 
   const debouncedSearch = useDebounce(search, 500);
 
@@ -47,23 +66,37 @@ function ContentPage({
         : contentListJson.filter((content: any) =>
             content.categories.some((v: string) => tabs[v] === tabCategory),
           );
+
+    const filteredContentWithCheck =
+      filterChecks !== EContentCheckState.None
+        ? filteredContent.filter((content) => {
+            if (filterChecks === EContentCheckState.Free) {
+              return content.free;
+            } else if (filterChecks === EContentCheckState.Wish) {
+              return wish.includes(content.sku);
+            } else if (filterChecks === EContentCheckState.Owned) {
+              return myContent.includes(content.sku);
+            }
+          })
+        : filteredContent;
+
     const trimmedSearch = debouncedSearch
       .trim()
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
     const filteredContentWithSearch = !!trimmedSearch
-      ? filteredContent.filter((content) =>
+      ? filteredContentWithCheck.filter((content) =>
           content.name
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
             .includes(trimmedSearch),
         )
-      : filteredContent;
+      : filteredContentWithCheck;
 
     setList(filteredContentWithSearch);
-  }, [debouncedSearch, tabCategory]);
+  }, [debouncedSearch, tabCategory, filterChecks]);
 
   return (
     <Page>
@@ -86,6 +119,49 @@ function ContentPage({
       />
 
       <ContentTable
+        filterButton={
+          <Tooltip
+            lazyMount
+            unmountOnExit
+            content={"Filter content by checkbox state"}
+            showArrow
+            openDelay={200}
+            closeDelay={100}
+            ids={{ trigger: "checkFilter" }}
+          >
+            <Checkbox
+              ids={{ root: "checkFilter" }}
+              colorPalette={"gray"}
+              checked={filterFree || filterOwned || filterWish}
+              controlProps={{
+                bgColor:
+                  filterFree || filterOwned || filterWish
+                    ? { _hover: "black", base: "gray.400" }
+                    : undefined,
+                borderColor: { _hover: "black", base: "gray.400" },
+              }}
+              icon={
+                filterFree ? (
+                  <FontAwesomeIcon size={"xs"} icon={faSackXmark} />
+                ) : filterWish ? (
+                  <FontAwesomeIcon size={"xs"} icon={faBookmark} />
+                ) : undefined
+              }
+              onClick={(e) => e.stopPropagation()}
+              onCheckedChange={() => {
+                if (filterOwned) {
+                  setFilterChecks(EContentCheckState.Wish);
+                } else if (filterWish) {
+                  setFilterChecks(EContentCheckState.Free);
+                } else if (filterFree) {
+                  setFilterChecks(EContentCheckState.None);
+                } else {
+                  setFilterChecks(EContentCheckState.Owned);
+                }
+              }}
+            />
+          </Tooltip>
+        }
         list={list}
         rows={(item) => {
           const owned = myContent.includes(item.sku);

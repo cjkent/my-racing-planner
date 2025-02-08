@@ -5,6 +5,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 ## 0.6.3
 
 - Added Filter to My Series table to show only favorite series
+- Added Filter to My Cars and My Tracks to show only selected check state
 
 ## 0.6.2
 
