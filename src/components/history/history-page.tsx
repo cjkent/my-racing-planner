@@ -1,4 +1,8 @@
-import { EHistorySince, getSortedHistory } from "@/ir-data/utils/history";
+import {
+  EHistorySince,
+  ESortHistory,
+  getSortedHistory,
+} from "@/ir-data/utils/history";
 import { ECarCategories } from "@/ir-data/utils/types";
 import { useIr } from "@/store/ir";
 import { useEffect, useState } from "react";
@@ -14,14 +18,15 @@ function HistoryPage() {
     ECarCategories.all,
   );
   const [since, setSince] = useState<EHistorySince>(EHistorySince.Ever);
+  const [sortBy, setSortBy] = useState<ESortHistory>(ESortHistory.Usage);
   const [list, setList] = useState(
     getSortedHistory(ECarCategories.all, EHistorySince.Ever),
   );
 
   useEffect(() => {
-    const filteredContent = getSortedHistory(tabCategory, since);
+    const filteredContent = getSortedHistory(tabCategory, since, sortBy);
     setList(filteredContent);
-  }, [tabCategory, since]);
+  }, [tabCategory, since, sortBy]);
 
   const { wishTracks, myTracks } = useIr();
 
@@ -40,6 +45,8 @@ function HistoryPage() {
       />
 
       <HistoryTable
+        sortBy={sortBy}
+        setSortBy={setSortBy}
         list={list}
         rows={(item) => {
           const track =

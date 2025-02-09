@@ -4,7 +4,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 
 ## 0.7.0
 
-- Added Tracks Usage history page
+- Added Tracks Usage History page
 - Removed Info Link to iRacing members site on Content tables
 
 ## 0.6.4
