@@ -122,8 +122,10 @@ const isLegacy = (name: string) => {
   }, {} as Record<string, (typeof parsedCars)[0] & { skuGroup?: { [key: string]: string }; group?: number; skuSeries?: number[] }>);
 
   const parsedTracks = TRACKS_JSON.filter(
-    (track) => track.is_ps_purchasable || track.track_id === 252, // 252="Nürburgring Combined"
-  ).map((track) => ({
+    (track) =>
+      !track.retired && (track.is_ps_purchasable || track.track_id === 252), // 252="Nürburgring Combined"
+  )
+  .map((track) => ({
     id: track.track_id,
     name: track.track_name,
     config: track.config_name ?? "",

@@ -17,84 +17,6 @@
     },
     "skuSeries": []
   },
-  "2": {
-    "id": 2,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] Full Course",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
-  "3": {
-    "id": 3,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] Patriot",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
-  "4": {
-    "id": 4,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] North",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
-  "5": {
-    "id": 5,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] Grand West",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
-  "6": {
-    "id": 6,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] Grand East",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
-  "7": {
-    "id": 7,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] South",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
-  },
   "8": {
     "id": 8,
     "name": "Summit Point Raceway",
@@ -1389,58 +1311,6 @@
     "logo": "/img/logos/tracks/phoenixinternationalraceway-logo.png",
     "group": 104
   },
-  "106": {
-    "id": 106,
-    "name": "[Retired] Watkins Glen International",
-    "config": "[Retired] Cup",
-    "categories": [
-      "road"
-    ],
-    "free": false,
-    "price": 15.95,
-    "sku": 10060,
-    "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 432
-  },
-  "107": {
-    "id": 107,
-    "name": "[Retired] Watkins Glen International",
-    "config": "[Retired] Boot",
-    "categories": [
-      "road"
-    ],
-    "free": false,
-    "price": 15.95,
-    "sku": 10060,
-    "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 432
-  },
-  "108": {
-    "id": 108,
-    "name": "[Retired] Watkins Glen International",
-    "config": "[Retired] Classic Boot",
-    "categories": [
-      "road"
-    ],
-    "free": false,
-    "price": 15.95,
-    "sku": 10060,
-    "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 432
-  },
-  "109": {
-    "id": 109,
-    "name": "[Retired] Watkins Glen International",
-    "config": "[Retired] Classic",
-    "categories": [
-      "road"
-    ],
-    "free": false,
-    "price": 15.95,
-    "sku": 10060,
-    "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
-    "group": 432
-  },
   "110": {
     "id": 110,
     "name": "Las Vegas Motor Speedway",
@@ -2001,19 +1871,6 @@
     "sku": 10108,
     "logo": "/img/logos/tracks/poconoraceway-logo.png",
     "group": 136
-  },
-  "141": {
-    "id": 141,
-    "name": "[Retired] Virginia International Raceway",
-    "config": "[Retired] Patriot Reverse",
-    "categories": [
-      "road"
-    ],
-    "free": true,
-    "price": 0,
-    "sku": 10031,
-    "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
-    "group": 465
   },
   "142": {
     "id": 142,
@@ -6800,10 +6657,6 @@
     ],
     "logo": "/img/logos/tracks/watkinsgleninternational-logo.png",
     "skuGroup": {
-      "106": "[Retired] Cup",
-      "107": "[Retired] Boot",
-      "108": "[Retired] Classic Boot",
-      "109": "[Retired] Classic",
       "432": "Classic",
       "433": "Cup",
       "434": "Boot",
@@ -7403,13 +7256,6 @@
     ],
     "logo": "/img/logos/tracks/virginiainternationalraceway-logo.png",
     "skuGroup": {
-      "2": "[Retired] Full Course",
-      "3": "[Retired] Patriot",
-      "4": "[Retired] North",
-      "5": "[Retired] Grand West",
-      "6": "[Retired] Grand East",
-      "7": "[Retired] South",
-      "141": "[Retired] Patriot Reverse",
       "465": "Full Course",
       "466": "Grand Course",
       "467": "North Course",

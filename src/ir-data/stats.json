@@ -4157,37 +4157,5 @@
       "lastYear": 3,
       "thisYear": 3
     }
-  },
-  "undefined": {
-    "id": 264,
-    "released": 2009,
-    "all": {
-      "ever": 236,
-      "tenYears": 212,
-      "fiveYears": 93,
-      "threeYears": 47,
-      "lastYear": 20,
-      "thisYear": 1
-    },
-    "sports_car": {
-      "ever": 63,
-      "tenYears": 63,
-      "fiveYears": 50,
-      "threeYears": 37,
-      "lastYear": 15
-    },
-    "oval": {
-      "ever": 135,
-      "tenYears": 113,
-      "fiveYears": 22
-    },
-    "formula_car": {
-      "ever": 38,
-      "tenYears": 36,
-      "fiveYears": 21,
-      "threeYears": 10,
-      "lastYear": 5,
-      "thisYear": 1
-    }
   }
 }

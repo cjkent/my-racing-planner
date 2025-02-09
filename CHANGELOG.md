@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.7.1
+
+- Removed Retired tracks from My Tracks table
+
 ## 0.7.0
 
 - Added Tracks Usage History page

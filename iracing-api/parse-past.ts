@@ -2,8 +2,8 @@ import { readFile, writeFile } from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import TRACKS_JSON from "./parsed/tracks.json";
 import SERIES_JSON from "./raw/all-series.json";
+import TRACKS_JSON from "./raw/tracks.json";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -69,9 +69,10 @@ const getYears = (prev: { [key: string]: number }, yearString: string) => {
 
     series.seasons.forEach((season: any) => {
       season.race_weeks.forEach((week: any) => {
-        const sku =
-          TRACKS_JSON[week.track.track_id as keyof typeof TRACKS_JSON]?.sku;
-        if (sku === 0) {
+        const sku = TRACKS_JSON.find(
+          (t) => t.track_id === week.track.track_id,
+        )?.sku;
+        if (!sku) {
           return;
         }
         const prev = tracksMap[sku] ?? {
