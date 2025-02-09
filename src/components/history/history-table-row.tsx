@@ -1,7 +1,7 @@
 import { CategoryIcon } from "@/ir-data/utils/icons";
 import { Category } from "@/ir-data/utils/types";
 import { IR_URL } from "@/ir-data/utils/urls";
-import { Center, For, Image, Table, Text } from "@chakra-ui/react";
+import { Badge, Center, For, Image, Table, Text } from "@chakra-ui/react";
 import React from "react";
 import ContentCheckbox from "../content/content-checkbox";
 import ContentNameBadge from "../content/content-name-badge";
@@ -17,6 +17,8 @@ function HistoryTableRow({
   owned,
   wish,
   categories,
+  released,
+  usagePerYear,
 }: {
   id: number;
   sku: number;
@@ -27,6 +29,8 @@ function HistoryTableRow({
   owned: boolean;
   wish: boolean;
   categories: string[];
+  released: number;
+  usagePerYear: number;
 }) {
   return (
     <Table.Row bgColor={"transparent"}>
@@ -100,6 +104,14 @@ function HistoryTableRow({
             </Tooltip>
           )}
         />
+      </Table.Cell>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
+        <Text>{released}</Text>
+      </Table.Cell>
+      <Table.Cell minWidth={"90px"} textAlign={"center"}>
+        <Badge variant={"solid"} _light={{ bg: "gray.600" }}>
+          {usagePerYear.toFixed(1)}
+        </Badge>
       </Table.Cell>
       <Table.Cell minWidth={"90px"} textAlign={"center"}>
         <Text fontWeight={"bold"}>{count}</Text>

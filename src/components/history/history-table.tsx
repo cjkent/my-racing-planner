@@ -1,5 +1,4 @@
 import { Table, VisuallyHidden } from "@chakra-ui/react";
-import { ReactNode } from "react";
 import InfinityTable from "../table/infinity-table";
 
 type Dict<T = any> = Record<string, T>;
@@ -9,7 +8,6 @@ function HistoryTable<T extends string | number | Dict | undefined>({
 }: {
   list: T[] | readonly T[] | undefined;
   rows: (item: Exclude<T, undefined>, index: number) => React.ReactNode;
-  filterButton?: ReactNode;
 }) {
   return (
     <InfinityTable list={list} rows={rows} cols={7}>
@@ -23,6 +21,12 @@ function HistoryTable<T extends string | number | Dict | undefined>({
         <Table.ColumnHeader width={"100%"}>Name</Table.ColumnHeader>
         <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
           Category
+        </Table.ColumnHeader>
+        <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
+          Released
+        </Table.ColumnHeader>
+        <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
+          Usage/Year
         </Table.ColumnHeader>
         <Table.ColumnHeader minWidth={"90px"} textAlign={"center"}>
           Used

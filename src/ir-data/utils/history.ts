@@ -1,6 +1,5 @@
 import STATS_JSON from "../stats.json";
 import { ECarCategories } from "./types";
-
 export enum EHistorySince {
   Ever = "ever",
   TenYears = "tenYears",
@@ -17,6 +16,8 @@ function getKeyFromValue(value: ECarCategories): string | undefined {
   return entry ? entry[0] : undefined;
 }
 
+const thisYear = new Date().getUTCFullYear();
+
 export const getSortedHistory = (
   category: ECarCategories = ECarCategories.all,
   since: EHistorySince = EHistorySince.Ever,
@@ -25,6 +26,8 @@ export const getSortedHistory = (
     .map((item: any) => ({
       sku: item.sku,
       id: item.id,
+      released: item.released,
+      usagePerYear: item.all.ever / Math.max(thisYear - item.released + 1, 1),
       count: item[getKeyFromValue(category) ?? "_"]?.[since] ?? 0,
     }))
     .sort((a, b) => (a.count < b.count ? 1 : -1));

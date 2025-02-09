@@ -74,10 +74,15 @@ const getYears = (prev: { [key: string]: number }, yearString: string) => {
         if (sku === 0) {
           return;
         }
-        const prev = tracksMap[sku] ?? { sku, id: week.track.track_id };
+        const prev = tracksMap[sku] ?? {
+          sku,
+          id: week.track.track_id,
+          released: thisYear,
+        };
 
         tracksMap[sku] = {
           ...prev,
+          released: Math.min(season.season_year, prev.released),
           all: {
             ...getYears(prev.all ?? {}, season.season_year),
           },

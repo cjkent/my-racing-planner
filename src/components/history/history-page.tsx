@@ -61,6 +61,8 @@ function HistoryPage() {
               categories={track.categories}
               owned={owned}
               wish={wished}
+              released={item.released}
+              usagePerYear={item.usagePerYear}
             />
           );
         }}
