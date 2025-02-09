@@ -8,6 +8,7 @@ export enum ETabs {
   MyCars = "/cars",
   MyTracks = "/tracks",
   ShopGuide = "/checkout",
+  History = "/history",
 }
 
 export enum EDialogs {

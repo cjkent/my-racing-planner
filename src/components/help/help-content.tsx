@@ -14,6 +14,7 @@ import {
 import {
   faBookmark,
   faCar,
+  faChartLine,
   faFlagCheckered,
   faGears,
   faLanguage,
@@ -222,6 +223,12 @@ function HelpContent() {
               Theme <FontAwesomeIcon size="xs" icon={faMoon} />
             </strong>
             : Choose your theme from light and dark options.
+          </List.Item>
+          <List.Item>
+            <strong>
+              History <FontAwesomeIcon size="xs" icon={faChartLine} />
+            </strong>
+            : See tracks usage history.
           </List.Item>
           <List.Item>
             <strong>

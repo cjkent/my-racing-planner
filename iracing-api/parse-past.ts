@@ -2,9 +2,48 @@ import { readFile, writeFile } from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import TRACKS_JSON from "./parsed/tracks.json";
 import SERIES_JSON from "./raw/all-series.json";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const thisYear = new Date().getUTCFullYear();
+const lastYear = thisYear - 1;
+const threeYears = thisYear - 3;
+const fiveYears = thisYear - 5;
+const tenYears = thisYear - 10;
+
+const keys = {
+  [thisYear]: "thisYear",
+  [lastYear]: "lastYear",
+  [threeYears]: "threeYears",
+  [fiveYears]: "fiveYears",
+  [tenYears]: "tenYears",
+};
+
+const getYears = (prev: { [key: string]: number }, yearString: string) => {
+  const year = parseInt(yearString);
+  const value = { ...prev };
+
+  value.ever = (value.ever ?? 0) + 1;
+  if (year >= tenYears) {
+    value[keys[tenYears]] = (value[keys[tenYears]] ?? 0) + 1;
+    if (year >= fiveYears) {
+      value[keys[fiveYears]] = (value[keys[fiveYears]] ?? 0) + 1;
+      if (year >= threeYears) {
+        value[keys[threeYears]] = (value[keys[threeYears]] ?? 0) + 1;
+        if (year >= lastYear) {
+          value[keys[lastYear]] = (value[keys[lastYear]] ?? 0) + 1;
+          if (year === thisYear) {
+            value[keys[thisYear]] = (value[keys[thisYear]] ?? 0) + 1;
+          }
+        }
+      }
+    }
+  }
+
+  return value;
+};
 
 (async () => {
   const tracksMap: any = {};
@@ -30,15 +69,20 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
     series.seasons.forEach((season: any) => {
       season.race_weeks.forEach((week: any) => {
-        const prev = tracksMap[week.track.track_id] ?? {};
-        tracksMap[week.track.track_id] = {
+        const sku =
+          TRACKS_JSON[week.track.track_id as keyof typeof TRACKS_JSON]?.sku;
+        if (sku === 0) {
+          return;
+        }
+        const prev = tracksMap[sku] ?? { sku, id: week.track.track_id };
+
+        tracksMap[sku] = {
           ...prev,
-          count: (prev.count ?? 0) + 1,
-          [season.season_year]: {
-            ...(prev[season.season_year] ?? {}),
-            count: (prev[season.season_year]?.count ?? 0) + 1,
-            [series.category]:
-              (prev[season.season_year]?.[series.category] ?? 0) + 1,
+          all: {
+            ...getYears(prev.all ?? {}, season.season_year),
+          },
+          [series.category]: {
+            ...getYears(prev[series.category] ?? {}, season.season_year),
           },
         };
       });

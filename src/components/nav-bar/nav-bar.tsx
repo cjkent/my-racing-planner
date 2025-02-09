@@ -3,6 +3,7 @@ import { ETabs } from "@/store/ui";
 import { For, Image, Stack, StackProps } from "@chakra-ui/react";
 import {
   faCar,
+  faChartLine,
   faFlagCheckered,
   faRoad,
   faShoppingBag,
@@ -82,6 +83,15 @@ function NavBar({ ...props }: StackProps) {
           alignItems={"center"}
           gap={!height.tiny && height.small ? 1.5 : 3}
         >
+          <NavBarButton
+            key={"tracks-history"}
+            label={"History"}
+            icon={faChartLine}
+            selected={location === ETabs.History}
+            as={Link}
+            href={ETabs.History}
+          />
+
           <NavBarButton
             key={"buy-me-a-coffee"}
             label="Donate"

@@ -1,6 +1,8 @@
 import { useNotifications } from "@/store/notifications";
+import { ETabs } from "@/store/ui";
 import { Group, Separator, Stack } from "@chakra-ui/react";
 import {
+  faChartLine,
   faCircleQuestion,
   faFileLines,
   faInfoCircle,
@@ -10,6 +12,7 @@ import {
   faShieldHalved,
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "wouter";
 import AboutDialog from "../about/about-dialog";
 import BMCIcon from "../bmc/icon";
 import ChangelogDialog from "../changelog/changelog-dialog";
@@ -22,6 +25,7 @@ import MoreMenuItem from "./more-menu-item";
 function MoreMenuContent({ close }: { close: () => void }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { changelog, privacyPolicy } = useNotifications();
+  const [_, navigate] = useLocation();
   return (
     <Stack>
       <Group grow gap="0" alignItems={"start"}>
@@ -51,6 +55,15 @@ function MoreMenuContent({ close }: { close: () => void }) {
           />
         </ChangelogDialog>
       </Group>
+      <Separator />
+      <MoreMenuItem
+        label="History"
+        icon={faChartLine}
+        onClick={() => {
+          close();
+          navigate(ETabs.History);
+        }}
+      />
       <Separator />
       <MoreMenuItem
         label="Buy me a Coffee"
