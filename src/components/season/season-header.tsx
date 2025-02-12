@@ -41,7 +41,7 @@ function SeasonHeader() {
       ownedCount={counts.owned}
       wishCount={counts.wish}
       title="My Season Planner"
-      description="Plan your season weeks, you can drag and drop series columns"
+      description="Plan your season weeks from your favorite series, use the settings dropdown options to customize the table."
     />
   );
 }

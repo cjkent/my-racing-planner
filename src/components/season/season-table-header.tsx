@@ -1,6 +1,8 @@
 import { IR_URL } from "@/ir-data/utils/urls";
+import { setFavoriteSeriesList, useIr } from "@/store/ir";
 import { useUi } from "@/store/ui";
 import { Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
+import { arrayMove } from "@dnd-kit/sortable";
 import SERIES_JSON from "../../ir-data/series.json";
 import { useAppLayout } from "../app/useAppLayout";
 import { Tooltip } from "../ui/tooltip";
@@ -14,6 +16,11 @@ function SeasonTableHeader({
 }) {
   const { seasonShowReorder, seasonShowCarsDropdown } = useUi();
   const { scrolled } = useAppLayout();
+  const { favoriteSeries } = useIr();
+
+  const onClickSwap = (index: number) => {
+    setFavoriteSeriesList(arrayMove(favoriteSeries, index, index - 1));
+  };
   return (
     <Table.Header>
       <Table.Row bgColor={"bg.muted"} zIndex="sticky">
@@ -30,13 +37,14 @@ function SeasonTableHeader({
 
         <For
           each={filteredFavorites}
-          children={(seriesId) => {
+          children={(seriesId, i) => {
             const series =
               SERIES_JSON[seriesId.toString() as keyof typeof SERIES_JSON];
             return (
               <SortableColumnHeader
                 dragId={seriesId}
-                dragEnabled={seasonShowReorder}
+                showDragButton={seasonShowReorder}
+                onClickSwap={i !== 0 ? () => onClickSwap(i) : undefined}
                 key={seriesId}
                 width="(100/x)%"
                 position={"relative"}

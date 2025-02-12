@@ -34,7 +34,6 @@ function SeasonTableRowCell({
   setHighlightTrack: (n: number) => void;
 }) {
   const {
-    seasonShowReorder,
     seasonShowCheckboxes,
     seasonShowCarsDropdown,
     seasonShowTrackConfig,
@@ -95,7 +94,6 @@ function SeasonTableRowCell({
   };
   return (
     <SortableColumnCell
-      dragEnabled={seasonShowReorder}
       dragId={seriesId}
       width="(100/x)%"
       position={"relative"}

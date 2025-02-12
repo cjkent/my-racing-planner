@@ -1,15 +1,24 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import { Box, Table, TableColumnHeaderProps } from "@chakra-ui/react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { faGripLinesVertical } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightArrowLeft,
+  faGripLinesVertical,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SortableColumnHeader({
-  dragEnabled,
+  showDragButton,
   dragId,
   children,
+  onClickSwap,
   ...rest
-}: TableColumnHeaderProps & { dragEnabled: boolean; dragId: number }) {
+}: TableColumnHeaderProps & {
+  onClickSwap?: () => void;
+  showDragButton: boolean;
+  dragId: number;
+}) {
   const {
     attributes,
     listeners,
@@ -19,6 +28,11 @@ function SortableColumnHeader({
     isDragging,
   } = useSortable({ id: dragId });
 
+  const { width } = useScreenSize();
+
+  const showSwapper = showDragButton && !width.md && !!onClickSwap;
+  const showDrag = showDragButton && width.md;
+
   return (
     <Table.ColumnHeader
       {...rest}
@@ -27,7 +41,27 @@ function SortableColumnHeader({
       transition={transition}
       zIndex={isDragging ? 10 : undefined}
     >
-      {dragEnabled && (
+      {showSwapper && (
+        <Box
+          justifyContent={"center"}
+          position={"absolute"}
+          transform={"translate(-50%,-50%)"}
+          left={0}
+          top={"50%"}
+          py={1}
+          px={2}
+          rounded={"full"}
+          cursor={"pointer"}
+          bg={"bg"}
+          color={"fg.muted"}
+          border={"fg.muted"}
+          borderWidth={1}
+          onClick={onClickSwap}
+        >
+          <FontAwesomeIcon size="sm" icon={faArrowRightArrowLeft} />
+        </Box>
+      )}
+      {showDrag && (
         <Box
           justifyContent={"center"}
           position={"absolute"}

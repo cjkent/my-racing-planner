@@ -3,11 +3,10 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
 function SortableColumnCell({
-  dragEnabled,
   dragId,
   children,
   ...rest
-}: TableCellProps & { dragEnabled: boolean; dragId: number }) {
+}: TableCellProps & { dragId: number }) {
   const { setNodeRef, transform, transition, isDragging } = useSortable({
     id: dragId,
   });

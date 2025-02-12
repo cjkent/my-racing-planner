@@ -1,3 +1,4 @@
+import useScreenSize from "@/hooks/useScreenSize";
 import {
   setFavoriteSeriesItem,
   setFavoriteSeriesList,
@@ -31,6 +32,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
   const { seasonShowReorder } = useUi();
   const [highlightTrack, setHighlightTrack] = useState<number>(-1);
   const { onScroll } = useAppLayout();
+  const { width } = useScreenSize();
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -55,7 +57,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
       <SortableContext
         items={filteredFavorites}
         strategy={horizontalListSortingStrategy}
-        disabled={!seasonShowReorder}
+        disabled={!seasonShowReorder || !width.md}
       >
         <Table.ScrollArea borderRadius={"md"} onScroll={onScroll}>
           <Table.Root size="sm" showColumnBorder stickyHeader>

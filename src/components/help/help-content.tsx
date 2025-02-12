@@ -161,8 +161,7 @@ function HelpContent() {
 
         <List.Root>
           <List.Item>
-            <strong>Drag and drop to reorder</strong>: Enable columns drag and
-            drop to reorder series
+            <strong>Reorder columns</strong>: Enable series columns reordering
           </List.Item>
           <List.Item>
             <strong>Show content checkboxes</strong>: Show track checkboxes to

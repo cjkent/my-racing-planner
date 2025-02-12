@@ -4,6 +4,7 @@ All notable changes to the **"my-racing-planner"** project will be documented in
 
 ## 0.7.1
 
+- Replaced drag control by a swap button to reorder series columns at the season table
 - Removed Retired tracks from My Tracks table
 
 ## 0.7.0

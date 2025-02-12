@@ -56,8 +56,8 @@ function SeasonSettingsPopover() {
     },
     {
       id: "reorder",
-      text: "Drag and drop to reorder",
-      tooltip: "Enable columns drag and drop to reorder series",
+      text: "Reorder columns",
+      tooltip: "Enable series columns reordering",
       checked: seasonShowReorder,
       setChecked: setSeasonShowReorder,
     },
