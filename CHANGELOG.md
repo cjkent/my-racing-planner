@@ -2,6 +2,11 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.7.2
+
+- Update with data of Season 2 of 2025
+- Added current season text to top bar
+
 ## 0.7.1
 
 - Replaced drag control by a swap button to reorder series columns at the season table
