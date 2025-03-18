@@ -41,55 +41,57 @@ function SeasonTableHeader({
             const series =
               SERIES_JSON[seriesId.toString() as keyof typeof SERIES_JSON];
             return (
-              <SortableColumnHeader
-                dragId={seriesId}
-                showDragButton={seasonShowReorder}
-                onClickSwap={i !== 0 ? () => onClickSwap(i) : undefined}
-                key={seriesId}
-                width="(100/x)%"
-                position={"relative"}
-                bgColor={"currentBg"}
-              >
-                <>
-                  <VStack>
-                    {series.logo && (
-                      <Image
-                        loading="lazy"
-                        userSelect={"none"}
-                        draggable={false}
-                        h="40px"
-                        fit="contain"
-                        src={`${IR_URL.image}/img/logos/series/${series.logo}`}
-                      />
-                    )}
+              series && (
+                <SortableColumnHeader
+                  dragId={seriesId}
+                  showDragButton={seasonShowReorder}
+                  onClickSwap={i !== 0 ? () => onClickSwap(i) : undefined}
+                  key={seriesId}
+                  width="(100/x)%"
+                  position={"relative"}
+                  bgColor={"currentBg"}
+                >
+                  <>
+                    <VStack>
+                      {series.logo && (
+                        <Image
+                          loading="lazy"
+                          userSelect={"none"}
+                          draggable={false}
+                          h="40px"
+                          fit="contain"
+                          src={`${IR_URL.image}/img/logos/series/${series.logo}`}
+                        />
+                      )}
 
-                    <Collapsible.Root open={!scrolled}>
-                      <Collapsible.Content>
-                        <Tooltip
-                          lazyMount
-                          unmountOnExit
-                          content={series.name}
-                          showArrow
-                          positioning={{ placement: "bottom" }}
-                          openDelay={200}
-                          closeDelay={100}
-                        >
-                          <Text
-                            textAlign={"center"}
-                            lineClamp="2"
-                            maxW={"200px"}
+                      <Collapsible.Root open={!scrolled}>
+                        <Collapsible.Content>
+                          <Tooltip
+                            lazyMount
+                            unmountOnExit
+                            content={series.name}
+                            showArrow
+                            positioning={{ placement: "bottom" }}
+                            openDelay={200}
+                            closeDelay={100}
                           >
-                            {series.name}
-                          </Text>
-                        </Tooltip>
-                      </Collapsible.Content>
-                    </Collapsible.Root>
-                  </VStack>
-                  {seasonShowCarsDropdown && (
-                    <SeasonCarsPopover cars={series.cars} />
-                  )}
-                </>
-              </SortableColumnHeader>
+                            <Text
+                              textAlign={"center"}
+                              lineClamp="2"
+                              maxW={"200px"}
+                            >
+                              {series.name}
+                            </Text>
+                          </Tooltip>
+                        </Collapsible.Content>
+                      </Collapsible.Root>
+                    </VStack>
+                    {seasonShowCarsDropdown && (
+                      <SeasonCarsPopover cars={series.cars} />
+                    )}
+                  </>
+                </SortableColumnHeader>
+              )
             );
           }}
         />

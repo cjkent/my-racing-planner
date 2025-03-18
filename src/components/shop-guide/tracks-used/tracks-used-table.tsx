@@ -16,7 +16,7 @@ function TracksUsedTable() {
     () =>
       favoriteSeries.reduce((acc, curr) => {
         const series = SERIES_JSON[curr.toString() as keyof typeof SERIES_JSON];
-        series.weeks.forEach((week) => {
+        series?.weeks.forEach((week) => {
           const track =
             TRACKS_JSON[week.track.id.toString() as keyof typeof TRACKS_JSON];
           if (track.free) {

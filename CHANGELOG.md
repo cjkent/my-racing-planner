@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.7.3
+
+- Fixed an issue caused by previously favorite series was removed in the new season
+
 ## 0.7.2
 
 - Update with data of Season 2 of 2025
