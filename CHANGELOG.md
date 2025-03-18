@@ -2,6 +2,10 @@
 
 All notable changes to the **"my-racing-planner"** project will be documented in this file.
 
+## 0.7.4
+
+- Fixed an issue with the tracks not being found at the checkout page
+
 ## 0.7.3
 
 - Fixed an issue caused by previously favorite series was removed in the new season
