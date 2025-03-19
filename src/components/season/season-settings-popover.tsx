@@ -3,6 +3,7 @@ import {
   setSeasonShowCarsDropdown,
   setSeasonShowCheckboxes,
   setSeasonShowOwned,
+  setSeasonShowParticipation,
   setSeasonShowReorder,
   setSeasonShowThisWeek,
   setSeasonShowTrackConfig,
@@ -23,6 +24,7 @@ function SeasonSettingsPopover() {
     seasonShowThisWeek,
     seasonShowWishlist,
     seasonShowOwned,
+    seasonShowParticipation,
   } = useUi();
 
   const settingsList = [
@@ -81,6 +83,14 @@ function SeasonSettingsPopover() {
       tooltip: "Either owned items should be colored",
       checked: seasonShowOwned,
       setChecked: setSeasonShowOwned,
+    },
+    {
+      id: "minParticipation",
+      text: "Show participation credit program",
+      tooltip:
+        "Either series you have enough tracks to get reward should be colored",
+      checked: seasonShowParticipation,
+      setChecked: setSeasonShowParticipation,
     },
   ];
 

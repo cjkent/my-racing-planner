@@ -7,14 +7,18 @@ import SERIES_JSON from "../../ir-data/series.json";
 import { useAppLayout } from "../app/useAppLayout";
 import { Tooltip } from "../ui/tooltip";
 import SeasonCarsPopover from "./season-cars-popover";
+import SeasonTableHeaderParticipation from "./season-table-header-participation";
 import SortableColumnHeader from "./sortable-column-header";
 
 function SeasonTableHeader({
   filteredFavorites,
+  seriesDateMap,
 }: {
   filteredFavorites: number[];
+  seriesDateMap: { [key: number]: any };
 }) {
-  const { seasonShowReorder, seasonShowCarsDropdown } = useUi();
+  const { seasonShowReorder, seasonShowCarsDropdown, seasonShowParticipation } =
+    useUi();
   const { scrolled } = useAppLayout();
   const { favoriteSeries } = useIr();
 
@@ -51,45 +55,53 @@ function SeasonTableHeader({
                   position={"relative"}
                   bgColor={"currentBg"}
                 >
-                  <>
-                    <VStack>
-                      {series.logo && (
-                        <Image
-                          loading="lazy"
-                          userSelect={"none"}
-                          draggable={false}
-                          h="40px"
-                          fit="contain"
-                          src={`${IR_URL.image}/img/logos/series/${series.logo}`}
-                        />
-                      )}
-
-                      <Collapsible.Root open={!scrolled}>
-                        <Collapsible.Content>
-                          <Tooltip
-                            lazyMount
-                            unmountOnExit
-                            content={series.name}
-                            showArrow
-                            positioning={{ placement: "bottom" }}
-                            openDelay={200}
-                            closeDelay={100}
-                          >
-                            <Text
-                              textAlign={"center"}
-                              lineClamp="2"
-                              maxW={"200px"}
-                            >
-                              {series.name}
-                            </Text>
-                          </Tooltip>
-                        </Collapsible.Content>
-                      </Collapsible.Root>
-                    </VStack>
-                    {seasonShowCarsDropdown && (
-                      <SeasonCarsPopover cars={series.cars} />
+                  <VStack
+                    gap={1}
+                    pb={seasonShowParticipation && !scrolled ? "10px" : 0}
+                  >
+                    {series.logo && (
+                      <Image
+                        loading="lazy"
+                        userSelect={"none"}
+                        draggable={false}
+                        h="40px"
+                        fit="contain"
+                        src={`${IR_URL.image}/img/logos/series/${series.logo}`}
+                      />
                     )}
-                  </>
+
+                    <Collapsible.Root open={!scrolled}>
+                      <Collapsible.Content>
+                        <Tooltip
+                          lazyMount
+                          unmountOnExit
+                          content={series.name}
+                          showArrow
+                          positioning={{ placement: "bottom" }}
+                          openDelay={200}
+                          closeDelay={100}
+                        >
+                          <Text
+                            textAlign={"center"}
+                            lineClamp="2"
+                            maxW={"200px"}
+                          >
+                            {series.name}
+                          </Text>
+                        </Tooltip>
+                      </Collapsible.Content>
+                    </Collapsible.Root>
+                  </VStack>
+
+                  {seasonShowParticipation && (
+                    <SeasonTableHeaderParticipation
+                      seriesTracks={seriesDateMap[seriesId]}
+                    />
+                  )}
+
+                  {seasonShowCarsDropdown && (
+                    <SeasonCarsPopover cars={series.cars} />
+                  )}
                 </SortableColumnHeader>
               )
             );
