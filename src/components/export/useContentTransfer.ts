@@ -25,12 +25,25 @@ function useContentTransfer() {
 
   const applyData = () => {
     if (!hasNewData) return;
-    const myCars = params.myCars?.split("-").map((n) => parseInt(n));
-    const myTracks = params.myTracks?.split("-").map((n) => parseInt(n));
-    const wishCars = params.wishCars?.split("-").map((n) => parseInt(n));
-    const wishTracks = params.wishTracks?.split("-").map((n) => parseInt(n));
+    const myCars = params.myCars
+      ?.split("-")
+      .filter(Boolean)
+      .map((n) => parseInt(n));
+    const myTracks = params.myTracks
+      ?.split("-")
+      .filter(Boolean)
+      .map((n) => parseInt(n));
+    const wishCars = params.wishCars
+      ?.split("-")
+      .filter(Boolean)
+      .map((n) => parseInt(n));
+    const wishTracks = params.wishTracks
+      ?.split("-")
+      .filter(Boolean)
+      .map((n) => parseInt(n));
     const favoriteSeries = params.favoriteSeries
       ?.split("-")
+      .filter(Boolean)
       .map((n) => parseInt(n));
 
     setContentStore({ myCars, myTracks, wishCars, wishTracks, favoriteSeries });
