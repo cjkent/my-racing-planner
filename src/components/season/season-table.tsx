@@ -68,7 +68,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
             <Table.Body>
               <For
                 each={weeksStartDates}
-                children={(date) => (
+                children={(date, index) => (
                   <SeasonTableRow
                     seriesDateMap={seriesDateMap}
                     key={date}
@@ -76,6 +76,7 @@ function SeasonTable({ filteredFavorites }: { filteredFavorites: number[] }) {
                     filteredFavorites={filteredFavorites}
                     highlightTrack={highlightTrack}
                     setHighlightTrack={setHighlightTrack}
+                    weekIndex={index}
                   />
                 )}
               />
