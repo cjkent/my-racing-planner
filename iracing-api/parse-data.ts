@@ -238,6 +238,7 @@ const isLegacy = (name: string) => {
           name: week.track.track_name,
           config: week.track.config_name,
         },
+        rainChance: week.weather?.weather_summary?.precip_chance ?? 0,
       })),
     }))
     .reduce((acc, curr) => ({ ...acc, [curr.id]: curr }), {});

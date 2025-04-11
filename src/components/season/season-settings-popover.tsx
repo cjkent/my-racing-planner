@@ -4,6 +4,7 @@ import {
   setSeasonShowCheckboxes,
   setSeasonShowOwned,
   setSeasonShowParticipation,
+  setSeasonShowRain,
   setSeasonShowReorder,
   setSeasonShowThisWeek,
   setSeasonShowTrackConfig,
@@ -25,6 +26,7 @@ function SeasonSettingsPopover() {
     seasonShowWishlist,
     seasonShowOwned,
     seasonShowParticipation,
+    seasonShowRain,
   } = useUi();
 
   const settingsList = [
@@ -91,6 +93,13 @@ function SeasonSettingsPopover() {
         "Either series you have enough tracks to get reward should be colored",
       checked: seasonShowParticipation,
       setChecked: setSeasonShowParticipation,
+    },
+    {
+      id: "rain",
+      text: "Show rain",
+      tooltip: "Show rain indicators for tracks with chance of rain",
+      checked: seasonShowRain,
+      setChecked: setSeasonShowRain,
     },
   ];
 

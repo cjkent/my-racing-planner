@@ -7,6 +7,7 @@ type TWeek = {
   date: string;
   track: { id: number; name: string };
   cars?: { id: number; name: string }[];
+  rainChance?: number;
 };
 
 export function getPreviousTuesday(date: string): string {
@@ -59,6 +60,7 @@ const useSeason = () => {
             return {
               ...acc2,
               [date]: curr2.track.id,
+              [`${date}_rainChance`]: curr2.rainChance || 0,
               ...(series.switching
                 ? { [`${date}_cars`]: curr2.cars?.map((c) => c.id) }
                 : {}),
