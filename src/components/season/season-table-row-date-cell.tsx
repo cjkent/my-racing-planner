@@ -1,12 +1,14 @@
-import { Table, Text } from "@chakra-ui/react";
+import { Flex, Table, Text } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 
 function SeasonTableRowDateCell({
   date,
   thisWeek,
+  weekNumber,
 }: {
   date: string;
   thisWeek: boolean;
+  weekNumber: number;
 }) {
   const locale = "en-US";
   const longFormat: Intl.DateTimeFormatOptions = {
@@ -44,9 +46,14 @@ function SeasonTableRowDateCell({
         openDelay={200}
         closeDelay={100}
       >
-        <Text textAlign={"right"}>
-          {weekStart.toLocaleDateString("en-US", shortFormat)}
-        </Text>
+        <Flex direction="column" alignItems="center">
+          <Text textAlign={"center"}>
+            {weekStart.toLocaleDateString("en-US", shortFormat)}
+          </Text>
+          <Text fontSize="xs" textAlign="center" opacity="0.8">
+            (week {weekNumber})
+          </Text>
+        </Flex>
       </Tooltip>
     </Table.Cell>
   );
