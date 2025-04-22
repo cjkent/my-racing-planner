@@ -19,12 +19,17 @@ function SeasonTableHeaderParticipation({
 
   const { numberOfTracks, tracksNeeded, enoughTracks } = useMemo(() => {
     const filteredTracks = Object.fromEntries(
-      Object.entries(seriesTracks).filter(([key]) => !key.includes("_cars")),
+      Object.entries(seriesTracks).filter(
+        ([key]) => !key.includes("_cars") && !key.includes("_rainChance")
+      ),
     );
 
     const tracks = Object.values(filteredTracks).map(
-      (trackId) => TRACKS_JSON[trackId.toString() as keyof typeof TRACKS_JSON],
-    ) as TContent[];
+      (trackId) => {
+        const track = TRACKS_JSON[trackId.toString() as keyof typeof TRACKS_JSON];
+        return track;
+      }
+    ).filter(Boolean) as TContent[];
 
     const tracksNeeded = Math.ceil(tracks.length * PARTICIPATION_THRESHOLD);
 

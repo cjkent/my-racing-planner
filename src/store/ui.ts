@@ -30,6 +30,7 @@ export const useUiStorePersist = create(
       seasonShowOwned: true,
       seasonShowParticipation: false,
       seasonShowThisWeek: true,
+      seasonShowRain: true,
       seasonCategory: ECarCategories.all,
       shopVolumeDiscount: true,
       shopLoyaltyDiscount: false,
@@ -68,6 +69,9 @@ export const setSeasonShowParticipation = (value: boolean) =>
 export const setSeasonShowThisWeek = (value: boolean) =>
   useUiStorePersist.setState(() => ({ seasonShowThisWeek: value }));
 
+export const setSeasonShowRain = (value: boolean) =>
+  useUiStorePersist.setState(() => ({ seasonShowRain: value }));
+
 export const setSeasonCategory = (value: ECarCategories) =>
   useUiStorePersist.setState(() => ({ seasonCategory: value }));
 
@@ -103,6 +107,9 @@ export const useUi = () => {
   const seasonShowThisWeek = useUiStorePersist(
     (state) => state.seasonShowThisWeek,
   );
+  const seasonShowRain = useUiStorePersist(
+    (state) => state.seasonShowRain,
+  );
   const seasonCategory = useUiStorePersist((state) => state.seasonCategory);
   const shopVolumeDiscount = useUiStorePersist(
     (state) => state.shopVolumeDiscount,
@@ -122,6 +129,7 @@ export const useUi = () => {
     seasonShowOwned,
     seasonShowParticipation,
     seasonShowThisWeek,
+    seasonShowRain,
     seasonCategory,
     shopVolumeDiscount,
     shopLoyaltyDiscount,
