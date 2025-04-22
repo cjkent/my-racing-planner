@@ -96,7 +96,7 @@ function SeasonSettingsPopover() {
     },
     {
       id: "rain",
-      text: "Show rain",
+      text: "Show rain chance",
       tooltip: "Show rain indicators for tracks with chance of rain",
       checked: seasonShowRain,
       setChecked: setSeasonShowRain,

@@ -1,4 +1,4 @@
-import { Flex, Table, Text } from "@chakra-ui/react";
+import { Table, Text, VStack } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 
 function SeasonTableRowDateCell({
@@ -46,14 +46,14 @@ function SeasonTableRowDateCell({
         openDelay={200}
         closeDelay={100}
       >
-        <Flex direction="column" alignItems="center">
+        <VStack alignItems="center" gap={0}>
           <Text textAlign={"center"}>
             {weekStart.toLocaleDateString("en-US", shortFormat)}
           </Text>
           <Text fontSize="xs" textAlign="center" opacity="0.8">
             (week {weekNumber})
           </Text>
-        </Flex>
+        </VStack>
       </Tooltip>
     </Table.Cell>
   );

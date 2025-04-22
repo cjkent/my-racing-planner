@@ -7,6 +7,7 @@ const contributors = [
   { name: "Adriano Lima", github: "adrianulima" },
   { name: "Juni Lima", github: "junilima" },
   { name: "Daniel López", github: "raikwallace" },
+  { name: "Chris Kent", github: "cjkent" },
 ];
 
 function AboutContent() {

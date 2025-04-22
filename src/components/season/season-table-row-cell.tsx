@@ -1,5 +1,5 @@
 import { useUi } from "@/store/ui";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import React from "react";
 import ContentCheckbox from "../content/content-checkbox";
 import SeasonTableCarsPopover from "./season-table-cars-popover";
@@ -46,10 +46,11 @@ function SeasonTableRowCell({
   const cars: number[] =
     seriesDateMap?.[seriesId as keyof typeof seriesDateMap]?.[`${date}_cars`] ||
     [];
-  
+
   const rainChance: number =
-    seriesDateMap?.[seriesId as keyof typeof seriesDateMap]?.[`${date}_rainChance`] ||
-    0;
+    seriesDateMap?.[seriesId as keyof typeof seriesDateMap]?.[
+      `${date}_rainChance`
+    ] || 0;
 
   const color = {
     _dark: free
@@ -110,57 +111,56 @@ function SeasonTableRowCell({
       color={color}
     >
       {seasonShowRain && rainChance > 0 && (
-        <Box 
-          position="absolute" 
-          top="2px" 
-          right="2px"
+        <Text
+          position="absolute"
+          top={1}
+          right={1}
           fontSize="14px"
           lineHeight="1"
           zIndex="1"
           title={`${rainChance}% chance of rain`}
+          userSelect={"none"}
         >
           💧
-        </Box>
+        </Text>
       )}
-      <Flex direction="column" position="relative">
+      <Text
+        userSelect={"none"}
+        textAlign={"center"}
+        lineClamp="3"
+        lineHeight={"18px"}
+      >
+        {name}
+      </Text>
+      {seasonShowTrackConfig && config && (
         <Text
           userSelect={"none"}
           textAlign={"center"}
           lineClamp="3"
-          lineHeight={"18px"}
+          lineHeight={"12px"}
+          fontSize={"10px"}
+          pt="2px"
         >
-          {name}
+          ({config})
         </Text>
-        {seasonShowTrackConfig && config && (
-          <Text
-            userSelect={"none"}
-            textAlign={"center"}
-            lineClamp="3"
-            lineHeight={"12px"}
-            fontSize={"10px"}
-            pt="2px"
-          >
-            ({config})
-          </Text>
-        )}
-        {seasonShowCarsDropdown && cars.length > 0 && (
-          <SeasonTableCarsPopover cars={cars} />
-        )}
-        {seasonShowCheckboxes && (
-          <ContentCheckbox
-            size={"xs"}
-            position={"absolute"}
-            left={1}
-            top={1}
-            content={"tracks"}
-            sku={sku}
-            contentId={id}
-            free={free}
-            owned={owned}
-            wish={wish}
-          />
-        )}
-      </Flex>
+      )}
+      {seasonShowCarsDropdown && cars.length > 0 && (
+        <SeasonTableCarsPopover cars={cars} />
+      )}
+      {seasonShowCheckboxes && (
+        <ContentCheckbox
+          size={"xs"}
+          position={"absolute"}
+          left={1}
+          top={1}
+          content={"tracks"}
+          sku={sku}
+          contentId={id}
+          free={free}
+          owned={owned}
+          wish={wish}
+        />
+      )}
     </SortableColumnCell>
   );
 }
