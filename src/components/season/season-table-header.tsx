@@ -1,7 +1,9 @@
 import { IR_URL } from "@/ir-data/utils/urls";
 import { setFavoriteSeriesList, useIr } from "@/store/ir";
 import { useUi } from "@/store/ui";
-import { Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
+import { createSeriesScheduleDescription } from "@/utils/race-schedule";
+import { createSimpleScheduleDescription } from "@/utils/simple-schedule";
+import { Box, Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
 import { arrayMove } from "@dnd-kit/sortable";
 import SERIES_JSON from "../../ir-data/series.json";
 import { useAppLayout } from "../app/useAppLayout";
@@ -44,6 +46,15 @@ function SeasonTableHeader({
           children={(seriesId, i) => {
             const series =
               SERIES_JSON[seriesId.toString() as keyof typeof SERIES_JSON];
+            
+            // Generate race format description
+            const raceFormatDescription = series ? 
+              createSimpleScheduleDescription(series.laps, series.duration) : "";
+              
+            // Generate schedule description from actual race schedule data
+            const scheduleDescription = series && series.raceSchedule ? 
+              createSeriesScheduleDescription(series.raceSchedule) : "";
+              
             return (
               series && (
                 <SortableColumnHeader
@@ -58,6 +69,7 @@ function SeasonTableHeader({
                   <VStack
                     gap={1}
                     pb={seasonShowParticipation && !scrolled ? "10px" : 0}
+                    width="100%"
                   >
                     {series.logo && (
                       <Image
@@ -71,24 +83,53 @@ function SeasonTableHeader({
                     )}
 
                     <Collapsible.Root open={!scrolled}>
-                      <Collapsible.Content>
-                        <Tooltip
-                          lazyMount
-                          unmountOnExit
-                          content={series.name}
-                          showArrow
-                          positioning={{ placement: "bottom" }}
-                          openDelay={200}
-                          closeDelay={100}
-                        >
-                          <Text
-                            textAlign={"center"}
-                            lineClamp="2"
-                            maxW={"200px"}
+                      <Collapsible.Content style={{ width: '100%' }}>
+                        <Box width="100%" px={1}>
+                          <Tooltip
+                            lazyMount
+                            unmountOnExit
+                            content={series.name}
+                            showArrow
+                            positioning={{ placement: "bottom" }}
+                            openDelay={200}
+                            closeDelay={100}
                           >
-                            {series.name}
-                          </Text>
-                        </Tooltip>
+                            <Text
+                              textAlign={"center"}
+                              lineClamp="2"
+                              width="100%"
+                            >
+                              {series.name}
+                            </Text>
+                          </Tooltip>
+                          
+                          {raceFormatDescription && (
+                            <Text
+                              fontSize="xs"
+                              color="gray.500"
+                              textAlign="center"
+                              width="100%"
+                              whiteSpace="normal"
+                              wordBreak="break-word"
+                            >
+                              {raceFormatDescription}
+                            </Text>
+                          )}
+                          
+                          {scheduleDescription && (
+                            <Text
+                              fontSize="xs"
+                              color="gray.400"
+                              textAlign="center"
+                              width="100%"
+                              mt="1px"
+                              whiteSpace="normal"
+                              wordBreak="break-word"
+                            >
+                              {scheduleDescription}
+                            </Text>
+                          )}
+                        </Box>
                       </Collapsible.Content>
                     </Collapsible.Root>
                   </VStack>
