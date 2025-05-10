@@ -5,6 +5,7 @@ import { createSeriesScheduleDescription } from "@/utils/race-schedule";
 import { createSimpleScheduleDescription } from "@/utils/simple-schedule";
 import { Box, Collapsible, For, Image, Table, Text, VStack } from "@chakra-ui/react";
 import { arrayMove } from "@dnd-kit/sortable";
+import { useMemo } from "react";
 import SERIES_JSON from "../../ir-data/series.json";
 import { useAppLayout } from "../app/useAppLayout";
 import { Tooltip } from "../ui/tooltip";
@@ -19,10 +20,24 @@ function SeasonTableHeader({
   filteredFavorites: number[];
   seriesDateMap: { [key: number]: any };
 }) {
-  const { seasonShowReorder, seasonShowCarsDropdown, seasonShowParticipation } =
-    useUi();
+  const { 
+    seasonShowReorder, 
+    seasonShowCarsDropdown, 
+    seasonShowParticipation,
+    seasonShowSchedules,
+    seasonUseLocalTimezone
+  } = useUi();
   const { scrolled } = useAppLayout();
   const { favoriteSeries } = useIr();
+
+  // Calculate the local timezone offset in minutes
+  const timezoneOffsetMinutes = useMemo(() => {
+    if (!seasonUseLocalTimezone) return 0;
+    // Get the local timezone offset in minutes
+    // Note: getTimezoneOffset() returns the offset in minutes, but with opposite sign
+    // e.g., for UTC+2, it returns -120, so we need to negate it
+    return -new Date().getTimezoneOffset();
+  }, [seasonUseLocalTimezone]);
 
   const onClickSwap = (index: number) => {
     setFavoriteSeriesList(arrayMove(favoriteSeries, index, index - 1));
@@ -48,12 +63,13 @@ function SeasonTableHeader({
               SERIES_JSON[seriesId.toString() as keyof typeof SERIES_JSON];
             
             // Generate race format description
-            const raceFormatDescription = series ? 
+            const raceFormatDescription = series && seasonShowSchedules ? 
               createSimpleScheduleDescription(series.laps, series.duration) : "";
               
             // Generate schedule description from actual race schedule data
-            const scheduleDescription = series && series.raceSchedule ? 
-              createSeriesScheduleDescription(series.raceSchedule) : "";
+            // Pass the timezone offset if using local timezone
+            const scheduleDescription = series && series.raceSchedule && seasonShowSchedules ? 
+              createSeriesScheduleDescription(series.raceSchedule, timezoneOffsetMinutes) : "";
               
             return (
               series && (
@@ -127,6 +143,9 @@ function SeasonTableHeader({
                               wordBreak="break-word"
                             >
                               {scheduleDescription}
+                              {seasonUseLocalTimezone && (
+                                <Text as="span" fontStyle="italic"> (local time)</Text>
+                              )}
                             </Text>
                           )}
                         </Box>
