@@ -1,0 +1,58 @@
+Races every 15 minutes
+Races hourly at :45 past
+Races at 15 past every 2 hours on the odd hour
+Races every hour on the hour
+Races every hour at :45
+Races every even 2 hours on the hour
+Races every odd 2 hours on the hour
+Races at 15 past every 2 hours on the even hour
+Races hourly at the top of the hour
+Races every hour at :15 past
+Races hourly at :30
+Races 45 past every 2 hours
+Races on the hour every hour
+Races every odd 2 hours at :15 past
+Races every even 2 hours at :15 past
+Races hours at :45
+Races every 2 hours on the hour
+Races every odd 2 hours at :45 past
+Races every even 2 hours at :30 past
+Races every hour at :15 after
+Races every hour at :00
+Races every 30 minutes at :15 and :45 after
+Races every odd 2 hours at :30 past
+Races every even hour at :30 past
+Races every hour at :30
+Races at :45 past every hour
+Races on Saturday at 7 & 17:00 GMT & Sunday at 0 & 13 GMT
+Races every hour at :30 past
+Races every hour at :15
+Races every even 2 hours at 45 past
+Races every even hour at :45
+Races on Saturday at 1 & 13 GMT
+Races Saturdays 9 and 19 GMT and Sundays 17 GMT
+Races every other Saturday at 4 & 15 GMT and Sunday at 0 GMT, 20 GMT
+Races every odd two hours on the hour
+Races every even 2 hours at :45 past
+Races on every hour on the hour | Qualifying every hour at :30
+Races every odd hour at :30 past
+Races every odd hour at :45
+Races every other Saturday at 7, 18 GMT and Sunday at 14 GMT
+Races every other Saturday at 2, 7, 18 GMT and Sunday at 14 GMT
+Races every even two hours at :00
+Races every 30 minutes at :00 and :30 after
+Races at 15 past every hour
+Races every even hour at :00
+Races Thur & Sat at 10, 19 GMT & Fri & Sun at 1,4 GMT
+Races Fri & Sun at 10, 19 GMT & Sat & Mon at 1,4 GMT
+Races every odd 2 hours at :00
+Races Tue at 2 GMT, Sun at 7 & 22 GMT, & Mon at 18 GMT
+Races every hour at half past
+Races every hour at :45 past
+Races hourly at :00
+Races hourly at :15
+Races hourly at :45
+Races hourly on the 00
+Races every thirty minutes on the hour and :30 past
+Races every 2 hours on the odd hour
+Races every 2 hours on the even hour
