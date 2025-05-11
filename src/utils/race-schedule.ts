@@ -139,7 +139,7 @@ function createDailyScheduleDescription(hours: number, minutes: number, repeatMi
     return `Races every 15 minutes`;
   } else if (repeatMinutes === 30) {
     if (minutes === 0) {
-      return `Races every 30 minutes at :00 and :30 after`;
+      return `Races every 30 minutes at :00 and :30`;
     } else if (minutes === 15) {
       return `Races every 30 minutes at :15 and :45`;
     } else {
@@ -163,7 +163,7 @@ function createDailyScheduleDescription(hours: number, minutes: number, repeatMi
       } else if (minutes === 45) {
         return `Races every even 2 hours at :45`;
       } else {
-        return `Races every even 2 hours at :${formatMinutesStr(minutes)} past`;
+        return `Races every even 2 hours at :${formatMinutesStr(minutes)}`;
       }
     } else {
       if (minutes === 0) {
@@ -171,7 +171,7 @@ function createDailyScheduleDescription(hours: number, minutes: number, repeatMi
       } else if (minutes === 45) {
         return `Races every odd 2 hours at :45`;
       } else {
-        return `Races every odd 2 hours at :${formatMinutesStr(minutes)} past`;
+        return `Races every odd 2 hours at :${formatMinutesStr(minutes)}`;
       }
     }
   } else {

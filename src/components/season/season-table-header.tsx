@@ -38,6 +38,16 @@ function SeasonTableHeader({
     // e.g., for UTC+2, it returns -120, so we need to negate it
     return -new Date().getTimezoneOffset();
   }, [seasonUseLocalTimezone]);
+  
+  // Get the local timezone name
+  const timezoneName = useMemo(() => {
+    if (!seasonUseLocalTimezone) return "";
+    try {
+      return Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
+    } catch (e) {
+      return "Local time";
+    }
+  }, [seasonUseLocalTimezone]);
 
   const onClickSwap = (index: number) => {
     setFavoriteSeriesList(arrayMove(favoriteSeries, index, index - 1));
@@ -139,20 +149,31 @@ function SeasonTableHeader({
                           )}
                           
                           {scheduleDescription && (
-                            <Text
-                              fontSize="xs"
-                              color="gray.400"
-                              textAlign="center"
-                              width="100%"
-                              mt="1px"
-                              whiteSpace="normal"
-                              wordBreak="break-word"
-                            >
-                              {scheduleDescription}
+                            <VStack spacing="0" width="100%">
+                              <Text
+                                fontSize="xs"
+                                color="gray.400"
+                                textAlign="center"
+                                width="100%"
+                                mt="1px"
+                                whiteSpace="normal"
+                                wordBreak="break-word"
+                              >
+                                {scheduleDescription}
+                              </Text>
+                              
                               {seasonUseLocalTimezone && hasLongRepeatInterval && (
-                                <Text as="span" fontStyle="italic"> (local time)</Text>
+                                <Text
+                                  fontSize="xs"
+                                  color="gray.400"
+                                  textAlign="center"
+                                  width="100%"
+                                  fontStyle="italic"
+                                >
+                                  {timezoneName} time
+                                </Text>
                               )}
-                            </Text>
+                            </VStack>
                           )}
                         </Box>
                       </Collapsible.Content>

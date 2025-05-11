@@ -27,7 +27,7 @@ describe('Race Schedule Utilities', () => {
           startDate: '2025-02-11',
           superSession: false
         };
-        expect(createReadableSchedule(descriptor)).toBe('Races every 30 minutes at :00 and :30 after');
+        expect(createReadableSchedule(descriptor)).toBe('Races every 30 minutes at :00 and :30');
       });
 
       test('Every 30 minutes starting at :15', () => {
@@ -40,7 +40,7 @@ describe('Race Schedule Utilities', () => {
           startDate: '2025-02-11',
           superSession: false
         };
-        expect(createReadableSchedule(descriptor)).toBe('Races every 30 minutes at :15 and :45 after');
+        expect(createReadableSchedule(descriptor)).toBe('Races every 30 minutes at :15 and :45');
       });
 
       test('Every hour on the hour', () => {
@@ -108,7 +108,7 @@ describe('Race Schedule Utilities', () => {
         expect(createReadableSchedule(descriptor)).toBe('Races every even 2 hours on the hour');
       });
 
-      test('Every even 2 hours at :15 past', () => {
+      test('Every even 2 hours at :15', () => {
         const descriptor = {
           dayOffset: [0, 1, 2, 3, 4, 5, 6],
           firstSessionTime: '02:15:00',
@@ -118,7 +118,7 @@ describe('Race Schedule Utilities', () => {
           startDate: '2025-02-11',
           superSession: false
         };
-        expect(createReadableSchedule(descriptor)).toBe('Races every even 2 hours at :15 past');
+        expect(createReadableSchedule(descriptor)).toBe('Races every even 2 hours at :15');
       });
 
       test('Every odd 2 hours on the hour', () => {
@@ -134,7 +134,7 @@ describe('Race Schedule Utilities', () => {
         expect(createReadableSchedule(descriptor)).toBe('Races every odd 2 hours on the hour');
       });
 
-      test('Every odd 2 hours at :45 past', () => {
+      test('Every odd 2 hours at :45', () => {
         const descriptor = {
           dayOffset: [0, 1, 2, 3, 4, 5, 6],
           firstSessionTime: '01:45:00',
@@ -144,7 +144,7 @@ describe('Race Schedule Utilities', () => {
           startDate: '2025-02-11',
           superSession: false
         };
-        expect(createReadableSchedule(descriptor)).toBe('Races every odd 2 hours at :45 past');
+        expect(createReadableSchedule(descriptor)).toBe('Races every odd 2 hours at :45');
       });
 
       test('Custom interval (45 minutes)', () => {
