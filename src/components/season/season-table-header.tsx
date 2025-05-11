@@ -71,6 +71,12 @@ function SeasonTableHeader({
             const scheduleDescription = series && series.raceSchedule && seasonShowSchedules ? 
               createSeriesScheduleDescription(series.raceSchedule, timezoneOffsetMinutes) : "";
               
+            // Check if any race time descriptor has repeatMinutes > 60
+            const hasLongRepeatInterval = series && series.raceSchedule ? 
+              series.raceSchedule.some((descriptor: any) => 
+                descriptor.repeatMinutes && descriptor.repeatMinutes > 60
+              ) : false;
+              
             return (
               series && (
                 <SortableColumnHeader
@@ -143,7 +149,7 @@ function SeasonTableHeader({
                               wordBreak="break-word"
                             >
                               {scheduleDescription}
-                              {seasonUseLocalTimezone && (
+                              {seasonUseLocalTimezone && hasLongRepeatInterval && (
                                 <Text as="span" fontStyle="italic"> (local time)</Text>
                               )}
                             </Text>

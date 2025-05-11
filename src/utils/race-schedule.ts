@@ -141,13 +141,15 @@ function createDailyScheduleDescription(hours: number, minutes: number, repeatMi
     if (minutes === 0) {
       return `Races every 30 minutes at :00 and :30 after`;
     } else if (minutes === 15) {
-      return `Races every 30 minutes at :15 and :45 after`;
+      return `Races every 30 minutes at :15 and :45`;
     } else {
       return `Races every 30 minutes starting at ${formatMinutesStr(minutes)} past the hour`;
     }
   } else if (repeatMinutes === 60) {
     if (minutes === 0) {
       return `Races every hour on the hour`;
+    } else if (minutes === 45) {
+      return `Races every hour at :45`;
     } else {
       return `Races every hour at :${formatMinutesStr(minutes)}`;
     }
@@ -158,12 +160,16 @@ function createDailyScheduleDescription(hours: number, minutes: number, repeatMi
     if (isEvenHour) {
       if (minutes === 0) {
         return `Races every even 2 hours on the hour`;
+      } else if (minutes === 45) {
+        return `Races every even 2 hours at :45`;
       } else {
         return `Races every even 2 hours at :${formatMinutesStr(minutes)} past`;
       }
     } else {
       if (minutes === 0) {
         return `Races every odd 2 hours on the hour`;
+      } else if (minutes === 45) {
+        return `Races every odd 2 hours at :45`;
       } else {
         return `Races every odd 2 hours at :${formatMinutesStr(minutes)} past`;
       }
@@ -274,6 +280,8 @@ function createTimePattern(hours: number, minutes: number, repeatMinutes: number
   } else if (repeatMinutes === 60) {
     if (minutes === 0) {
       return `every hour on the hour`;
+    } else if (minutes === 45) {
+      return `every hour at :45`;
     } else {
       return `every hour at :${formatMinutesStr(minutes)} past`;
     }
@@ -281,15 +289,23 @@ function createTimePattern(hours: number, minutes: number, repeatMinutes: number
     const isEvenHour = hours % 2 === 0;
     
     if (isEvenHour) {
-      return `every even 2 hours starting at ${timeStr}`;
+      if (minutes === 45) {
+        return `every even 2 hours at :45`;
+      } else {
+        return `every even 2 hours starting at ${timeStr}`;
+      }
     } else {
-      return `every odd 2 hours starting at ${timeStr}`;
+      if (minutes === 45) {
+        return `every odd 2 hours at :45`;
+      } else {
+        return `every odd 2 hours starting at ${timeStr}`;
+      }
     }
   } else if (repeatMinutes === 30) {
     if (minutes === 0) {
       return `every 30 minutes at :00 and :30 past`;
     } else if (minutes === 15) {
-      return `every 30 minutes at :15 and :45 past`;
+      return `every 30 minutes at :15 and :45`;
     } else {
       return `every 30 minutes starting at ${timeStr}`;
     }
