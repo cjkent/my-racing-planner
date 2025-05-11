@@ -39,9 +39,11 @@ function SeasonTableHeader({
     return -new Date().getTimezoneOffset();
   }, [seasonUseLocalTimezone]);
   
-  // Get the local timezone name
+  // Get the timezone name
   const timezoneName = useMemo(() => {
-    if (!seasonUseLocalTimezone) return "";
+    if (!seasonUseLocalTimezone) {
+      return "UTC";
+    }
     try {
       return Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
     } catch (e) {
@@ -162,7 +164,7 @@ function SeasonTableHeader({
                                 {scheduleDescription}
                               </Text>
                               
-                              {seasonUseLocalTimezone && hasLongRepeatInterval && (
+                              {hasLongRepeatInterval && (
                                 <Text
                                   fontSize="xs"
                                   color="gray.400"
@@ -170,7 +172,7 @@ function SeasonTableHeader({
                                   width="100%"
                                   fontStyle="italic"
                                 >
-                                  {timezoneName} time
+                                  {timezoneName === "UTC" ? "UTC" : `${timezoneName} time`}
                                 </Text>
                               )}
                             </VStack>
