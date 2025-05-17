@@ -133,6 +133,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 26,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "33": {
@@ -266,6 +285,25 @@
           "name": "Martinsville Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 43,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -408,6 +446,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 36,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "45": {
@@ -542,6 +599,25 @@
           "name": "The Bullring"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -936,6 +1012,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 72,
+        "startDate": "2025-02-11",
+        "superSession": false
+      }
     ]
   },
   "53": {
@@ -1076,6 +1171,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 70,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "58": {
@@ -1215,6 +1329,25 @@
           "name": "Michigan International Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 99,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -1611,6 +1744,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 84,
+        "startDate": "2025-02-11",
+        "superSession": false
+      }
     ]
   },
   "63": {
@@ -1749,6 +1901,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 37,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -1890,6 +2061,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 62,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "74": {
@@ -2029,6 +2219,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "102": {
@@ -2166,6 +2375,25 @@
           "config": "Asphalt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 51,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -2306,6 +2534,25 @@
           "config": "Oval"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 51,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -2450,6 +2697,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 39,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -2601,6 +2867,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 24,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "131": {
@@ -2739,6 +3024,25 @@
           "name": "Southern National Motorsports Park"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 37,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -2880,6 +3184,25 @@
           "config": "Oval"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 75,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -3023,6 +3346,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 123,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "139": {
@@ -3165,6 +3507,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 26,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "164": {
@@ -3304,6 +3665,25 @@
           "name": "Michigan International Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 47,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -3447,6 +3827,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 43,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "167": {
@@ -3588,6 +3987,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 33,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "182": {
@@ -3726,6 +4144,25 @@
           "config": "Asphalt"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -3867,6 +4304,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 36,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "191": {
@@ -4006,6 +4462,25 @@
           "name": "Michigan International Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 55,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -4148,6 +4623,25 @@
           "config": "Roval"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 50,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -4523,6 +5017,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 252,
+        "superSession": false
+      }
     ]
   },
   "210": {
@@ -4666,6 +5167,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 39,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "223": {
@@ -4801,6 +5321,25 @@
           "config": "Asphalt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 46,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -4953,6 +5492,25 @@
           "config": "Gesamtstrecke 24h"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 54,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -5328,6 +5886,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 252,
+        "superSession": false
+      }
     ]
   },
   "231": {
@@ -5468,6 +6033,25 @@
           "name": "Circuit Gilles Villeneuve"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -5620,6 +6204,13 @@
           "config": "Gesamtstrecke 24h"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 194,
+        "superSession": false
       }
     ]
   },
@@ -5774,6 +6365,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 20,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "260": {
@@ -5916,6 +6526,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 67,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "275": {
@@ -6043,6 +6672,13 @@
           "config": "Gesamtstrecke VLN"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 283,
+        "superSession": false
       }
     ]
   },
@@ -6184,6 +6820,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 54,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "291": {
@@ -6317,6 +6972,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 23,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "292": {
@@ -6449,6 +7123,25 @@
           "name": "Knoxville Raceway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 21,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -6593,6 +7286,25 @@
         },
         "rainChance": 62
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 41,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "305": {
@@ -6726,6 +7438,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 62,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "306": {
@@ -6858,6 +7589,25 @@
           "name": "Volusia Speedway Park"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 55,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -6993,6 +7743,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 49,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "308": {
@@ -7125,6 +7894,25 @@
           "name": "Eldora Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 66,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -7260,6 +8048,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 49,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "310": {
@@ -7394,6 +8201,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 49,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "311": {
@@ -7527,6 +8353,25 @@
           "config": "Dirt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 47,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -7663,6 +8508,25 @@
           "name": "Chili Bowl"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -7809,6 +8673,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 62,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "327": {
@@ -7943,6 +8826,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 49,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "331": {
@@ -8039,6 +8941,13 @@
           "config": "24 Heures du Mans"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 374,
+        "superSession": false
       }
     ]
   },
@@ -8181,6 +9090,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "369": {
@@ -8313,6 +9241,25 @@
           "name": "Eldora Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -8493,6 +9440,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 132,
+        "superSession": false
+      }
     ]
   },
   "391": {
@@ -8627,6 +9581,25 @@
           "config": "Full"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -8770,6 +9743,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 57,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "405": {
@@ -8911,6 +9903,65 @@
           "config": "NASCAR Short"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 57,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
+    ]
+  },
+  "411": {
+    "id": 411,
+    "name": "iRacing.com Indy 500 - Fixed",
+    "category": "oval",
+    "laps": 200,
+    "duration": null,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      99
+    ],
+    "license": {
+      "id": 3,
+      "name": "Class C",
+      "letter": "C",
+      "color": "feec04"
+    },
+    "logo": "seriesid_411.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-05-10",
+        "track": {
+          "id": 453,
+          "name": "Indianapolis Motor Speedway",
+          "config": "Open Wheel Oval"
+        },
+        "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 308,
+        "superSession": false
       }
     ]
   },
@@ -9054,6 +10105,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 71,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "414": {
@@ -9195,6 +10265,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 57,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "416": {
@@ -9330,6 +10419,25 @@
           "config": "Asphalt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -9469,6 +10577,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 51,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "419": {
@@ -9566,6 +10693,13 @@
           "config": "Belle Isle"
         },
         "rainChance": 0.7
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 174,
+        "superSession": false
       }
     ]
   },
@@ -9701,6 +10835,25 @@
           "config": "Dirt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 59,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -9842,6 +10995,25 @@
           "config": "300"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 39,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -9987,6 +11159,25 @@
         },
         "rainChance": 67
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "431": {
@@ -10129,6 +11320,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 39,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -10274,6 +11484,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "440": {
@@ -10407,6 +11636,25 @@
           "name": "Martinsville Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 25,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -10543,6 +11791,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "442": {
@@ -10677,6 +11944,25 @@
           "name": "Cedar Lake Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 27,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -10818,6 +12104,25 @@
           "config": "Moto"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -10971,6 +12276,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "446": {
@@ -11109,6 +12433,25 @@
           "name": "Limaland Motorsports Park"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -11267,6 +12610,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 59,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "451": {
@@ -11354,6 +12716,13 @@
           "config": "Grand Prix"
         },
         "rainChance": 18
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 751,
+        "superSession": false
       }
     ]
   },
@@ -11495,6 +12864,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 26,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -11638,6 +13026,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 39,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -11785,6 +13192,25 @@
         },
         "rainChance": 20
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "458": {
@@ -11918,6 +13344,25 @@
           "name": "The Dirt Track at Charlotte"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 25,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -12062,6 +13507,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 18,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "460": {
@@ -12204,6 +13668,25 @@
           "config": "Rallycross"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 18,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -12350,6 +13833,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 18,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "462": {
@@ -12487,6 +13989,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 17,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "463": {
@@ -12621,6 +14142,25 @@
           "config": "Full"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -12757,6 +14297,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 23,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "466": {
@@ -12891,6 +14450,25 @@
           "name": "Cedar Lake Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -13041,6 +14619,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 25,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "476": {
@@ -13184,6 +14781,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 41,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "483": {
@@ -13321,6 +14937,25 @@
           "config": "Asphalt"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -13464,6 +15099,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "490": {
@@ -13598,6 +15252,25 @@
           "config": "Short"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 23,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -13745,6 +15418,25 @@
         },
         "rainChance": 21
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "492": {
@@ -13835,6 +15527,13 @@
           "config": "Full Course"
         },
         "rainChance": 24
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 134,
+        "superSession": false
       }
     ]
   },
@@ -13977,6 +15676,25 @@
           "config": "Full Course"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -14237,6 +15955,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 126,
+        "superSession": false
+      }
     ]
   },
   "496": {
@@ -14496,6 +16221,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 126,
+        "superSession": false
+      }
     ]
   },
   "498": {
@@ -14635,6 +16367,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -15018,6 +16769,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 80,
+        "superSession": false
+      }
     ]
   },
   "501": {
@@ -15379,6 +17137,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 69,
+        "superSession": false
+      }
     ]
   },
   "502": {
@@ -15526,6 +17291,25 @@
         },
         "rainChance": 47
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "503": {
@@ -15670,6 +17454,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "505": {
@@ -15810,6 +17613,25 @@
           "config": "2023 Cup"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -15953,6 +17775,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "515": {
@@ -16085,6 +17926,25 @@
           "name": "Huset's Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 32,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -16220,6 +18080,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 24,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "517": {
@@ -16352,6 +18231,25 @@
           "name": "Volusia Speedway Park"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -16487,6 +18385,25 @@
           "config": "Dirt Track"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 36,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -16629,6 +18546,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "520": {
@@ -16769,6 +18705,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 26,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -16912,6 +18867,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "524": {
@@ -17051,6 +19025,25 @@
           "name": "Nashville Superspeedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 80,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -17193,6 +19186,25 @@
           "config": "Full Course"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -17525,6 +19537,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 31,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "530": {
@@ -17665,6 +19696,25 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -17812,6 +19862,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:00:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 59,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "536": {
@@ -17954,6 +20023,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 64,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "537": {
@@ -18095,6 +20183,25 @@
           "config": "Classic Pits"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:30:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 43,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -18409,6 +20516,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 24,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "539": {
@@ -18566,6 +20692,25 @@
         },
         "rainChance": 62
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 49,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "540": {
@@ -18705,6 +20850,25 @@
           "config": "West w/chicane"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -18848,6 +21012,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "542": {
@@ -18988,6 +21171,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 30,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "550": {
@@ -19125,11 +21327,30 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 19,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "551": {
     "id": 551,
-    "name": "Formula C - Super Formula Lights",
+    "name": "Formula C - Super Formula Lights by Ready Set Sim",
     "category": "formula_car",
     "laps": null,
     "duration": 30,
@@ -19253,7 +21474,7 @@
           "id": 219,
           "name": "Mount Panorama Circuit"
         },
-        "rainChance": 38
+        "rainChance": 31
       },
       {
         "weekNum": 11,
@@ -19265,11 +21486,30 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 44,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "552": {
     "id": 552,
-    "name": "Formula C - Super Formula Lights - Fixed",
+    "name": "Formula C - Super Formula Lights - Fixed by Ready Set Sim",
     "category": "formula_car",
     "laps": null,
     "duration": 20,
@@ -19404,6 +21644,25 @@
           "config": "Classic Pits"
         },
         "rainChance": 15
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "01:45:00",
+        "repeatMinutes": 120,
+        "repeating": true,
+        "sessionMinutes": 34,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -19613,6 +21872,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 35,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "554": {
@@ -19752,6 +22030,25 @@
           "config": "Oval"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 25,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -19894,6 +22191,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "558": {
@@ -20030,6 +22346,25 @@
           "config": "Dirt"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 19,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -20181,6 +22516,25 @@
         },
         "rainChance": 100
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:15:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "562": {
@@ -20323,6 +22677,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:30:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 29,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "563": {
@@ -20461,6 +22834,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 27,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "564": {
@@ -20597,6 +22989,25 @@
           "config": "Asphalt"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 20,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -20736,6 +23147,25 @@
           "name": "Limaland Motorsports Park"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 22,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -20879,6 +23309,25 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:00:00",
+        "repeatMinutes": 15,
+        "repeating": true,
+        "sessionMinutes": 26,
+        "startDate": "2025-03-18",
+        "superSession": false
+      }
     ]
   },
   "572": {
@@ -20965,6 +23414,13 @@
           "config": "Belle Isle"
         },
         "rainChance": 16
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 134,
+        "superSession": false
       }
     ]
   },
@@ -21206,6 +23662,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 109,
+        "superSession": false
+      }
     ]
   },
   "575": {
@@ -21430,6 +23893,13 @@
         },
         "rainChance": 0
       }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 109,
+        "superSession": false
+      }
     ]
   },
   "576": {
@@ -21564,6 +24034,25 @@
           "name": "Cedar Lake Speedway"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "dayOffset": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "firstSessionTime": "00:45:00",
+        "repeatMinutes": 60,
+        "repeating": true,
+        "sessionMinutes": 51,
+        "startDate": "2025-03-18",
+        "superSession": false
       }
     ]
   },
@@ -21744,6 +24233,113 @@
           "config": "Grand Prix"
         },
         "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 126,
+        "superSession": false
+      }
+    ]
+  },
+  "583": {
+    "id": 583,
+    "name": "Racing Prodigy Radical SR8 Cup",
+    "category": "sports_car",
+    "laps": null,
+    "duration": 20,
+    "switching": false,
+    "official": true,
+    "fixed": true,
+    "multiclass": false,
+    "cars": [
+      13
+    ],
+    "license": {
+      "id": 1,
+      "name": "Rookie",
+      "letter": "R",
+      "color": "fc0706"
+    },
+    "logo": "seriesid_583.png",
+    "weeks": [
+      {
+        "weekNum": 0,
+        "date": "2025-04-25",
+        "track": {
+          "id": 465,
+          "name": "Virginia International Raceway",
+          "config": "Full Course"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 1,
+        "date": "2025-05-02",
+        "track": {
+          "id": 297,
+          "name": "Snetterton Circuit",
+          "config": "300"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 2,
+        "date": "2025-05-09",
+        "track": {
+          "id": 95,
+          "name": "Sebring International Raceway",
+          "config": "International"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 3,
+        "date": "2025-05-16",
+        "track": {
+          "id": 166,
+          "name": "Okayama International Circuit",
+          "config": "Full Course"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 4,
+        "date": "2025-05-23",
+        "track": {
+          "id": 22,
+          "name": "Homestead Miami Speedway",
+          "config": "Road Course B"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 5,
+        "date": "2025-05-30",
+        "track": {
+          "id": 47,
+          "name": "WeatherTech Raceway at Laguna Seca",
+          "config": "Full Course"
+        },
+        "rainChance": 0
+      },
+      {
+        "weekNum": 6,
+        "date": "2025-06-06",
+        "track": {
+          "id": 515,
+          "name": "Circuito de Navarra",
+          "config": "Speed Circuit"
+        },
+        "rainChance": 0
+      }
+    ],
+    "raceSchedule": [
+      {
+        "repeating": false,
+        "sessionMinutes": 34,
+        "superSession": false
       }
     ]
   }
